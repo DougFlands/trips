@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: origin,
       title: "青烟威 · 海岸线",
       description: "2026.09.26—09.29｜高德地图点位、换城动线与四日安排",
-      images: [{ url: imageUrl, width: 1735, height: 910, alt: "青烟威沿海旅行手帖" }],
+      images: [{ url: imageUrl, width: 1731, height: 909, alt: "青烟威沿海旅行手帖" }],
     },
     twitter: {
       card: "summary_large_image",

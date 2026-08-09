@@ -14,7 +14,7 @@ export type MapStop = {
   coord: [number, number];
 };
 
-const colors = ["#00f5ff", "#ff2bd6", "#f9f871", "#8bff80"];
+const colors = ["#00a4b0", "#df3650", "#f2d700", "#16845b"];
 
 function escapeHtml(value: string) {
   return value.replace(
