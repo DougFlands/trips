@@ -14,82 +14,28 @@ export type MapStop = {
   coord: [number, number];
 };
 
-type Props = {
-  stops: MapStop[];
-  activeDay: number | "all";
-};
-
-const dayColors = ["#e55b3b", "#087f8c", "#6555c7", "#e0a126", "#c14463"];
-
-function transformLat(x: number, y: number) {
-  let result = -100 + 2 * x + 3 * y + 0.2 * y * y + 0.1 * x * y;
-  result += 0.2 * Math.sqrt(Math.abs(x));
-  result +=
-    ((20 * Math.sin(6 * x * Math.PI) + 20 * Math.sin(2 * x * Math.PI)) * 2) /
-    3;
-  result +=
-    ((20 * Math.sin(y * Math.PI) + 40 * Math.sin((y / 3) * Math.PI)) * 2) /
-    3;
-  result +=
-    ((160 * Math.sin((y / 12) * Math.PI) + 320 * Math.sin((y * Math.PI) / 30)) *
-      2) /
-    3;
-  return result;
-}
-
-function transformLng(x: number, y: number) {
-  let result = 300 + x + 2 * y + 0.1 * x * x + 0.1 * x * y;
-  result += 0.1 * Math.sqrt(Math.abs(x));
-  result +=
-    ((20 * Math.sin(6 * x * Math.PI) + 20 * Math.sin(2 * x * Math.PI)) * 2) /
-    3;
-  result +=
-    ((20 * Math.sin(x * Math.PI) + 40 * Math.sin((x / 3) * Math.PI)) * 2) /
-    3;
-  result +=
-    ((150 * Math.sin((x / 12) * Math.PI) + 300 * Math.sin((x / 30) * Math.PI)) *
-      2) /
-    3;
-  return result;
-}
-
-function gcj02ToWgs84([lng, lat]: [number, number]): [number, number] {
-  const a = 6378245;
-  const ee = 0.006693421622965943;
-  let dLat = transformLat(lng - 105, lat - 35);
-  let dLng = transformLng(lng - 105, lat - 35);
-  const radLat = (lat / 180) * Math.PI;
-  let magic = Math.sin(radLat);
-  magic = 1 - ee * magic * magic;
-  const sqrtMagic = Math.sqrt(magic);
-  dLat = (dLat * 180) / (((a * (1 - ee)) / (magic * sqrtMagic)) * Math.PI);
-  dLng = (dLng * 180) / ((a / sqrtMagic) * Math.cos(radLat) * Math.PI);
-  return [lng * 2 - (lng + dLng), lat * 2 - (lat + dLat)];
-}
+const colors = ["#00f5ff", "#ff2bd6", "#f9f871", "#8bff80"];
 
 function escapeHtml(value: string) {
   return value.replace(
     /[&<>'"]/g,
-    (character) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[
-        character
-      ] ?? character,
+    (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char] ?? char,
   );
 }
 
 export function amapUrl(stop: MapStop) {
   const [lng, lat] = stop.coord;
-  const params = new URLSearchParams({
+  const query = new URLSearchParams({
     position: `${lng},${lat}`,
     name: stop.name,
-    src: "qingdao-trip-guide",
     coordinate: "gaode",
     callnative: "1",
+    src: "qingdao-trip-guide",
   });
-  return `https://uri.amap.com/marker?${params.toString()}`;
+  return `https://uri.amap.com/marker?${query.toString()}`;
 }
 
-export function TravelMap({ stops, activeDay }: Props) {
+export function TravelMap({ stops, activeDay }: { stops: MapStop[]; activeDay: number | "all" }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<LeafletMap | null>(null);
   const layerRef = useRef<LayerGroup | null>(null);
@@ -97,77 +43,79 @@ export function TravelMap({ stops, activeDay }: Props) {
   useEffect(() => {
     let cancelled = false;
 
-    async function renderMap() {
+    async function draw() {
       if (!containerRef.current) return;
       const L = await import("leaflet");
       if (cancelled || !containerRef.current) return;
 
       if (!mapRef.current) {
         mapRef.current = L.map(containerRef.current, {
-          zoomControl: false,
-          scrollWheelZoom: false,
+          zoomControl: true,
+          scrollWheelZoom: true,
+          touchZoom: true,
+          doubleClickZoom: true,
+          dragging: true,
+          keyboard: true,
+          boxZoom: true,
+          zoomSnap: 0.5,
+          wheelPxPerZoomLevel: 90,
         }).setView([36.75, 121.15], 8);
-        L.control.zoom({ position: "bottomright" }).addTo(mapRef.current);
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          maxZoom: 18,
-          attribution: "© OpenStreetMap contributors",
-        }).addTo(mapRef.current);
+
+        L.tileLayer(
+          "https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}",
+          {
+            subdomains: ["1", "2", "3", "4"],
+            minZoom: 3,
+            maxZoom: 18,
+            attribution: '<a href="https://lbs.amap.com/" target="_blank" rel="noreferrer">高德地图</a>',
+          },
+        ).addTo(mapRef.current);
         layerRef.current = L.layerGroup().addTo(mapRef.current);
       }
 
-      const layer = layerRef.current;
       const map = mapRef.current;
-      if (!layer || !map) return;
+      const layer = layerRef.current;
+      if (!map || !layer) return;
       layer.clearLayers();
 
       const shown = activeDay === "all" ? stops : stops.filter((stop) => stop.day === activeDay);
       const bounds: [number, number][] = [];
 
-      for (const day of [0, 1, 2, 3, 4]) {
+      for (const day of [0, 1, 2, 3]) {
         const route = shown.filter((stop) => stop.day === day);
-        if (route.length < 2) continue;
-        const coordinates = route.map((stop) => {
-          const [lng, lat] = gcj02ToWgs84(stop.coord);
-          return [lat, lng] as [number, number];
-        });
-        L.polyline(coordinates, {
-          color: dayColors[day],
-          weight: activeDay === "all" ? 2 : 3,
-          opacity: activeDay === "all" ? 0.45 : 0.8,
-          dashArray: "7 8",
-        }).addTo(layer);
+        if (route.length > 1) {
+          L.polyline(
+            route.map((stop) => [stop.coord[1], stop.coord[0]] as [number, number]),
+            { color: colors[day], weight: 2, opacity: 0.8, dashArray: "8 9" },
+          ).addTo(layer);
+        }
       }
 
       shown.forEach((stop) => {
-        const [lng, lat] = gcj02ToWgs84(stop.coord);
-        const location: [number, number] = [lat, lng];
+        const location: [number, number] = [stop.coord[1], stop.coord[0]];
         bounds.push(location);
-        const marker = L.marker(location, {
+        L.marker(location, {
           icon: L.divIcon({
             className: "map-marker-shell",
-            html: `<span class="map-marker" style="--marker:${dayColors[stop.day]}">${stop.order}</span>`,
-            iconSize: [32, 38],
-            iconAnchor: [16, 36],
-            popupAnchor: [0, -31],
+            html: `<span class="map-marker" style="--marker:${colors[stop.day]}">${stop.order}</span>`,
+            iconSize: [34, 34],
+            iconAnchor: [17, 17],
+            popupAnchor: [0, -18],
           }),
-        });
-        marker.bindPopup(
-          `<div class="map-popup"><span>${escapeHtml(stop.city)} · ${escapeHtml(stop.time)}</span><strong>${escapeHtml(stop.name)}</strong><p>${escapeHtml(stop.note)}</p><a href="${amapUrl(stop)}" target="_blank" rel="noreferrer">高德地图打开 ↗</a></div>`,
-          { maxWidth: 240 },
-        );
-        marker.addTo(layer);
+        })
+          .bindPopup(
+            `<div class="map-popup"><span>${escapeHtml(stop.city)} // ${escapeHtml(stop.time)}</span><strong>${escapeHtml(stop.name)}</strong><p>${escapeHtml(stop.note)}</p><a href="${amapUrl(stop)}" target="_blank" rel="noreferrer">高德导航 ↗</a></div>`,
+            { maxWidth: 250 },
+          )
+          .addTo(layer);
       });
 
-      if (bounds.length) {
-        map.fitBounds(bounds, {
-          padding: [38, 38],
-          maxZoom: activeDay === "all" ? 8 : 13,
-        });
-      }
-      window.setTimeout(() => map.invalidateSize(), 80);
+      if (bounds.length === 1) map.setView(bounds[0], 13);
+      else if (bounds.length) map.fitBounds(bounds, { padding: [40, 40], maxZoom: activeDay === "all" ? 8 : 13 });
+      window.setTimeout(() => map.invalidateSize(), 60);
     }
 
-    renderMap();
+    draw();
     return () => {
       cancelled = true;
     };
@@ -184,8 +132,8 @@ export function TravelMap({ stops, activeDay }: Props) {
 
   return (
     <div className="map-wrap">
-      <div ref={containerRef} className="map-canvas" aria-label="青岛烟台威海旅行点位地图" />
-      <div className="map-note">点位来自高德 MCP · 底图使用 OpenStreetMap</div>
+      <div ref={containerRef} className="map-canvas" aria-label="高德地图：青岛烟台威海旅行点位" />
+      <div className="map-hint">高德底图 // 滚轮或双指缩放</div>
     </div>
   );
 }

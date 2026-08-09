@@ -13,22 +13,22 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: {
-      default: "青烟威 · 5日山海路线",
+      default: "青烟威 · 4日海岸线",
       template: "%s · 青烟威旅行",
     },
-    description: "一份围绕中秋假期、城际动车与沿海点位整理的青岛、烟台、威海旅行攻略。",
+    description: "2026年9月26日至29日，青岛、烟台、威海四日旅行攻略。",
     openGraph: {
       type: "website",
       locale: "zh_CN",
       url: origin,
-      title: "青烟威 · 沿着海岸，慢慢换城",
-      description: "2026.09.25—09.29｜地图点位、换城动线、抢票提醒与逐日安排",
+      title: "青烟威 · 海岸线",
+      description: "2026.09.26—09.29｜高德地图点位、换城动线与四日安排",
       images: [{ url: imageUrl, width: 1735, height: 910, alt: "青烟威沿海旅行手帖" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "青烟威 · 沿着海岸，慢慢换城",
-      description: "2026.09.25—09.29｜5日山海路线",
+      title: "青烟威 · 海岸线",
+      description: "2026.09.26—09.29｜四日三城",
       images: [imageUrl],
     },
   };
