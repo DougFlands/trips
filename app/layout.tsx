@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
