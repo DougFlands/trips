@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import type { TripDay, TripStop } from "./trips/types";
+import type { TripDay, TripPlace, TripStop } from "./trips/types";
 
 type DayFilter = number | "all";
 
@@ -105,18 +105,18 @@ async function loadAMap(key: string, securityJsCode: string) {
   return amapPromise;
 }
 
-function popupContent(stop: TripStop) {
+function popupContent(place: TripPlace, metaText: string) {
   const box = document.createElement("div");
   box.className = "map-popup";
 
   const meta = document.createElement("span");
-  meta.textContent = `${stop.city} // ${stop.time}`;
+  meta.textContent = metaText;
   const name = document.createElement("strong");
-  name.textContent = stop.name;
+  name.textContent = place.name;
   const note = document.createElement("p");
-  note.textContent = stop.note;
+  note.textContent = place.note;
   const link = document.createElement("a");
-  link.href = amapUrl(stop);
+  link.href = amapUrl(place);
   link.target = "_blank";
   link.rel = "noreferrer";
   link.textContent = "高德导航 ↗";
@@ -125,11 +125,11 @@ function popupContent(stop: TripStop) {
   return box;
 }
 
-export function amapUrl(stop: TripStop) {
-  const [lng, lat] = stop.coord;
+export function amapUrl(place: TripPlace) {
+  const [lng, lat] = place.coord;
   const query = new URLSearchParams({
     position: `${lng},${lat}`,
-    name: stop.name,
+    name: place.name,
     coordinate: "gaode",
     callnative: "1",
     src: "travel-guides",
@@ -140,12 +140,19 @@ export function amapUrl(stop: TripStop) {
 
 type TravelMapProps = {
   stops: TripStop[];
+  alternatives: TripPlace[];
   days: TripDay[];
   activeDay: DayFilter;
   label: string;
 };
 
-export function TravelMap({ stops, days, activeDay, label }: TravelMapProps) {
+export function TravelMap({
+  stops,
+  alternatives,
+  days,
+  activeDay,
+  label,
+}: TravelMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<AMapInstance | null>(null);
   const [api, setApi] = useState<AMapNamespace | null>(null);
@@ -206,63 +213,104 @@ export function TravelMap({ stops, days, activeDay, label }: TravelMapProps) {
   useEffect(() => {
     const map = mapRef.current;
     if (!api || !map) return;
+    const currentApi = api;
+    const currentMap = map;
 
-    const shown =
+    const shownStops =
       activeDay === "all"
         ? stops
         : stops.filter((stop) => stop.day === activeDay);
+    const activeCity = activeDay === "all" ? undefined : days[activeDay]?.city;
+    const shownAlternatives =
+      activeDay === "all"
+        ? alternatives
+        : alternatives.filter((place) => place.city === activeCity);
+    const shownPlaces = [...shownStops, ...shownAlternatives];
     const overlays: AMapOverlay[] = [];
     const infoWindows: AMapInfoWindow[] = [];
 
-    for (const dayIndex of new Set(shown.map((stop) => stop.day))) {
-      const route = shown.filter((stop) => stop.day === dayIndex);
+    for (const dayIndex of new Set(shownStops.map((stop) => stop.day))) {
+      const route = shownStops
+        .filter((stop) => stop.day === dayIndex)
+        .sort((a, b) => a.order - b.order);
       if (route.length < 2) continue;
 
       overlays.push(
         new api.Polyline({
           path: route.map((stop) => stop.coord),
           strokeColor: days[dayIndex]?.color ?? "#008f9c",
-          strokeWeight: 4,
-          strokeOpacity: 0.9,
-          strokeStyle: "dashed",
-          borderWeight: 1,
+          strokeWeight: 5,
+          strokeOpacity: 0.95,
+          strokeStyle: "solid",
+          borderWeight: 2,
           showDir: true,
           zIndex: 30,
         }),
       );
     }
 
-    shown.forEach((stop) => {
-      const color = days[stop.day]?.color ?? "#008f9c";
+    function addMarker(
+      place: TripPlace,
+      markerText: string,
+      color: string,
+      kind: "planned" | "alternative",
+      metaText: string,
+    ) {
       const markerNode = document.createElement("span");
-      markerNode.className = "map-marker";
+      markerNode.className = `map-marker ${kind}`;
       markerNode.style.setProperty("--marker", color);
-      markerNode.textContent = String(stop.order);
+      markerNode.textContent = markerText;
 
-      const marker = new api.Marker({
-        position: stop.coord,
+      const marker = new currentApi.Marker({
+        position: place.coord,
         content: markerNode,
         anchor: "center",
-        zIndex: 50,
-        title: stop.name,
+        zIndex: kind === "planned" ? 50 : 40,
+        title: place.name,
       });
-      const infoWindow = new api.InfoWindow({
-        content: popupContent(stop),
+      const infoWindow = new currentApi.InfoWindow({
+        content: popupContent(place, metaText),
         anchor: "bottom-center",
-        offset: new api.Pixel(0, -22),
+        offset: new currentApi.Pixel(0, -22),
         isCustom: true,
       });
 
       marker.on?.("click", () => {
         infoWindows.forEach((window) => window.close());
-        infoWindow.open(map, stop.coord);
+        infoWindow.open(currentMap, place.coord);
       });
       overlays.push(marker);
       infoWindows.push(infoWindow);
+    }
+
+    shownStops.forEach((stop) => {
+      const color = days[stop.day]?.color ?? "#008f9c";
+      addMarker(
+        stop,
+        String(stop.order),
+        color,
+        "planned",
+        `${stop.city} // ${stop.time} // 推荐 ${stop.score.toFixed(1)}`,
+      );
+    });
+
+    shownAlternatives.forEach((place) => {
+      const color =
+        (activeDay === "all"
+          ? days.find((day) => day.city === place.city)?.color
+          : days[activeDay]?.color) ?? "#008f9c";
+      addMarker(
+        place,
+        place.score.toFixed(1),
+        color,
+        "alternative",
+        `${place.city} // 6+ 备选 // 推荐 ${place.score.toFixed(1)}`,
+      );
     });
 
     if (overlays.length) map.add(overlays);
-    if (shown.length === 1) map.setZoomAndCenter(13, shown[0].coord);
+    if (shownPlaces.length === 1)
+      map.setZoomAndCenter(13, shownPlaces[0].coord);
     else if (overlays.length)
       map.setFitView(
         overlays,
@@ -275,7 +323,7 @@ export function TravelMap({ stops, days, activeDay, label }: TravelMapProps) {
       infoWindows.forEach((window) => window.close());
       if (mapRef.current === map && overlays.length) map.remove(overlays);
     };
-  }, [activeDay, api, days, stops]);
+  }, [activeDay, alternatives, api, days, stops]);
 
   const statusText =
     status === "missing"
@@ -290,6 +338,14 @@ export function TravelMap({ stops, days, activeDay, label }: TravelMapProps) {
       {status !== "ready" && (
         <div className={`map-status ${status}`}>{statusText}</div>
       )}
+      <div className="map-legend">
+        <span>
+          <i className="planned" /> 要去的 / 顺序连线
+        </span>
+        <span>
+          <i className="alternative" /> 6+ 备选
+        </span>
+      </div>
       <div className="map-hint">高德 JS API 2.0 // 滚轮或双指缩放</div>
     </div>
   );

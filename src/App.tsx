@@ -79,7 +79,9 @@ function TripIndex() {
               <div>
                 <span>{item.fullDateRange}</span>
                 <span>{cities.join(" · ")}</span>
-                <span>{item.stops.length} MAP NODES</span>
+                <span>
+                  {item.stops.length + item.alternatives.length} MAP NODES
+                </span>
               </div>
               <b>OPEN ROUTE ↗</b>
             </a>

@@ -11,15 +11,19 @@ export type TripDay = {
   color: string;
 };
 
-export type TripStop = {
+export type TripPlace = {
   id: string;
-  day: number;
-  order: number;
   city: string;
   name: string;
-  time: string;
+  score: number;
   note: string;
   coord: Coordinate;
+};
+
+export type TripStop = TripPlace & {
+  day: number;
+  order: number;
+  time: string;
 };
 
 export type TripLink = {
@@ -45,6 +49,7 @@ export type Trip = {
   };
   days: TripDay[];
   stops: TripStop[];
+  alternatives: TripPlace[];
   bookings: Array<{
     eyebrow: string;
     title: string;

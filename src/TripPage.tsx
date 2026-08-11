@@ -11,7 +11,12 @@ export function TripPage({ trip }: { trip: Trip }) {
       ? trip.stops
       : trip.stops.filter((stop) => stop.day === activeDay);
   const activeInfo = activeDay === "all" ? undefined : trip.days[activeDay];
+  const visibleAlternatives =
+    activeDay === "all"
+      ? trip.alternatives
+      : trip.alternatives.filter((place) => place.city === activeInfo?.city);
   const cities = [...new Set(trip.days.map((day) => day.city))];
+  const mapNodeCount = trip.stops.length + trip.alternatives.length;
 
   function showDay(day: number) {
     setActiveDay(day);
@@ -52,7 +57,7 @@ export function TripPage({ trip }: { trip: Trip }) {
         <div className="hero-meta">
           <span>{String(trip.days.length).padStart(2, "0")} DAYS</span>
           <span>{String(cities.length).padStart(2, "0")} CITIES</span>
-          <span>{String(trip.stops.length).padStart(2, "0")} MAP NODES</span>
+          <span>{String(mapNodeCount).padStart(2, "0")} MAP NODES</span>
         </div>
         <a className="neon-button" href="#map">
           ENTER MAP <b>↘</b>
@@ -123,34 +128,76 @@ export function TripPage({ trip }: { trip: Trip }) {
                   "切换日期，地图会聚焦当天动线。点击箭头可在高德地图继续导航。"}
               </p>
             </header>
-            <ol>
-              {visibleStops.map((stop) => (
-                <li
-                  key={stop.id}
-                  style={
-                    {
-                      "--accent":
-                        trip.days[stop.day]?.color ?? "var(--cyan)",
-                    } as CSSProperties
-                  }
-                >
-                  <b>{stop.order}</b>
-                  <div>
-                    <small>
-                      {stop.time} // {stop.city}
-                    </small>
-                    <strong>{stop.name}</strong>
-                    <p>{stop.note}</p>
-                  </div>
-                  <a href={amapUrl(stop)} target="_blank" rel="noreferrer">
-                    ↗
-                  </a>
-                </li>
-              ))}
-            </ol>
+            <section className="point-group planned">
+              <h4>
+                <span>要去的</span>
+                <em>{visibleStops.length}</em>
+              </h4>
+              <ol>
+                {visibleStops.map((stop) => (
+                  <li
+                    key={stop.id}
+                    style={
+                      {
+                        "--accent":
+                          trip.days[stop.day]?.color ?? "var(--cyan)",
+                      } as CSSProperties
+                    }
+                  >
+                    <b>{stop.order}</b>
+                    <div>
+                      <small>
+                        {stop.time} // {stop.city} · {stop.score.toFixed(1)}
+                      </small>
+                      <strong>{stop.name}</strong>
+                      <p>{stop.note}</p>
+                    </div>
+                    <a href={amapUrl(stop)} target="_blank" rel="noreferrer">
+                      ↗
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </section>
+            <section className="point-group optional">
+              <h4>
+                <span>6 分以上 · 未排入</span>
+                <em>{visibleAlternatives.length}</em>
+              </h4>
+              <ul>
+                {visibleAlternatives.map((place) => {
+                  const cityDay =
+                    activeDay === "all"
+                      ? trip.days.find((day) => day.city === place.city)
+                      : activeInfo;
+
+                  return (
+                    <li
+                      key={place.id}
+                      style={
+                        {
+                          "--accent": cityDay?.color ?? "var(--cyan)",
+                        } as CSSProperties
+                      }
+                    >
+                      <b>{place.score.toFixed(1)}</b>
+                      <div>
+                        <small>{place.city} // HIGH SCORE</small>
+                        <strong>{place.name}</strong>
+                        <p>{place.note}</p>
+                      </div>
+                      <a href={amapUrl(place)} target="_blank" rel="noreferrer">
+                        ↗
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
           </aside>
           <TravelMap
             stops={trip.stops}
+            alternatives={trip.alternatives}
             days={trip.days}
             activeDay={activeDay}
             label={`高德地图：${trip.title}${trip.subtitle}旅行点位`}
