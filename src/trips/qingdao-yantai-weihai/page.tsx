@@ -70,6 +70,10 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
   const cities = [...new Set(trip.days.map((day) => day.city))];
   const mapNodeCount = trip.stops.length + trip.alternatives.length;
   const timelineStep = activeDay === "all" ? trip.days.length : activeDay + 1;
+  const mealsByDay = trip.days.map((day) => ({
+    day,
+    meals: trip.meals.filter((meal) => meal.date === day.date),
+  }));
 
   function showDay(day: number) {
     setActiveDay(day);
@@ -181,7 +185,7 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
         </Button>
       </header>
 
-      <section className="overflow-x-auto border-y border-[#15191d]/30 bg-[#e6cf00] px-5 py-5 sm:px-[max(20px,calc((100vw-1120px)/2))]">
+      <section className="qingdao-horizontal-scroll overflow-x-auto overflow-y-hidden border-y border-[#15191d]/30 bg-[#e6cf00] px-5 py-5 sm:px-[max(20px,calc((100vw-1120px)/2))]">
         <Timeline
           orientation="horizontal"
           defaultValue={timelineStep}
@@ -258,11 +262,11 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
           }
         >
           <TabsList
-            variant="line"
-            className="flex h-auto max-w-full gap-2 overflow-x-auto rounded-none p-0"
+            variant="default"
+            className="qingdao-horizontal-scroll flex h-auto max-w-full gap-2 overflow-x-auto overflow-y-hidden rounded-none !bg-transparent !p-0"
           >
             <TabsTrigger
-              className="rounded-none border border-[#15191d]/30 bg-[#fff8b5]/45 px-3 py-2 font-mono text-[10px] text-[#596052] data-[state=active]:bg-[#182126] data-[state=active]:text-[#fff8b5]"
+              className="rounded-none border border-[#f2dc00]/35 !bg-[#15191d] px-3 py-2 font-mono text-[10px] !text-white data-[state=active]:!bg-[#15191d] data-[state=active]:!text-[#f2dc00] data-[state=active]:after:bg-[#f2dc00]"
               value="all"
               aria-pressed={activeDay === "all"}
             >
@@ -270,7 +274,7 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
             </TabsTrigger>
             {trip.days.map((day, index) => (
               <TabsTrigger
-                className="rounded-none border border-[#15191d]/30 bg-[#fff8b5]/45 px-3 py-2 font-mono text-[10px] text-[#596052] data-[state=active]:bg-[#182126] data-[state=active]:text-[#fff8b5]"
+                className="rounded-none border border-[#f2dc00]/35 !bg-[#15191d] px-3 py-2 font-mono text-[10px] !text-white data-[state=active]:!bg-[#15191d] data-[state=active]:!text-[#f2dc00] data-[state=active]:after:bg-[#f2dc00]"
                 value={String(index)}
                 key={day.date}
                 aria-pressed={activeDay === index}
@@ -352,7 +356,7 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
                   <Badge className="rounded-none border-0 bg-transparent p-0 font-mono text-lg font-black text-[var(--day-color)]">
                     {day.label}
                   </Badge>
-                  <span className="font-mono text-[10px] text-[#596052]">
+                  <span className="font-mono text-xs font-bold text-[#596052]">
                     {day.date} // {day.city}
                   </span>
                 </div>
@@ -368,7 +372,7 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
                   ))}
                 </ol>
               </CardContent>
-              <CardFooter className="justify-between border-t border-[#15191d]/30 p-0 pt-3">
+              <CardFooter className="mt-auto justify-between border-t border-[#15191d]/30 p-0 pt-3">
                 <span className="text-[11px] text-[#596052]">{day.stay}</span>
                 <Button
                   className="h-auto bg-transparent p-0 font-mono text-[10px] font-black text-[var(--day-color)] hover:bg-transparent hover:text-[#d93047]"
@@ -389,22 +393,42 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
           按路线排主选；排队、关店或赶车就切换 Plan B。
         </SectionHeading>
         <div className="grid gap-3 md:grid-cols-2">
-          {trip.meals.map((meal) => (
-            <Card className="gap-5 rounded-none border-[#15191d]/30 bg-[#fff3a6] p-6 shadow-[6px_6px_0_rgb(21_25_29_/_10%)]" key={`${meal.date}-${meal.slot}`}>
+          {mealsByDay.map(({ day, meals }) => (
+            <Card
+              className="gap-5 rounded-none border-[#15191d]/30 bg-[#fff3a6] p-6 shadow-[6px_6px_0_rgb(21_25_29_/_10%)]"
+              key={day.date}
+              style={{ "--day-color": day.color } as CSSProperties}
+            >
               <CardHeader className="p-0">
                 <div className="flex items-center justify-between gap-3">
-                  <Badge className="rounded-none border-0 bg-transparent p-0 font-mono text-lg font-black text-[#d93047]">
-                    {meal.date}
+                  <Badge className="rounded-none border-0 bg-transparent p-0 font-mono text-lg font-black text-[var(--day-color)]">
+                    {day.label}
                   </Badge>
-                  <span className="text-right font-mono text-[9px] text-[#596052]">
-                    {meal.slot} // {meal.city}
+                  <span className="text-right font-mono text-xs font-bold text-[#596052]">
+                    {day.date} // {day.city}
                   </span>
                 </div>
-                <CardTitle className="mt-3 text-xl">{meal.route}</CardTitle>
+                <CardTitle className="mt-3 text-xl">{day.title}</CardTitle>
               </CardHeader>
-              <CardContent className="grid gap-2 p-0">
-                <MealOption label="PLAN A" option={meal.planA} primary />
-                <MealOption label="PLAN B" option={meal.planB} />
+              <CardContent className="flex flex-col gap-4 p-0">
+                {meals.map((meal, index) => (
+                  <div className="flex flex-col gap-3" key={`${meal.date}-${meal.slot}`}>
+                    {index > 0 && <Separator className="bg-[#15191d]/20" />}
+                    <div>
+                      <div className="flex items-baseline justify-between gap-3">
+                        <Badge className="rounded-none border-0 bg-transparent p-0 font-mono text-xs font-black text-[#d93047]">
+                          {meal.slot}
+                        </Badge>
+                        <span className="font-mono text-xs font-bold text-[#596052]">{meal.city}</span>
+                      </div>
+                      <p className="mt-1 mb-0 text-sm font-bold text-[#414a44]">{meal.route}</p>
+                    </div>
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      <MealOption label="PLAN A" option={meal.planA} primary />
+                      <MealOption label="PLAN B" option={meal.planB} />
+                    </div>
+                  </div>
+                ))}
               </CardContent>
             </Card>
           ))}
@@ -445,22 +469,12 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
         </div>
       </section>
 
-      <section className={`${shell} grid py-12 md:grid-cols-3`}>
-        {trip.foods.map((food) => (
-          <div className="border-l border-[#15191d]/30 px-5 py-4 last:border-r" key={food.city}>
-            <small className="mb-2 block font-mono text-[10px] font-extrabold text-[#008f9c]">{food.city}</small>
-            <strong className="text-[13px]">{food.items.join(" · ")}</strong>
-          </div>
-        ))}
-      </section>
-
-      <footer className="flex flex-col gap-5 border-t border-[#182126] bg-[#182126] px-5 py-7 text-[#fff3a6] sm:flex-row sm:items-center sm:justify-between sm:px-[max(20px,calc((100vw-1120px)/2))]">
-        <div className="flex flex-col gap-1">
+      <footer className="grid items-center gap-5 border-t border-[#182126] bg-[#182126] px-5 py-7 text-[#fff3a6] sm:grid-cols-[1fr_auto_1fr] sm:px-[max(20px,calc((100vw-1120px)/2))]">
+        <div className="flex flex-col items-center gap-1 text-center sm:col-start-2">
           <strong className="text-[#f2dc00]">{trip.title}{trip.subtitle && `//${trip.subtitle}`}</strong>
           <span className="font-mono text-[9px] font-bold text-[#c5c49e]">{trip.fullDateRange}</span>
         </div>
-        <p className="m-0 font-mono text-[9px] font-bold text-[#c5c49e]">高德地图 JS API 2.0</p>
-        <div className="flex flex-wrap gap-4 font-mono text-[9px] font-extrabold text-[#ff6575]">
+        <div className="flex flex-wrap justify-center gap-4 font-mono text-[9px] font-extrabold text-[#ff6575] sm:col-start-3 sm:justify-self-end">
           <a href="/">ALL TRIPS ↗</a>
           {trip.links.map((link) => (
             <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label}</a>

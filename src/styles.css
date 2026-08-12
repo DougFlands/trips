@@ -58,6 +58,11 @@ body {
   color: var(--foreground);
 }
 
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
 button:focus-visible,
 a:focus-visible {
   outline: 3px solid var(--destructive);

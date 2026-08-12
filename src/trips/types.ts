@@ -73,9 +73,5 @@ export type Trip = {
     footer?: string;
     link?: TripLink;
   }>;
-  foods: Array<{
-    city: string;
-    items: string[];
-  }>;
   links: TripLink[];
 };

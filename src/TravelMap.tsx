@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { TripDay, TripPlace, TripStop } from "./trips/types";
 
-type DayFilter = number | "all";
+export type DayFilter = number | "all";
 
 type AMapOverlay = {
   on?: (event: string, handler: () => void) => void;
@@ -35,8 +35,6 @@ type AMapNamespace = {
   Polyline: new (options: Record<string, unknown>) => AMapOverlay;
   InfoWindow: new (options: Record<string, unknown>) => AMapInfoWindow;
   Pixel: new (x: number, y: number) => object;
-  ToolBar: new (options?: Record<string, unknown>) => object;
-  Scale: new (options?: Record<string, unknown>) => object;
 };
 
 type AMapLoader = {
@@ -107,7 +105,7 @@ async function loadAMap(
   amapPromise ??= window.AMapLoader!.load({
     key,
     version: "2.0",
-    plugins: ["AMap.ToolBar", "AMap.Scale"],
+    plugins: [],
   });
 
   return amapPromise;
@@ -146,7 +144,7 @@ export function amapUrl(place: TripPlace) {
   return `https://uri.amap.com/marker?${query.toString()}`;
 }
 
-type TravelMapProps = {
+export type TravelMapProps = {
   stops: TripStop[];
   alternatives: TripPlace[];
   days: TripDay[];
@@ -210,8 +208,6 @@ export function TravelMap({
           touchZoomCenter: 0,
         });
 
-        map.addControl(new AMap.ToolBar({ position: "RT" }));
-        map.addControl(new AMap.Scale());
         mapRef.current = map;
         setApi(AMap);
         setStatus("ready");
@@ -425,33 +421,24 @@ export function TravelMap({
           {statusText}
         </div>
       )}
-      <div className="absolute left-3 top-3 z-[500] flex max-w-[calc(100%-1.5rem)] flex-wrap gap-3 border border-[#15191d]/40 bg-[#182126]/90 px-2.5 py-2 font-mono text-[9px] font-bold text-[#fff5a4]">
-        <span className="flex items-center gap-1.5">
-          <i className="size-2.5 rotate-45 bg-[#f2dc00]" /> 要去的 / 顺序连线
-        </span>
-        <span className="flex items-center gap-1.5">
-          <i className="size-2.5 rounded-full border border-[#f2dc00]" /> 6+ 备选
-        </span>
-      </div>
       <button
-        className="absolute right-3 top-3 z-[520] border border-[#f2dc00]/70 bg-[#182126]/95 px-2.5 py-2 font-mono text-[9px] font-extrabold text-[#f2dc00] hover:bg-[#d93047] hover:text-[#fff3a6] disabled:cursor-wait disabled:opacity-65"
+        className="absolute bottom-3 left-3 z-[520] grid size-9 place-items-center rounded-full border border-[#f2dc00]/70 bg-[#182126]/95 font-sans text-xl leading-none text-[#f2dc00] shadow-[0_0_0_3px_rgb(24_33_38_/_18%)] hover:bg-[#d93047] hover:text-[#fff3a6] disabled:cursor-wait disabled:opacity-65"
         type="button"
         onClick={locateUser}
         disabled={locating || status !== "ready"}
+        aria-label={locating ? "定位中" : "我的位置"}
+        title={locating ? "定位中" : "我的位置"}
       >
-        {locating ? "定位中…" : "我的位置 ↗"}
+        {locating ? "…" : "◎"}
       </button>
       {locationError && (
         <div
-          className="absolute right-3 top-12 z-[520] max-w-[230px] border border-[#d93047] bg-[#182126]/95 px-2 py-1.5 font-mono text-[9px] font-bold leading-[1.4] text-[#fff3a6]"
+          className="absolute bottom-14 left-3 z-[520] max-w-[230px] border border-[#d93047] bg-[#182126]/95 px-2 py-1.5 font-mono text-[9px] font-bold leading-[1.4] text-[#fff3a6]"
           role="status"
         >
           {locationError}
         </div>
       )}
-      <div className="absolute bottom-3 left-3 z-[500] border border-[#15191d]/40 bg-[#182126]/90 px-2.5 py-1.5 font-mono text-[9px] font-bold text-[#fff5a4]">
-        高德 JS API 2.0 // 列表点击聚焦 · 地图可拖动/双指缩放
-      </div>
     </div>
   );
 }

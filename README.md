@@ -51,6 +51,27 @@ npm run check
 
 `src/App.tsx` 只负责路径解析和入口状态；旅行页面可以共享 `TravelMap`、类型和 UI primitives，但不要复制其他旅行的页面样式。
 
+地图组件位于 `src/TravelMap.tsx`，按 `stops`、`alternatives`、`days`、`activeDay` 和 `focusPlaceId` 传入数据即可复用。
+
+## 风格参考库
+
+以下链接只记录视觉方向，页面按旅行目录单独选用；它们不会成为运行时依赖。关键词用于后续检索，落地时再核对页面细节。
+
+| 风格 | 关键词 | 适合页面 | 参考 |
+| --- | --- | --- | --- |
+| NERV / Tactical Surveillance | 深色战术控制台、角形切角、等宽字、状态轨道、密集信息 | 监控感路线、状态面板、运营视图 | [NERV surveillance](https://mdrbx.github.io/nerv-ui/examples/surveillance/) |
+| Neonblade Badge | 徽章、短标签、状态色、轻量强调 | 地点评分、提醒、路线状态 | [Neonblade badge](https://neonbladeui.neuronrush.com/components/elements/badge) |
+| Sketchbook / Hand-drawn | 手绘线条、纸张感、草图标题、随手记卡片 | 轻松旅行日记、手帐式页面 | [Sketchbook UI](https://sarthakrawat-1.github.io/sketchbook-ui/?utm_source=chatgpt.com) |
+| Pxlkit Pixel / Linear | 8-bit 像素边框、按压阴影，也可用 linear 平面表面 | 像素旅行主题、地图节点、时间线 | [Pxlkit UI Kit](https://pxlkit.xyz/ui-kit?utm_source=chatgpt.com) |
+| Retro UI | 像素组件、硬边框、复古终端、游戏化控件 | 复古城市、老街、游戏化页面 | [Retro UI](https://retroui.io/components) |
+| Animal Island | 动物插画、圆润卡片、明快配色、亲子感 | 亲子旅行、轻量景点卡片、活动页 | [Animal Island UI](https://guokaigdg.github.io/animal-island-ui/?utm_source=chatgpt.com#/button) |
+
+### 使用约定
+
+- 页面级风格写在 `src/trips/<slug>/styles.css`，公共组件继续放在 `src/components/`。
+- 先定风格关键词，再选字体、色板、边框、阴影和状态组件。
+- 组件按需用 shadcn、ReUI、Kibo UI 源码实现，保持旅行页面之间的样式隔离。
+
 ## Cloudflare Pages
 
 - Framework preset：`Vite`

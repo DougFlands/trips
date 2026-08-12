@@ -632,16 +632,7 @@ export const qingdaoYantaiWeihaiTrip = {
       },
     },
   ],
-  foods: [
-    { city: "QINGDAO", items: ["鲅鱼水饺", "辣炒蛤蜊", "袋装鲜啤"] },
-    { city: "YANTAI", items: ["蓬莱小面", "海肠捞饭", "焖子"] },
-    { city: "WEIHAI", items: ["海鲜疙瘩汤", "韩式料理", "无花果"] },
-  ],
   links: [
-    {
-      label: "NOTION ↗",
-      href: "https://app.notion.com/p/dflands/3b7529bc43e380498ce2d170164a27e4",
-    },
     {
       label: "12306 ↗",
       href: "https://hzfw.12306.cn/zgzfw/resources/h5/ysqcx-h5.html",
