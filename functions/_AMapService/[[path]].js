@@ -21,10 +21,15 @@ export async function onRequest(context) {
   const upstreamUrl = new URL(`https://${upstreamHost}${upstreamPath}`);
   upstreamUrl.search = requestUrl.search;
   upstreamUrl.searchParams.set("jscode", securityJsCode);
+  const upstreamHeaders = new Headers({
+    Accept: context.request.headers.get("Accept") ?? "*/*",
+  });
+  const referer = context.request.headers.get("Referer");
+  if (referer) upstreamHeaders.set("Referer", referer);
 
   const response = await fetch(upstreamUrl, {
     method: context.request.method,
-    headers: { Accept: context.request.headers.get("Accept") ?? "*/*" },
+    headers: upstreamHeaders,
   });
   const headers = new Headers(response.headers);
   headers.delete("set-cookie");

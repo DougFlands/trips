@@ -44,6 +44,9 @@ TravelMap(props: {
   activeDay: number | "all";
   label: string;
 }): JSX.Element
+
+functions/_AMapService/[[path]].js:
+onRequest(context): Promise<Response>
 ```
 
 页面 URL：`/trips/<Trip.slug>/`。
@@ -56,7 +59,9 @@ TravelMap(props: {
 - `Trip.stops`：确定要去的点，按 `day`、`order` 绘制每日路线。
 - `Trip.alternatives`：分数必须大于 6，不能和 `stops` 重复，也不参与路线连线。
 - `VITE_AMAP_KEY`：高德 Web 端 JS API Key，地图加载必需。
-- `VITE_AMAP_SECURITY_JS_CODE`：高德安全密钥，地图加载必需。
+- `VITE_AMAP_SECURITY_JS_CODE`：只用于本地开发的高德安全密钥。
+- `AMAP_SECURITY_JS_CODE`：生产环境 Cloudflare Pages Secret，不能使用 `VITE_` 前缀。
+- 生产环境将 `_AMapSecurityConfig.serviceHost` 指向同源 `/_AMapService`；代理只接受 GET/HEAD、覆盖客户端 `jscode`，并把客户端 `Referer` 转发给高德，供域名白名单校验。
 - 所有 `VITE_` 值会进入浏览器产物，不能放服务端密钥。
 
 ### 4. Validation & Error Matrix
@@ -64,7 +69,10 @@ TravelMap(props: {
 | Condition | Behavior |
 |---|---|
 | 未知 slug | 渲染站内 404，提供首页链接 |
-| 任一高德变量缺失 | 显示 `missing` 配置提示，不加载脚本 |
+| 生产环境缺少 `VITE_AMAP_KEY` | 显示 `missing` 配置提示，不加载脚本 |
+| 本地开发缺少任一高德变量 | 显示 `missing` 配置提示，不加载脚本 |
+| Pages Secret 缺失 | 代理返回 503，不请求高德上游 |
+| Referer 不在高德域名白名单 | 高德返回 `INVALID_USER_DOMAIN` |
 | Loader、Key、白名单失败 | 显示 `error` 提示 |
 | 高德加载中 | 显示 `loading` 提示 |
 | 日期筛选 | 显示该日行程点、该日路线与同城高分备选 |
@@ -73,15 +81,18 @@ TravelMap(props: {
 
 ### 5. Good / Base / Bad Cases
 
-- Good：新增旅行目录，分别填写 `stops` 与 `alternatives`，再在 `src/trips/index.ts` 注册。
+- Good：生产页面使用同源代理，安全密钥留在 Pages Secret，代理转发真实 Referer。
 - Base：没有高德配置时，行程内容可读，地图区域明确提示配置方式。
-- Bad：把备选混入 `stops` 后再用名称排除，或让备选点参与每日连线。
+- Bad：把安全密钥放进 `VITE_` 变量，或代理丢弃 Referer 后再启用域名白名单。
 
 ### 6. Tests Required
 
 - `npm run lint`
 - `npm run typecheck`
 - `npm run build`
+- `node --check functions/_AMapService/[[path]].js`
+- 用自定义域 Referer 请求 `/_AMapService`，断言高德返回 `status=1`；不带合法 Referer 时不得误报成功。
+- 检查生产 bundle 不包含 `AMAP_SECURITY_JS_CODE` 的值。
 - 检查 `stops` 与 `alternatives` 的 ID 不重复，且 `alternatives.score > 6`。
 - 浏览器检查 `/`、已知详情 URL、未知 URL、日期筛选和缺失配置状态。
 - 移动端检查地图容器与触摸缩放配置。
@@ -94,6 +105,14 @@ export function QingdaoPage() { /* copied renderer */ }
 
 // Correct: 两类数据进入唯一渲染器
 <TripPage trip={findTrip(slug)} />
+```
+
+```js
+// Wrong: 开启域名白名单后丢弃 Referer
+headers: { Accept: request.headers.get("Accept") ?? "*/*" }
+
+// Correct: 只选择性转发高德校验需要的 Referer
+if (referer) upstreamHeaders.set("Referer", referer);
 ```
 
 ## Avoid
