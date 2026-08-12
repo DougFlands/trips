@@ -48,3 +48,40 @@ Initialized Trellis, migrated the travel guide to static Vite and reusable trip 
 ### Status
 
 [OK] **Completed**
+
+
+## Session 3: Tailwind UI and Qingdao feature migration
+
+**Date**: 2026-08-12
+**Task**: Tailwind UI and Qingdao feature migration
+**Branch**: `main`
+
+### Summary
+
+Installed Tailwind v4 with shadcn source components, ReUI Timeline, Kibo Announcement and local agent skills. Moved the Qingdao/Yantai/Weihai page into a feature-owned renderer with local map CSS and route registry.
+
+### Main Changes
+
+- Tailwind v4 + shadcn UI primitives
+- ReUI Timeline and Kibo Announcement
+- Feature-owned Qingdao trip page and styles
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `14fcb83` | (see git log) |
+
+### Testing
+
+- [OK] npm run check
+- [OK] npm audit --audit-level=high
+- [OK] node --check functions/_AMapService/[[path]].js
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- Add another trip under src/trips/<slug> with its own page.tsx and styles.css
