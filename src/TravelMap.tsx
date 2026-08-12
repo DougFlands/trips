@@ -408,21 +408,33 @@ export function TravelMap({
         : "高德 JS API 2.0 加载中…";
 
   return (
-    <div className="map-wrap">
-      <div ref={containerRef} className="map-canvas" aria-label={label} />
+    <div className="relative min-w-0 bg-[#eef1e9]">
+      <div
+        ref={containerRef}
+        className="h-[680px] w-full touch-none bg-[#eef1e9] max-md:h-[460px]"
+        aria-label={label}
+      />
       {status !== "ready" && (
-        <div className={`map-status ${status}`}>{statusText}</div>
+        <div
+          className={`absolute left-1/2 top-1/2 z-[510] w-[min(420px,calc(100%-2rem))] -translate-x-1/2 -translate-y-1/2 border bg-[#182126]/95 px-5 py-[18px] text-center font-mono text-[11px] font-extrabold leading-[1.7] text-[#fff3a6] shadow-[7px_7px_0_rgb(21_25_29_/_20%)] ${
+            status === "error"
+              ? "border-[#d93047]"
+              : "border-[#f2dc00]/60"
+          }`}
+        >
+          {statusText}
+        </div>
       )}
-      <div className="map-legend">
-        <span>
-          <i className="planned" /> 要去的 / 顺序连线
+      <div className="absolute left-3 top-3 z-[500] flex max-w-[calc(100%-1.5rem)] flex-wrap gap-3 border border-[#15191d]/40 bg-[#182126]/90 px-2.5 py-2 font-mono text-[9px] font-bold text-[#fff5a4]">
+        <span className="flex items-center gap-1.5">
+          <i className="size-2.5 rotate-45 bg-[#f2dc00]" /> 要去的 / 顺序连线
         </span>
-        <span>
-          <i className="alternative" /> 6+ 备选
+        <span className="flex items-center gap-1.5">
+          <i className="size-2.5 rounded-full border border-[#f2dc00]" /> 6+ 备选
         </span>
       </div>
       <button
-        className="map-location-button"
+        className="absolute right-3 top-3 z-[520] border border-[#f2dc00]/70 bg-[#182126]/95 px-2.5 py-2 font-mono text-[9px] font-extrabold text-[#f2dc00] hover:bg-[#d93047] hover:text-[#fff3a6] disabled:cursor-wait disabled:opacity-65"
         type="button"
         onClick={locateUser}
         disabled={locating || status !== "ready"}
@@ -430,11 +442,16 @@ export function TravelMap({
         {locating ? "定位中…" : "我的位置 ↗"}
       </button>
       {locationError && (
-        <div className="map-location-error" role="status">
+        <div
+          className="absolute right-3 top-12 z-[520] max-w-[230px] border border-[#d93047] bg-[#182126]/95 px-2 py-1.5 font-mono text-[9px] font-bold leading-[1.4] text-[#fff3a6]"
+          role="status"
+        >
           {locationError}
         </div>
       )}
-      <div className="map-hint">高德 JS API 2.0 // 列表点击聚焦 · 地图可拖动/双指缩放</div>
+      <div className="absolute bottom-3 left-3 z-[500] border border-[#15191d]/40 bg-[#182126]/90 px-2.5 py-1.5 font-mono text-[9px] font-bold text-[#fff5a4]">
+        高德 JS API 2.0 // 列表点击聚焦 · 地图可拖动/双指缩放
+      </div>
     </div>
   );
 }

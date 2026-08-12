@@ -4,11 +4,11 @@
 
 - `src/main.tsx` 是唯一浏览器入口。
 - `src/App.tsx` 解析 `/`、`/trips/<slug>/` 与站内 404。
-- `src/TripPage.tsx` 是唯一旅行详情渲染器。
+- `src/trips/<slug>/page.tsx` 是旅行详情渲染器；`src/trips/index.ts` 将 slug 映射到页面组件。
 - `src/TravelMap.tsx` 隔离高德地图脚本、实例与覆盖物。
 - `src/trips/index.ts` 是旅行注册表。
 - `src/trips/<slug>/trip.ts` 保存单趟旅行数据。
-- `src/styles.css` 保存全站黄色赛博朋克视觉系统。
+- `src/styles.css` 保存 Tailwind 入口、shadcn tokens 与通用浏览器规则；旅行主题样式属于旅行目录。
 
 ## Local Patterns
 
@@ -17,6 +17,25 @@
 - UI 筛选使用组件本地状态，不增加状态库。
 - 路由使用 `window.location.pathname` 和普通链接，不增加路由库。
 - 只有跨旅行复用的 UI 才进入公共组件。
+
+### Convention: Feature-owned trip pages
+
+旅行注册表同时保存数据和页面组件映射；入口只解析 slug，不复制旅行渲染器。
+
+```ts
+const tripPages: Record<string, ComponentType<{ trip: Trip }>> = {
+  [qingdaoYantaiWeihaiTrip.slug]: QingdaoTripPage,
+};
+
+const Page = findTripPage(trip.slug);
+return Page ? <Page trip={trip} /> : <NotFound />;
+```
+
+旅行专属的 `page.tsx`、`styles.css` 和区块组件放在 `src/trips/<slug>/`。页面使用 Tailwind utilities；全局 `src/styles.css` 只保留 Tailwind import、shadcn CSS variables、基础 reset 和通用 focus/reduced-motion 规则。AMap imperatively-created marker/popup 可以继续使用旅行目录内的少量 CSS。
+
+### Convention: Source-owned UI registries
+
+普通控件从 `src/components/ui` 的 shadcn 源码组件组合；需要复杂交互时，按需从 `@reui` registry 或 Kibo CLI 下载源码到 `src/components/reui` / `src/components/kibo-ui`。安装后必须阅读生成文件、修正项目别名并运行 lint/typecheck/build，不能把整套 registry 当运行时依赖。
 
 ## Design Decision: Trip Folder, Place Data
 
@@ -100,11 +119,12 @@ onRequest(context): Promise<Response>
 ### 7. Wrong vs Correct
 
 ```ts
-// Wrong: 每个旅行复制页面
-export function QingdaoPage() { /* copied renderer */ }
+// Wrong: 新旅行复制青岛页面和样式
+export function AnotherTripPage() { /* copied Qingdao renderer */ }
 
-// Correct: 两类数据进入唯一渲染器
-<TripPage trip={findTrip(slug)} />
+// Correct: 注册自己的页面，公共能力按需复用
+const Page = findTripPage(slug);
+return Page ? <Page trip={findTrip(slug)!} /> : <NotFound />;
 ```
 
 ```js

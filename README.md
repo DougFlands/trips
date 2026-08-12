@@ -1,6 +1,6 @@
 # 旅行攻略
 
-基于 Vite、React、TypeScript 与高德地图 JS API 2.0 的静态旅行站点。
+基于 Vite、React、TypeScript、Tailwind CSS 与高德地图 JS API 2.0 的静态旅行站点。
 
 ## 本地运行
 
@@ -9,6 +9,16 @@
 ```powershell
 npm install
 npm run dev
+```
+
+UI 组件使用 shadcn/ui 的源码模式。ReUI 和 Kibo UI 通过 registry/CLI 按需下载源码，组件落在 `src/components/`，旅行专属组合和样式留在对应的 `src/trips/<slug>/` 目录。
+
+```powershell
+# 已配置 ReUI registry；按需安装一个组件
+npx shadcn@latest add @reui/timeline
+
+# Kibo UI 组件
+npx kibo-ui add announcement
 ```
 
 ```env
@@ -33,10 +43,13 @@ npm run check
 ## 增加旅行
 
 1. 在 `src/trips/<slug>/trip.ts` 新增一份 `Trip` 数据。
-2. 在 `src/trips/index.ts` 注册。
-3. 访问 `/trips/<slug>/`。
+2. 在 `src/trips/<slug>/page.tsx` 新增该旅行的页面组件和 Tailwind 样式。
+3. 在 `src/trips/index.ts` 注册数据与页面组件。
+4. 访问 `/trips/<slug>/`。
 
 景点直接放在该旅行的 `stops` 数组中。只有景点存在专属页面或大量资源时，才单独建目录。
+
+`src/App.tsx` 只负责路径解析和入口状态；旅行页面可以共享 `TravelMap`、类型和 UI primitives，但不要复制其他旅行的页面样式。
 
 ## Cloudflare Pages
 
