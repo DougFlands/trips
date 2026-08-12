@@ -43,6 +43,9 @@ npm run check
 - Framework preset：`Vite`
 - Build command：`npm run build`
 - Build output directory：`dist`
-- 环境变量：`VITE_AMAP_KEY`、`VITE_AMAP_SECURITY_JS_CODE`
+- 构建变量：`VITE_AMAP_KEY`
+- Pages Secret：`AMAP_SECURITY_JS_CODE`（加密保存，供 `functions/_AMapService` 使用）
+
+生产环境通过 Pages Function 代理高德请求，安全密钥不会进入浏览器产物。开发环境仍可在 `.env.local` 中填写 `VITE_AMAP_SECURITY_JS_CODE`。
 
 站点没有自定义 `404.html`，Cloudflare Pages 会将未知路径交给单页应用入口，详情页可直接访问。

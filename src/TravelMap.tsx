@@ -49,7 +49,9 @@ type AMapLoader = {
 
 declare global {
   interface Window {
-    _AMapSecurityConfig?: { securityJsCode: string };
+    _AMapSecurityConfig?:
+      | { securityJsCode: string }
+      | { serviceHost: string };
     AMapLoader?: AMapLoader;
   }
 }
@@ -92,8 +94,14 @@ function loadLoader() {
   return loaderPromise;
 }
 
-async function loadAMap(key: string, securityJsCode: string) {
-  window._AMapSecurityConfig = { securityJsCode };
+async function loadAMap(
+  key: string,
+  securityJsCode: string,
+  serviceHost: string,
+) {
+  window._AMapSecurityConfig = serviceHost
+    ? { serviceHost }
+    : { securityJsCode };
   await loadLoader();
 
   amapPromise ??= window.AMapLoader!.load({
@@ -160,11 +168,15 @@ export function TravelMap({
     "missing" | "loading" | "ready" | "error"
   >("loading");
   const key = import.meta.env.VITE_AMAP_KEY?.trim() ?? "";
-  const securityJsCode =
-    import.meta.env.VITE_AMAP_SECURITY_JS_CODE?.trim() ?? "";
+  const securityJsCode = import.meta.env.DEV
+    ? (import.meta.env.VITE_AMAP_SECURITY_JS_CODE?.trim() ?? "")
+    : "";
+  const serviceHost = import.meta.env.DEV
+    ? ""
+    : `${window.location.origin}/_AMapService`;
 
   useEffect(() => {
-    if (!key || !securityJsCode) {
+    if (!key || (import.meta.env.DEV && !securityJsCode)) {
       setStatus("missing");
       return;
     }
@@ -172,7 +184,7 @@ export function TravelMap({
     let cancelled = false;
     setStatus("loading");
 
-    loadAMap(key, securityJsCode)
+    loadAMap(key, securityJsCode, serviceHost)
       .then((AMap) => {
         if (cancelled || !containerRef.current) return;
 
@@ -208,7 +220,7 @@ export function TravelMap({
       mapRef.current?.destroy();
       mapRef.current = null;
     };
-  }, [key, securityJsCode, stops]);
+  }, [key, securityJsCode, serviceHost, stops]);
 
   useEffect(() => {
     const map = mapRef.current;

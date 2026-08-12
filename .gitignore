@@ -1,11 +1,9 @@
 /node_modules/
 /dist/
-/.next/
-/.vinext/
-/.wrangler/
 
 .env*
 !.env.example
+.dev.vars*
 
 *.log
 .DS_Store
