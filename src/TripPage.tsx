@@ -1,11 +1,23 @@
 import { useState, type CSSProperties } from "react";
 import { amapUrl, TravelMap } from "./TravelMap";
-import type { Trip } from "./trips/types";
+import type { Trip, TripPlace } from "./trips/types";
 
 type DayFilter = number | "all";
 
+function defaultDayForToday(days: Trip["days"]): DayFilter {
+  const now = new Date();
+  const today = `${String(now.getMonth() + 1).padStart(2, "0")}.${String(
+    now.getDate(),
+  ).padStart(2, "0")}`;
+  const dayIndex = days.findIndex((day) => day.date === today);
+  return dayIndex >= 0 ? dayIndex : "all";
+}
+
 export function TripPage({ trip }: { trip: Trip }) {
-  const [activeDay, setActiveDay] = useState<DayFilter>("all");
+  const [activeDay, setActiveDay] = useState<DayFilter>(() =>
+    defaultDayForToday(trip.days),
+  );
+  const [focusedPlaceId, setFocusedPlaceId] = useState<string | null>(null);
   const visibleStops =
     activeDay === "all"
       ? trip.stops
@@ -23,6 +35,17 @@ export function TripPage({ trip }: { trip: Trip }) {
     document.querySelector("#map")?.scrollIntoView({ behavior: "smooth" });
   }
 
+  function scrollPage(direction: -1 | 1) {
+    window.scrollBy({
+      top: direction * Math.round(window.innerHeight * 0.5),
+      behavior: "smooth",
+    });
+  }
+
+  function focusPlace(place: TripPlace) {
+    setFocusedPlaceId(place.id);
+  }
+
   return (
     <main>
       <nav className="topbar">
@@ -32,12 +55,30 @@ export function TripPage({ trip }: { trip: Trip }) {
         <div>
           <a href="#map">MAP</a>
           <a href="#plan">PLAN</a>
+          <a href="#meal">MEAL</a>
           <a href="#book">BOOK</a>
         </div>
         <span className="status">
           <i /> ROUTE ONLINE
         </span>
       </nav>
+
+      <div className="page-scroll-controls" aria-label="页面滚动控制">
+        <button
+          type="button"
+          aria-label="向上滚动半页"
+          onClick={() => scrollPage(-1)}
+        >
+          ↑
+        </button>
+        <button
+          type="button"
+          aria-label="向下滚动半页"
+          onClick={() => scrollPage(1)}
+        >
+          ↓
+        </button>
+      </div>
 
       <header
         className="hero section-shell"
@@ -47,9 +88,13 @@ export function TripPage({ trip }: { trip: Trip }) {
         <div className="hero-kicker">[ {trip.kicker} ]</div>
         <h1>
           {trip.title}
-          <span>//</span>
-          <br />
-          {trip.subtitle}
+          {trip.subtitle && (
+            <>
+              <span>//</span>
+              <br />
+              {trip.subtitle}
+            </>
+          )}
         </h1>
         <p>
           {trip.dateRange} · {trip.intro}
@@ -95,7 +140,7 @@ export function TripPage({ trip }: { trip: Trip }) {
             <small>AMAP ROUTE</small>
             <h2>点位地图</h2>
           </div>
-          <p>地图内支持鼠标滚轮、双击和移动端双指缩放。</p>
+          <p>地图支持拖动、双击和移动端双指缩放；页面滚动不再嵌套。</p>
         </div>
         <div className="tabs" role="group" aria-label="按日期筛选地图">
           <button
@@ -120,14 +165,6 @@ export function TripPage({ trip }: { trip: Trip }) {
         </div>
         <div className="map-grid cyber-panel">
           <aside className="stop-panel">
-            <header>
-              <small>{activeInfo?.date ?? "FULL ROUTE"}</small>
-              <h3>{activeInfo?.title ?? "完整路线"}</h3>
-              <p>
-                {activeInfo?.summary ??
-                  "切换日期，地图会聚焦当天动线。点击箭头可在高德地图继续导航。"}
-              </p>
-            </header>
             <section className="point-group planned">
               <h4>
                 <span>要去的</span>
@@ -137,6 +174,16 @@ export function TripPage({ trip }: { trip: Trip }) {
                 {visibleStops.map((stop) => (
                   <li
                     key={stop.id}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`在地图上查看${stop.name}`}
+                    onClick={() => focusPlace(stop)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        focusPlace(stop);
+                      }
+                    }}
                     style={
                       {
                         "--accent":
@@ -152,7 +199,12 @@ export function TripPage({ trip }: { trip: Trip }) {
                       <strong>{stop.name}</strong>
                       <p>{stop.note}</p>
                     </div>
-                    <a href={amapUrl(stop)} target="_blank" rel="noreferrer">
+                    <a
+                      href={amapUrl(stop)}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(event) => event.stopPropagation()}
+                    >
                       ↗
                     </a>
                   </li>
@@ -174,6 +226,16 @@ export function TripPage({ trip }: { trip: Trip }) {
                   return (
                     <li
                       key={place.id}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`在地图上查看${place.name}`}
+                      onClick={() => focusPlace(place)}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          focusPlace(place);
+                        }
+                      }}
                       style={
                         {
                           "--accent": cityDay?.color ?? "var(--cyan)",
@@ -186,7 +248,12 @@ export function TripPage({ trip }: { trip: Trip }) {
                         <strong>{place.name}</strong>
                         <p>{place.note}</p>
                       </div>
-                      <a href={amapUrl(place)} target="_blank" rel="noreferrer">
+                      <a
+                        href={amapUrl(place)}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                      >
                         ↗
                       </a>
                     </li>
@@ -200,6 +267,7 @@ export function TripPage({ trip }: { trip: Trip }) {
             alternatives={trip.alternatives}
             days={trip.days}
             activeDay={activeDay}
+            focusPlaceId={focusedPlaceId}
             label={`高德地图：${trip.title}${trip.subtitle}旅行点位`}
           />
         </div>
@@ -245,11 +313,55 @@ export function TripPage({ trip }: { trip: Trip }) {
         </div>
       </section>
 
+      <section className="section-shell meal-section" id="meal">
+        <div className="section-head">
+          <div>
+            <span>03</span>
+            <small>MEAL PLAN</small>
+            <h2>吃饭计划</h2>
+          </div>
+          <p>按路线排主选；排队、关店或赶车就切换 Plan B。</p>
+        </div>
+        <div className="meal-grid">
+          {trip.meals.map((meal) => (
+            <article className="meal-card" key={`${meal.date}-${meal.slot}`}>
+              <header>
+                <b>{meal.date}</b>
+                <small>
+                  {meal.slot} // {meal.city}
+                </small>
+              </header>
+              <h3>{meal.route}</h3>
+              <div className="meal-option primary">
+                <small>PLAN A</small>
+                <strong>{meal.planA.name}</strong>
+                <p>{meal.planA.note}</p>
+                {meal.planA.link && (
+                  <a href={meal.planA.link.href} target="_blank" rel="noreferrer">
+                    {meal.planA.link.label}
+                  </a>
+                )}
+              </div>
+              <div className="meal-option fallback">
+                <small>PLAN B</small>
+                <strong>{meal.planB.name}</strong>
+                <p>{meal.planB.note}</p>
+                {meal.planB.link && (
+                  <a href={meal.planB.link.href} target="_blank" rel="noreferrer">
+                    {meal.planB.link.label}
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="book-section" id="book">
         <div className="section-shell">
           <div className="section-head light">
             <div>
-              <span>03</span>
+              <span>04</span>
               <small>MISSION QUEUE</small>
               <h2>预订清单</h2>
             </div>
@@ -290,7 +402,8 @@ export function TripPage({ trip }: { trip: Trip }) {
       <footer className="footer">
         <div>
           <strong>
-            {trip.title}//{trip.subtitle}
+            {trip.title}
+            {trip.subtitle && `//${trip.subtitle}`}
           </strong>
           <span>{trip.fullDateRange}</span>
         </div>

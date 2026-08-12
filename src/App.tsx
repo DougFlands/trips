@@ -12,7 +12,7 @@ const trip =
 export function App() {
   const isIndex = pathname === "/";
   const title = trip
-    ? `${trip.title} · ${trip.subtitle}`
+    ? `${trip.title}${trip.subtitle ? ` · ${trip.subtitle}` : ""}`
     : isIndex
       ? "旅行攻略"
       : "页面不存在 · 旅行攻略";
@@ -73,7 +73,7 @@ function TripIndex() {
               <small>ROUTE {String(index + 1).padStart(2, "0")}</small>
               <h2>
                 {item.title}
-                <span>//{item.subtitle}</span>
+                {item.subtitle && <span>//{item.subtitle}</span>}
               </h2>
               <p>{item.intro}</p>
               <div>

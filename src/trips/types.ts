@@ -31,6 +31,21 @@ export type TripLink = {
   href: string;
 };
 
+export type TripMealOption = {
+  name: string;
+  note: string;
+  link?: TripLink;
+};
+
+export type TripMeal = {
+  date: string;
+  slot: string;
+  city: string;
+  route: string;
+  planA: TripMealOption;
+  planB: TripMealOption;
+};
+
 export type Trip = {
   slug: string;
   code: string;
@@ -50,6 +65,7 @@ export type Trip = {
   days: TripDay[];
   stops: TripStop[];
   alternatives: TripPlace[];
+  meals: TripMeal[];
   bookings: Array<{
     eyebrow: string;
     title: string;

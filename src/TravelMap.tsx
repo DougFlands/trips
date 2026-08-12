@@ -151,6 +151,7 @@ type TravelMapProps = {
   alternatives: TripPlace[];
   days: TripDay[];
   activeDay: DayFilter;
+  focusPlaceId?: string | null;
   label: string;
 };
 
@@ -159,11 +160,15 @@ export function TravelMap({
   alternatives,
   days,
   activeDay,
+  focusPlaceId = null,
   label,
 }: TravelMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<AMapInstance | null>(null);
+  const userMarkerRef = useRef<AMapOverlay | null>(null);
   const [api, setApi] = useState<AMapNamespace | null>(null);
+  const [locating, setLocating] = useState(false);
+  const [locationError, setLocationError] = useState<string | null>(null);
   const [status, setStatus] = useState<
     "missing" | "loading" | "ready" | "error"
   >("loading");
@@ -198,7 +203,7 @@ export function TravelMap({
           showLabel: true,
           dragEnable: true,
           zoomEnable: true,
-          scrollWheel: true,
+          scrollWheel: false,
           doubleClickZoom: true,
           keyboardEnable: true,
           touchZoom: true,
@@ -217,10 +222,55 @@ export function TravelMap({
 
     return () => {
       cancelled = true;
+      if (mapRef.current && userMarkerRef.current) {
+        mapRef.current.remove(userMarkerRef.current);
+        userMarkerRef.current = null;
+      }
       mapRef.current?.destroy();
       mapRef.current = null;
     };
   }, [key, securityJsCode, serviceHost, stops]);
+
+  function locateUser() {
+    if (!api || !mapRef.current) return;
+    if (!navigator.geolocation) {
+      setLocationError("当前浏览器不支持定位");
+      return;
+    }
+
+    setLocating(true);
+    setLocationError(null);
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        const map = mapRef.current;
+        if (!map || !api) return;
+
+        const position: [number, number] = [coords.longitude, coords.latitude];
+        if (userMarkerRef.current) map.remove(userMarkerRef.current);
+
+        const markerNode = document.createElement("span");
+        markerNode.className = "map-user-marker";
+        markerNode.title = "我的位置";
+        const marker = new api.Marker({
+          position,
+          content: markerNode,
+          anchor: "center",
+          zIndex: 100,
+          title: "我的位置",
+        });
+
+        map.add(marker);
+        map.setZoomAndCenter(14, position);
+        userMarkerRef.current = marker;
+        setLocating(false);
+      },
+      () => {
+        setLocating(false);
+        setLocationError("无法获取位置，请检查浏览器定位权限");
+      },
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 },
+    );
+  }
 
   useEffect(() => {
     const map = mapRef.current;
@@ -331,11 +381,24 @@ export function TravelMap({
         activeDay === "all" ? 8 : 13,
       );
 
+    const focusedPlace = focusPlaceId
+      ? shownPlaces.find((place) => place.id === focusPlaceId)
+      : undefined;
+    const focusedInfoWindow = focusedPlace
+      ? infoWindows[shownPlaces.indexOf(focusedPlace)]
+      : undefined;
+
+    if (focusedPlace && focusedInfoWindow) {
+      infoWindows.forEach((window) => window.close());
+      currentMap.setZoomAndCenter(14, focusedPlace.coord);
+      focusedInfoWindow.open(currentMap, focusedPlace.coord);
+    }
+
     return () => {
       infoWindows.forEach((window) => window.close());
       if (mapRef.current === map && overlays.length) map.remove(overlays);
     };
-  }, [activeDay, alternatives, api, days, stops]);
+  }, [activeDay, alternatives, api, days, focusPlaceId, stops]);
 
   const statusText =
     status === "missing"
@@ -358,7 +421,20 @@ export function TravelMap({
           <i className="alternative" /> 6+ 备选
         </span>
       </div>
-      <div className="map-hint">高德 JS API 2.0 // 滚轮或双指缩放</div>
+      <button
+        className="map-location-button"
+        type="button"
+        onClick={locateUser}
+        disabled={locating || status !== "ready"}
+      >
+        {locating ? "定位中…" : "我的位置 ↗"}
+      </button>
+      {locationError && (
+        <div className="map-location-error" role="status">
+          {locationError}
+        </div>
+      )}
+      <div className="map-hint">高德 JS API 2.0 // 列表点击聚焦 · 地图可拖动/双指缩放</div>
     </div>
   );
 }
