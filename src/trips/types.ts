@@ -18,6 +18,9 @@ export type TripPlace = {
   score: number;
   note: string;
   coord: Coordinate;
+  category?: string;
+  markerLabel?: string;
+  markerColor?: string;
 };
 
 export type TripStop = TripPlace & {
@@ -65,6 +68,7 @@ export type Trip = {
   days: TripDay[];
   stops: TripStop[];
   alternatives: TripPlace[];
+  koreanRestaurants?: TripPlace[];
   meals: TripMeal[];
   bookings: Array<{
     eyebrow: string;

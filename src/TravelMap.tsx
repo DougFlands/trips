@@ -18,6 +18,8 @@ type AMapInstance = {
     maxZoom?: number,
   ) => void;
   setZoomAndCenter: (zoom: number, center: [number, number]) => void;
+  zoomIn: () => void;
+  zoomOut: () => void;
   destroy: () => void;
 };
 
@@ -151,6 +153,7 @@ export type TravelMapProps = {
   activeDay: DayFilter;
   focusPlaceId?: string | null;
   label: string;
+  fitMaxZoom?: number;
 };
 
 export function TravelMap({
@@ -160,6 +163,7 @@ export function TravelMap({
   activeDay,
   focusPlaceId = null,
   label,
+  fitMaxZoom = 8,
 }: TravelMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<AMapInstance | null>(null);
@@ -286,6 +290,7 @@ export function TravelMap({
     const shownPlaces = [...shownStops, ...shownAlternatives];
     const overlays: AMapOverlay[] = [];
     const infoWindows: AMapInfoWindow[] = [];
+    const infoWindowByPlaceId = new Map<string, AMapInfoWindow>();
 
     for (const dayIndex of new Set(shownStops.map((stop) => stop.day))) {
       const route = shownStops
@@ -339,6 +344,7 @@ export function TravelMap({
       });
       overlays.push(marker);
       infoWindows.push(infoWindow);
+      infoWindowByPlaceId.set(place.id, infoWindow);
     }
 
     shownStops.forEach((stop) => {
@@ -354,15 +360,16 @@ export function TravelMap({
 
     shownAlternatives.forEach((place) => {
       const color =
+        place.markerColor ??
         (activeDay === "all"
           ? days.find((day) => day.city === place.city)?.color
           : days[activeDay]?.color) ?? "#008f9c";
       addMarker(
         place,
-        place.score.toFixed(1),
+        place.markerLabel ?? place.score.toFixed(1),
         color,
         "alternative",
-        `${place.city} // 6+ 备选 // 推荐 ${place.score.toFixed(1)}`,
+        `${place.category ?? "备选"} // ${place.city} // 推荐 ${place.score.toFixed(1)}`,
       );
     });
 
@@ -374,14 +381,14 @@ export function TravelMap({
         overlays,
         false,
         [55, 55, 55, 55],
-        activeDay === "all" ? 8 : 13,
+        activeDay === "all" ? fitMaxZoom : 13,
       );
 
     const focusedPlace = focusPlaceId
       ? shownPlaces.find((place) => place.id === focusPlaceId)
       : undefined;
     const focusedInfoWindow = focusedPlace
-      ? infoWindows[shownPlaces.indexOf(focusedPlace)]
+      ? infoWindowByPlaceId.get(focusedPlace.id)
       : undefined;
 
     if (focusedPlace && focusedInfoWindow) {
@@ -394,7 +401,7 @@ export function TravelMap({
       infoWindows.forEach((window) => window.close());
       if (mapRef.current === map && overlays.length) map.remove(overlays);
     };
-  }, [activeDay, alternatives, api, days, focusPlaceId, stops]);
+  }, [activeDay, alternatives, api, days, fitMaxZoom, focusPlaceId, stops]);
 
   const statusText =
     status === "missing"
@@ -431,6 +438,28 @@ export function TravelMap({
       >
         {locating ? "…" : "◎"}
       </button>
+      <div className="absolute bottom-3 right-3 z-[520] grid border border-[#f2dc00]/70 bg-[#182126]/95 shadow-[0_0_0_3px_rgb(24_33_38_/_18%)]">
+        <button
+          className="grid size-9 place-items-center border-b border-[#f2dc00]/35 font-sans text-xl leading-none text-[#f2dc00] hover:bg-[#d93047] hover:text-[#fff3a6] disabled:cursor-not-allowed disabled:opacity-65"
+          type="button"
+          onClick={() => mapRef.current?.zoomIn()}
+          disabled={status !== "ready"}
+          aria-label="放大地图"
+          title="放大地图"
+        >
+          +
+        </button>
+        <button
+          className="grid size-9 place-items-center font-sans text-xl leading-none text-[#f2dc00] hover:bg-[#d93047] hover:text-[#fff3a6] disabled:cursor-not-allowed disabled:opacity-65"
+          type="button"
+          onClick={() => mapRef.current?.zoomOut()}
+          disabled={status !== "ready"}
+          aria-label="缩小地图"
+          title="缩小地图"
+        >
+          -
+        </button>
+      </div>
       {locationError && (
         <div
           className="absolute bottom-14 left-3 z-[520] max-w-[230px] border border-[#d93047] bg-[#182126]/95 px-2 py-1.5 font-mono text-[9px] font-bold leading-[1.4] text-[#fff3a6]"

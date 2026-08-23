@@ -101,6 +101,7 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
         <div className="hidden gap-7 text-[#596052] md:flex">
           {[
             ["MAP", "#map"],
+            ["K-FOOD", "#korean-food"],
             ["PLAN", "#plan"],
             ["MEAL", "#meal"],
             ["BOOK", "#book"],
@@ -339,6 +340,42 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
           />
         </div>
       </section>
+
+      {trip.koreanRestaurants && trip.koreanRestaurants.length > 0 && (
+        <section className={`${shell} pt-20 sm:pt-[90px]`} id="korean-food">
+          <SectionHeading number="01K" eyebrow="CITY CENTER K-FOOD" title="市中心韩餐推荐">
+            只保留市南、市北核心商圈；地图标记鳗鱼、炸鸡和烤肉，城阳店不放进来。
+          </SectionHeading>
+          <div className={`${panel} flex min-h-[590px] flex-col-reverse items-stretch md:grid md:grid-cols-[390px_1fr] md:items-start`}>
+            <ScrollArea className="h-[500px] border-b border-[#15191d]/30 md:h-[590px] md:border-b-0 md:border-r">
+              <PointGroup title="市中心韩餐" count={trip.koreanRestaurants.length} dark>
+                <ol>
+                  {trip.koreanRestaurants.map((place) => (
+                    <PlaceRow
+                      key={place.id}
+                      place={place}
+                      accent={place.markerColor ?? "#008f9c"}
+                      meta={`${place.category ?? "韩餐"} // 市中心`}
+                      score={place.markerLabel ?? "店"}
+                      alternative
+                      onFocus={() => focusPlace(place)}
+                    />
+                  ))}
+                </ol>
+              </PointGroup>
+            </ScrollArea>
+            <TravelMap
+              stops={[]}
+              alternatives={trip.koreanRestaurants}
+              days={[]}
+              activeDay="all"
+              focusPlaceId={focusedPlaceId}
+              fitMaxZoom={15}
+              label="青岛市中心韩餐地图：鳗鱼、炸鸡、烤肉"
+            />
+          </div>
+        </section>
+      )}
 
       <section className={`${shell} pt-20 sm:pt-[90px]`} id="plan">
         <SectionHeading number="02" eyebrow="DAY BY DAY" title="逐日计划">
