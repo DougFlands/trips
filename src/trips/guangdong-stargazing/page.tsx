@@ -42,6 +42,7 @@ export default function StargazingPage() {
   const controller = useRef<AbortController | null>(null);
   const unsavedPlaces = useRef(new Set<string>());
   const mounted = useRef(false);
+  const placeListRef = useRef<HTMLDivElement>(null);
   const dates = nightDates(now);
   const busy = progress !== null;
   const visible = useMemo(() => sortPlaces(places.filter(place =>
@@ -49,6 +50,21 @@ export default function StargazingPage() {
   const shownMapPlaces = useMemo(() => mapPlaces.filter(place =>
     places.some(source => source.id === place.id && `${source.name} ${source.city} ${source.district} ${source.terrain}`.toLowerCase().includes(query.trim().toLowerCase()))), [query]);
   const selected = visible.find(place => place.id === selectedId) ?? visible[0];
+
+  function selectFromMap(id: string) {
+    setSelectedId(id);
+    const viewport = placeListRef.current?.querySelector<HTMLElement>('[data-slot="scroll-area-viewport"]');
+    const card = viewport?.querySelector<HTMLElement>(`[data-place-id="${CSS.escape(id)}"]`);
+    if (!viewport || !card) return;
+    const viewBounds = viewport.getBoundingClientRect();
+    const cardBounds = card.getBoundingClientRect();
+    if (cardBounds.top >= viewBounds.top && cardBounds.bottom <= viewBounds.bottom) return;
+    // Scroll only the list viewport so selecting a marker does not move the page/map.
+    viewport.scrollTo({
+      top: viewport.scrollTop + cardBounds.top - viewBounds.top - (viewport.clientHeight - cardBounds.height) / 2,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+    });
+  }
 
   useEffect(() => {
     let cancelled = false;
@@ -174,14 +190,14 @@ export default function StargazingPage() {
         <div className="grid items-start gap-4 lg:grid-cols-[320px_minmax(0,1fr)] xl:grid-cols-[340px_minmax(0,1fr)]">
           <section aria-label="观星地点列表" className="min-w-0">
             <div className="mb-2 text-xs text-muted-foreground">地点 / {visible.length}</div>
-            <ScrollArea key={`${query.trim()}:${sortKey}:${direction}`} className="stargazing-place-scroll stargazing-enter" type="auto"><div className="flex flex-col gap-1 p-1 pr-3">
+            <ScrollArea ref={placeListRef} key={`${query.trim()}:${sortKey}:${direction}`} className="stargazing-place-scroll stargazing-enter" type="auto"><div className="flex flex-col gap-1 p-1 pr-3">
               {!visible.length && <Empty className="border px-3 py-6"><EmptyHeader><EmptyDescription>没有找到匹配地点。</EmptyDescription></EmptyHeader><EmptyContent><Button variant="outline" onClick={() => setQuery("")}>清空搜索</Button></EmptyContent></Empty>}
               {visible.map(place => {
                 const record = cache[place.id];
                 const hours = nightHours(record, date);
                 const summary = weatherSummary(hours);
                 const isSelected = place.id === selected?.id;
-                return <Card key={place.id} data-selected={isSelected} className="stargazing-place-card shrink-0 gap-0 rounded-sm p-0">
+                return <Card key={place.id} data-place-id={place.id} data-selected={isSelected} className="stargazing-place-card shrink-0 gap-0 rounded-sm p-0">
                   <Button variant="ghost" className="stargazing-place-select block h-auto w-full px-2.5 pt-2 pb-1.5 text-left whitespace-normal" aria-pressed={isSelected} onClick={() => setSelectedId(place.id)}>
                     <CardHeader className="gap-1 px-0">
                       <div className="flex items-start justify-between gap-2">
@@ -208,7 +224,7 @@ export default function StargazingPage() {
           <div className="flex min-w-0 flex-col gap-5">
             <section className="overflow-hidden rounded-sm border border-border bg-card shadow-[4px_4px_0_#e5dfcf]" aria-label="广东观星地图">
               <div className="flex justify-end border-b border-border px-2 py-1"><Button size="xs" variant="ghost" onClick={() => { setSelectedId(null); setQuery(""); }}>查看全图</Button></div>
-              <TravelMap places={shownMapPlaces} focusPlaceId={visible.some(place => place.id === selectedId) ? selectedId : null} onSelectPlace={setSelectedId} label="广东流星雨与星空拍摄地点地图" theme="paper" fitMaxZoom={8} focusZoom={11} />
+              <TravelMap places={shownMapPlaces} focusPlaceId={visible.some(place => place.id === selectedId) ? selectedId : null} onSelectPlace={selectFromMap} label="广东流星雨与星空拍摄地点地图" theme="paper" fitMaxZoom={8} focusZoom={11} />
             </section>
             {selected && <PlaceDetail key={selected.id} place={selected} record={cache[selected.id]} date={date} now={now} />}
           </div>

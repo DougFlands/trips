@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8"><title>地图首次选点回归检查</title></head>
+  <body>
+    <pre id="result">运行中…</pre><div id="root"></div>
+    <script type="module">
+      import { act, createElement, useState } from 'react';
+      import { createRoot } from 'react-dom/client';
+      import { TravelMap } from '/src/TravelMap.tsx';
+
+      // Exercise real React effects against the SDK boundary; no external map requests.
+      window.IS_REACT_ACT_ENVIRONMENT = true;
+      const calls = [];
+      const points = [
+        { id: 'west', name: '西侧点', coord: [111, 22], note: '' },
+        { id: 'east', name: '东侧点', coord: [116, 24], note: '' },
+      ];
+      let container, currentPoints = points, setFocus;
+      let center, zoom, pendingAnimation;
+      class Map {
+        constructor(element) {
+          container = element;
+          center = [113, 23];
+          pendingAnimation = null;
+        }
+        add(items) { for (const item of [items].flat()) if (item.content) container.append(item.content); }
+        remove(items) { for (const item of [items].flat()) item.content?.remove(); }
+        setFitView(items, immediately) {
+          calls.push('fit');
+          const move = () => { center = [113, 23]; zoom = 8; };
+          if (immediately) move();
+          else pendingAnimation = move;
+        }
+        setZoomAndCenter(level, position, immediately) {
+          calls.push('focus');
+          const move = () => { center = position; zoom = level; };
+          // AMap's immediate update does NOT cancel a previous animated fit/zoom.
+          if (immediately) move();
+          else pendingAnimation = move;
+        }
+        destroy() { container.replaceChildren(); }
+      }
+      class Marker {
+        constructor(options) { this.content = options.content; }
+        on(event, handler) { this.content?.addEventListener(event, handler); }
+      }
+      class InfoWindow {
+        constructor(options) { this.content = options.content; }
+        open(map, position) {
+          calls.push('open');
+          if (center.toString() !== position.toString()) calls.push('stale-popup-viewport');
+        }
+        close() {}
+      }
+      window.AMapLoader = { load: async () => ({ Map, Marker, Polyline: Marker, InfoWindow, Pixel: class {} }) };
+      function Harness({ initialFocus = null, controlled = true }) {
+        const [focus, updateFocus] = useState(initialFocus);
+        setFocus = updateFocus;
+        return createElement('div', null,
+          ...currentPoints.map(point => createElement('button', {
+            key: point.id, id: `list-${point.id}`, onClick: () => updateFocus(point.id),
+          }, point.name)),
+          createElement(TravelMap, {
+          places: currentPoints, label: '回归地图', focusZoom: 11,
+          focusPlaceId: focus, onSelectPlace: controlled ? updateFocus : undefined,
+        }));
+      }
+      const root = createRoot(document.getElementById('root'));
+      const results = [];
+      function check(condition, message) { if (!condition) throw new Error(message); }
+      function settledAt(point) {
+        pendingAnimation?.(); pendingAnimation = null;
+        check(center?.toString() === point.coord.toString() && zoom === 11, '最终位置/缩放错误');
+        check(!calls.includes('stale-popup-viewport'), '弹窗在目标定位前开启');
+      }
+      async function select(point, event = 'click') {
+        calls.length = 0;
+        await act(async () => {
+          const button = event === 'list' ? document.getElementById(`list-${point.id}`)
+            : container.querySelector(`[aria-label="选择${point.name}"]`);
+          if (event === 'click' || event === 'list') button.click();
+          else button.dispatchEvent(new KeyboardEvent('keydown', { key: event, bubbles: true }));
+        });
+        check(calls.join() === 'focus,open', `选点应只定位再开窗，实际：${calls}`);
+        settledAt(point);
+      }
+      try {
+        await act(async () => root.render(createElement(Harness)));
+        check(calls.includes('fit'), '需要本地 .env.local 的地图配置才能运行组件');
+        await select(points[1], 'list'); results.push('PASS 首次列表选点不被初始全图动画覆盖');
+        await select(points[0], 'list'); results.push('PASS 列表跨区域切换');
+        await act(async () => root.render(createElement(Harness, { key: 'marker' })));
+        await select(points[1]); results.push('PASS 首次图标点击不被初始全图动画覆盖');
+        await select(points[0], 'Enter'); results.push('PASS 键盘切换点位');
+        calls.length = 0;
+        await act(async () => container.querySelector('button').click());
+        check(calls.join() === 'open', '重复点击只需重开弹窗');
+        results.push('PASS 同一点重开弹窗');
+        await act(async () => setFocus(null));
+        await select(points[1], ' '); results.push('PASS 查看全图后空格选点');
+        currentPoints = [points[0]];
+        calls.length = 0;
+        await act(async () => root.render(createElement(Harness, { key: 'initial', initialFocus: 'west' })));
+        check(calls.join() === 'focus,open', `单点预选不能先默认缩放：${calls}`);
+        settledAt(points[0]); results.push('PASS SDK 就绪时已有单点预选');
+        await act(async () => root.render(createElement(Harness, { key: 'single' })));
+        await select(points[0], 'list'); results.push('PASS 单点默认视图后立即从列表选点');
+        calls.length = 0;
+        currentPoints = points;
+        await act(async () => root.render(createElement(Harness, { key: 'uncontrolled', controlled: false })));
+        calls.length = 0;
+        await act(async () => container.querySelector('button').click());
+        check(calls[0] === 'open' && !calls.includes('focus'), '无联动回调的地图应仍可直接开窗');
+        results.push('PASS 无联动回调的地图点击');
+        await act(async () => root.unmount());
+        document.getElementById('result').textContent = results.join('\n');
+      } catch (error) {
+        document.getElementById('result').textContent = [...results, `FAIL ${error.message}`].join('\n');
+        throw error;
+      }
+    </script>
+  </body>
+</html>

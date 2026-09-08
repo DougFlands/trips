@@ -18,7 +18,7 @@ type AMapInstance = {
     avoid?: number[],
     maxZoom?: number,
   ) => void;
-  setZoomAndCenter: (zoom: number, center: [number, number]) => void;
+  setZoomAndCenter: (zoom: number, center: [number, number], immediately?: boolean) => void;
   zoomIn: () => void;
   zoomOut: () => void;
   destroy: () => void;
@@ -383,6 +383,11 @@ export function TravelMap({
       });
 
       const select = () => {
+        // Let the controlled focus update position the map before opening its popup.
+        if (onSelectRef.current && place.id !== focusPlaceId) {
+          onSelectRef.current(place.id);
+          return;
+        }
         infoWindows.forEach((window) => window.close());
         infoWindow.open(currentMap, place.coord);
         onSelectRef.current?.(place.id);
@@ -425,16 +430,6 @@ export function TravelMap({
     places?.forEach((place) => addMarker(place, place.markerLabel ?? "•", place.markerColor ?? "#36594a", "place", place.meta ?? ""));
 
     if (overlays.length) map.add(overlays);
-    if (shownPlaces.length === 1)
-      map.setZoomAndCenter(13, shownPlaces[0].coord);
-    else if (overlays.length)
-      map.setFitView(
-        overlays,
-        false,
-        [55, 55, 55, 55],
-        activeDay === "all" ? fitMaxZoom : 13,
-      );
-
     const focusedPlace = focusPlaceId
       ? shownPlaces.find((place) => place.id === focusPlaceId)
       : undefined;
@@ -444,9 +439,19 @@ export function TravelMap({
 
     if (focusedPlace && focusedInfoWindow) {
       infoWindows.forEach((window) => window.close());
-      currentMap.setZoomAndCenter(focusZoom, focusedPlace.coord);
+      // Update the viewport before the popup measures whether it needs to pan.
+      currentMap.setZoomAndCenter(focusZoom, focusedPlace.coord, true);
       focusedInfoWindow.open(currentMap, focusedPlace.coord);
-    }
+    } else if (shownPlaces.length === 1)
+      map.setZoomAndCenter(13, shownPlaces[0].coord, true);
+    else if (overlays.length)
+      map.setFitView(
+        overlays,
+        // AMap's earlier fit animation can overwrite a later immediate focus.
+        true,
+        [55, 55, 55, 55],
+        activeDay === "all" ? fitMaxZoom : 13,
+      );
 
     return () => {
       infoWindows.forEach((window) => window.close());
