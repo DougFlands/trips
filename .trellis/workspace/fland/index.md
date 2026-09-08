@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 4
+- **Total Sessions**: 5
 - **Last Active**: 2026-09-08
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~112 | Active |
+| `journal-1.md` | ~143 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 5 | 2026-09-08 | 观星地图定位与列表滚动联动 | `3874265` | `main` |
 | 4 | 2026-09-08 | 广东观星地图与紧凑 UI | `0e26b67` | `main` |
 | 3 | 2026-08-12 | Tailwind UI and Qingdao feature migration | `14fcb83` | `main` |
 | 2 | 2026-08-12 | 高分点位与地图路线 | `3610b13` | `main` |

@@ -110,3 +110,34 @@ Installed Tailwind v4 with shadcn source components, ReUI Timeline, Kibo Announc
 ### Status
 
 [OK] **Completed**
+
+
+## Session 5: 观星地图定位与列表滚动联动
+
+**Date**: 2026-09-08
+**Task**: 观星地图定位与列表滚动联动
+**Branch**: `main`
+
+### Summary
+
+修复高德旧全图动画回写首次选点位置；地图选点后滚动列表至对应卡片。补充真实SDK证据、9项回归检查与防复发规范。
+
+### Main Changes
+
+- 全图、单点和选点视图立即更新，避免旧动画覆盖中心
+- 地图选点按地点ID滚动ScrollArea，支持排序、筛选、重复选点和减少动态效果
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `3874265` | (see git log) |
+
+### Testing
+
+- [OK] lint、TypeScript检查与生产构建通过；7项数据测试、9项地图回归通过
+- [OK] 桌面和390px实测列表首选、全图后快速选点及列表滚动；旧动画恢复时回归用例可稳定失败
+
+### Status
+
+[OK] **Completed**
