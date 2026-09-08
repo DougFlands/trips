@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-09-08",
+  "method": "Edge + unified-computer-use；可见搜索卡片、滚动与候选详情",
+  "keywords": [
+    {
+      "query": "广东流星雨拍摄",
+      "count": 51
+    },
+    {
+      "query": "广东星空拍摄",
+      "count": 58
+    },
+    {
+      "query": "广东银河拍摄机位",
+      "count": 60
+    },
+    {
+      "query": "广东暗夜观星",
+      "count": 57
+    },
+    {
+      "query": "深圳附近拍流星雨",
+      "count": 50
+    },
+    {
+      "query": "深圳周边星空摄影",
+      "count": 53
+    },
+    {
+      "query": "惠州流星雨拍摄",
+      "count": 53
+    },
+    {
+      "query": "惠州星空露营",
+      "count": 55
+    },
+    {
+      "query": "清远星空摄影",
+      "count": 50
+    },
+    {
+      "query": "韶关银河拍摄",
+      "count": 59
+    },
+    {
+      "query": "汕尾星空拍摄",
+      "count": 59
+    },
+    {
+      "query": "阳江星空摄影",
+      "count": 56
+    }
+  ],
+  "associations": 661,
+  "uniquePosts": 390,
+  "supplementalPosts": 28,
+  "totalUniquePosts": 418,
+  "detailPosts": 50,
+  "initialDetailPosts": 47,
+  "decisions": {
+    "promotion-unverified": 5,
+    "place-unclear": 122,
+    "candidate-unverified": 58,
+    "exclude-technique": 10,
+    "candidate-context": 11,
+    "candidate-area-reference": 1,
+    "exclude-unrelated": 4,
+    "candidate-reservoir-reference": 3,
+    "candidate-island-reference": 2,
+    "candidate-reservation-required": 3,
+    "candidate-beach-reference": 1,
+    "exclude-outside-guangdong": 16,
+    "candidate-viewpoint": 1,
+    "pending-detail": 160,
+    "candidate-needs-coordinate": 6,
+    "include-regional-reference": 6,
+    "unclear-no-title": 6,
+    "no-place-evidence": 14,
+    "candidate-access-unverified": 2,
+    "candidate-map-poi-verified": 1,
+    "include-peak-reference": 1,
+    "context-crowd-light": 1,
+    "pending-corroboration": 1,
+    "unresolved-specific-place": 1,
+    "include-village-reference": 1,
+    "candidate": 14,
+    "candidate-card": 41,
+    "needs-detail": 153,
+    "context": 3,
+    "hold": 2,
+    "exclude": 10,
+    "candidate-area": 1
+  },
+  "notes": "原12词计数保持独立；补充定向搜索不用于凑原词数量。详情数覆盖原记录与补充记录，按帖子ID全局去重。搜索卡片不等于已核验的地点。"
+}

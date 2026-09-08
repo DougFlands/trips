@@ -4,6 +4,7 @@
 
 - Read [Architecture](./architecture.md) before changing page structure, trip data, or the map.
 - Read [Quality](./quality.md) before changing TypeScript, dependencies, or build scripts.
+- Read [Stargazing](./stargazing.md) before changing coordinate conversion, generic map points, or cached weather.
 - Keep the site static and compatible with a browser-only deployment.
 
 ## Quality Check
@@ -18,3 +19,4 @@
 |---|---|
 | [Architecture](./architecture.md) | Components, trip content, map integration, styling |
 | [Quality](./quality.md) | Type safety, dependencies, checks, accessibility |
+| [Stargazing](./stargazing.md) | Coordinate provenance, generic map points, manual forecast and IndexedDB |

@@ -1,0 +1,341 @@
+[
+  {
+    "id": "dongchong-dapaitou",
+    "name": "东涌大排头",
+    "city": "深圳",
+    "wgs84": [
+      114.5692043,
+      22.4962212
+    ],
+    "access": "导航东涌码头、天后宫附近停车，作者路线经桥上山约15–20分钟；须现场确认通行。",
+    "nightAccess": "2025-08-13有通宵实拍，当前通行与扎营规则未核实。",
+    "bortle": null,
+    "sourceNoteIds": [
+      "689d9d24000000001d02ecf9"
+    ],
+    "district": "大鹏新区 · 南澳街道",
+    "terrain": "海边山坡",
+    "precision": "东涌社区区域参考，约2公里范围，非山顶营地精确位置",
+    "coordinateEvidence": {
+      "provider": "OpenStreetMap Nominatim",
+      "url": "https://www.openstreetmap.org/node/1551826397",
+      "query": "东涌 深圳市",
+      "object": "node/1551826397",
+      "name": "东涌社区",
+      "verifiedAt": "2026-09-08",
+      "boundingbox": [
+        "22.4862212",
+        "22.5062212",
+        "114.5592043",
+        "114.5792043"
+      ]
+    },
+    "coordinateUrl": "https://www.openstreetmap.org/node/1551826397",
+    "summary": "东涌海边高处开阔平地，有通宵星空与流星实拍。",
+    "caution": "南向海面有渔船强光；山路、海风和夜间辨路需留意。",
+    "sources": [
+      {
+        "title": "八月生 · 0813深圳东涌，我拍到了现实版梵高星空✨",
+        "url": "https://www.xiaohongshu.com/explore/689d9d24000000001d02ecf9",
+        "date": "2025-08-14"
+      }
+    ],
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E4%B8%9C%E6%B6%8C%E7%A0%81%E5%A4%B4&city=%E6%B7%B1%E5%9C%B3&view=map&src=travel-guides"
+  },
+  {
+    "id": "xiaosanmen-island",
+    "name": "小三门岛山顶",
+    "city": "惠州",
+    "wgs84": [
+      114.645858,
+      22.4393616
+    ],
+    "access": "从深圳东涌码头乘船，下船沿路标上山；岛有饭店、小卖铺，船班与住宿需提前确认。",
+    "nightAccess": "作者记录山顶露营；当前上岛、船班及营地规则未核实。",
+    "bortle": null,
+    "sourceNoteIds": [
+      "68886fbe0000000022021888"
+    ],
+    "district": "大亚湾经济技术开发区",
+    "terrain": "海岛山顶",
+    "precision": "岛屿区域参考，约2公里范围，非山顶营地精确位置",
+    "coordinateEvidence": {
+      "provider": "OpenStreetMap Nominatim",
+      "url": "https://www.openstreetmap.org/relation/11621562",
+      "query": "小三门岛",
+      "object": "relation/11621562",
+      "name": "小三门岛",
+      "verifiedAt": "2026-09-08",
+      "boundingbox": [
+        "22.4311703",
+        "22.4475815",
+        "114.6374872",
+        "114.6550745"
+      ]
+    },
+    "coordinateUrl": "https://www.openstreetmap.org/relation/11621562",
+    "summary": "离岸海岛山顶视野无遮挡，有星空营地拍摄经历。",
+    "caution": "需提前确认返程船、海况；照片效果强于作者描述的肉眼观感。",
+    "sources": [
+      {
+        "title": "桑之落矣 · 深圳周边夏日小三门岛的星空营地，附攻略",
+        "url": "https://www.xiaohongshu.com/explore/68886fbe0000000022021888",
+        "date": "2025-07-29"
+      }
+    ],
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%83%A0%E5%B7%9E%E5%B0%8F%E4%B8%89%E9%97%A8%E5%B2%9B&city=%E6%83%A0%E5%B7%9E&view=map&src=travel-guides"
+  },
+  {
+    "id": "wanlvhu",
+    "name": "万绿湖",
+    "city": "河源",
+    "district": "东源县",
+    "terrain": "湖中岛屿",
+    "wgs84": [
+      114.5382303,
+      23.9158553
+    ],
+    "precision": "新丰江水库湖区中心，约45公里湖区范围；具体岛屿不详，非登岸点或导航终点。",
+    "coordinateUrl": "https://www.openstreetmap.org/relation/397886",
+    "summary": "作者记录万绿湖岛上露营与银河实拍，确认拍摄当晚肉眼可见银河。适合把湖区作为进一步选机位的方向。",
+    "access": "作者划行至湖中岛，未公开岛名、入水点或陆路通道。出发前须落实具体营地和合规交通。",
+    "nightAccess": "有岛上露营记录，当前水域、岛屿与夜间活动管理未核实。",
+    "caution": "坐标只作湖区天气和距离参考，湖区各岸光环境差异大；不据此安排夜间涉水。",
+    "sources": [
+      {
+        "title": "不会发笔记的小林 · 银河｜万绿湖",
+        "url": "https://www.xiaohongshu.com/explore/69ee21870000000038020cc0",
+        "date": "页面显示04-26"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=%E4%B8%87%E7%BB%BF%E6%B9%96&city=%E6%B2%B3%E6%BA%90&view=map&src=travel-guides",
+    "coordinateEvidence": {
+      "provider": "OpenStreetMap Nominatim",
+      "query": "万绿湖",
+      "name": "新丰江水库",
+      "object": "relation/397886",
+      "displayName": "新丰江水库, 半江镇, 东源县, 河源市, 广东省, 中国",
+      "boundingbox": [
+        "23.7132500",
+        "24.1184916",
+        "114.3469382",
+        "114.7320000"
+      ],
+      "verifiedAt": "2026-09-08"
+    },
+    "sourceNoteIds": [
+      "69ee21870000000038020cc0"
+    ]
+  },
+  {
+    "id": "huidong-dananshan",
+    "name": "惠东大南山",
+    "city": "惠州",
+    "district": "惠东县",
+    "terrain": "山峰草甸",
+    "wgs84": [
+      114.925814,
+      22.9236604
+    ],
+    "precision": "OSM惠东大南山山峰节点，非登山入口、停车位置或作者具体机位。",
+    "coordinateUrl": "https://www.openstreetmap.org/node/6237956369",
+    "summary": "作者凌晨登山时看到流星和清晰的北斗七星，山顶视野开阔，适合有经验的徒步者踩点。",
+    "access": "需要登山，原帖未给具体起点和用时；须在白天确认路线、下撤方向与体力安排。",
+    "nightAccess": "有历史凌晨登山观星经历，现行夜间登山及露营管理未核实。",
+    "caution": "作者明确山上风很大、徒步累；勿与深圳同名大南山混淆，原帖拍摄日期早于发布日期。",
+    "sources": [
+      {
+        "title": "木子 · 惠东大南山",
+        "url": "https://www.xiaohongshu.com/explore/6996624c000000001b01c5df",
+        "date": "页面显示02-19，拍摄早于发帖"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%83%A0%E4%B8%9C%E5%A4%A7%E5%8D%97%E5%B1%B1&city=%E6%83%A0%E5%B7%9E&view=map&src=travel-guides",
+    "coordinateEvidence": {
+      "provider": "OpenStreetMap Nominatim",
+      "query": "大南山 惠东",
+      "name": "惠东大南山",
+      "object": "node/6237956369",
+      "displayName": "惠东大南山, 惠州市, 广东省, 中国",
+      "boundingbox": [
+        "22.9236104",
+        "22.9237104",
+        "114.9257640",
+        "114.9258640"
+      ],
+      "verifiedAt": "2026-09-08"
+    },
+    "sourceNoteIds": [
+      "6996624c000000001b01c5df"
+    ]
+  },
+  {
+    "id": "fenghuang-tianchi",
+    "name": "凤凰山天池",
+    "city": "潮州",
+    "district": "潮安区 · 凤凰镇",
+    "terrain": "高山湖泊",
+    "wgs84": [
+      116.6444499,
+      23.9569456
+    ],
+    "precision": "OSM天池湖泊区域中心，约300米范围，非售票处、停车点或湖畔具体机位。",
+    "coordinateUrl": "https://www.openstreetmap.org/way/310758870",
+    "summary": "作者在夜半雾散后拍到星空、云海与月落，天池景观适合作前景；可拍窗口很依赖云雾变化。",
+    "access": "作者称自驾到售票处停车，再爬约半小时至山顶。现行门票、索道与上下山安排需向景区确认。",
+    "nightAccess": "作者记录山顶露营和夜半拍摄，当前夜间进入及露营规定未核实。",
+    "caution": "容易起雾、局部光污染偏高；作者当晚肉眼看不见银河，照片不代表肉眼观感。",
+    "sources": [
+      {
+        "title": "菜箱子📸 · 凤凰天池星空云海美爆了！",
+        "url": "https://www.xiaohongshu.com/explore/6a623b30000000001003c1ff",
+        "date": "页面显示07-24"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=%E5%87%A4%E5%87%B0%E5%B1%B1%E5%A4%A9%E6%B1%A0&city=%E6%BD%AE%E5%B7%9E&view=map&src=travel-guides",
+    "coordinateEvidence": {
+      "provider": "OpenStreetMap Nominatim",
+      "query": "凤凰天池",
+      "name": "凤凰山天池",
+      "object": "way/310758870",
+      "displayName": "凤凰山天池, 凤凰镇, 潮安区, 潮州市, 广东省, 中国",
+      "boundingbox": [
+        "23.9557653",
+        "23.9581013",
+        "116.6436995",
+        "116.6454912"
+      ],
+      "verifiedAt": "2026-09-08"
+    },
+    "sourceNoteIds": [
+      "6a623b30000000001003c1ff"
+    ]
+  },
+  {
+    "id": "lanping",
+    "name": "蓝坪村",
+    "city": "惠州",
+    "district": "博罗县 · 公庄镇",
+    "terrain": "溪谷营地",
+    "wgs84": [
+      114.42013288350054,
+      23.61106310352625
+    ],
+    "precision": "蓝坪村区域POI参考，非鸭麻輋营地或具体溪岸机位。",
+    "coordinateUrl": "https://map.baidu.com/poi/蓝坪村?uid=4420764686f1ae6bdfee8b8c",
+    "summary": "攻略封面明确博罗蓝坪村，含露营夜景；可以结合白天踩点安排星空拍摄。",
+    "access": "作者称鸭麻輋露营地再往里有位置；具体路线标在原帖图中，未逐图核准。",
+    "nightAccess": "作者07-15回复晚上可去，当前通行和露营规定待确认。",
+    "caution": "溪谷遇降雨或上游来水不适合停留，夜间不能照搬溯溪路线；周末可能堵车。",
+    "sources": [
+      {
+        "title": "张汉超📷 · ⛺️惠州蓝坪村星空露营溯溪最新攻略",
+        "url": "https://www.xiaohongshu.com/explore/6a4798da00000000070258e5",
+        "date": "07-03"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=%E8%93%9D%E5%9D%AA%E6%9D%91&city=%E6%83%A0%E5%B7%9E&view=map&src=travel-guides",
+    "sourceNoteIds": [
+      "6a4798da00000000070258e5"
+    ],
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "4420764686f1ae6bdfee8b8c",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12738614.69,
+        2689210.89
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/5A8bfv",
+      "method": "检索惠州博罗蓝坪村，选择村庄POI；相邻结果明确博罗县公庄镇。详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "fengchedao",
+    "name": "汕尾风车岛",
+    "city": "汕尾",
+    "district": "城区",
+    "terrain": "风车海岸",
+    "wgs84": [
+      115.57792891426051,
+      22.739104134212287
+    ],
+    "precision": "汕尾风车岛旅游POI区域参考，未核原帖具体风机、岸线或停车点；不改称遮浪半岛。",
+    "coordinateUrl": "https://map.baidu.com/poi/汕尾风车岛?uid=6a5b9f3fdb0bc12d7bb55c6a",
+    "summary": "作者记录风车岛星空延时，远离市区的海岸环境有拍摄机会。",
+    "access": "原帖未公开风车编号、具体岸段或停车点，需白天踩点并确认合法停留区域。",
+    "nightAccess": "百度2026-09-08显示00:00–24:00，有历史夜间延时记录；不能推定所有岸段和风电场设施可夜入。",
+    "caution": "作者说明月牙升起造成画面增亮；海面渔灯、强风与局部设施照明仍会影响拍摄。",
+    "sources": [
+      {
+        "title": "momo😅 · 汕尾风车岛星空延时",
+        "url": "https://www.xiaohongshu.com/explore/69b96b44000000001a030599",
+        "date": "03-17"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%B1%95%E5%B0%BE%E9%A3%8E%E8%BD%A6%E5%B2%9B&city=%E6%B1%95%E5%B0%BE&view=map&src=travel-guides",
+    "sourceNoteIds": [
+      "69b96b44000000001a030599"
+    ],
+    "poiHours": "百度POI显示00:00–24:00，不能推定所有岸段与设施夜间开放",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "6a5b9f3fdb0bc12d7bb55c6a",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12867443.09,
+        2584209.95
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/RyPbfv",
+      "method": "搜索汕尾风车岛，结果同名且地址汕尾市城区施公寮与田下山中间；详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "yezhuzhang",
+    "name": "野猪嶂",
+    "city": "河源",
+    "district": "龙川县",
+    "terrain": "风车山",
+    "wgs84": [
+      115.36755188314031,
+      24.712275984989702
+    ],
+    "precision": "野猪嶂山峰POI参考，非车辆通行终点或具体风机平台。",
+    "coordinateUrl": "https://map.baidu.com/poi/野猪嶂?uid=ef773a0f40941637230220a1",
+    "summary": "作者于2025-07-26拍到银河，并回复肉眼可辨银河，但亮度弱于照片。",
+    "access": "作者2025年称可直接开车到顶；有读者提及距顶约3公里路段可能拦车，需核对出发当日通行。",
+    "nightAccess": "作者有夜间实拍经历，当前道路、风电场和露营管理尚未确认。",
+    "caution": "不能把一次顺利驾车经历当成常态开放；山路夜间会车、强风及雾气需留意。",
+    "sources": [
+      {
+        "title": "蓝枫 · 野猪嶂银河丨2025.7.26",
+        "url": "https://www.xiaohongshu.com/explore/6887806b00000000170341f6",
+        "date": "2025-07-28"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=%E9%87%8E%E7%8C%AA%E5%B6%82&city=%E6%B2%B3%E6%BA%90&view=map&src=travel-guides",
+    "sourceNoteIds": [
+      "6887806b00000000170341f6"
+    ],
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "ef773a0f40941637230220a1",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12844090.48,
+        2822782.73
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/D9Wbfv",
+      "method": "搜索河源野猪嶂，选地址河源市龙川县的山峰野猪嶂，排除猪兜嶂/野猪尖等不同地名；详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  }
+]

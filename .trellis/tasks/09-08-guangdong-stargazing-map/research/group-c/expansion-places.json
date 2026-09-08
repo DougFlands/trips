@@ -1,0 +1,1284 @@
+{
+  "geocoderResults": [
+    {
+      "query": "莫六公星空营地",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E8%8E%AB%E5%85%AD%E5%85%AC%E6%98%9F%E7%A9%BA%E8%90%A5%E5%9C%B0&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    },
+    {
+      "query": "桃花湖",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E6%A1%83%E8%8A%B1%E6%B9%96&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 237311988,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 243180213,
+          "lat": "22.6154085",
+          "lon": "113.8664181",
+          "category": "water",
+          "type": "lake",
+          "place_rank": 20,
+          "importance": 0.13340363241016248,
+          "addresstype": "lake",
+          "name": "桃花湖",
+          "display_name": "桃花湖, 桃源社区, 西乡街道, 宝安区, 深圳市, 广东省, 518100, 中国",
+          "address": {
+            "lake": "桃花湖",
+            "quarter": "桃源社区",
+            "suburb": "西乡街道",
+            "city": "宝安区",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "postcode": "518100",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "22.6140665",
+            "22.6167286",
+            "113.8648215",
+            "113.8676539"
+          ]
+        },
+        {
+          "place_id": 241597597,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "relation",
+          "osm_id": 11205942,
+          "lat": "30.6697966",
+          "lon": "103.9224261",
+          "category": "water",
+          "type": "lake",
+          "place_rank": 20,
+          "importance": 0.1333933356221866,
+          "addresstype": "lake",
+          "name": "桃花湖",
+          "display_name": "桃花湖, 马厂社区, 康河街道, 青羊区, 成都市, 四川省, 中国",
+          "address": {
+            "lake": "桃花湖",
+            "quarter": "马厂社区",
+            "suburb": "康河街道",
+            "city": "青羊区",
+            "state": "四川省",
+            "ISO3166-2-lvl4": "CN-SC",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "30.6684024",
+            "30.6711939",
+            "103.9209588",
+            "103.9254926"
+          ]
+        },
+        {
+          "place_id": 238594276,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 827628669,
+          "lat": "26.2138661",
+          "lon": "105.4750835",
+          "category": "water",
+          "type": "lake",
+          "place_rank": 20,
+          "importance": 0.1333933356221866,
+          "addresstype": "lake",
+          "name": "桃花湖",
+          "display_name": "桃花湖, 青龙村, 六枝特区, 六盘水市, 贵州省, 中国",
+          "address": {
+            "lake": "桃花湖",
+            "hamlet": "青龙村",
+            "county": "六枝特区",
+            "city": "六盘水市",
+            "state": "贵州省",
+            "ISO3166-2-lvl4": "CN-GZ",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "26.2127166",
+            "26.2151298",
+            "105.4735749",
+            "105.4759745"
+          ]
+        },
+        {
+          "place_id": 420271377,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 1527094929,
+          "lat": "23.3646425",
+          "lon": "111.8222100",
+          "category": "water",
+          "type": "lake",
+          "place_rank": 20,
+          "importance": 0.1333933356221866,
+          "addresstype": "lake",
+          "name": "桃花湖",
+          "display_name": "桃花湖, 德庆县, 肇庆市, 广东省, 中国",
+          "address": {
+            "lake": "桃花湖",
+            "county": "德庆县",
+            "city": "肇庆市",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "23.3638143",
+            "23.3656114",
+            "111.8213410",
+            "111.8224169"
+          ]
+        },
+        {
+          "place_id": 239059052,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "relation",
+          "osm_id": 13379567,
+          "lat": "21.6452968",
+          "lon": "108.3587258",
+          "category": "water",
+          "type": "lake",
+          "place_rank": 20,
+          "importance": 0.1333916479743648,
+          "addresstype": "lake",
+          "name": "桃花湖",
+          "display_name": "桃花湖, 渔洲坪街道, 港口区, 防城港市, 广西壮族自治区, 538000, 中国",
+          "address": {
+            "lake": "桃花湖",
+            "suburb": "渔洲坪街道",
+            "city": "港口区",
+            "district": "港口区",
+            "region": "防城港市",
+            "state": "广西壮族自治区",
+            "ISO3166-2-lvl4": "CN-GX",
+            "postcode": "538000",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "21.6422995",
+            "21.6572525",
+            "108.3550832",
+            "108.3674763"
+          ]
+        }
+      ],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    },
+    {
+      "query": "清远石林",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E6%B8%85%E8%BF%9C%E7%9F%B3%E6%9E%97&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 239227051,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 693690410,
+          "lat": "25.3219859",
+          "lon": "110.4105362",
+          "category": "landuse",
+          "type": "residential",
+          "place_rank": 24,
+          "importance": 0.08006494621194779,
+          "addresstype": "residential",
+          "name": "清苑",
+          "display_name": "清苑, 花江新村, 灵川县, 桂林市, 广西壮族自治区, 中国",
+          "address": {
+            "residential": "清苑",
+            "hamlet": "花江新村",
+            "county": "灵川县",
+            "city": "桂林市",
+            "state": "广西壮族自治区",
+            "ISO3166-2-lvl4": "CN-GX",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "25.3209809",
+            "25.3229985",
+            "110.4090275",
+            "110.4113186"
+          ]
+        },
+        {
+          "place_id": 222216318,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 99685721,
+          "lat": "39.1336567",
+          "lon": "117.1892737",
+          "category": "leisure",
+          "type": "park",
+          "place_rank": 24,
+          "importance": 0.08007336766613257,
+          "addresstype": "park",
+          "name": "奥式风情音乐公园",
+          "display_name": "奥式风情音乐公园, 光复道街道, 小树林, 河北区, 天津市, 中国",
+          "address": {
+            "park": "奥式风情音乐公园",
+            "suburb": "光复道街道",
+            "village": "小树林",
+            "city": "河北区",
+            "state": "天津市",
+            "ISO3166-2-lvl4": "CN-TJ",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "39.1332746",
+            "39.1338865",
+            "117.1888733",
+            "117.1896138"
+          ]
+        },
+        {
+          "place_id": 221735738,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 776707357,
+          "lat": "36.8296865",
+          "lon": "115.7036181",
+          "category": "landuse",
+          "type": "residential",
+          "place_rank": 24,
+          "importance": 0.08006638818951702,
+          "addresstype": "residential",
+          "name": "青年盛世嘉苑",
+          "display_name": "青年盛世嘉苑, 青年路街道, 临清市, 聊城市, 山东省, 252600, 中国",
+          "address": {
+            "residential": "青年盛世嘉苑",
+            "suburb": "青年路街道",
+            "city": "临清市",
+            "state": "山东省",
+            "ISO3166-2-lvl4": "CN-SD",
+            "postcode": "252600",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "36.8280234",
+            "36.8311778",
+            "115.7027735",
+            "115.7043707"
+          ]
+        },
+        {
+          "place_id": 224371232,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 944669395,
+          "lat": "30.3655434",
+          "lon": "120.3000591",
+          "category": "landuse",
+          "type": "residential",
+          "place_rank": 24,
+          "importance": 0.08006254596780343,
+          "addresstype": "residential",
+          "name": "青春时代雅居",
+          "display_name": "青春时代雅居, 南李家村, 南苑街道, 临平区, 杭州市, 浙江省, 中国",
+          "address": {
+            "residential": "青春时代雅居",
+            "hamlet": "南李家村",
+            "suburb": "南苑街道",
+            "city": "临平区",
+            "state": "浙江省",
+            "ISO3166-2-lvl4": "CN-ZJ",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "30.3650258",
+            "30.3663587",
+            "120.2980954",
+            "120.3021620"
+          ]
+        },
+        {
+          "place_id": 224693996,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 1106529544,
+          "lat": "30.0631118",
+          "lon": "120.2640695",
+          "category": "landuse",
+          "type": "industrial",
+          "place_rank": 24,
+          "importance": 0.08006254596780343,
+          "addresstype": "industrial",
+          "name": "杭州清源环保设施有限公司",
+          "display_name": "杭州清源环保设施有限公司, 临浦镇, 萧山区, 杭州市, 浙江省, 中国",
+          "address": {
+            "industrial": "杭州清源环保设施有限公司",
+            "town": "临浦镇",
+            "city": "萧山区",
+            "state": "浙江省",
+            "ISO3166-2-lvl4": "CN-ZJ",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "30.0622778",
+            "30.0634138",
+            "120.2631067",
+            "120.2647644"
+          ]
+        }
+      ],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    },
+    {
+      "query": "天塘顶",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A9%E5%A1%98%E9%A1%B6&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 237877195,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4162096732,
+          "lat": "23.6546975",
+          "lon": "113.8146622",
+          "category": "natural",
+          "type": "peak",
+          "place_rank": 18,
+          "importance": 0.21337448257116948,
+          "addresstype": "peak",
+          "name": "天堂顶",
+          "display_name": "天堂顶, 广州市, 广东省, 中国",
+          "address": {
+            "peak": "天堂顶",
+            "city": "广州市",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "23.6546475",
+            "23.6547475",
+            "113.8146122",
+            "113.8147122"
+          ]
+        },
+        {
+          "place_id": 237493140,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 5867361096,
+          "lat": "22.1612964",
+          "lon": "111.5519461",
+          "category": "natural",
+          "type": "peak",
+          "place_rank": 18,
+          "importance": 0.1600375013351644,
+          "addresstype": "peak",
+          "name": "天堂顶",
+          "display_name": "天堂顶, 庞北村, 阳春市, 阳江市, 广东省, 中国",
+          "address": {
+            "peak": "天堂顶",
+            "village": "庞北村",
+            "county": "阳春市",
+            "region": "阳江市",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "22.1612464",
+            "22.1613464",
+            "111.5518961",
+            "111.5519961"
+          ]
+        },
+        {
+          "place_id": 423337004,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 14026870487,
+          "lat": "24.5081766",
+          "lon": "113.2871892",
+          "category": "natural",
+          "type": "peak",
+          "place_rank": 18,
+          "importance": 0.16003075379568169,
+          "addresstype": "peak",
+          "name": "天堂顶",
+          "display_name": "天堂顶, 罗坑镇, 曲江区, 韶关市, 广东省, 中国",
+          "address": {
+            "peak": "天堂顶",
+            "town": "罗坑镇",
+            "district": "曲江区",
+            "region": "韶关市",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "24.5081266",
+            "24.5082266",
+            "113.2871392",
+            "113.2872392"
+          ]
+        },
+        {
+          "place_id": 240634527,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 5788242070,
+          "lat": "24.7001524",
+          "lon": "111.5893925",
+          "category": "natural",
+          "type": "peak",
+          "place_rank": 18,
+          "importance": 0.16000999999999999,
+          "addresstype": "peak",
+          "name": "天堂顶",
+          "display_name": "天堂顶, 江华瑶族自治县, 永州市, 湖南省, 中国",
+          "address": {
+            "peak": "天堂顶",
+            "county": "江华瑶族自治县",
+            "region": "永州市",
+            "state": "湖南省",
+            "ISO3166-2-lvl4": "CN-HN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "24.7001024",
+            "24.7002024",
+            "111.5893425",
+            "111.5894425"
+          ]
+        }
+      ],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    },
+    {
+      "query": "南雄云峰山",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E5%8D%97%E9%9B%84%E4%BA%91%E5%B3%B0%E5%B1%B1&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 240635208,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 469623730,
+          "lat": "25.1507570",
+          "lon": "102.0765609",
+          "category": "place",
+          "type": "town",
+          "place_rank": 18,
+          "importance": 0.22697289548003588,
+          "addresstype": "town",
+          "name": "金山镇",
+          "display_name": "金山镇, 禄丰市, 楚雄彝族自治州, 云南省, 中国",
+          "address": {
+            "town": "金山镇",
+            "city": "禄丰市",
+            "region": "楚雄彝族自治州",
+            "state": "云南省",
+            "ISO3166-2-lvl4": "CN-YN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "25.1107570",
+            "25.1907570",
+            "102.0365609",
+            "102.1165609"
+          ]
+        },
+        {
+          "place_id": 241362791,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 3973949167,
+          "lat": "25.1426259",
+          "lon": "101.3278804",
+          "category": "place",
+          "type": "village",
+          "place_rank": 19,
+          "importance": 0.1467217647058823,
+          "addresstype": "village",
+          "name": "上风山邑",
+          "display_name": "上风山邑, 南华县, 楚雄彝族自治州, 云南省, 中国",
+          "address": {
+            "village": "上风山邑",
+            "county": "南华县",
+            "region": "楚雄彝族自治州",
+            "state": "云南省",
+            "ISO3166-2-lvl4": "CN-YN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "25.1226259",
+            "25.1626259",
+            "101.3078804",
+            "101.3478804"
+          ]
+        },
+        {
+          "place_id": 418624012,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 13893341885,
+          "lat": "25.1503058",
+          "lon": "101.3358464",
+          "category": "place",
+          "type": "hamlet",
+          "place_rank": 20,
+          "importance": 0.133388431372549,
+          "addresstype": "hamlet",
+          "name": "下凤山邑",
+          "display_name": "下凤山邑, 车子塘, 南华县, 楚雄彝族自治州, 云南省, 中国",
+          "address": {
+            "hamlet": "下凤山邑",
+            "village": "车子塘",
+            "county": "南华县",
+            "region": "楚雄彝族自治州",
+            "state": "云南省",
+            "ISO3166-2-lvl4": "CN-YN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "25.1303058",
+            "25.1703058",
+            "101.3158464",
+            "101.3558464"
+          ]
+        },
+        {
+          "place_id": 241475097,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 10240207660,
+          "lat": "25.3957493",
+          "lon": "101.0557044",
+          "category": "place",
+          "type": "hamlet",
+          "place_rank": 20,
+          "importance": 0.13338829098954755,
+          "addresstype": "hamlet",
+          "name": "胜峰山",
+          "display_name": "胜峰山, 姚安县, 楚雄彝族自治州, 云南省, 中国",
+          "address": {
+            "hamlet": "胜峰山",
+            "city": "姚安县",
+            "region": "楚雄彝族自治州",
+            "state": "云南省",
+            "ISO3166-2-lvl4": "CN-YN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "25.3757493",
+            "25.4157493",
+            "101.0357044",
+            "101.0757044"
+          ]
+        },
+        {
+          "place_id": 241150346,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 37670106,
+          "lat": "25.5394792",
+          "lon": "102.3709516",
+          "category": "natural",
+          "type": "wood",
+          "place_rank": 22,
+          "importance": 0.10672192339971005,
+          "addresstype": "wood",
+          "name": "狮子山风景区",
+          "display_name": "狮子山风景区, 武定县, 狮山镇, 武定县, 楚雄彝族自治州, 云南省, 中国",
+          "address": {
+            "wood": "狮子山风景区",
+            "city": "武定县",
+            "town": "狮山镇",
+            "county": "武定县",
+            "region": "楚雄彝族自治州",
+            "state": "云南省",
+            "ISO3166-2-lvl4": "CN-YN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "25.5329931",
+            "25.5441838",
+            "102.3645758",
+            "102.3774504"
+          ]
+        }
+      ],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    },
+    {
+      "query": "缺牙山",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E7%BC%BA%E7%89%99%E5%B1%B1&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 237596260,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 7308450193,
+          "lat": "23.9615057",
+          "lon": "114.9239865",
+          "category": "natural",
+          "type": "peak",
+          "place_rank": 18,
+          "importance": 0.1600375013351644,
+          "addresstype": "peak",
+          "name": "缺牙山",
+          "display_name": "缺牙山, 东源县, 河源市, 广东省, 中国",
+          "address": {
+            "peak": "缺牙山",
+            "county": "东源县",
+            "region": "河源市",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "23.9614557",
+            "23.9615557",
+            "114.9239365",
+            "114.9240365"
+          ]
+        }
+      ],
+      "decision": "accepted-regional-reference"
+    },
+    {
+      "query": "猴岩",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E7%8C%B4%E5%B2%A9&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 225360157,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 7343509301,
+          "lat": "24.2343838",
+          "lon": "113.3714450",
+          "category": "place",
+          "type": "village",
+          "place_rank": 19,
+          "importance": 0.1467275402456702,
+          "addresstype": "village",
+          "name": "猴岩",
+          "display_name": "猴岩, 清远市, 广东省, 513000, 中国",
+          "address": {
+            "village": "猴岩",
+            "city": "清远市",
+            "state": "广东省",
+            "ISO3166-2-lvl4": "CN-GD",
+            "postcode": "513000",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "24.2143838",
+            "24.2543838",
+            "113.3514450",
+            "113.3914450"
+          ]
+        }
+      ],
+      "decision": "rejected-same-name",
+      "reason": "返回清远猴岩，与详情新丰猴岩风车山不同；采用百度新丰POI"
+    },
+    {
+      "query": "青莲山",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E9%9D%92%E8%8E%B2%E5%B1%B1&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 225916660,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 9803280650,
+          "lat": "28.8204509",
+          "lon": "119.3384129",
+          "category": "natural",
+          "type": "peak",
+          "place_rank": 18,
+          "importance": 0.16006617914091706,
+          "addresstype": "peak",
+          "name": "青莲山",
+          "display_name": "青莲山, 金华市, 浙江省, 中国",
+          "address": {
+            "peak": "青莲山",
+            "city": "金华市",
+            "state": "浙江省",
+            "ISO3166-2-lvl4": "CN-ZJ",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "28.8204009",
+            "28.8205009",
+            "119.3383629",
+            "119.3384629"
+          ]
+        }
+      ],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    },
+    {
+      "query": "岭南红叶世界",
+      "url": "https://nominatim.openstreetmap.org/search?q=%E5%B2%AD%E5%8D%97%E7%BA%A2%E5%8F%B6%E4%B8%96%E7%95%8C&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+      "results": [
+        {
+          "place_id": 223372406,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 11465774545,
+          "lat": "43.8389360",
+          "lon": "125.3389856",
+          "category": "highway",
+          "type": "bus_stop",
+          "place_rank": 30,
+          "importance": 6.739375905999873e-05,
+          "addresstype": "highway",
+          "name": "东岭南街",
+          "display_name": "东岭南街, 繁荣路, 交通小区, 飞跃街道, 鸿城街道, 南关区, 长春市, 绿园区, 吉林省, 130000, 中国",
+          "address": {
+            "highway": "东岭南街",
+            "road": "繁荣路",
+            "residential": "交通小区",
+            "suburb": "飞跃街道",
+            "city": "南关区",
+            "district": "绿园区",
+            "state": "吉林省",
+            "ISO3166-2-lvl4": "CN-JL",
+            "postcode": "130000",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "43.8388860",
+            "43.8389860",
+            "125.3389356",
+            "125.3390356"
+          ]
+        },
+        {
+          "place_id": 225270947,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 1236649159,
+          "lat": "26.8220167",
+          "lon": "112.6277193",
+          "category": "landuse",
+          "type": "industrial",
+          "place_rank": 24,
+          "importance": 0.08006000228885325,
+          "addresstype": "industrial",
+          "name": "湖南华菱汽车有限公司",
+          "display_name": "湖南华菱汽车有限公司, 窑厂, 金龙坪街道, 雁峰区, 衡阳市, 湖南省, 中国",
+          "address": {
+            "industrial": "湖南华菱汽车有限公司",
+            "hamlet": "窑厂",
+            "suburb": "金龙坪街道",
+            "city": "雁峰区",
+            "state": "湖南省",
+            "ISO3166-2-lvl4": "CN-HN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "26.8204131",
+            "26.8235250",
+            "112.6246127",
+            "112.6308140"
+          ]
+        },
+        {
+          "place_id": 236679379,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 629505170,
+          "lat": "22.4959645",
+          "lon": "114.1348466",
+          "category": "amenity",
+          "type": "toilets",
+          "place_rank": 30,
+          "importance": 6.549095902948069e-05,
+          "addresstype": "amenity",
+          "name": "粉嶺圍(南)公廁 Fanling Wai (South) Public Toilet",
+          "display_name": "粉嶺圍(南)公廁 Fanling Wai (South) Public Toilet, 新運路 San Wan Road, 粉嶺市中心 Fanling Town Centre, 北區 North District, 新界 New Territories, 香港 Hong Kong, 518010, 中国",
+          "address": {
+            "amenity": "粉嶺圍(南)公廁 Fanling Wai (South) Public Toilet",
+            "road": "新運路 San Wan Road",
+            "quarter": "粉嶺市中心 Fanling Town Centre",
+            "suburb": "北區 North District",
+            "region": "新界 New Territories",
+            "city": "香港 Hong Kong",
+            "ISO3166-2-lvl3": "CN-HK",
+            "postcode": "518010",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "22.4959124",
+            "22.4960164",
+            "114.1347945",
+            "114.1348987"
+          ]
+        },
+        {
+          "place_id": 225256027,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 11483282204,
+          "lat": "26.8240775",
+          "lon": "112.6354629",
+          "category": "office",
+          "type": "company",
+          "place_rank": 30,
+          "importance": 6.0002288853238995e-05,
+          "addresstype": "office",
+          "name": "湖南领湃科技集团股份有限公司",
+          "display_name": "湖南领湃科技集团股份有限公司, 白沙工业大道, 金桥村注家湾村, 金龙坪街道, 雁峰区, 衡阳市, 湖南省, 中国",
+          "address": {
+            "office": "湖南领湃科技集团股份有限公司",
+            "road": "白沙工业大道",
+            "hamlet": "金桥村注家湾村",
+            "suburb": "金龙坪街道",
+            "city": "雁峰区",
+            "state": "湖南省",
+            "ISO3166-2-lvl4": "CN-HN",
+            "country": "中国",
+            "country_code": "cn"
+          },
+          "boundingbox": [
+            "26.8240275",
+            "26.8241275",
+            "112.6354129",
+            "112.6355129"
+          ]
+        }
+      ],
+      "decision": "rejected-no-matching-place",
+      "reason": "空结果或同名异地/模糊匹配；真实坐标见places.coordinateEvidence"
+    }
+  ],
+  "checkedAt": "2026-09-08",
+  "places": [
+    {
+      "id": "moliugong",
+      "name": "莫六公 · 横山水星空营地",
+      "city": "清远",
+      "district": "阳山县 · 大理村横山水",
+      "terrain": "山顶营地",
+      "wgs84": [
+        112.77010752595838,
+        24.37336205914406
+      ],
+      "precision": "百度营地POI转换为WGS84，区域参考；较高处繁星营地是另一营地，不混同。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E8%8E%AB%E5%85%AD%E5%85%AC%20%C2%B7%20%E6%A8%AA%E5%B1%B1%E6%B0%B4%E6%98%9F%E7%A9%BA%E8%90%A5%E5%9C%B0?uid=5bd5036536fa103888db7319",
+      "summary": "到访作者确认银河照片在营地拍摄。喀斯特峰丛可作前景，有洗浴、水电等基本设施。",
+      "access": "末段约2公里碎路，历史经验建议SUV；可预先联系营地主人安排付费接驳。周边手机信号差，先下载离线地图。",
+      "nightAccess": "百度2026-09-08显示00:00–24:00；住宿、露营名额与车辆通行应提前向营地确认。",
+      "caution": "营地外有散养牛；历史收费不当现价。更高处繁星营地单独经营，勿按名字相近默认是同一位置。",
+      "sources": [
+        {
+          "title": "丁度的镜头 · 莫六公星空营地实拍与道路",
+          "url": "https://www.xiaohongshu.com/explore/66b636d30000000005032b04",
+          "date": "2024-08-09"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%8E%AB%E5%85%AD%E5%85%AC+%C2%B7+%E6%A8%AA%E5%B1%B1%E6%B0%B4%E6%98%9F%E7%A9%BA%E8%90%A5%E5%9C%B0&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "5bd5036536fa103888db7319",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12554957.4,
+          2781570.75
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/4j4rfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "taohuahu",
+      "name": "清远桃花湖",
+      "city": "清远",
+      "district": "清新区 · 浸潭镇",
+      "terrain": "湖畔",
+      "wgs84": [
+        112.69564660301981,
+        24.09436276034079
+      ],
+      "precision": "百度桃源生态旅游区-桃花湖POI，湖区参考，非作者岸边机位或可夜入景区入口。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E6%B8%85%E8%BF%9C%E6%A1%83%E8%8A%B1%E6%B9%96?uid=755bf78bb451e84fc909f091",
+      "summary": "作者用手机拍到银河，并提醒当地灯光明显，肉眼未见银河。适合结合湖畔住宿安排摄影。",
+      "access": "作者称地图搜清远桃花湖可到水库；未给精确岸边落脚位置，应白天辨认可合法停留的公共位置。",
+      "nightAccess": "旅游区POI显示09:00–18:00，不默认景区可夜入；作者水库旁午夜拍摄与住宿经历不能替代当前岸线管理。",
+      "caution": "湖边风大，需要稳固三脚架和保暖；周边灯光会影响银河，勿将手机长曝光效果等同肉眼。",
+      "sources": [
+        {
+          "title": "H.Y.K · 清远桃花湖手机银河实拍",
+          "url": "https://www.xiaohongshu.com/explore/688434ed000000002203df0a",
+          "date": "2025-07-26"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E6%B8%85%E8%BF%9C%E6%A1%83%E8%8A%B1%E6%B9%96&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "755bf78bb451e84fc909f091",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12546654.1,
+          2747715.61
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/z5erfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "shilipang",
+      "name": "石离磅 · 石林周边",
+      "city": "清远",
+      "district": "阳山县",
+      "terrain": "喀斯特石林",
+      "wgs84": [
+        112.76424440368307,
+        24.832328934041023
+      ],
+      "precision": "百度石离磅村庄POI转换为WGS84，仅作石林区域参考，非具体岩石机位。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E7%9F%B3%E7%A6%BB%E7%A3%85%20%C2%B7%20%E7%9F%B3%E6%9E%97%E5%91%A8%E8%BE%B9?uid=dfc496b6aa22f7af8936ee18",
+      "summary": "2025年作者在石离磅拍摄银河堆栈，岩石与峰丛适合作前景；2026年另有作者在附近农田拍到银河。",
+      "access": "作者2025年回复可驾车和露营；另帖天黑后未找到目标石林，建议提前白天踩点。",
+      "nightAccess": "露营回复属于历史个人经历，现行土地与夜间进入规定待确认。",
+      "caution": "旧机位可能随种树和土地使用变化；不要依赖固定网红岩石机位。周边农田有灯光，末段道路需现场核对。",
+      "sources": [
+        {
+          "title": "infrared · 石离磅夏季银河实拍",
+          "url": "https://www.xiaohongshu.com/explore/67f14f78000000000d016ada",
+          "date": "2025-04-05"
+        },
+        {
+          "title": "退堂鼓艺术家 · 石林周边银河及夜间找路经历",
+          "url": "https://www.xiaohongshu.com/explore/6a524399000000000f017541",
+          "date": "页面显示07-11"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E7%9F%B3%E7%A6%BB%E7%A3%85+%C2%B7+%E7%9F%B3%E6%9E%97%E5%91%A8%E8%BE%B9&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "dfc496b6aa22f7af8936ee18",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12554308.71,
+          2837435.99
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/1xtrfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "tiantangding",
+      "name": "天塘顶 · 禾云滑翔基地",
+      "city": "清远",
+      "district": "清新区 · 禾云镇天塘山",
+      "terrain": "山顶营地",
+      "wgs84": [
+        112.80499187984363,
+        23.95484488593004
+      ],
+      "precision": "百度天塘顶 · 禾云滑翔基地POI转换为WGS84，区域参考，非精确帐篷或摄影机位。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E5%A4%A9%E5%A1%98%E9%A1%B6%20%C2%B7%20%E7%A6%BE%E4%BA%91%E6%BB%91%E7%BF%94%E5%9F%BA%E5%9C%B0?uid=a8f876acea1cddef14b54b37",
+      "summary": "作者记录整夜无云、银河摄影和一颗未拍到的流星；露营有厕所、热水和洗漱设施。",
+      "access": "帖子带禾云国际滑翔基地地名，作者报告夜间有人驾车到营地；车型及末段路况未确认。",
+      "nightAccess": "百度滑翔体验POI显示09:00–18:00；营地住宿和夜间安排需另向基地确认，不能将日间体验时间当露营开放时间。",
+      "caution": "夜间车辆和人声较多，山谷清晨有雾；照片由同行摄影师拍摄并堆栈，实际星空取决于天气。",
+      "sources": [
+        {
+          "title": "天塘顶露营经历 · 同行Waymon银河摄影",
+          "url": "https://www.xiaohongshu.com/explore/68f5ad960000000003036d19",
+          "date": "2025-10-20"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E5%A4%A9%E5%A1%98%E9%A1%B6+%C2%B7+%E7%A6%BE%E4%BA%91%E6%BB%91%E7%BF%94%E5%9F%BA%E5%9C%B0&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "a8f876acea1cddef14b54b37",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12558826.18,
+          2730830.62
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/sW_rfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "houyan",
+      "name": "新丰猴岩风车山",
+      "city": "韶关",
+      "district": "新丰县",
+      "terrain": "风车山",
+      "wgs84": [
+        114.02367164446291,
+        24.071730085584413
+      ],
+      "precision": "百度新丰猴岩风车山POI转换为WGS84，区域参考，非精确帐篷或摄影机位。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E6%96%B0%E4%B8%B0%E7%8C%B4%E5%B2%A9%E9%A3%8E%E8%BD%A6%E5%B1%B1?uid=082c48036792b75343ab9a6b",
+      "summary": "攻略作者推荐风机平台拍摄星空，山脊开阔，可用风车和草甸作前景。",
+      "access": "导航使用新丰猴岩风车山；作者报告约8公里水泥盘山路，轿车慢行可上。风机编号与机位仍需现场辨认。",
+      "nightAccess": "山脚铁门有时关闭，须先核对当日车辆和夜间通行；不保证可通宵露营。",
+      "caution": "山顶缺水和补给、信号弱、强风及风机噪音明显；避开风机设施。Nominatim清远同名猴岩是另一点，未采用。",
+      "sources": [
+        {
+          "title": "小番薯 · 猴岩星空攻略与道路回复",
+          "url": "https://www.xiaohongshu.com/explore/6a5b7c97000000000f028a77",
+          "date": "页面显示07-18"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E6%96%B0%E4%B8%B0%E7%8C%B4%E5%B2%A9%E9%A3%8E%E8%BD%A6%E5%B1%B1&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "082c48036792b75343ab9a6b",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12694491.06,
+          2744972.41
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/0wksfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "queyashan",
+      "name": "缺牙山 · 禅子顶区域",
+      "city": "河源",
+      "district": "东源县",
+      "terrain": "风车山",
+      "wgs84": [
+        114.9239865,
+        23.9615057
+      ],
+      "precision": "OSM缺牙山山峰节点，仅作山域天气、距离及暗空参考，非作者禅子顶导航终点或风机机位。",
+      "coordinateUrl": "https://www.openstreetmap.org/node/7308450193",
+      "summary": "作者用手机拍摄缺牙山星空，风车与山脊可作前景。图片中的亮线有卫星、飞机争议，不作为流星实拍保证。",
+      "access": "作者推荐导航禅子顶；2026年8月称扫码进场、无需预约，山路驾驶需经验。具体末段路况应出发前核对。",
+      "nightAccess": "作者8月19日回复当时免费且可过夜；已有历史封路反馈，当日管理可能变化。",
+      "caution": "周末人流及照明增多；不要将缺牙山山峰节点当风车停车位，避开设施和作业路段。",
+      "sources": [
+        {
+          "title": "俺是安公子 · 缺牙山手机星空与通行回复",
+          "url": "https://www.xiaohongshu.com/explore/6a794b8a00000000210229c9",
+          "date": "2026-08-10 / 08-19"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E7%A6%85%E5%AD%90%E9%A1%B6+%E7%BC%BA%E7%89%99%E5%B1%B1&city=%E6%B2%B3%E6%BA%90&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Nominatim / OpenStreetMap",
+        "osmType": "node",
+        "osmId": 7308450193,
+        "displayName": "缺牙山, 东源县, 河源市, 广东省, 中国",
+        "sourceDatum": "WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "qinglianshan",
+      "name": "乐昌青莲山",
+      "city": "韶关",
+      "district": "乐昌市 · 云岩镇",
+      "terrain": "山顶",
+      "wgs84": [
+        113.08852341340176,
+        25.104984444550688
+      ],
+      "precision": "百度乐昌青莲山POI转换为WGS84，山域/景区参考，非精确摄影机位。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E4%B9%90%E6%98%8C%E9%9D%92%E8%8E%B2%E5%B1%B1?uid=2fd2beabfda9be517adbd241",
+      "summary": "作者骑行上山拍摄银河，并提供70、30及13张堆栈参数；当时肉眼也能看见银河。",
+      "access": "作者评论确认可开车到青莲山，未给停车位或最后一段路况。适合白天先熟悉路线。",
+      "nightAccess": "作者没有过夜，现行夜间道路及山地管理仍需核对。",
+      "caution": "照片经过堆栈和调色，不能等同肉眼效果；山顶风雨与道路情况应出发前确认。",
+      "sources": [
+        {
+          "title": "广东波减猹 · 乐昌青莲山银河实拍",
+          "url": "https://www.xiaohongshu.com/explore/6a52041300000000070104de",
+          "date": "页面显示07-11"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E4%B9%90%E6%98%8C%E9%9D%92%E8%8E%B2%E5%B1%B1&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "2fd2beabfda9be517adbd241",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12590454.42,
+          2870721.41
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/3yJbfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "lingnanhongye",
+      "name": "岭南红叶世界",
+      "city": "韶关",
+      "district": "新丰县 · 黄磜镇茶峒村",
+      "terrain": "山顶景区住宿",
+      "wgs84": [
+        114.14713519344211,
+        24.234720355368903
+      ],
+      "precision": "百度岭南红叶世界POI转换为WGS84，山域/景区参考，非精确摄影机位。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E5%B2%AD%E5%8D%97%E7%BA%A2%E5%8F%B6%E4%B8%96%E7%95%8C?uid=dbc70a8abad2d42745e27479",
+      "summary": "作者入住观星小院，用手机拍到银河及流星；午夜熄灯后肉眼看到淡银河。适合结合住宿安排。",
+      "access": "作者由翁源县打车入景区，再搭观光车到住宿；返程不易叫车，提前约好交通。",
+      "nightAccess": "日间景区POI显示09:00–17:00，16:00停止售票；需另预订并确认夜间住宿观星安排。午夜熄灯是2025年个人经历。",
+      "caution": "园区灯光与住宿位置会影响拍摄；道路弯多。玻璃房照片不代表任何房型都可直接拍星。",
+      "sources": [
+        {
+          "title": "Liu二三 · 岭南红叶世界住宿与星空实拍",
+          "url": "https://www.xiaohongshu.com/explore/688918fc000000002302733b",
+          "date": "2025-07-30"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E5%B2%AD%E5%8D%97%E7%BA%A2%E5%8F%B6%E4%B8%96%E7%95%8C&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "dbc70a8abad2d42745e27479",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12708236.52,
+          2764738.91
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/h0xbfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "yunfengshan",
+      "name": "南雄云峰山",
+      "city": "韶关",
+      "district": "南雄市 · 江头镇",
+      "terrain": "山地景区",
+      "wgs84": [
+        114.47265877196048,
+        25.015014977573443
+      ],
+      "precision": "百度云峰山·狮子寨景区POI转换为WGS84，山域参考，非原帖摄影师精确机位。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E4%BA%91%E5%B3%B0%E5%B1%B1%C2%B7%E7%8B%AE%E5%AD%90%E5%AF%A8%E7%94%9F%E6%80%81%E6%97%85%E6%B8%B8%E6%99%AF%E5%8C%BA?uid=f6f809c1f7b1e3449cf77955",
+      "summary": "2026英仙座期间的帖子明确在南雄云峰山通宵拍摄。可作为山域候选，具体拍摄位置仍须向现场确认。",
+      "access": "地图匹配江头镇488乡道云峰山·狮子寨景区。帖子未回复能否开车直达，不默认车辆可到山顶。",
+      "nightAccess": "百度景区显示09:00–18:00，夜间摄影需另向管理方确认，不默认购日票可通宵停留。",
+      "caution": "原帖致敬摄影师，未证实发布者为拍摄本人；蚊虫较多。景区范围可能跨省，本文仅用南雄侧POI作区域参考。",
+      "sources": [
+        {
+          "title": "千夜 · 南雄云峰山2026英仙座拍摄记录",
+          "url": "https://www.xiaohongshu.com/explore/6a7ca5ef0000000033019edc",
+          "date": "2026-08-13"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E5%8D%97%E9%9B%84%E4%BA%91%E5%B3%B0%E5%B1%B1+%E7%8B%AE%E5%AD%90%E5%AF%A8&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides",
+      "decision": "include",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "f6f809c1f7b1e3449cf77955",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12744445.48,
+          2859794.95
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/mo9bfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08"
+      }
+    },
+    {
+      "id": "houshanding",
+      "name": "后山顶 · 后山村参考",
+      "city": "韶关",
+      "district": "曲江区 · 樟市镇",
+      "terrain": "高山草甸徒步",
+      "wgs84": [
+        113.45438121452516,
+        24.50460398905411
+      ],
+      "precision": "百度樟市镇后山村POI转换为WGS84，村落区域参考，非后山顶、登山入口或山顶天气测点。",
+      "coordinateUrl": "https://map.baidu.com/poi/%E5%90%8E%E5%B1%B1%E6%9D%91?uid=08fc93df2cf20b919a68b4b0",
+      "summary": "作者描述后山顶为开阔草甸，360度视野，无树木遮挡。山顶银河拍摄需安排徒步和山地露营经验。",
+      "access": "作者定位曲江樟市镇后山村，单程徒步约2.5–3小时且爬升较大，评论确认不可开车直达山顶；具体轨迹未核准。",
+      "nightAccess": "当前登山与过夜许可未核准；应在白天辨认路线，并核对管理要求。",
+      "caution": "山顶强风、明显温差；地图采用村落参考，天气及暗空估算不能当山顶实况。不要沿导航村落点直接夜爬未知路线。",
+      "sources": [
+        {
+          "title": "小企鹅cunning · 后山顶与阎罗头银河实拍",
+          "url": "https://www.xiaohongshu.com/explore/6a5d653e000000000c015014",
+          "date": "页面显示07-20"
+        }
+      ],
+      "bortle": null,
+      "mapUrl": "https://uri.amap.com/search?keyword=%E5%90%8E%E5%B1%B1%E6%9D%91+%E6%9B%B2%E6%B1%9F+%E6%A8%9F%E5%B8%82%E9%95%87&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides",
+      "decision": "include-regional-reference",
+      "coordinateEvidence": {
+        "provider": "Baidu Maps public POI",
+        "uid": "08fc93df2cf20b919a68b4b0",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinates": [
+          12631172.81,
+          2797489.83
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/2v-bfv",
+        "conversion": "gcoord 1.0.7 BD09MC -> WGS84",
+        "checkedAt": "2026-09-08",
+        "referenceOnly": true
+      }
+    }
+  ],
+  "heldCandidates": [
+    {
+      "id": "yedanzia",
+      "name": "韶关野丹霞",
+      "decision": "hold",
+      "reason": "真实摄影但仅有东侧南雄、西侧村庄方位，没有可检索具体地名；不能借用丹霞山景区点位",
+      "sources": [
+        "https://www.xiaohongshu.com/explore/69ba79aa000000001a026b80"
+      ]
+    }
+  ]
+}

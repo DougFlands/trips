@@ -17,7 +17,7 @@
 
 ## Dependencies
 
-- 运行依赖只保留 React 与 React DOM。
+- 复用现有 React、Radix/Base UI 与 shadcn 源码组件；`lucide-react` 对应 components.json 的图标配置。不要重复引入同用途的 UI 或动画运行库。
 - 浏览器 API、CSS 或现有依赖能解决时，不添加新包。
 - 替换工具时，一起删除导入、依赖、配置和生成脚手架。
 - 依赖调整后运行 `npm audit`；修复版优先使用同一主版本。

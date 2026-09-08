@@ -1,0 +1,36 @@
+{
+  "query": "罗坑水库 电白",
+  "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E7%BD%97%E5%9D%91%E6%B0%B4%E5%BA%93+%E7%94%B5%E7%99%BD&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+  "results": [
+    {
+      "place_id": 240455924,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 2689149,
+      "lat": "21.8248062",
+      "lon": "111.2709385",
+      "category": "water",
+      "type": "reservoir",
+      "place_rank": 20,
+      "importance": 0.2328416436185146,
+      "addresstype": "reservoir",
+      "name": "罗坑水库",
+      "display_name": "罗坑水库, 电白区, 茂名市, 广东省, 中国",
+      "address": {
+        "reservoir": "罗坑水库",
+        "district": "电白区",
+        "city": "茂名市",
+        "state": "广东省",
+        "ISO3166-2-lvl4": "CN-GD",
+        "country": "中国",
+        "country_code": "cn"
+      },
+      "boundingbox": [
+        "21.8102574",
+        "21.8394061",
+        "111.2578417",
+        "111.3072416"
+      ]
+    }
+  ]
+}

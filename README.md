@@ -30,6 +30,7 @@ VITE_AMAP_SECURITY_JS_CODE=
 
 - 旅行列表：`http://localhost:5173/`
 - 青烟威详情：`http://localhost:5173/trips/qingdao-yantai-weihai/`
+- 广东观星地图：`http://localhost:5173/trips/guangdong-stargazing/`
 
 ## 常用命令
 
@@ -38,6 +39,7 @@ npm run lint
 npm run typecheck
 npm run build
 npm run check
+node --test tests/stargazing.test.mjs
 ```
 
 ## 增加旅行
@@ -52,6 +54,10 @@ npm run check
 `src/App.tsx` 只负责路径解析和入口状态；旅行页面可以共享 `TravelMap`、类型和 UI primitives，但不要复制其他旅行的页面样式。
 
 地图组件位于 `src/TravelMap.tsx`，按 `stops`、`alternatives`、`days`、`activeDay` 和 `focusPlaceId` 传入数据即可复用。
+
+广东观星页独立维护于 `src/trips/guangdong-stargazing/`，当前收录 **35 个广东省内点位**，采用 Sketchbook 手帐风和地图的 `places` 模式。列表支持按距深圳市民中心的直线距离、波尔特等级排序，并查看七个夜晚的逐小时天气。天气通过单点或全部更新按钮获取并写入 IndexedDB；打开页面只读缓存，全部更新覆盖完整目录，不受地点筛选影响。跨批写入失败的地点会保留未保存提示，直到对应数据成功写入。
+
+研究通过 Edge 检索小红书：原 12 词共 661 条关联、390 篇独立帖子，补搜新增 28 篇，合计 418 篇独立帖子，其中 50 篇读过详情。点位保留帖子依据、坐标精度和 2025 天空亮度模型来源，波尔特等级标为估算。地图上的区域参考位置不等于精确停车点或夜间开放许可。开发时访问 `/tests/stargazing-map-error.html` 可验收地图加载失败状态；刷新后回到正常页面。
 
 ## 风格参考库
 

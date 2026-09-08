@@ -1,0 +1,37 @@
+[
+  {
+    "name": "德庆大顶山主峰·杨梅山",
+    "status": "verified-area-reference",
+    "latitude": 23.38270960187554,
+    "longitude": 111.86709000099329,
+    "datum": "WGS84",
+    "gcj02Latitude": 23.379934889537658,
+    "gcj02Longitude": 111.87216107217154,
+    "precisionMeters": 500,
+    "precisionNote": "地图杨梅山山峰POI区域参考，500米为展示上的保守误差说明，并非测绘精度；18号风车及18–19号路段未精确定位",
+    "source": {
+      "provider": "百度地图网页UI",
+      "label": "杨梅山，广东省肇庆市德庆县官圩镇",
+      "uid": "925c550fcb9f56b15a3ac878",
+      "url": "https://map.baidu.com/poi/杨梅山/@12454388.814020475,2665040.455135584,12.19z?uid=925c550fcb9f56b15a3ac878",
+      "coordinateShareUrl": "https://j.map.baidu.com/t/fWxlfv",
+      "coordinateEvidence": "在独立Edge标签打开详情DOM实际显示的短链，重定向mapclient-pages/download的openapi参数内包含query=杨梅山、poi_x=12454410.08、poi_y=2661640.31、uid=925c550fcb9f56b15a3ac878，UID与选中山峰详情一致。采用poi_x/y，未采用URL的@视图中心。",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [12454410.08, 2661640.31],
+      "bd09Coordinate": [111.87865195002459, 23.385893599070208]
+    },
+    "conversion": {
+      "library": "gcoord",
+      "version": "1.0.7",
+      "method": "gcoord.transform(source, gcoord.BD09MC, gcoord.WGS84); GCJ02 separately converted",
+      "package": "https://registry.npmjs.org/gcoord/-/gcoord-1.0.7.tgz",
+      "source": "https://github.com/hujiulong/gcoord"
+    },
+    "checkedAt": "2026-09-08",
+    "caveats": [
+      "山峰POI不等于导航风电场公司，未将公司位置替换拍摄机位",
+      "不将另一侧1–15号风车偏峰合并到主峰坐标",
+      "当次游记报告夜间可上山，但现场管理及雨后道路需再确认"
+    ]
+  }
+]

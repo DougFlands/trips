@@ -1,0 +1,101 @@
+[
+  {
+    "id": "jilongding",
+    "name": "阳春鸡笼顶",
+    "city": "阳江",
+    "district": "阳春市",
+    "terrain": "高山草甸",
+    "wgs84": [
+      111.383548,
+      22.250605
+    ],
+    "precision": "OSM山峰参考节点，非具体营地、登山口或停车点。",
+    "coordinateUrl": "https://www.openstreetmap.org/node/12987910710",
+    "summary": "独立到访者记录银河、日出与云海，高山草甸可作开阔前景。适合先完成徒步路线与营地确认。",
+    "access": "需要徒步；原帖未公开具体上山路线、营地和耗时，不据此判断难度或安排夜间首次探路。",
+    "nightAccess": "2025年到访帖有营地与银河经历，现行夜间进入和露营规定待核对。",
+    "caution": "山顶风云变化快。补搜有作者承认封面经AI修图，不能把网络照片当作肉眼银河预期。",
+    "sources": [
+      {
+        "title": "Icdat · 阳江鸡笼顶到访观星",
+        "url": "https://www.xiaohongshu.com/explore/68c645a4000000001c036100",
+        "date": "2025-09-14"
+      }
+    ],
+    "bortle": {
+      "min": 3,
+      "max": 3,
+      "sqm": 21.72,
+      "year": 2025,
+      "sampledWgs84": [
+        111.38355,
+        22.25061
+      ]
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=阳春鸡笼顶&city=阳江&view=map&src=travel-guides"
+  },
+  {
+    "id": "luokeng",
+    "name": "电白罗坑水库",
+    "city": "茂名",
+    "district": "电白区",
+    "terrain": "水库大坝周边",
+    "wgs84": [
+      111.2709385,
+      21.8248062
+    ],
+    "precision": "OSM水库区域中心，非大坝拍摄点、岸线入口或停车位置。",
+    "coordinateUrl": "https://www.openstreetmap.org/relation/2689149",
+    "summary": "作者记录冬季银河实拍，明确机位在大坝附近；水面与远山可供踩点时比较前景。",
+    "access": "作者建议导航罗坑水库后到大坝附近；不是景区，周边缺少餐饮等配套。需落实允许停留的具体位置。",
+    "nightAccess": "有2025年冬季拍摄经历，现行水库、大坝与夜间通行管理待确认；露营许可未核实。",
+    "caution": "照片使用全光谱改机和滤镜，肉眼观感不能直接比照。勿与韶关罗坑大草原混淆，不进入管理限制区域。",
+    "sources": [
+      {
+        "title": "追星者 阿响 · 电白罗坑水库冬季银河",
+        "url": "https://www.xiaohongshu.com/explore/692320ee000000001d03c50c",
+        "date": "2025-11-23，后续04-08回复机位"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=电白罗坑水库&city=茂名&view=map&src=travel-guides"
+  },
+  {
+    "id": "qingshanzui",
+    "name": "青山咀灯塔",
+    "city": "江门",
+    "district": "台山市 · 海宴镇",
+    "wgs84": [
+      112.55535370862887,
+      21.759480298110663
+    ],
+    "precision": "青山咀灯塔POI参考，非精确相机位置或岸边停车位。",
+    "coordinateUrl": "https://map.baidu.com/poi/青山咀灯塔?uid=115a66b62958cc8e3913fd36",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "115a66b62958cc8e3913fd36",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12531006.65,
+        2467115.02
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/TXftfv",
+      "method": "搜索台山海宴青山咀灯塔，选同名且地址广东省江门市台山市海宴镇的POI；详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    },
+    "terrain": "海岸灯塔",
+    "summary": "作者记录单张与堆栈银河拍摄，明确灯塔位置。海岸与灯塔适合作前景，但需控制现场人造光。",
+    "access": "导航江门台山海宴青山咀灯塔；原帖未给停车点与末段步行路线，提前在白天确认允许停留的位置。",
+    "nightAccess": "作者记录20:40拍到凌晨；夜间是否随时可进入的提问未得到可见回复，当前海岸管理待核对。",
+    "caution": "灯塔、渔灯与其他摄影者照明会干扰；留意海况和潮汐，照片部分使用天文改机或堆栈。",
+    "sources": [
+      {
+        "title": "NeonDreams📸 · 江门青山咀灯塔星空拍摄",
+        "url": "https://www.xiaohongshu.com/explore/68872a080000000017031d70",
+        "date": "2025-07-28"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=台山海宴青山咀灯塔&city=江门&view=map&src=travel-guides"
+  }
+]

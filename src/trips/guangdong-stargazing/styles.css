@@ -1,0 +1,120 @@
+.stargazing {
+  --background: #f7f4eb;
+  --foreground: #2e3f35;
+  --card: #fffdf7;
+  --popover: #fffdf7;
+  --popover-foreground: #2e3f35;
+  --card-foreground: #2e3f35;
+  --primary: #36594a;
+  --primary-foreground: #fffdf7;
+  --secondary: #eeeee2;
+  --secondary-foreground: #36594a;
+  --muted: #eeeee2;
+  --muted-foreground: #727769;
+  --accent: #e7ebdc;
+  --accent-foreground: #36594a;
+  --border: #d7d6c7;
+  --input: #c5c9ba;
+  --ring: #78917b;
+  --destructive: #ac5942;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+.stargazing .font-serif { font-family: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif; }
+.stargazing :is(input, select, summary, [tabindex]):focus-visible { outline: 2px solid #36594a; outline-offset: 3px; }
+.stargazing-map > div[aria-label] { height: 490px; }
+.stargazing-map .map-status {
+  background: #fffdf7; color: #36594a; border-color: #bcc9b8;
+  box-shadow: 3px 3px 0 #d9ded1; font: 500 14px/1.8 system-ui, sans-serif;
+}
+.stargazing-map > button, .stargazing-map > div.absolute:not(.map-status) {
+  background: #fffdf7; border-color: #abb9a3; color: #36594a; box-shadow: 2px 2px 0 #cbd3c1;
+}
+.stargazing-map > div.absolute > button { color: #36594a; border-color: #cbd3c1; }
+.stargazing-map > button:hover, .stargazing-map > div.absolute > button:hover { background: #e4ebdc; color: #294738; }
+.stargazing-marker.map-marker {
+  display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
+  color: #fffdf7; background: #36594a; border: 2px solid #fffdf7; border-radius: 50% 45% 48% 42%;
+  box-shadow: 0 1px 0 2px #36594a55; clip-path: none; font: 700 14px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+.stargazing-marker.map-marker[aria-pressed="true"] { background: #aa7044; box-shadow: 0 0 0 5px #aa704433; }
+.stargazing-popup.map-popup { width: 240px; padding: 8px 10px; overflow-wrap: anywhere; color: #2e3f35; background: #fffdf7; border: 1px solid #98aa94; border-radius: 3px; box-shadow: 3px 4px 0 #c9d0bd99; }
+.stargazing-popup.map-popup span { color: #627961; font: 500 11px/1.4 system-ui, sans-serif; }
+.stargazing-popup.map-popup strong { margin: 3px 0; font-size: 15px; line-height: 1.4; }
+.stargazing-popup.map-popup p { margin: 0 0 4px; color: #727769; font-size: 12px; line-height: 1.5; }
+.stargazing-popup.map-popup a { color: #8b603b; font-size: 12px; line-height: 1.5; }
+@media (max-width: 767px) { .stargazing-map > div[aria-label] { height: 360px; } }
+
+/* Compact feature composition; shared components keep their default treatment elsewhere. */
+.stargazing-place-card {
+  transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.stargazing-place-card[data-selected="true"] {
+  border-color: var(--primary);
+  background: var(--accent);
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+.stargazing-place-card [data-slot="card-title"] { font-weight: 500; }
+.stargazing-place-summary { font-size: 12px; line-height: 18px; overflow-wrap: anywhere; }
+.stargazing [data-slot="field-label"] { font-size: 12px; color: var(--muted-foreground); }
+.stargazing [data-slot="toggle-group-item"] {
+  transition: background-color 180ms ease, color 180ms ease, transform 160ms ease;
+}
+.stargazing [data-slot="toggle-group-item"][data-state="on"] {
+  color: var(--primary-foreground); background: var(--primary);
+}
+.stargazing [data-slot="button"]:active:not(:disabled),
+.stargazing [data-slot="toggle-group-item"]:active:not(:disabled) { transform: scale(.97); }
+.stargazing [data-slot="progress-indicator"] { transition: transform 240ms ease; }
+.stargazing-weather-table { font-size: 12px; text-align: center; }
+.stargazing-weather-table [data-slot="table-head"] { text-align: center; }
+.stargazing-weather-table [data-slot="table-header"] { background: var(--secondary); }
+.stargazing-weather-table tr > th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--card);
+  box-shadow: 1px 0 0 var(--border);
+}
+.stargazing-weather-table thead th:first-child { background: var(--secondary); }
+.stargazing [data-slot="accordion-content"][data-state="open"] { animation: stargazing-expand 220ms ease-out; }
+.stargazing [data-slot="accordion-content"][data-state="closed"] { animation: stargazing-collapse 180ms ease-in; }
+.stargazing-enter { animation: stargazing-enter 220ms ease-out; }
+@keyframes stargazing-enter {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes stargazing-expand {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes stargazing-collapse {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+@media (hover: hover) {
+  .stargazing-place-card:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 2px 5px #36594a18; }
+  .stargazing [data-slot="button"]:hover:not(:disabled) [data-icon] { transform: rotate(-10deg); }
+  .stargazing [data-slot="button"] [data-icon] { transition: transform 180ms ease; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stargazing *, .stargazing *::before, .stargazing *::after { animation: none !important; transition: none !important; }
+  .stargazing-place-card:hover, .stargazing [data-slot="button"]:active, .stargazing [data-slot="toggle-group-item"]:active { transform: none; }
+}
+
+.stargazing-place-select { font-weight: 400; }
+.stargazing-place-select:hover { background: transparent; color: inherit; }
+.stargazing-place-select:active:not(:disabled) { transform: none; }
+
+.stargazing-place-scroll [data-slot="scroll-area-viewport"] { max-height: 520px; }
+@media (min-width: 1024px) { .stargazing-place-scroll [data-slot="scroll-area-viewport"] { max-height: 1070px; } }
+
+/* Select is portalled outside the page; its theme and motion travel with it. */
+.stargazing-select-content[data-state="open"] { animation: stargazing-select-open 140ms ease-out; }
+@keyframes stargazing-select-open { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .stargazing-select-content { animation: none !important; } }
+
+.stargazing-detail-note [data-slot="alert-description"] { font-size: 13px; line-height: 20px; }
+
+.stargazing-weather-table [data-slot="table-body"] [data-slot="table-head"] { height: 32px; }
+.stargazing-weather-table [data-slot="table-cell"] { padding: 4px 8px; }

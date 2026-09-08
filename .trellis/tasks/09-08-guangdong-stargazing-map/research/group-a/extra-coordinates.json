@@ -1,0 +1,99 @@
+[
+  {
+    "id": "lanping",
+    "name": "蓝坪村",
+    "city": "惠州",
+    "district": "博罗县 · 公庄镇",
+    "wgs84": [
+      114.42013288350054,
+      23.61106310352625
+    ],
+    "precision": "蓝坪村区域POI参考，非鸭麻輋营地或具体溪岸机位。",
+    "coordinateUrl": "https://map.baidu.com/poi/蓝坪村?uid=4420764686f1ae6bdfee8b8c",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "4420764686f1ae6bdfee8b8c",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12738614.69,
+        2689210.89
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/5A8bfv",
+      "method": "检索惠州博罗蓝坪村，选择村庄POI；相邻结果明确博罗县公庄镇。详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "fengchedao",
+    "name": "汕尾风车岛",
+    "city": "汕尾",
+    "district": "城区",
+    "wgs84": [
+      115.57792891426051,
+      22.739104134212287
+    ],
+    "precision": "汕尾风车岛旅游POI区域参考，未核原帖具体风机、岸线或停车点；不改称遮浪半岛。",
+    "coordinateUrl": "https://map.baidu.com/poi/汕尾风车岛?uid=6a5b9f3fdb0bc12d7bb55c6a",
+    "poiHours": "百度POI显示00:00–24:00，不能推定所有岸段与设施夜间开放",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "6a5b9f3fdb0bc12d7bb55c6a",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12867443.09,
+        2584209.95
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/RyPbfv",
+      "method": "搜索汕尾风车岛，结果同名且地址汕尾市城区施公寮与田下山中间；详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "yezhuzhang",
+    "name": "野猪嶂",
+    "city": "河源",
+    "district": "龙川县",
+    "wgs84": [
+      115.36755188314031,
+      24.712275984989702
+    ],
+    "precision": "野猪嶂山峰POI参考，非车辆通行终点或具体风机平台。",
+    "coordinateUrl": "https://map.baidu.com/poi/野猪嶂?uid=ef773a0f40941637230220a1",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "ef773a0f40941637230220a1",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12844090.48,
+        2822782.73
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/D9Wbfv",
+      "method": "搜索河源野猪嶂，选地址河源市龙川县的山峰野猪嶂，排除猪兜嶂/野猪尖等不同地名；详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "qingshanzui",
+    "name": "青山咀灯塔",
+    "city": "江门",
+    "district": "台山市 · 海宴镇",
+    "wgs84": [
+      112.55535370862887,
+      21.759480298110663
+    ],
+    "precision": "青山咀灯塔POI参考，非精确相机位置或岸边停车位。",
+    "coordinateUrl": "https://map.baidu.com/poi/青山咀灯塔?uid=115a66b62958cc8e3913fd36",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "115a66b62958cc8e3913fd36",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12531006.65,
+        2467115.02
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/TXftfv",
+      "method": "搜索台山海宴青山咀灯塔，选同名且地址广东省江门市台山市海宴镇的POI；详情短链同UID poi_x/poi_y经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "query": "阿婆六村",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%98%BF%E5%A9%86%E5%85%AD%E6%9D%91&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": []
+  },
+  {
+    "query": "莲麻村",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E8%8E%B2%E9%BA%BB%E6%9D%91&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 236762204,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 9556653343,
+        "lat": "23.8929102",
+        "lon": "114.0004185",
+        "category": "place",
+        "type": "village",
+        "place_rank": 19,
+        "importance": 0.14673452582589452,
+        "addresstype": "village",
+        "name": "莲麻村",
+        "display_name": "莲麻村, 广州市, 广东省, 中国",
+        "address": {
+          "village": "莲麻村",
+          "city": "广州市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "23.8729102",
+          "23.9129102",
+          "113.9804185",
+          "114.0204185"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "欧家梯田",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E6%AC%A7%E5%AE%B6%E6%A2%AF%E7%94%B0&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 225835453,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1448110886,
+        "lat": "24.7414425",
+        "lon": "112.1794662",
+        "category": "landuse",
+        "type": "farmland",
+        "place_rank": 24,
+        "importance": 0.08006087357900356,
+        "addresstype": "farmland",
+        "name": "连山欧家梯田",
+        "display_name": "连山欧家梯田, 欧家坪, 连山壮族瑶族自治县, 清远市, 广东省, 中国",
+        "address": {
+          "farmland": "连山欧家梯田",
+          "hamlet": "欧家坪",
+          "city": "连山壮族瑶族自治县",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "24.7386057",
+          "24.7442708",
+          "112.1776914",
+          "112.1825495"
+        ]
+      },
+      {
+        "place_id": 238371561,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 11727174700,
+        "lat": "23.1282369",
+        "lon": "106.3994494",
+        "category": "shop",
+        "type": "furniture",
+        "place_rank": 30,
+        "importance": 6.200885023265458e-05,
+        "addresstype": "shop",
+        "name": "帝欧家居",
+        "display_name": "帝欧家居, 云天大道, 大坡村, 新靖镇, 靖西市, 百色市, 广西壮族自治区, 533899, 中国",
+        "address": {
+          "shop": "帝欧家居",
+          "road": "云天大道",
+          "hamlet": "大坡村",
+          "town": "新靖镇",
+          "city": "靖西市",
+          "state": "广西壮族自治区",
+          "ISO3166-2-lvl4": "CN-GX",
+          "postcode": "533899",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "23.1281869",
+          "23.1282869",
+          "106.3993994",
+          "106.3994994"
+        ]
+      },
+      {
+        "place_id": 222261681,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 608366619,
+        "lat": "36.6857455",
+        "lon": "117.0224721",
+        "category": "shop",
+        "type": "furniture",
+        "place_rank": 30,
+        "importance": 6.0002288853238995e-05,
+        "addresstype": "shop",
+        "name": "欧亚达家居",
+        "display_name": "欧亚达家居, 北园大街, 北园街道, 天桥区, 济南市, 山东省, 250000, 中国",
+        "address": {
+          "shop": "欧亚达家居",
+          "road": "北园大街",
+          "suburb": "北园街道",
+          "city": "天桥区",
+          "state": "山东省",
+          "ISO3166-2-lvl4": "CN-SD",
+          "postcode": "250000",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "36.6852336",
+          "36.6862512",
+          "117.0210205",
+          "117.0241226"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "靘雾山",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%9D%98%E9%9B%BE%E5%B1%B1&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 226263163,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 6321699487,
+        "lat": "24.3224323",
+        "lon": "112.7533708",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.16006087357900356,
+        "addresstype": "peak",
+        "name": "靘雾山",
+        "display_name": "靘雾山, 清远市, 广东省, 中国",
+        "address": {
+          "peak": "靘雾山",
+          "city": "清远市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "24.3223823",
+          "24.3224823",
+          "112.7533208",
+          "112.7534208"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "罗坑大草原",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E7%BD%97%E5%9D%91%E5%A4%A7%E8%8D%89%E5%8E%9F&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 238038989,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1304670155,
+        "lat": "23.2344166",
+        "lon": "112.7334624",
+        "category": "highway",
+        "type": "services",
+        "place_rank": 30,
+        "importance": 6.0002288853238995e-05,
+        "addresstype": "highway",
+        "name": "罗坑服务区",
+        "display_name": "罗坑服务区, 东进大道, 联和, 大沙镇, 四会市, 肇庆市, 广东省, 中国",
+        "address": {
+          "highway": "罗坑服务区",
+          "road": "东进大道",
+          "hamlet": "联和",
+          "town": "大沙镇",
+          "county": "四会市",
+          "city": "肇庆市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "23.2339874",
+          "23.2350782",
+          "112.7325986",
+          "112.7344494"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "阴那山",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%98%B4%E9%82%A3%E5%B1%B1&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 226392961,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 2640663511,
+        "lat": "24.3941968",
+        "lon": "116.4139354",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.12743869505990896,
+        "addresstype": "peak",
+        "name": "阴那山",
+        "display_name": "阴那山, 梅州市, 广东省, 中国",
+        "address": {
+          "peak": "阴那山",
+          "city": "梅州市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "24.3941468",
+          "24.3942468",
+          "116.4138854",
+          "116.4139854"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "铜鼓峰",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%93%9C%E9%BC%93%E5%B3%B0&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 225589755,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 6322602593,
+        "lat": "28.4885711",
+        "lon": "114.3202865",
+        "category": "railway",
+        "type": "station",
+        "place_rank": 30,
+        "importance": 5.1863126573541126e-05,
+        "addresstype": "railway",
+        "name": "铜鼓",
+        "display_name": "铜鼓, 南昌-兴义, 丰田, 永宁镇, 铜鼓县, 宜春市, 江西省, 中国",
+        "address": {
+          "railway": "铜鼓",
+          "road": "南昌-兴义",
+          "village": "丰田",
+          "town": "永宁镇",
+          "county": "铜鼓县",
+          "region": "宜春市",
+          "state": "江西省",
+          "ISO3166-2-lvl4": "CN-JX",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "28.4835711",
+          "28.4935711",
+          "114.3152865",
+          "114.3252865"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "庙湾岛",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E5%BA%99%E6%B9%BE%E5%B2%9B&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 236693224,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "relation",
+        "osm_id": 11606671,
+        "lat": "21.8635850",
+        "lon": "114.0076418",
+        "category": "place",
+        "type": "island",
+        "place_rank": 17,
+        "importance": 0.19283288150311992,
+        "addresstype": "island",
+        "name": "庙湾岛",
+        "display_name": "庙湾岛, 珠海万山海洋开发试验区, 香洲区, 珠海市, 广东省, 519000, 中国",
+        "address": {
+          "island": "庙湾岛",
+          "suburb": "珠海万山海洋开发试验区",
+          "city": "香洲区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "519000",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "21.8511692",
+          "21.8761681",
+          "114.0020084",
+          "114.0265982"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "野猪嶂",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%87%8E%E7%8C%AA%E5%B6%82&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 241015451,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 2575759636,
+        "lat": "28.5651792",
+        "lon": "110.0533631",
+        "category": "place",
+        "type": "locality",
+        "place_rank": 25,
+        "importance": 0.06672253070878156,
+        "addresstype": "locality",
+        "name": "野竹社区",
+        "display_name": "野竹社区, 岩头寨镇, 古丈县, 湘西土家族苗族自治州, 湖南省, 中国",
+        "address": {
+          "locality": "野竹社区",
+          "town": "岩头寨镇",
+          "county": "古丈县",
+          "region": "湘西土家族苗族自治州",
+          "state": "湖南省",
+          "ISO3166-2-lvl4": "CN-HN",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "28.5551792",
+          "28.5751792",
+          "110.0433631",
+          "110.0633631"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "南昆山七仙湖",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E5%8D%97%E6%98%86%E5%B1%B1%E4%B8%83%E4%BB%99%E6%B9%96&format=jsonv2&limit=3&addressdetails=1&countrycodes=cn",
+    "results": []
+  }
+]

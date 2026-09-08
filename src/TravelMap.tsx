@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { TripDay, TripPlace, TripStop } from "./trips/types";
+import { wgs84ToGcj02 } from "./lib/coordinates";
 
 export type DayFilter = number | "all";
 
@@ -113,27 +114,53 @@ async function loadAMap(
   return amapPromise;
 }
 
-function popupContent(place: TripPlace, metaText: string) {
+export type MapPlace = Pick<TripPlace, "id" | "name" | "coord" | "note"> & {
+  markerLabel?: string;
+  markerColor?: string;
+  meta?: string;
+  url?: string;
+  linkLabel?: string;
+};
+
+function popupContent(place: MapPlace, metaText: string, theme: string, onClose: () => void) {
   const box = document.createElement("div");
-  box.className = "map-popup";
+  box.className = `map-popup relative${theme === "paper" ? " stargazing-popup" : ""}`;
+
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = "absolute right-1 top-1 grid size-7 cursor-pointer place-items-center rounded text-xl leading-none hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-offset-1";
+  close.setAttribute("aria-label", "关闭地图弹窗");
+  close.title = "关闭";
+  close.textContent = "×";
+  close.addEventListener("click", event => {
+    event.stopPropagation();
+    onClose();
+  });
+  box.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      event.stopPropagation();
+      onClose();
+    }
+  });
 
   const meta = document.createElement("span");
+  meta.className = "block pr-6";
   meta.textContent = metaText;
   const name = document.createElement("strong");
   name.textContent = place.name;
   const note = document.createElement("p");
   note.textContent = place.note;
   const link = document.createElement("a");
-  link.href = amapUrl(place);
+  link.href = place.url ?? amapUrl(place);
   link.target = "_blank";
   link.rel = "noreferrer";
-  link.textContent = "高德导航 ↗";
+  link.textContent = place.linkLabel ?? "高德导航 ↗";
 
-  box.append(meta, name, note, link);
+  box.append(close, meta, name, note, link);
   return box;
 }
 
-export function amapUrl(place: TripPlace) {
+export function amapUrl(place: Pick<MapPlace, "name" | "coord">) {
   const [lng, lat] = place.coord;
   const query = new URLSearchParams({
     position: `${lng},${lat}`,
@@ -146,28 +173,39 @@ export function amapUrl(place: TripPlace) {
   return `https://uri.amap.com/marker?${query.toString()}`;
 }
 
+const emptyStops: TripStop[] = [];
+const emptyPlaces: TripPlace[] = [];
+const emptyDays: TripDay[] = [];
+
 export type TravelMapProps = {
-  stops: TripStop[];
-  alternatives: TripPlace[];
-  days: TripDay[];
-  activeDay: DayFilter;
   focusPlaceId?: string | null;
   label: string;
   fitMaxZoom?: number;
-};
+  focusZoom?: number;
+  onSelectPlace?: (id: string) => void;
+  theme?: "default" | "paper";
+} & ({ places: MapPlace[]; stops?: never; alternatives?: never; days?: never; activeDay?: never }
+  | { places?: never; stops: TripStop[]; alternatives: TripPlace[]; days: TripDay[]; activeDay: DayFilter });
 
 export function TravelMap({
-  stops,
-  alternatives,
-  days,
-  activeDay,
+  stops = emptyStops,
+  alternatives = emptyPlaces,
+  days = emptyDays,
+  activeDay = "all",
+  places,
   focusPlaceId = null,
   label,
   fitMaxZoom = 8,
+  focusZoom = 14,
+  onSelectPlace,
+  theme = "default",
 }: TravelMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<AMapInstance | null>(null);
   const userMarkerRef = useRef<AMapOverlay | null>(null);
+  const initialCenter = useRef(places?.[0]?.coord ?? stops[0]?.coord ?? [116.397, 39.909]);
+  const onSelectRef = useRef(onSelectPlace);
+  useEffect(() => { onSelectRef.current = onSelectPlace; }, [onSelectPlace]);
   const [api, setApi] = useState<AMapNamespace | null>(null);
   const [locating, setLocating] = useState(false);
   const [locationError, setLocationError] = useState<string | null>(null);
@@ -198,7 +236,7 @@ export function TravelMap({
         const map = new AMap.Map(containerRef.current, {
           viewMode: "2D",
           mapStyle: "amap://styles/normal",
-          center: stops[0]?.coord ?? [116.397, 39.909],
+          center: initialCenter.current,
           zoom: 8,
           zooms: [3, 18],
           resizeEnable: true,
@@ -229,7 +267,7 @@ export function TravelMap({
       mapRef.current?.destroy();
       mapRef.current = null;
     };
-  }, [key, securityJsCode, serviceHost, stops]);
+  }, [key, securityJsCode, serviceHost]);
 
   function locateUser() {
     if (!api || !mapRef.current) return;
@@ -245,7 +283,7 @@ export function TravelMap({
         const map = mapRef.current;
         if (!map || !api) return;
 
-        const position: [number, number] = [coords.longitude, coords.latitude];
+        const position = wgs84ToGcj02([coords.longitude, coords.latitude]);
         if (userMarkerRef.current) map.remove(userMarkerRef.current);
 
         const markerNode = document.createElement("span");
@@ -287,7 +325,7 @@ export function TravelMap({
       activeDay === "all"
         ? alternatives
         : alternatives.filter((place) => place.city === activeCity);
-    const shownPlaces = [...shownStops, ...shownAlternatives];
+    const shownPlaces: MapPlace[] = places ?? [...shownStops, ...shownAlternatives];
     const overlays: AMapOverlay[] = [];
     const infoWindows: AMapInfoWindow[] = [];
     const infoWindowByPlaceId = new Map<string, AMapInfoWindow>();
@@ -313,14 +351,17 @@ export function TravelMap({
     }
 
     function addMarker(
-      place: TripPlace,
+      place: MapPlace,
       markerText: string,
       color: string,
-      kind: "planned" | "alternative",
+      kind: "planned" | "alternative" | "place",
       metaText: string,
     ) {
-      const markerNode = document.createElement("span");
-      markerNode.className = `map-marker ${kind}`;
+      const markerNode = document.createElement("button");
+      markerNode.type = "button";
+      markerNode.setAttribute("aria-label", `选择${place.name}`);
+      markerNode.setAttribute("aria-pressed", String(place.id === focusPlaceId));
+      markerNode.className = `map-marker ${kind}${theme === "paper" ? " stargazing-marker" : ""}`;
       markerNode.style.setProperty("--marker", color);
       markerNode.textContent = markerText;
 
@@ -332,15 +373,23 @@ export function TravelMap({
         title: place.name,
       });
       const infoWindow = new currentApi.InfoWindow({
-        content: popupContent(place, metaText),
+        content: popupContent(place, metaText, theme, () => {
+          infoWindow.close();
+          markerNode.focus({ preventScroll: true });
+        }),
         anchor: "bottom-center",
         offset: new currentApi.Pixel(0, -22),
         isCustom: true,
       });
 
-      marker.on?.("click", () => {
+      const select = () => {
         infoWindows.forEach((window) => window.close());
         infoWindow.open(currentMap, place.coord);
+        onSelectRef.current?.(place.id);
+      };
+      marker.on?.("click", select);
+      markerNode.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") { event.preventDefault(); select(); }
       });
       overlays.push(marker);
       infoWindows.push(infoWindow);
@@ -373,6 +422,8 @@ export function TravelMap({
       );
     });
 
+    places?.forEach((place) => addMarker(place, place.markerLabel ?? "•", place.markerColor ?? "#36594a", "place", place.meta ?? ""));
+
     if (overlays.length) map.add(overlays);
     if (shownPlaces.length === 1)
       map.setZoomAndCenter(13, shownPlaces[0].coord);
@@ -393,7 +444,7 @@ export function TravelMap({
 
     if (focusedPlace && focusedInfoWindow) {
       infoWindows.forEach((window) => window.close());
-      currentMap.setZoomAndCenter(14, focusedPlace.coord);
+      currentMap.setZoomAndCenter(focusZoom, focusedPlace.coord);
       focusedInfoWindow.open(currentMap, focusedPlace.coord);
     }
 
@@ -401,17 +452,17 @@ export function TravelMap({
       infoWindows.forEach((window) => window.close());
       if (mapRef.current === map && overlays.length) map.remove(overlays);
     };
-  }, [activeDay, alternatives, api, days, fitMaxZoom, focusPlaceId, stops]);
+  }, [activeDay, alternatives, api, days, fitMaxZoom, focusPlaceId, focusZoom, stops, places, theme]);
 
   const statusText =
     status === "missing"
-      ? "请在根目录 .env.local 填写高德 Web JS API Key 与安全密钥"
+      ? theme === "paper" ? "地图暂未配置，可继续查看地点列表与天气。" : "请在根目录 .env.local 填写高德 Web JS API Key 与安全密钥"
       : status === "error"
-        ? "高德地图加载失败，请检查 Key、安全密钥和域名白名单"
+        ? theme === "paper" ? "地图暂时加载失败，可通过下方链接查看地点。" : "高德地图加载失败，请检查 Key、安全密钥和域名白名单"
         : "高德 JS API 2.0 加载中…";
 
   return (
-    <div className="relative min-w-0 bg-[#eef1e9]">
+    <div className={`relative min-w-0 bg-[#eef1e9] ${theme === "paper" ? "stargazing-map" : ""}`}>
       <div
         ref={containerRef}
         className="h-[680px] w-full touch-none bg-[#eef1e9] max-md:h-[460px]"
@@ -419,7 +470,8 @@ export function TravelMap({
       />
       {status !== "ready" && (
         <div
-          className={`absolute left-1/2 top-1/2 z-[510] w-[min(420px,calc(100%-2rem))] -translate-x-1/2 -translate-y-1/2 border bg-[#182126]/95 px-5 py-[18px] text-center font-mono text-[11px] font-extrabold leading-[1.7] text-[#fff3a6] shadow-[7px_7px_0_rgb(21_25_29_/_20%)] ${
+          role="status"
+          className={`map-status absolute left-1/2 top-1/2 z-[510] w-[min(420px,calc(100%-2rem))] -translate-x-1/2 -translate-y-1/2 border bg-[#182126]/95 px-5 py-[18px] text-center font-mono text-[11px] font-extrabold leading-[1.7] text-[#fff3a6] shadow-[7px_7px_0_rgb(21_25_29_/_20%)] ${
             status === "error"
               ? "border-[#d93047]"
               : "border-[#f2dc00]/60"

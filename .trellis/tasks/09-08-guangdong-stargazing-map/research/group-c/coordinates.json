@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-09-08",
+  "places": [
+    {
+      "name": "八界山",
+      "status": "verified-poi-reference",
+      "latitude": 24.66306676564697,
+      "longitude": 112.51889043566949,
+      "datum": "WGS84",
+      "precision": "百度山峰POI，已用分享重定向poi_x/poi_y核对；不是具体停车/拍摄机位",
+      "source": {
+        "provider": "百度地图网页UI",
+        "label": "八界山，广东省清远市阳山县黎埠镇",
+        "uid": "14076dee41974ff702294f02",
+        "url": "https://map.baidu.com/poi/八界山/@12526986.565,2816814.32,19z?uid=14076dee41974ff702294f02",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinate": [
+          12526986.44,
+          2816784.32
+        ],
+        "shareUrl": "https://j.map.baidu.com/t/L0jkfv",
+        "coordinateEvidence": "详情页实际显示分享短链的302 Location，双URL解码后query=八界山，poi_x=12526986.44，poi_y=2816784.32，uid=14076dee41974ff702294f02"
+      },
+      "conversion": {
+        "library": "gcoord",
+        "version": "1.0.7",
+        "method": "gcoord.transform(source, gcoord.BD09MC, gcoord.WGS84)",
+        "package": "https://registry.npmjs.org/gcoord/-/gcoord-1.0.7.tgz",
+        "source": "https://github.com/hujiulong/gcoord"
+      },
+      "caveats": [
+        "此前地图中心相距该POI约27米，dark-sky.jsonl保留实际查询位置；等级可作该区域模型参考",
+        "POI坐标不等于具体停车点、山顶机位或夜间可通行证明"
+      ],
+      "skySamplingOffsetMeters": 27.4
+    },
+    {
+      "name": "阎罗头",
+      "status": "verified-peak-reference",
+      "latitude": 24.5032891,
+      "longitude": 113.176271,
+      "datum": "WGS84",
+      "precision": "OSM山峰节点，非登山入口或营地",
+      "source": {
+        "provider": "OpenStreetMap / Nominatim",
+        "osmType": "node",
+        "osmId": 12757264549,
+        "url": "https://www.openstreetmap.org/node/12757264549",
+        "label": "阎罗头, 大布镇, 乳源瑶族自治县, 韶关市, 广东省, 中国"
+      }
+    },
+    {
+      "name": "鸡笼顶",
+      "status": "verified-peak-reference",
+      "latitude": 22.250605,
+      "longitude": 111.383548,
+      "datum": "WGS84",
+      "precision": "OSM山峰节点，非停车点或营地；仍需补详情拍摄证据",
+      "source": {
+        "provider": "OpenStreetMap / Nominatim",
+        "osmType": "node",
+        "osmId": 12987910710,
+        "url": "https://www.openstreetmap.org/node/12987910710",
+        "label": "鸡笼顶, 阳春市, 阳江市, 广东省, 中国"
+      },
+      "rejectedMatches": [
+        "杭州市鸡笼顶",
+        "湖州市鸡笼顶"
+      ]
+    },
+    {
+      "name": "海陵岛地拿海",
+      "status": "verified-hamlet-reference",
+      "latitude": 21.6107548,
+      "longitude": 111.9581731,
+      "datum": "WGS84",
+      "precision": "村落参考点，帖子拍摄位置还需往海边开一小段；不是具体礁石机位",
+      "source": {
+        "provider": "OpenStreetMap / Nominatim",
+        "osmType": "node",
+        "osmId": 4550932972,
+        "url": "https://www.openstreetmap.org/node/4550932972",
+        "label": "地拿海, 那拿村, 闸坡镇, 海陵岛经济开发试验区, 江城区, 阳江市, 广东省, 中国"
+      }
+    },
+    {
+      "name": "后山顶",
+      "status": "unresolved",
+      "latitude": null,
+      "longitude": null,
+      "datum": null,
+      "precision": null,
+      "reason": "小红书定位曲江樟市镇后山村；Nominatim只命中浙江衢州后山顶，不能使用",
+      "sourceEvidence": "geocode-nominatim.json"
+    },
+    {
+      "name": "阳江石塘海湾休闲园",
+      "status": "verified-poi-reference",
+      "latitude": 21.785944742380273,
+      "longitude": 112.07934687285383,
+      "datum": "WGS84",
+      "precision": "百度园区POI；不是具体海堤机位",
+      "reason": "实际名称含海湾；地址阳东区八二村委会石塘村海堤路",
+      "sourceEvidence": "geocode-nominatim.json",
+      "source": {
+        "provider": "百度地图网页UI及公开分享重定向",
+        "label": "石塘海湾休闲园",
+        "uid": "03ffc157746dd2a836b06c18",
+        "url": "https://map.baidu.com/poi/石塘海湾休闲园/?uid=03ffc157746dd2a836b06c18",
+        "shareUrl": "https://j.map.baidu.com/t/-8Rlfv",
+        "sourceDatum": "BD09MC",
+        "sourceCoordinate": [
+          12478057.72,
+          2470303.83
+        ],
+        "coordinateEvidence": "实际显示分享短链的302 Location双解码后poi_x/poi_y，query与uid匹配"
+      },
+      "conversion": {
+        "library": "gcoord",
+        "version": "1.0.7",
+        "method": "gcoord.transform(source, gcoord.BD09MC, gcoord.WGS84)",
+        "package": "https://registry.npmjs.org/gcoord/-/gcoord-1.0.7.tgz",
+        "source": "https://github.com/hujiulong/gcoord"
+      },
+      "accessEvidence": "2026-09-08百度地图详情显示周一至周日10:30–22:30。不得默认通宵入园，需出发前向园区确认。参考价30元仅作当日地图展示信息。"
+    },
+    {
+      "name": "汕尾风车岛",
+      "status": "unresolved",
+      "latitude": null,
+      "longitude": null,
+      "datum": null,
+      "precision": null,
+      "reason": "Nominatim误匹配四川建筑，拒绝。百度地图站内输入汕尾风车岛后持续loading，详情仍为石塘海湾休闲园，未取得可靠风车岛定位。不把施公寮/遮浪别名视为已验证。",
+      "sourceEvidence": "geocode-nominatim.json"
+    }
+  ],
+  "rawGeocoderResults": "geocode-nominatim.json",
+  "license": "OpenStreetMap data © OpenStreetMap contributors, ODbL 1.0."
+}

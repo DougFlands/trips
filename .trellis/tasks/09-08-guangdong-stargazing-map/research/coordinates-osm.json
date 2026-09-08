@@ -1,0 +1,322 @@
+[
+  {
+    "query": "八界山 广东",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E5%85%AB%E7%95%8C%E5%B1%B1+%E5%B9%BF%E4%B8%9C&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 237374922,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 692785722,
+        "lat": "22.4788702",
+        "lon": "113.3480461",
+        "category": "highway",
+        "type": "living_street",
+        "place_rank": 26,
+        "importance": 0.05339562752727547,
+        "addresstype": "road",
+        "name": "八街",
+        "display_name": "八街, 良都社区, 南区街道, 秀山村, 中山市, 广东省, 528403, 中国",
+        "boundingbox": [
+          "22.4787896",
+          "22.4789152",
+          "113.3474224",
+          "113.3486697"
+        ]
+      },
+      {
+        "place_id": 237439107,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 198996577,
+        "lat": "23.0581390",
+        "lon": "112.9695397",
+        "category": "highway",
+        "type": "residential",
+        "place_rank": 26,
+        "importance": 0.05339333562218658,
+        "addresstype": "road",
+        "name": "八街",
+        "display_name": "八街, 天晟・海琴湾, 新安社区, 丹灶镇, 南海区, 佛山市, 南海区, 广东省, 528223, 中国",
+        "boundingbox": [
+          "23.0576189",
+          "23.0584157",
+          "112.9687120",
+          "112.9695473"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "莫六公山",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E8%8E%AB%E5%85%AD%E5%85%AC%E5%B1%B1&format=jsonv2&limit=3&countrycodes=cn",
+    "results": []
+  },
+  {
+    "query": "天塘顶 广东",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A9%E5%A1%98%E9%A1%B6+%E5%B9%BF%E4%B8%9C&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 237877195,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 4162096732,
+        "lat": "23.6546975",
+        "lon": "113.8146622",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.21337448257116948,
+        "addresstype": "peak",
+        "name": "天堂顶",
+        "display_name": "天堂顶, 广州市, 广东省, 中国",
+        "boundingbox": [
+          "23.6546475",
+          "23.6547475",
+          "113.8146122",
+          "113.8147122"
+        ]
+      },
+      {
+        "place_id": 237493140,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 5867361096,
+        "lat": "22.1612964",
+        "lon": "111.5519461",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.1600375013351644,
+        "addresstype": "peak",
+        "name": "天堂顶",
+        "display_name": "天堂顶, 庞北村, 阳春市, 阳江市, 广东省, 中国",
+        "boundingbox": [
+          "22.1612464",
+          "22.1613464",
+          "111.5518961",
+          "111.5519961"
+        ]
+      },
+      {
+        "place_id": 423337004,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 14026870487,
+        "lat": "24.5081766",
+        "lon": "113.2871892",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.16003075379568169,
+        "addresstype": "peak",
+        "name": "天堂顶",
+        "display_name": "天堂顶, 罗坑镇, 曲江区, 韶关市, 广东省, 中国",
+        "boundingbox": [
+          "24.5081266",
+          "24.5082266",
+          "113.2871392",
+          "113.2872392"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "南水水库 广东",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E5%8D%97%E6%B0%B4%E6%B0%B4%E5%BA%93+%E5%B9%BF%E4%B8%9C&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 225306224,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "relation",
+        "osm_id": 1903196,
+        "lat": "24.8006821",
+        "lon": "113.1822252",
+        "category": "water",
+        "type": "reservoir",
+        "place_rank": 20,
+        "importance": 0.24158668584662718,
+        "addresstype": "reservoir",
+        "name": "南水水库",
+        "display_name": "南水水库, 汤盆村, 东坪镇, 乳源瑶族自治县, 韶关市, 广东省, 中国",
+        "boundingbox": [
+          "24.7235381",
+          "24.8778715",
+          "113.1210655",
+          "113.2205272"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "青莲山 乐昌",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E9%9D%92%E8%8E%B2%E5%B1%B1+%E4%B9%90%E6%98%8C&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 225404280,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 846497991,
+        "lat": "31.7775999",
+        "lon": "117.2237694",
+        "category": "landuse",
+        "type": "commercial",
+        "place_rank": 24,
+        "importance": 0.08006629205767907,
+        "addresstype": "commercial",
+        "name": "百乐门广场",
+        "display_name": "百乐门广场, 莲花社区, 合肥经济技术开发区, 蜀山区, 合肥市, 安徽省, 中国",
+        "boundingbox": [
+          "31.7767848",
+          "31.7781482",
+          "117.2228445",
+          "117.2246799"
+        ]
+      },
+      {
+        "place_id": 237529651,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 389202317,
+        "lat": "22.3620074",
+        "lon": "114.1335397",
+        "category": "leisure",
+        "type": "sports_centre",
+        "place_rank": 30,
+        "importance": 6.549095902948069e-05,
+        "addresstype": "leisure",
+        "name": "大連排道遊樂場 Tai Lin Pai Road Playground",
+        "display_name": "大連排道遊樂場 Tai Lin Pai Road Playground, 大連排道 Tai Lin Pai Road, 大連排 Tai Lin Pai, 葵涌 Kwai Chung, 葵青區 Kwai Tsing District, 新界 New Territories, 香港 Hong Kong, 中国",
+        "boundingbox": [
+          "22.3616756",
+          "22.3626066",
+          "114.1332699",
+          "114.1340542"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "白盆珠水库",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E7%99%BD%E7%9B%86%E7%8F%A0%E6%B0%B4%E5%BA%93&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 236518413,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "relation",
+        "osm_id": 546399,
+        "lat": "23.1308393",
+        "lon": "115.1402315",
+        "category": "water",
+        "type": "reservoir",
+        "place_rank": 20,
+        "importance": 0.2328416436185146,
+        "addresstype": "reservoir",
+        "name": "白盆珠水库",
+        "display_name": "白盆珠水库, 惠州市, 广东省, 中国",
+        "boundingbox": [
+          "23.0644628",
+          "23.1972135",
+          "115.0290113",
+          "115.2183706"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "深圳天文台",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%96%87%E5%8F%B0&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 235812702,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 822150582,
+        "lat": "22.7334119",
+        "lon": "114.3713737",
+        "category": "landuse",
+        "type": "construction",
+        "place_rank": 24,
+        "importance": 0.08007029907682915,
+        "addresstype": "construction",
+        "name": "中孚泰文化大厦",
+        "display_name": "中孚泰文化大厦, 井水龙, 龙田街道, 坪山区, 深圳市, 广东省, 518118, 中国",
+        "boundingbox": [
+          "22.7328313",
+          "22.7341202",
+          "114.3708053",
+          "114.3719497"
+        ]
+      },
+      {
+        "place_id": 234172084,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 665946657,
+        "lat": "22.4826799",
+        "lon": "114.5557147",
+        "category": "office",
+        "type": "research",
+        "place_rank": 30,
+        "importance": 7.029907682912974e-05,
+        "addresstype": "office",
+        "name": "深圳市天文台",
+        "display_name": "深圳市天文台, 天文路, 南澳街道, 大鹏新区, 龙岗区, 深圳市, 广东省, 518100, 中国",
+        "boundingbox": [
+          "22.4820914",
+          "22.4832934",
+          "114.5542958",
+          "114.5575869"
+        ]
+      },
+      {
+        "place_id": 237573984,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1208338770,
+        "lat": "22.6781827",
+        "lon": "113.9882490",
+        "category": "building",
+        "type": "retail",
+        "place_rank": 30,
+        "importance": 7.029907682912974e-05,
+        "addresstype": "building",
+        "name": "羊台山美食文化街",
+        "display_name": "羊台山美食文化街, 西大街, 大浪商业中心 / 后浪新天地, 同胜社区, 大浪街道, 龙华区, 深圳市, 广东省, 518109, 中国",
+        "boundingbox": [
+          "22.6779245",
+          "22.6784410",
+          "113.9878249",
+          "113.9886731"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "大顶山 肇庆",
+    "sourceUrl": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A7%E9%A1%B6%E5%B1%B1+%E8%82%87%E5%BA%86&format=jsonv2&limit=3&countrycodes=cn",
+    "results": [
+      {
+        "place_id": 237693810,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 12550925648,
+        "lat": "22.8823380",
+        "lon": "112.3736217",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.16006000228885328,
+        "addresstype": "peak",
+        "name": "大山顶",
+        "display_name": "大山顶, 肇庆市, 广东省, 中国",
+        "boundingbox": [
+          "22.8822880",
+          "22.8823880",
+          "112.3735717",
+          "112.3736717"
+        ]
+      }
+    ]
+  }
+]

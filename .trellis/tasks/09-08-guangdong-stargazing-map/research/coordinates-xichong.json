@@ -1,0 +1,325 @@
+[
+  {
+    "query": "西涌",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E8%A5%BF%E6%B6%8C&format=jsonv2&limit=5&addressdetails=1",
+    "results": [
+      {
+        "place_id": 237123009,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 513343360,
+        "lat": "22.2859418",
+        "lon": "113.9182941",
+        "category": "waterway",
+        "type": "stream",
+        "place_rank": 22,
+        "importance": 0.10673215762569617,
+        "addresstype": "stream",
+        "name": "彌散石澗 Nei San Stream",
+        "display_name": "彌散石澗 Nei San Stream, 離島區 Islands District, 新界 New Territories, 香港 Hong Kong, 中国",
+        "address": {
+          "stream": "彌散石澗 Nei San Stream",
+          "suburb": "離島區 Islands District",
+          "region": "新界 New Territories",
+          "city": "香港 Hong Kong",
+          "ISO3166-2-lvl3": "CN-HK",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.2796021",
+          "22.2901347",
+          "113.9141401",
+          "113.9241260"
+        ]
+      },
+      {
+        "place_id": 237509074,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 13414740925,
+        "lat": "22.6146852",
+        "lon": "114.3549870",
+        "category": "railway",
+        "type": "station",
+        "place_rank": 30,
+        "importance": 0.38493605591222957,
+        "addresstype": "railway",
+        "name": "溪涌",
+        "display_name": "溪涌, 溪海路, 溪涌社区, 葵涌街道, 大鹏新区, 龙岗区, 深圳市, 广东省, 518100, 中国",
+        "address": {
+          "railway": "溪涌",
+          "road": "溪海路",
+          "quarter": "溪涌社区",
+          "suburb": "葵涌街道",
+          "town": "大鹏新区",
+          "city": "龙岗区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518100",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.6096852",
+          "22.6196852",
+          "114.3499870",
+          "114.3599870"
+        ]
+      },
+      {
+        "place_id": 241173628,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 4362308967,
+        "lat": "29.5997271",
+        "lon": "106.3739864",
+        "category": "place",
+        "type": "suburb",
+        "place_rank": 19,
+        "importance": 0.3035308770567123,
+        "addresstype": "suburb",
+        "name": "西永街道",
+        "display_name": "西永街道, 重庆高新区, 沙坪坝区, 重庆市, 中国",
+        "address": {
+          "suburb": "西永街道",
+          "city": "重庆高新区",
+          "state": "重庆市",
+          "ISO3166-2-lvl4": "CN-CQ",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "29.5797271",
+          "29.6197271",
+          "106.3539864",
+          "106.3939864"
+        ]
+      },
+      {
+        "place_id": 234836378,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 597083225,
+        "lat": "23.0618412",
+        "lon": "113.3551764",
+        "category": "waterway",
+        "type": "river",
+        "place_rank": 19,
+        "importance": 0.14673452582589452,
+        "addresstype": "river",
+        "name": "细涌",
+        "display_name": "细涌, 华洲街道, 海珠区, 广州市, 广东省, 510290, 中国",
+        "address": {
+          "river": "细涌",
+          "suburb": "华洲街道",
+          "city": "海珠区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "510290",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "23.0586245",
+          "23.0650837",
+          "113.3531424",
+          "113.3558178"
+        ]
+      },
+      {
+        "place_id": 237344110,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 6440024848,
+        "lat": "22.6117774",
+        "lon": "114.3559632",
+        "category": "place",
+        "type": "hamlet",
+        "place_rank": 20,
+        "importance": 0.13340363241016248,
+        "addresstype": "hamlet",
+        "name": "溪涌",
+        "display_name": "溪涌, 大鹏新区, 龙岗区, 深圳市, 广东省, 518100, 中国",
+        "address": {
+          "hamlet": "溪涌",
+          "town": "大鹏新区",
+          "city": "龙岗区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518100",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.5917774",
+          "22.6317774",
+          "114.3359632",
+          "114.3759632"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "新屋 深圳市",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E6%96%B0%E5%B1%8B+%E6%B7%B1%E5%9C%B3%E5%B8%82&format=jsonv2&limit=5&addressdetails=1",
+    "results": [
+      {
+        "place_id": 236704956,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 7724637873,
+        "lat": "22.6901415",
+        "lon": "114.3631907",
+        "category": "place",
+        "type": "hamlet",
+        "place_rank": 20,
+        "importance": 0.13340363241016248,
+        "addresstype": "hamlet",
+        "name": "新屋",
+        "display_name": "新屋, 马峦街道, 坪山区, 深圳市, 广东省, 518118, 中国",
+        "address": {
+          "hamlet": "新屋",
+          "suburb": "马峦街道",
+          "city": "坪山区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518118",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.6701415",
+          "22.7101415",
+          "114.3431907",
+          "114.3831907"
+        ]
+      },
+      {
+        "place_id": 235467547,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 7262711527,
+        "lat": "22.6804563",
+        "lon": "114.3090098",
+        "category": "place",
+        "type": "hamlet",
+        "place_rank": 20,
+        "importance": 0.13340363241016248,
+        "addresstype": "hamlet",
+        "name": "新屋",
+        "display_name": "新屋, 坪山街道, 坪山区, 深圳市, 广东省, 518118, 中国",
+        "address": {
+          "hamlet": "新屋",
+          "suburb": "坪山街道",
+          "city": "坪山区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518118",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.6604563",
+          "22.7004563",
+          "114.2890098",
+          "114.3290098"
+        ]
+      },
+      {
+        "place_id": 235495303,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 7311749355,
+        "lat": "22.7607295",
+        "lon": "114.3540947",
+        "category": "place",
+        "type": "hamlet",
+        "place_rank": 20,
+        "importance": 0.13340363241016248,
+        "addresstype": "hamlet",
+        "name": "新屋",
+        "display_name": "新屋, 龙田街道, 坪山区, 深圳市, 广东省, 518118, 中国",
+        "address": {
+          "hamlet": "新屋",
+          "suburb": "龙田街道",
+          "city": "坪山区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518118",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.7407295",
+          "22.7807295",
+          "114.3340947",
+          "114.3740947"
+        ]
+      },
+      {
+        "place_id": 237003666,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 7202926275,
+        "lat": "22.8223444",
+        "lon": "113.9334760",
+        "category": "place",
+        "type": "hamlet",
+        "place_rank": 20,
+        "importance": 0.13340363241016248,
+        "addresstype": "hamlet",
+        "name": "新屋",
+        "display_name": "新屋, 新湖街道, 光明区, 深圳市, 广东省, 518107, 中国",
+        "address": {
+          "hamlet": "新屋",
+          "suburb": "新湖街道",
+          "city": "光明区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518107",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.8023444",
+          "22.8423444",
+          "113.9134760",
+          "113.9534760"
+        ]
+      },
+      {
+        "place_id": 237114017,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 406422714,
+        "lat": "22.4893432",
+        "lon": "114.5419908",
+        "category": "landuse",
+        "type": "residential",
+        "place_rank": 24,
+        "importance": 0.08007029907682915,
+        "addresstype": "residential",
+        "name": "新屋",
+        "display_name": "新屋, 南澳街道, 大鹏新区, 龙岗区, 深圳市, 广东省, 518100, 中国",
+        "address": {
+          "residential": "新屋",
+          "suburb": "南澳街道",
+          "town": "大鹏新区",
+          "city": "龙岗区",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "postcode": "518100",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.4882773",
+          "22.4907087",
+          "114.5406317",
+          "114.5427831"
+        ]
+      }
+    ]
+  }
+]

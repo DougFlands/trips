@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { findTrip, findTripPage, trips } from "./trips";
+import StargazingPage from "./trips/guangdong-stargazing/page";
 
 const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
 const segments = pathname.split("/").filter(Boolean);
@@ -10,12 +11,14 @@ const trip =
 
 export function App() {
   const isIndex = pathname === "/";
-  const title = trip
+  const isStargazing = pathname === "/trips/guangdong-stargazing";
+  const title = isStargazing ? "广东观星地图 · 流星雨与星空拍摄"
+    : trip
     ? `${trip.title}${trip.subtitle ? ` · ${trip.subtitle}` : ""}`
     : isIndex
       ? "旅行攻略"
       : "页面不存在 · 旅行攻略";
-  const description = trip?.intro ?? "逐日安排、高德地图点位与预订清单。";
+  const description = isStargazing ? "从深圳出发，比较广东星空拍摄地点、直线距离、波尔特等级与未来七晚天气。" : trip?.intro ?? "逐日安排、高德地图点位与预订清单。";
 
   useEffect(() => {
     document.title = title;
@@ -24,6 +27,7 @@ export function App() {
       ?.setAttribute("content", description);
   }, [description, title]);
 
+  if (isStargazing) return <StargazingPage />;
   if (trip) {
     const Page = findTripPage(trip.slug);
     if (Page) return <Page trip={trip} />;
@@ -50,7 +54,7 @@ function TripIndex() {
           <i className="size-2 bg-[#15191d]" /> TRAVEL//INDEX
         </a>
         <span className="flex items-center gap-2 text-[#117b55]">
-          <i className="size-1.5 rounded-full bg-[#117b55] shadow-[0_0_12px_#117b55]" /> {String(trips.length).padStart(2, "0")} GUIDE ONLINE
+          <i className="size-1.5 rounded-full bg-[#117b55] shadow-[0_0_12px_#117b55]" /> {String(trips.length + 1).padStart(2, "0")} GUIDE ONLINE
         </span>
       </nav>
 
@@ -63,6 +67,12 @@ function TripIndex() {
       </header>
 
       <section className="mx-auto w-[min(1120px,calc(100%-2.5rem))] pb-24" aria-label="旅行列表">
+        <a href="/trips/guangdong-stargazing/" className="mb-5 block border border-[#a5b19b] bg-[#f5f3e8] p-8 text-[#36594a] shadow-[6px_6px_0_#dfe3d3] transition-transform hover:-translate-y-1">
+          <small className="text-xs tracking-[0.18em] text-[#9d5e39]">广东 · 观星手记</small>
+          <h2 className="my-5 font-serif text-[clamp(32px,5vw,58px)]">广东观星地图 <span aria-hidden="true">✧</span></h2>
+          <p className="max-w-[650px] text-sm leading-7 text-[#727769]">从深圳出发，找一处拍流星与银河的地方。地图点位、波尔特等级与未来七晚天气，放在一起比较。</p>
+          <p className="mt-6 text-sm font-semibold">打开观星手记 ↗</p>
+        </a>
         {trips.map((item, index) => {
           const cities = [...new Set(item.days.map((day) => day.city))];
 

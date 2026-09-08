@@ -1,0 +1,30 @@
+[
+  {
+    "placeId": "baipenzhu",
+    "name": "白盆珠水库区域",
+    "requestedWgs84": [115.1402315, 23.1308393],
+    "sampledWgs84": [115.14023, 23.13122],
+    "min": 4,
+    "max": 4,
+    "sqm": 21.26,
+    "layer": "Sky Brightness",
+    "dataYear": 2025,
+    "checkedAt": "2026-09-08",
+    "sourceUrl": "https://www.lightpollutionmap.info/",
+    "method": "Edge 插件搜索 WGS84 坐标后点击地图中心，读取可见点查询弹窗。查询位置与目标相距约42米，图层约1km分辨率；仅水库区域参考。"
+  },
+  {
+    "placeId": "yanluotou",
+    "name": "阎罗头",
+    "requestedWgs84": [113.1762710, 24.5032891],
+    "sampledWgs84": [113.17627, 24.50366],
+    "min": 3,
+    "max": 3,
+    "sqm": 21.72,
+    "layer": "Sky Brightness",
+    "dataYear": 2025,
+    "checkedAt": "2026-09-08",
+    "sourceUrl": "https://www.lightpollutionmap.info/",
+    "method": "Edge 插件搜索 WGS84 坐标后点击地图中心，读取可见点查询弹窗。查询位置与目标相距约41米，图层约1km分辨率；山顶区域参考。"
+  }
+]

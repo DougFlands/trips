@@ -1,0 +1,320 @@
+[
+  {
+    "query": "鸡笼顶",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%B8%A1%E7%AC%BC%E9%A1%B6&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+    "results": [
+      {
+        "place_id": 224357058,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 11549015059,
+        "lat": "30.1741627",
+        "lon": "120.0094006",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.16006254596780345,
+        "addresstype": "peak",
+        "name": "鸡笼顶",
+        "display_name": "鸡笼顶, 杭州市, 浙江省, 中国",
+        "address": {
+          "peak": "鸡笼顶",
+          "city": "杭州市",
+          "state": "浙江省",
+          "ISO3166-2-lvl4": "CN-ZJ",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "30.1741127",
+          "30.1742127",
+          "120.0093506",
+          "120.0094506"
+        ]
+      },
+      {
+        "place_id": 224901135,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 9050434542,
+        "lat": "30.5235710",
+        "lon": "119.5752731",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.16005072785534447,
+        "addresstype": "peak",
+        "name": "鸡笼顶",
+        "display_name": "鸡笼顶, 湖州市, 浙江省, 中国",
+        "address": {
+          "peak": "鸡笼顶",
+          "city": "湖州市",
+          "state": "浙江省",
+          "ISO3166-2-lvl4": "CN-ZJ",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "30.5235210",
+          "30.5236210",
+          "119.5752231",
+          "119.5753231"
+        ]
+      },
+      {
+        "place_id": 238159215,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 12987910710,
+        "lat": "22.2506050",
+        "lon": "111.3835480",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.1600375013351644,
+        "addresstype": "peak",
+        "name": "鸡笼顶",
+        "display_name": "鸡笼顶, 阳春市, 阳江市, 广东省, 中国",
+        "address": {
+          "peak": "鸡笼顶",
+          "county": "阳春市",
+          "region": "阳江市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "22.2505550",
+          "22.2506550",
+          "111.3834980",
+          "111.3835980"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "石塘海休闲园",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E7%9F%B3%E5%A1%98%E6%B5%B7%E4%BC%91%E9%97%B2%E5%9B%AD&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+    "results": [
+      {
+        "place_id": 221630100,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 966905371,
+        "lat": "39.4619465",
+        "lon": "118.2722018",
+        "category": "amenity",
+        "type": "school",
+        "place_rank": 30,
+        "importance": 6.695429922937389E-05,
+        "addresstype": "amenity",
+        "name": "唐山市丰南区第四中学",
+        "display_name": "唐山市丰南区第四中学, 唐曹公路, 宋家营, 锦绣家园社区, 小集镇, 丰南区, 唐山市, 河北省, 中国",
+        "address": {
+          "amenity": "唐山市丰南区第四中学",
+          "road": "唐曹公路",
+          "residential": "宋家营",
+          "quarter": "锦绣家园社区",
+          "town": "小集镇",
+          "district": "丰南区",
+          "city": "唐山市",
+          "state": "河北省",
+          "ISO3166-2-lvl4": "CN-HE",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "39.4607102",
+          "39.4631786",
+          "118.2712101",
+          "118.2745736"
+        ]
+      },
+      {
+        "place_id": 242186901,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 469066883,
+        "lat": "30.7638596",
+        "lon": "103.9527382",
+        "category": "amenity",
+        "type": "food_court",
+        "place_rank": 30,
+        "importance": 6.0002288853238995E-05,
+        "addresstype": "amenity",
+        "name": "北苑食堂",
+        "display_name": "北苑食堂, 锦绣大道, 天益佳苑, 犀浦街道, 郫都区, 成都市, 四川省, 611731, 中国",
+        "address": {
+          "amenity": "北苑食堂",
+          "road": "锦绣大道",
+          "neighbourhood": "天益佳苑",
+          "suburb": "犀浦街道",
+          "city": "郫都区",
+          "state": "四川省",
+          "ISO3166-2-lvl4": "CN-SC",
+          "postcode": "611731",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "30.7633915",
+          "30.7642128",
+          "103.9523381",
+          "103.9532335"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "地拿海",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E5%9C%B0%E6%8B%BF%E6%B5%B7&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+    "results": [
+      {
+        "place_id": 237216186,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 4550932972,
+        "lat": "21.6107548",
+        "lon": "111.9581731",
+        "category": "place",
+        "type": "hamlet",
+        "place_rank": 20,
+        "importance": 0.13337833447775996,
+        "addresstype": "hamlet",
+        "name": "地拿海",
+        "display_name": "地拿海, 那拿村, 闸坡镇, 海陵岛经济开发试验区, 江城区, 阳江市, 广东省, 中国",
+        "address": {
+          "hamlet": "地拿海",
+          "village": "那拿村",
+          "town": "闸坡镇",
+          "municipality": "海陵岛经济开发试验区",
+          "county": "江城区",
+          "region": "阳江市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "21.5907548",
+          "21.6307548",
+          "111.9381731",
+          "111.9781731"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "风车岛",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%A3%8E%E8%BD%A6%E5%B2%9B&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+    "results": [
+      {
+        "place_id": 239787486,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "way",
+        "osm_id": 1430767153,
+        "lat": "30.2799157",
+        "lon": "104.0446444",
+        "category": "building",
+        "type": "yes",
+        "place_rank": 30,
+        "importance": 6.0002288853238995E-05,
+        "addresstype": "building",
+        "name": "风车",
+        "display_name": "风车, 策克 - 磨憨, 籍田街道, 天府新区, 双流区, 成都市, 仁寿县, 眉山市, 四川省, 中国",
+        "address": {
+          "building": "风车",
+          "road": "策克 - 磨憨",
+          "town": "籍田街道",
+          "suburb": "天府新区",
+          "city": "双流区",
+          "county": "仁寿县",
+          "region": "眉山市",
+          "state": "四川省",
+          "ISO3166-2-lvl4": "CN-SC",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "30.2798885",
+          "30.2799427",
+          "104.0446142",
+          "104.0446746"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "后山顶",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E5%90%8E%E5%B1%B1%E9%A1%B6&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+    "results": [
+      {
+        "place_id": 225994569,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 7079574608,
+        "lat": "29.1847979",
+        "lon": "118.4252123",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.16005472724498357,
+        "addresstype": "peak",
+        "name": "后山顶",
+        "display_name": "后山顶, 衢州市, 浙江省, 中国",
+        "address": {
+          "peak": "后山顶",
+          "city": "衢州市",
+          "state": "浙江省",
+          "ISO3166-2-lvl4": "CN-ZJ",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "29.1847479",
+          "29.1848479",
+          "118.4251623",
+          "118.4252623"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "阎罗头",
+    "url": "https://nominatim.openstreetmap.org/search?q=%E9%98%8E%E7%BD%97%E5%A4%B4&format=jsonv2&countrycodes=cn&addressdetails=1&limit=5",
+    "results": [
+      {
+        "place_id": 226282786,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 12757264549,
+        "lat": "24.5032891",
+        "lon": "113.1762710",
+        "category": "natural",
+        "type": "peak",
+        "place_rank": 18,
+        "importance": 0.1600375013351644,
+        "addresstype": "peak",
+        "name": "阎罗头",
+        "display_name": "阎罗头, 大布镇, 乳源瑶族自治县, 韶关市, 广东省, 中国",
+        "address": {
+          "peak": "阎罗头",
+          "town": "大布镇",
+          "county": "乳源瑶族自治县",
+          "region": "韶关市",
+          "state": "广东省",
+          "ISO3166-2-lvl4": "CN-GD",
+          "country": "中国",
+          "country_code": "cn"
+        },
+        "boundingbox": [
+          "24.5032391",
+          "24.5033391",
+          "113.1762210",
+          "113.1763210"
+        ]
+      }
+    ]
+  }
+]

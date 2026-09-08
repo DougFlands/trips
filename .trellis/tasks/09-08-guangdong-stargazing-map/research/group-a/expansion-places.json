@@ -1,0 +1,236 @@
+[
+  {
+    "id": "apoliu",
+    "name": "阿婆六 · 山顶观星台",
+    "city": "广州",
+    "district": "从化区 · 良口镇",
+    "terrain": "山顶观星台",
+    "wgs84": [
+      113.8753474804382,
+      23.693581997352727
+    ],
+    "precision": "阿婆六村POI区域参考，非山顶楼宇或预约入口；上山机位需对照原帖确认。",
+    "coordinateUrl": "https://map.baidu.com/poi/阿婆六村?uid=b4857445ee2dc374a21de9ad",
+    "summary": "作者在楼顶拍摄银河全景，环顾四周无遮挡；山顶三楼为观星台，适合预约后安排拍摄。",
+    "access": "水泥陡坡山路可驾车上山，作者称山顶广场可停车。最后一段坡陡，底盘低车辆需谨慎。",
+    "nightAccess": "作者2026年8月更新：不预约不给进场。需提前联系场地方确认观星台预约与夜间时段。",
+    "caution": "村落坐标不等于山顶入口。现场有门禁报告；楼顶不用强手电，避免干扰其他摄影者。",
+    "sources": [
+      {
+        "title": "银河守望者 · 广州从化亚婆六山银拱，银河全景拍摄分享",
+        "url": "https://www.xiaohongshu.com/explore/68af3439000000001c03fed7",
+        "date": "2025-08-26实拍；2026-08预约更新"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=从化阿婆六村&city=广州&view=map",
+    "decision": "include-reservation-required",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "b4857445ee2dc374a21de9ad",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12677953.97,
+        2699220.35
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/PmVAfv",
+      "method": "详情页实际短链重定向参数query=阿婆六村及同UID的poi_x/poi_y；gcoord1.0.7转换为WGS84，未使用@视图中心",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "lianma",
+    "name": "莲麻 · 黄沙坑附近路段",
+    "city": "广州",
+    "district": "从化区 · 吕田镇",
+    "terrain": "村落道路",
+    "wgs84": [
+      113.97654155955121,
+      23.894596456955046
+    ],
+    "precision": "黄沙坑革命遗址纪念馆POI参考；作者在到馆前约200米路段拍摄，非馆内或精确停车位。",
+    "coordinateUrl": "https://map.baidu.com/poi/黄沙坑革命遗址纪念馆?uid=c9fbd14ca4d3c9bc4bcc4a73",
+    "summary": "广州出发较方便的村落观星线索。作者明确黄沙坑纪念馆附近路段，并记录深夜观星经历。",
+    "access": "作者称广州奥体出发约1.5小时，全程水泥路。导航纪念馆附近，再按现场规则选择允许停车的开阔位置。",
+    "nightAccess": "作者有23点至凌晨观星经历；周边道路管理与停车规定待出发前确认，不表示纪念馆夜间开放。",
+    "caution": "原帖光迹可能是飞机或卫星，不将该光迹认定为流星。路灯和来往车灯需现场避开，禁止妨碍道路通行。",
+    "sources": [
+      {
+        "title": "有理想的华仔 · 从化莲麻追英仙座流星雨成功",
+        "url": "https://www.xiaohongshu.com/explore/6a7d108b00000000060058a8",
+        "date": "页面显示08-13"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=黄沙坑革命遗址纪念馆&city=广州&view=map",
+    "decision": "include-area-reference",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "c9fbd14ca4d3c9bc4bcc4a73",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12689228.41,
+        2723525.37
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/57Mrfv",
+      "method": "详情页实际短链重定向的同UID poi_x/poi_y，经gcoord1.0.7转换WGS84；未使用@视图中心",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "wanshandao",
+    "name": "万山岛",
+    "city": "珠海",
+    "district": "香洲区 · 万山镇",
+    "terrain": "海岛",
+    "wgs84": [
+      113.72787317221226,
+      21.941715417028004
+    ],
+    "precision": "大万山岛旅游POI区域参考，靠近万山村；非作者具体岸线或山顶机位。",
+    "coordinateUrl": "https://map.baidu.com/poi/大万山岛?uid=0c1d9ec616579277bfa82246",
+    "summary": "独立作者两次到访拍摄银河，2026年记录天气窗口与相机器材。岛屿适合结合住宿安排星空拍摄。",
+    "access": "乘船上岛。作者报告香洲港至万山航线，票价与时刻以出发日为准；先安排夜拍后的住宿或返程。",
+    "nightAccess": "百度岛屿POI显示全天，但不代表岛内每条步道和海岸均可夜入；具体岸线管理待确认。",
+    "caution": "原帖未标精确机位。港口、村落和渔船照明局部较强；海岸需留意潮汐与风浪。",
+    "sources": [
+      {
+        "title": "CN_Chenx晨夕 · 珠海星空银河肉眼可见｜万山岛夏夜星空",
+        "url": "https://www.xiaohongshu.com/explore/6a775e97000000002403e00f",
+        "date": "页面显示08-09"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=大万山岛&city=珠海&view=map",
+    "decision": "include-island-reference",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "0c1d9ec616579277bfa82246",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12661557.9,
+        2488817.19
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/mx0rfv",
+      "method": "详情页实际短链重定向的同UID poi_x/poi_y，经gcoord1.0.7转换WGS84；未使用@视图中心",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "hengshiji",
+    "name": "横石基沙滩",
+    "city": "珠海",
+    "district": "金湾区 · 三灶镇",
+    "terrain": "沙滩",
+    "wgs84": [
+      113.30749496845486,
+      22.00370544074695
+    ],
+    "precision": "沙滩POI区域参考，非精确相机位置或入口停车点。",
+    "coordinateUrl": "https://map.baidu.com/poi/横石基沙滩?uid=09acb9fc9af063739e82ea2c",
+    "summary": "作者2026年8月在机场旁沙滩拍到银河，给出曝光与堆栈参数；适合接受较强光污染的本地拍摄。",
+    "access": "作者驾车抵达；地图匹配石基北路与587县道交叉口西南约620米的沙滩。停车与入口以现场规定为准。",
+    "nightAccess": "地图POI显示全天，作者有晚上7–8点拍摄记录；恶劣天气或临时管制仍须核对。",
+    "caution": "作者明确光污染严重、水汽重，肉眼仅淡银河；照片采用堆栈。留意潮汐，远离风浪和机场设施边界。",
+    "sources": [
+      {
+        "title": "汗青 · 珠海橫石基沙滩银河20260809",
+        "url": "https://www.xiaohongshu.com/explore/6a789e52000000002403cc0a",
+        "date": "2026-08-09实拍；编辑于08-10"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=横石基沙滩&city=珠海&view=map",
+    "decision": "include-beach-reference",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "09acb9fc9af063739e82ea2c",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12614787.98,
+        2496207.77
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/TBdsfv",
+      "method": "详情页实际短链重定向的同UID poi_x/poi_y，经gcoord1.0.7转换WGS84；未使用@视图中心",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "dongaodao",
+    "name": "东澳岛 · 观景台",
+    "city": "珠海",
+    "district": "香洲区 · 万山镇",
+    "terrain": "海岛观景台",
+    "wgs84": [
+      113.691260044139,
+      22.02426030904554
+    ],
+    "precision": "百度地图岛内观景台POI参考；同岛有多处平台，原帖未给坐标，具体机位须对照原图确认。",
+    "coordinateUrl": "https://map.baidu.com/poi/观景台?uid=dff9b08b89b7ce3b3517dca5",
+    "summary": "作者在东澳岛观景平台使用智能望远镜拍摄猎户座和马头星云，给出曝光记录；主要作为深空拍摄线索。",
+    "access": "香洲港乘船上岛，再步行爬升至平台。作者称离码头约1–2小时，需提前安排船班、住宿和负重路线。",
+    "nightAccess": "地图POI显示全天，作者有夜间拍摄记录；平台临时管理与具体步道开放状态出发前确认。",
+    "caution": "海岛风大、天气变化快，可能影响长曝光；原帖成果不等同肉眼银河效果。器材与电源携带规定向船公司确认。",
+    "sources": [
+      {
+        "title": "小郑的观星日记 · 东澳岛观星记",
+        "url": "https://www.xiaohongshu.com/explore/69996975000000002801daa2",
+        "date": "页面显示编辑于02-21"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=东澳岛观景台&city=珠海&view=map",
+    "decision": "include-viewpoint-reference",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "dff9b08b89b7ce3b3517dca5",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12657489.15,
+        2498612.64
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/vvGsfv",
+      "method": "搜索东澳岛观景平台，选择地址珠海市东澳岛的观景台；详情实际短链的同UID poi_x/poi_y经gcoord1.0.7转WGS84。排除大陆情侣南路观澳平台，未采用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  },
+  {
+    "id": "xikeng",
+    "name": "高明西坑水库 · 外围",
+    "city": "佛山",
+    "district": "高明区 · 杨和镇",
+    "terrain": "水库外围",
+    "wgs84": [
+      112.72283830719715,
+      22.71362420216038
+    ],
+    "precision": "西坑水库整体POI参考，非岸边精确机位；作者明确外围拍摄即可，不将水域坐标作步行终点。",
+    "coordinateUrl": "https://map.baidu.com/poi/西坑水库?uid=8cba4bb0e7953a87ad045751",
+    "summary": "作者给出佳能R62、16mm、F2.8、15秒实拍参数；水库外围可把湖面作前景，适合佛山本地星空拍摄。",
+    "access": "作者导航佛山高明西坑水库，驾车在外围拍摄；现时停车范围与路段管理需现场核对。",
+    "nightAccess": "作者有21点至凌晨2点拍摄记录，并在8月答复可车宿；此为历史到访经验，过夜与夜间开放按管理方现行规定。",
+    "caution": "评论报告村灯照上堤围；天气与局部灯光影响明显。仅在允许开放的外围活动，远离水边和水利设施。",
+    "sources": [
+      {
+        "title": "柒星系📷 · 谁还说佛山拍不了星空银河？",
+        "url": "https://www.xiaohongshu.com/explore/6a533d6a000000001100544a",
+        "date": "页面显示编辑于08-12"
+      }
+    ],
+    "bortle": null,
+    "mapUrl": "https://uri.amap.com/search?keyword=佛山高明西坑水库&city=佛山&view=map",
+    "decision": "include-reservoir-reference",
+    "coordinateEvidence": {
+      "provider": "百度地图公开UI",
+      "uid": "8cba4bb0e7953a87ad045751",
+      "sourceDatum": "BD09MC",
+      "sourceCoordinate": [
+        12549690.4,
+        2581120.02
+      ],
+      "shareUrl": "https://j.map.baidu.com/t/6Cbbfv",
+      "method": "搜索佛山高明西坑水库，选高明区自然地物西坑水库；详情短链同UID poi_x/poi_y，经gcoord1.0.7转WGS84，未用@视图中心。",
+      "checkedAt": "2026-09-08"
+    }
+  }
+]
