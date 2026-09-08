@@ -85,3 +85,28 @@ Installed Tailwind v4 with shadcn source components, ReUI Timeline, Kibo Announc
 ### Next Steps
 
 - Add another trip under src/trips/<slug> with its own page.tsx and styles.css
+
+
+## Session 4: 广东观星地图与紧凑 UI
+
+**Date**: 2026-09-08
+**Task**: 广东观星地图与紧凑 UI
+**Branch**: `main`
+
+### Summary
+
+完成35个广东观星点位、来源与波尔特模型、列表地图联动、IndexedDB手动天气，以及组件动画、排序菜单、紧凑卡片与详情、弹窗关闭和固定时间列。已获用户提交及推送授权。
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `0e26b67` | (see git log) |
+
+### Testing
+
+- [OK] lint/typecheck/build通过；7项行为测试通过；桌面及390px浏览器交互验证通过；运行依赖审计无漏洞。
+
+### Status
+
+[OK] **Completed**
