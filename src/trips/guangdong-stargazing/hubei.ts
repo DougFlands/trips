@@ -1,0 +1,854 @@
+// Generated from audited research/build-hubei.mjs. Preserve stable IDs for weather cache.
+import type { StargazingPlace } from "./places";
+
+export const hubeiPlaces: StargazingPlace[] = [
+  {
+    "id": "hubei-0",
+    "name": "武当山南岩 · 南岩宫参考",
+    "city": "十堰",
+    "district": "丹江口 · 武当山",
+    "terrain": "山中古建",
+    "wgs84": [
+      111.011313,
+      32.42316
+    ],
+    "precision": "南岩宫POI参考点，原帖只称南岩，具体拍摄机位未定位；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "作者评论明确南岩约22点银河拍摄",
+    "access": "景区夜间进入办法待复核",
+    "nightAccess": "山路、照明与开放时段未知；当前夜间通行仍需确认。",
+    "caution": "南岩宫POI参考点，原帖只称南岩，具体拍摄机位未定位；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "追星之旅 武当看星空拍银河",
+        "url": "https://www.xiaohongshu.com/search_result/6a5263ba000000001603f58d?xsec_token=ABSJPJeEIv3jcRMPi_gQTBiv95DVORjSuSgjbmYSh6nPA=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.67,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.011313,
+        32.42316
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Hubei, Danjiangkou City（南岩宫参考）"
+    },
+    "tianwentong": {
+      "min": 4.1,
+      "max": 4.1,
+      "sqm": 21.6,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.0169,
+        32.421
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "南岩宫 · 武当旅游经济开发特区永乐路14号武当山",
+      "searchQuery": "武当山 南岩"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%AD%A6%E5%BD%93%E5%B1%B1+%E5%8D%97%E5%B2%A9&city=%E5%8D%81%E5%A0%B0&view=map"
+  },
+  {
+    "id": "hubei-1",
+    "name": "九宫山铜鼓包",
+    "city": "咸宁",
+    "district": "通山 · 九宫山",
+    "terrain": "高山",
+    "wgs84": [
+      114.652187,
+      29.392611
+    ],
+    "precision": "铜鼓包·九宫山风景名胜区（山峰POI，非停车点）；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "银河相机单张实拍；铜鼓包停车场旁亭子也是摄影师推荐机位；汇总推荐但另两篇同作者提封闭或限行，必须核验当前准入。",
+    "access": "2024横评称限行，2026作者评论称自驾可上；不可据此保证当前通行；夜间准入、路况及收费待核验",
+    "nightAccess": "大风暴雨浓雾可临时劝离；夜间路窄弯多；下坡未开放保护区不进入；露营政策动态变化；当前夜间通行仍需确认。",
+    "caution": "铜鼓包·九宫山风景名胜区（山峰POI，非停车点）；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "九宫山｜武汉周边3小时触摸银河",
+        "url": "https://www.xiaohongshu.com/search_result/69e41df5000000001a02c089?xsec_token=AB0ZioHGgqj3xImodf2_jin20a0FFg-NE2tS6S7WX8pZs=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "谁懂啊!来九宫山看星空露营居然被连夜赶下山",
+        "url": "https://www.xiaohongshu.com/search_result/6a74886c0000000021023c5a?xsec_token=ABSP_DJS-NkFYf70D0pkf_haCA9QZK4_KpCUCKA_Wjg4k=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.69,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.652187,
+        29.392611
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Jiugongshan, Tongshan County, Hubei"
+    },
+    "tianwentong": {
+      "min": 3.7,
+      "max": 3.7,
+      "sqm": 21.74,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.6572,
+        29.3898
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "铜鼓包·九宫山风景名胜区（山峰POI，非停车点）",
+      "searchQuery": "九宫山 铜鼓"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E4%B9%9D%E5%AE%AB%E5%B1%B1+%E9%93%9C%E9%BC%93&city=%E5%92%B8%E5%AE%81&view=map"
+  },
+  {
+    "id": "hubei-3",
+    "name": "大幕山",
+    "city": "咸宁",
+    "district": "通山 · 黄沙铺镇",
+    "terrain": "风车山",
+    "wgs84": [
+      114.584405,
+      29.764035
+    ],
+    "precision": "大幕山·通山县黄沙铺镇山体POI（非特定摄影平台）；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "风车、信号塔和开阔山顶平台可作星空前景；2024和2025同一摄影师均称露营及公共设施灯光让条件变差，个人不推荐。",
+    "access": "2026攻略称无需门票/露营费；当前路况与收费待复核；夜间准入、路况及收费待核验",
+    "nightAccess": "非铺装路面；夜风低温；露营人群及公共设施灯光干扰；当前夜间通行仍需确认。",
+    "caution": "大幕山·通山县黄沙铺镇山体POI（非特定摄影平台）；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "武汉1.5h直达！大幕山拍星保姆级攻略✨",
+        "url": "https://www.xiaohongshu.com/search_result/69eb8e2f00000000350315f0?xsec_token=ABBJuTMLvzUWR4RWq8CaDulI_bqEdasCRGnhAF7Mj7fRY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4.2,
+      "max": 4.2,
+      "sqm": 21.46,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.584405,
+        29.764035
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Damu, Xianning, Hubei"
+    },
+    "tianwentong": {
+      "min": 4.2,
+      "max": 4.2,
+      "sqm": 21.49,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.5894,
+        29.7613
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "大幕山·通山县黄沙铺镇山体POI（非特定摄影平台）",
+      "searchQuery": "大幕山"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E5%A4%A7%E5%B9%95%E5%B1%B1&city=%E5%92%B8%E5%AE%81&view=map"
+  },
+  {
+    "id": "hubei-4",
+    "name": "薄刀峰东门2号停车场",
+    "city": "黄冈",
+    "district": "罗田",
+    "terrain": "山地停车场",
+    "wgs84": [
+      115.597553,
+      31.119647
+    ],
+    "precision": "东门2号停车场POI；原帖未细分停车场内机位，不是停车场内部精确拍摄点。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "东南面可拍银河，相机20mm单张实拍。",
+    "access": "导航薄刀峰风景区东门停车场，停车面积大、有厕所；作者观察到房车及帐篷。",
+    "nightAccess": "多次起云雾，窗口不稳定；露营管理和照明待核验；当前夜间通行仍需确认。",
+    "caution": "东门2号停车场POI；原帖未细分停车场内机位，不是停车场内部精确拍摄点。；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "罗田薄刀峰露营银河拍摄攻略",
+        "url": "https://www.xiaohongshu.com/search_result/6a788754000000002402d48e?xsec_token=AB2i1WzFp0J-VPDUjf8yCNQDNmjZ_4G4PwLfNI4I3M-Pc=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 3.8,
+      "max": 3.8,
+      "sqm": 21.73,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.597553,
+        31.119647
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Bodaofeng Forestry Station, Huanggang, Hubei"
+    },
+    "tianwentong": {
+      "min": 3.8,
+      "max": 3.8,
+      "sqm": 21.73,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.6027,
+        31.1173
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "薄刀峰景区东门2号停车场 · 湖北省黄冈市罗田县罗田大别山薄刀峰风景区(大别山国家地质公园薄刀峰景区东门)",
+      "searchQuery": "薄刀峰东门"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E8%96%84%E5%88%80%E5%B3%B0%E4%B8%9C%E9%97%A8&city=%E9%BB%84%E5%86%88&view=map"
+  },
+  {
+    "id": "hubei-5",
+    "name": "雾云山梯田 · 村域参考",
+    "city": "黄冈",
+    "district": "蕲春 · 檀林镇",
+    "terrain": "梯田 · 茶园",
+    "wgs84": [
+      115.764134,
+      30.661816
+    ],
+    "precision": "村域参考点；梯田、茶园或民宿平台的具体机位仍未取得。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "梯田、茶园和银河地景，灌水季可拍倒影，夏季有萤火虫；摄影师称茶园和梯田两个拍摄区；5月灌水可拍倒影、8月萤火虫。",
+    "access": "雾云山村农宿平台；普通车辆可达，免费停车是发帖时信息；夜间准入、路况及收费待核验",
+    "nightAccess": "村庄灯光；田埂与水面；当前费用待复核；当前夜间通行仍需确认。",
+    "caution": "村域参考点；梯田、茶园或民宿平台的具体机位仍未取得。；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "武汉周边2h的梯田秘境 🌾✨平替版“龙脊梯田”",
+        "url": "https://www.xiaohongshu.com/search_result/68aa9b3c000000001d00a787?xsec_token=ABrPlBMoizapZix6PdpaV4te-BJFkHjpQbSnWrkmDgSMw=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 3.9,
+      "max": 3.9,
+      "sqm": 21.7,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.764134,
+        30.661816
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Huanggang, Hubei, Qichun County（雾云山村参考）"
+    },
+    "tianwentong": {
+      "min": 3.9,
+      "max": 3.9,
+      "sqm": 21.7,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.7694,
+        30.6594
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "雾云山村 · 湖北省黄冈市蕲春县檀林镇雾云山村",
+      "searchQuery": "雾云山村"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E9%9B%BE%E4%BA%91%E5%B1%B1%E6%9D%91&city=%E9%BB%84%E5%86%88&view=map"
+  },
+  {
+    "id": "hubei-6",
+    "name": "道观河龙凤桥",
+    "city": "武汉",
+    "district": "新洲 · 道观河",
+    "terrain": "桥梁 · 湖库",
+    "wgs84": [
+      114.9965,
+      30.875922
+    ],
+    "precision": "桥梁POI参考，具体桥面拍摄位置待核。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "桥梁与湖库地景，可拍银河；作者肉眼看不见银河但手机可拍。",
+    "access": "道路与餐饮住宿较成熟；具体停车位置待核验；夜间准入、路况及收费待核验",
+    "nightAccess": "桥上拍摄者拥挤；肉眼与照片效果不同；夜间水边；当前夜间通行仍需确认。",
+    "caution": "桥梁POI参考，具体桥面拍摄位置待核。；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "道观河追星成功",
+        "url": "https://www.xiaohongshu.com/search_result/6a7b37c60000000008013c67?xsec_token=AB9llCIfLUOxIeSp_hwD1BsiPAYITeLOd_tq23dgr26bs=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边观星攻略",
+        "url": "https://www.xiaohongshu.com/search_result/6a787709000000003301ff77?xsec_token=AB2i1WzFp0J-VPDUjf8yCNQFPz_f8d1bHkGeK5UIIdGas=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4.5,
+      "max": 4.5,
+      "sqm": 21.12,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.9965,
+        30.875922
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Xinzhou District, Hubei"
+    },
+    "tianwentong": {
+      "min": 4.4,
+      "max": 4.4,
+      "sqm": 21.2,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.0018,
+        30.8736
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "龙凤桥 · 湖北省武汉市新洲区库北路5正西方向130米",
+      "searchQuery": "新洲 龙凤桥"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%96%B0%E6%B4%B2+%E9%BE%99%E5%87%A4%E6%A1%A5&city=%E6%AD%A6%E6%B1%89&view=map"
+  },
+  {
+    "id": "hubei-7",
+    "name": "仙居顶",
+    "city": "孝感",
+    "district": "大悟 · 吕王镇",
+    "terrain": "风车山",
+    "wgs84": [
+      114.427798,
+      31.535166
+    ],
+    "precision": "山峰POI参考；具体风机、停车或拍摄机位待核。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "夜间登顶拍银河与日出，风电场作为地景；独立实地帖称武汉约2小时，经高速省道后水泥爬坡山路；2026流星雨帖两度遇大雾。摄影师称近年露营与城镇灯光加重。",
+    "access": "具体停车和徒步距离正文未明确；2025实地帖子称经水泥山路抵达山顶；当前通行待核验",
+    "nightAccess": "夏季人群与灯光干扰；横评更推荐四五月，非绝对季节承诺；当前夜间通行仍需确认。",
+    "caution": "山峰POI参考；具体风机、停车或拍摄机位待核。；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "从深夜到黎明，仙居顶的星河值得说走就走",
+        "url": "https://www.xiaohongshu.com/search_result/6a647562000000001002a6a5?xsec_token=ABfwPIM0VlFp4PalCrrzogPob5HqhZ-qlakvetvUtiOAU=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "大悟山追流星 大雾二度空军",
+        "url": "https://www.xiaohongshu.com/search_result/6a81b26e000000003300a2ae?xsec_token=ABuM8P2L4HwqeyJiAwAKWQ_zyP3i2B_MwxNjxub3drSx0=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "仙居顶｜ 去看星星✨",
+        "url": "https://www.xiaohongshu.com/search_result/692c4825000000001e017aba?xsec_token=AB9bY-C8U28O9pWnO-1pHjf_mgLqIIwqCrGENOTWPMvbU=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.65,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.427798,
+        31.535166
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Lüwang, Hubei, Dawu County"
+    },
+    "tianwentong": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.65,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.4334,
+        31.5333
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "仙居顶 · 湖北省孝感市大悟县吕王镇",
+      "searchQuery": "大悟 仙居顶"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E5%A4%A7%E6%82%9F+%E4%BB%99%E5%B1%85%E9%A1%B6&city=%E5%AD%9D%E6%84%9F&view=map"
+  },
+  {
+    "id": "hubei-8",
+    "name": "云台荒",
+    "city": "宜昌",
+    "district": "长阳 · 榔坪镇",
+    "terrain": "高山",
+    "wgs84": [
+      110.540018,
+      30.563639
+    ],
+    "precision": "山地区域POI参考，原帖称秭归/长阳交界山顶，不代表具体停车或拍摄位置；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "秭归/长阳交界高山，平坦位置多",
+    "access": "两县均有上山道路，宜昌约3.5小时",
+    "nightAccess": "已有风电建设；另一帖评论反馈红灯影响，不能当纯黑区；当前夜间通行仍需确认。",
+    "caution": "山地区域POI参考，原帖称秭归/长阳交界山顶，不代表具体停车或拍摄位置；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "宜昌市观星手册（六）",
+        "url": "https://www.xiaohongshu.com/search_result/6720b022000000001901856c?xsec_token=ABXj1BgYrmsy1QYFdWykLQnuh9gvtf14p0CGYGH8CTmA8=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "谈谈宜昌市几个比较好看星星的地方（一）",
+        "url": "https://www.xiaohongshu.com/search_result/6623cfc40000000001030574?xsec_token=ABSgHosoDEb9wotOQD5UPzAbI44nfqHRFOVkuaO0t1MUI=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 3.4,
+      "max": 3.4,
+      "sqm": 21.81,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        110.540018,
+        30.563639
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Langping, Yichang, Hubei"
+    },
+    "tianwentong": {
+      "min": 3.3,
+      "max": 3.3,
+      "sqm": 21.83,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        110.5449,
+        30.561
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "云台荒 · 湖北省宜昌市长阳土家族自治县榔坪镇云台荒（相同名称地址首条）",
+      "searchQuery": "云台荒"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E4%BA%91%E5%8F%B0%E8%8D%92&city=%E5%AE%9C%E6%98%8C&view=map"
+  },
+  {
+    "id": "hubei-10",
+    "name": "大九湖",
+    "city": "神农架林区",
+    "district": "大九湖镇",
+    "terrain": "湿地湖区",
+    "wgs84": [
+      109.971524,
+      31.484994
+    ],
+    "precision": "湖区POI参考，不代表整片湖区或原帖具体摄影机位；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "游客夜观星空和流星，睡车等晨雾",
+    "access": "夜间准入、路况及收费待核验；星空机位未明确；二号湖仅明确晨雾拍摄，不作为星空坐标",
+    "nightAccess": "夜间开放和车宿许可待查；当前夜间通行仍需确认。",
+    "caution": "湖区POI参考，不代表整片湖区或原帖具体摄影机位；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "说走就走！大九湖一夜，星空之后静候晨雾",
+        "url": "https://www.xiaohongshu.com/search_result/6a84441c00000000330315b7?xsec_token=ABSgMWZZRNOIbitydnZIIvDQxA2pgDUCAhwYw4nRLmJQ4=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 2.5,
+      "max": 2.5,
+      "sqm": 21.94,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        109.971524,
+        31.484994
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Hubei（大九湖POI转换坐标）"
+    },
+    "tianwentong": {
+      "min": 2.5,
+      "max": 2.5,
+      "sqm": 21.94,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        109.9764,
+        31.4828
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "大九湖 · 湖北省神农架林区大九湖镇大九湖",
+      "searchQuery": "神农架 大九湖"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E7%A5%9E%E5%86%9C%E6%9E%B6+%E5%A4%A7%E4%B9%9D%E6%B9%96&city=%E7%A5%9E%E5%86%9C%E6%9E%B6%E6%9E%97%E5%8C%BA&view=map"
+  },
+  {
+    "id": "hubei-12",
+    "name": "红安天台山 · 天台寺广场",
+    "city": "黄冈",
+    "district": "红安 · 七里坪镇",
+    "terrain": "古寺广场",
+    "wgs84": [
+      114.626446,
+      31.585198
+    ],
+    "precision": "天台寺文化广场POI；对应原帖广场机位区域，不代表望仙崖或停车场。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "天台寺广场与望仙崖的观星露营点，古寺前景；GHY实拍标题明确红安。另一摄影师建议导航天台寺，山脚停车后步行半小时至1小时；起雾影响拍摄。",
+    "access": "导航天台寺，山顶停车后石阶约20至30分钟；作者报停车10元，现价待核；导航天台寺，山脚停车后步行半小时至1小时；夜间准入待核验",
+    "nightAccess": "盘山急弯；停车场光源比山顶明显；夜间登山和寺院管理待核验；当前夜间通行仍需确认。",
+    "caution": "天台寺文化广场POI；对应原帖广场机位区域，不代表望仙崖或停车场。；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "武汉直达红安天台山跑山露营看银河攻略",
+        "url": "https://www.xiaohongshu.com/search_result/69e9ea8f000000001a02dd9c?xsec_token=ABB3tq4UMcQMoicHcvoB1MudxQ4AcLEMnoLtJKMroSJOo=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "武汉周边观星攻略",
+        "url": "https://www.xiaohongshu.com/search_result/6a787709000000003301ff77?xsec_token=AB2i1WzFp0J-VPDUjf8yCNQFPz_f8d1bHkGeK5UIIdGas=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "天台山｜武汉周边拍星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6965ee0f000000001a02174c?xsec_token=ABkbITxOgGGiVz0NmEbjzh6hBZWBBMzkXobMgU7CLWUoU=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "红安天台山的英仙座流星雨！",
+        "url": "https://www.xiaohongshu.com/search_result/6a818db800000000280304da?xsec_token=ABuM8P2L4HwqeyJiAwAKWQ_xTozP_AT_pzR2ncV0azm0w=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 3.7,
+      "max": 3.7,
+      "sqm": 21.74,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.626446,
+        31.585198
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Huanggang, Hubei"
+    },
+    "tianwentong": {
+      "min": 3.8,
+      "max": 3.8,
+      "sqm": 21.73,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.6316,
+        31.583
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "天台寺文化广场 · 湖北省黄冈市红安县七里坪镇",
+      "searchQuery": "红安 天台寺"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E7%BA%A2%E5%AE%89+%E5%A4%A9%E5%8F%B0%E5%AF%BA&city=%E9%BB%84%E5%86%88&view=map"
+  },
+  {
+    "id": "hubei-13",
+    "name": "漳河水库 · 观音寺大坝参考",
+    "city": "荆门",
+    "district": "东宝 · 漳河",
+    "terrain": "水库大坝",
+    "wgs84": [
+      111.926671,
+      31.069433
+    ],
+    "precision": "高德观音寺大坝POI参考；原帖未指明坝名，不能确认为同一拍摄机位。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.amap.com/place/B0FFKHN4X3",
+    "summary": "两位作者提供银河或英仙座流星拍摄经历，仍缺精确岸段/坝段。",
+    "access": "水库夜间管理与合法停留范围待核。",
+    "nightAccess": "当前夜间通行仍需确认。",
+    "caution": "此处为已定位的观音寺大坝参考，原帖未明确坝名，不能确认与原拍摄点相同。天文通暂无可靠匹配。",
+    "sources": [
+      {
+        "title": "湖北荆门漳河水库夏季银河",
+        "url": "https://www.xiaohongshu.com/search_result/68d69291000000001202e757",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "荆门｜银河与英仙座流星雨🌠",
+        "url": "https://www.xiaohongshu.com/search_result/66b93fe70000000005032e20",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.64,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.926671,
+        31.069433
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Zhanghe, Dongbao District, Hubei"
+    },
+    "tianwentong": null,
+    "mapUrl": "https://www.amap.com/place/B0FFKHN4X3"
+  },
+  {
+    "id": "hubei-14",
+    "name": "汉江绿谷附近 · 景区参考",
+    "city": "十堰",
+    "district": "郧阳 · 安阳镇",
+    "terrain": "景区湖畔",
+    "wgs84": [
+      111.040655,
+      32.825035
+    ],
+    "precision": "景区 POI 参考点；原帖为汉江绿谷附近，具体岸段/拍摄机位未确认。；坐标按地图GCJ-02反算WGS84，小数位不代表现场精度。",
+    "coordinateUrl": "https://www.darkmap.cn/",
+    "summary": "摄影者推荐且评论有独立拍摄经历",
+    "access": "郧阳区安阳镇，具体机位待查",
+    "nightAccess": "朝县城银河方向光害严重；当前夜间通行仍需确认。",
+    "caution": "景区 POI 参考点；原帖为汉江绿谷附近，具体岸段/拍摄机位未确认。；暗空为区域模型，现场灯光、云与月光另有影响。",
+    "sources": [
+      {
+        "title": "十堰星空拍摄地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/685fe6070000000024009381?xsec_token=ABM8g1xDZDwh5-DvxyyiHiPe3iil-4pZAuFpicBQan6UE=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ],
+    "lightPollution": {
+      "min": 4.1,
+      "max": 4.1,
+      "sqm": 21.63,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.040655,
+        32.825035
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Anyang, Hubei"
+    },
+    "tianwentong": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.68,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.0464,
+        32.8231
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "郧阳区汉江绿谷生态旅游区 · 湖北省十堰市郧阳区安阳镇青龙村",
+      "searchQuery": "汉江绿谷"
+    },
+    "mapUrl": "https://uri.amap.com/search?keyword=%E6%B1%89%E6%B1%9F%E7%BB%BF%E8%B0%B7&city=%E5%8D%81%E5%A0%B0&view=map"
+  }
+];
+
+export const hubeiPending = [
+  {
+    "id": "hubei-2",
+    "name": "九宫山桃源后土路",
+    "reason": "原帖后土路未定位；景区历史指引称星空桃园酒店背山露营区在江西武宁境内。民宿搜索读数不作为湖北机位。",
+    "sources": [
+      {
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "date": "采集于2026-09-14"
+      },
+      {
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ]
+  },
+  {
+    "id": "hubei-9",
+    "name": "火烧坪",
+    "reason": "仅匹配乡政府，原帖山顶亭子与云上旺角未定位；行政驻地读数不作为摄影点。",
+    "sources": [
+      {
+        "title": "谈谈宜昌市比较好的看星星的地方(二)",
+        "url": "https://www.xiaohongshu.com/search_result/662b059e0000000001006afa?xsec_token=ABkC8gOF3VRz4U_rwj4e6LRO35qoQTO6rh26ZgTqIbF8U=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ]
+  },
+  {
+    "id": "hubei-11",
+    "name": "天燕星空营地",
+    "reason": "仅匹配天燕景区，尚未确认营地位置；景区中心读数不作为营地读数。",
+    "sources": [
+      {
+        "title": "打卡神农架可以过夜看星空、喂小动物的营地！",
+        "url": "https://www.xiaohongshu.com/search_result/6a89abeb000000000302abd9?xsec_token=AB4ACfQlRx9IFjhukTxzrYcp9fMBAFMGQL6eSCnKkrMOk=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ]
+  },
+  {
+    "id": "hubei-15",
+    "name": "葫芦包崖观景台",
+    "reason": "原帖指向郧阳大柳乡230省道弯道，搜索未匹配；需核对原帖地图标记图。",
+    "sources": [
+      {
+        "title": "十堰星空拍摄地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/685fe6070000000024009381?xsec_token=ABM8g1xDZDwh5-DvxyyiHiPe3iil-4pZAuFpicBQan6UE=&xsec_source=",
+        "date": "采集于2026-09-14"
+      }
+    ]
+  }
+];
+
+export const hubeiResearch = {
+  "associations": 695,
+  "uniquePosts": 452,
+  "supplementalPosts": 5,
+  "detailPosts": 61,
+  "keywords": [
+    {
+      "query": "湖北观星",
+      "count": 52
+    },
+    {
+      "query": "湖北星空拍摄",
+      "count": 72
+    },
+    {
+      "query": "湖北流星雨拍摄",
+      "count": 61
+    },
+    {
+      "query": "湖北银河摄影",
+      "count": 70
+    },
+    {
+      "query": "武汉周边观星",
+      "count": 65
+    },
+    {
+      "query": "武汉附近拍流星雨",
+      "count": 51
+    },
+    {
+      "query": "黄冈星空露营",
+      "count": 59
+    },
+    {
+      "query": "九宫山星空",
+      "count": 51
+    },
+    {
+      "query": "宜昌星空拍摄",
+      "count": 51
+    },
+    {
+      "query": "恩施星空露营",
+      "count": 53
+    },
+    {
+      "query": "神农架观星",
+      "count": 60
+    },
+    {
+      "query": "十堰星空",
+      "count": 50
+    }
+  ]
+};

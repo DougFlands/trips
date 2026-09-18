@@ -1,0 +1,472 @@
+{
+  "checkedAt": "2026-09-14",
+  "method": "Edge 地图地点搜索；按行政区及采样坐标范围核对",
+  "lightPollution": {
+    "houyan": [
+      4.3,
+      21.34,
+      "Xinfeng County, Guangdong"
+    ],
+    "xichong": [
+      5.5,
+      19.95,
+      "Dapeng New District, Longgang District, Guangdong"
+    ],
+    "baipenzhu": [
+      4.5,
+      21.1,
+      "Huizhou, Guangdong"
+    ],
+    "bajieshan": [
+      3.9,
+      21.71,
+      "Qingyuan City, Guangdong"
+    ],
+    "yanluotou": [
+      4,
+      21.64,
+      "Dabu Town, Guangdong, Ruyuan Yao Autonomous County"
+    ],
+    "nanshui": [
+      4.1,
+      21.6,
+      "Dongping Town, Guangdong, Ruyuan Yao Autonomous County"
+    ],
+    "dinahai": [
+      4.8,
+      20.72,
+      "Zhapo, Guangdong, Jiangcheng District"
+    ],
+    "yangmeishan": [
+      4.1,
+      21.54,
+      "Zhaoqing City, Guangdong"
+    ],
+    "shitanghai": [
+      5,
+      20.52,
+      "Guangdong, Yangdong District"
+    ],
+    "apoliu": [
+      4.6,
+      20.96,
+      "Guangzhou City, Guangdong"
+    ],
+    "lianma": [
+      4.4,
+      21.23,
+      "Guangzhou City, Guangdong"
+    ],
+    "wanshandao": [
+      5,
+      20.46,
+      "Zhuhai Wanshan Marine Development Experimental Zone, Xiangzhou, Guangdong"
+    ],
+    "hengshiji": [
+      6.3,
+      19.35,
+      "Zhuhai, Guangdong"
+    ],
+    "dongaodao": [
+      5.2,
+      20.28,
+      "Zhuhai Wanshan Marine Development Experimental Zone, Xiangzhou, Guangdong"
+    ],
+    "xikeng": [
+      5.2,
+      20.28,
+      "Foshan, Guangdong, Gaoming"
+    ],
+    "dongchong-dapaitou": [
+      5.4,
+      20.06,
+      "Nan’ao Sub-district, Dapeng New District, Longgang District, Guangdong"
+    ],
+    "xiaosanmen-island": [
+      5,
+      20.52,
+      "Huizhou, Guangdong"
+    ],
+    "wanlvhu": [
+      4.2,
+      21.44,
+      "Guangdong, Dongyuan County"
+    ],
+    "huidong-dananshan": [
+      5,
+      20.46,
+      "Huizhou, Guangdong"
+    ],
+    "fenghuang-tianchi": [
+      4.6,
+      20.98,
+      "Chaozhou, Guangdong"
+    ],
+    "lanping": [
+      4.9,
+      20.66,
+      "Huizhou, Guangdong"
+    ],
+    "fengchedao": [
+      5,
+      20.53,
+      "Chengqu, Guangdong"
+    ],
+    "yezhuzhang": [
+      3.9,
+      21.71,
+      "Shangping, Guangdong, Longchuan County"
+    ],
+    "moliugong": [
+      4,
+      21.69,
+      "Qingyuan City, Guangdong"
+    ],
+    "taohuahu": [
+      4.3,
+      21.3,
+      "Qingyuan City, Guangdong"
+    ],
+    "shilipang": [
+      3.4,
+      21.81,
+      "Chengjia, Yangshan County, Guangdong"
+    ],
+    "tiantangding": [
+      4.3,
+      21.28,
+      "Qingyuan City, Guangdong"
+    ],
+    "queyashan": [
+      4.2,
+      21.48,
+      "Guangdong, Dongyuan County"
+    ],
+    "qinglianshan": [
+      4.1,
+      21.54,
+      "Yunyan Town, Guangdong, Lechang City"
+    ],
+    "lingnanhongye": [
+      4.3,
+      21.36,
+      "Xinfeng County, Guangdong"
+    ],
+    "yunfengshan": [
+      4,
+      21.69,
+      "Jiangtou Town, Guangdong, Nanxiong City"
+    ],
+    "houshanding": [
+      4.2,
+      21.46,
+      "Zhangshi Town, Guangdong"
+    ],
+    "jilongding": [
+      4.1,
+      21.61,
+      "Guangdong, Yangchun"
+    ],
+    "luokeng": [
+      4.5,
+      21.05,
+      "Maoming City, Guangdong"
+    ],
+    "qingshanzui": [
+      4.4,
+      21.17,
+      "Haiqiaojingji, Jiangmen, Guangdong"
+    ]
+  },
+  "tianwentong": {
+    "houyan": [
+      4.3,
+      21.38,
+      114.0285,
+      24.0692,
+      "广东省韶关市新丰县沙田镇猴岩"
+    ],
+    "baipenzhu": [
+      4.5,
+      21.1,
+      115.1932,
+      23.1391,
+      "广东省惠州市惠东县白盆珠镇白盆珠水库"
+    ],
+    "bajieshan": [
+      4,
+      21.69,
+      112.5261,
+      24.6519,
+      "广东省清远市阳山县小江镇八界山"
+    ],
+    "yanluotou": [
+      4,
+      21.65,
+      113.1823,
+      24.5001,
+      "广东省韶关市乳源瑶族自治县大布镇阎罗头"
+    ],
+    "nanshui": [
+      4.2,
+      21.42,
+      113.211,
+      24.7816,
+      "广东省韶关市乳源瑶族自治县东坪镇南水湖国家湿地公园"
+    ],
+    "dinahai": [
+      4.6,
+      20.97,
+      111.9633,
+      21.6081,
+      "广东省阳江市江城区闸坡镇地拿海"
+    ],
+    "yangmeishan": [
+      4.1,
+      21.59,
+      111.8725,
+      23.3799,
+      "广东省肇庆市德庆县官圩镇杨梅山"
+    ],
+    "shitanghai": [
+      5.6,
+      19.89,
+      112.0611,
+      21.82,
+      "广东省阳江市阳东区雅韶镇石塘（园区附近村落）"
+    ],
+    "apoliu": [
+      4.7,
+      20.82,
+      113.8664,
+      23.7146,
+      "广东省广州市从化区良口镇溪头村（阿婆六附近）"
+    ],
+    "lianma": [
+      4.3,
+      21.29,
+      113.9813,
+      23.8924,
+      "广东省广州市从化区吕田镇黄沙坑"
+    ],
+    "wanshandao": [
+      5.1,
+      20.42,
+      113.7329,
+      21.9391,
+      "广东省珠海市香洲区万山镇大万山岛"
+    ],
+    "hengshiji": [
+      6.1,
+      19.44,
+      113.3121,
+      22.0068,
+      "珠海横石基公交站（沙滩附近）"
+    ],
+    "dongaodao": [
+      5.1,
+      20.34,
+      113.712,
+      22.0192,
+      "广东省珠海市香洲区万山镇东澳岛"
+    ],
+    "xikeng": [
+      5.1,
+      20.38,
+      112.7274,
+      22.7078,
+      "广东省佛山市高明区杨和镇西坑水库"
+    ],
+    "dongchong-dapaitou": [
+      5.2,
+      20.27,
+      114.5857,
+      22.4898,
+      "广东省深圳市龙岗区东涌海滩（大排头附近）"
+    ],
+    "xiaosanmen-island": [
+      4.9,
+      20.58,
+      114.6499,
+      22.4362,
+      "广东省惠州市惠阳区澳头街道小三门岛"
+    ],
+    "wanlvhu": [
+      4.2,
+      21.39,
+      114.4587,
+      23.9271,
+      "广东省河源市东源县锡场镇（万绿湖中部湖岸）"
+    ],
+    "fenghuang-tianchi": [
+      4.5,
+      21.04,
+      116.6484,
+      23.9535,
+      "广东省潮州市潮安区凤凰镇凤凰山天池"
+    ],
+    "lanping": [
+      4.8,
+      20.72,
+      114.422,
+      23.6098,
+      "广东省惠州市博罗县公庄镇蓝坪村（第二条同名）"
+    ],
+    "fengchedao": [
+      4.9,
+      20.63,
+      115.5813,
+      22.7393,
+      "广东省汕尾市遮浪街道城区风车岛"
+    ],
+    "yezhuzhang": [
+      3.7,
+      21.74,
+      115.3734,
+      24.7096,
+      "广东省河源市龙川县上坪镇野猪嶂"
+    ],
+    "moliugong": [
+      4,
+      21.67,
+      112.7743,
+      24.3691,
+      "广东省清远市阳山县阳城镇横山水"
+    ],
+    "taohuahu": [
+      4.2,
+      21.39,
+      112.7173,
+      24.088,
+      "广东省清远市清新区浸潭镇桃花湖"
+    ],
+    "shilipang": [
+      3.4,
+      21.82,
+      112.7688,
+      24.83,
+      "广东省清远市阳山县秤架瑶族乡石离塝"
+    ],
+    "tiantangding": [
+      4.3,
+      21.3,
+      112.8074,
+      23.9564,
+      "广东省清远市清新区禾云镇桂湖村天堂山林场（天塘山区域）"
+    ],
+    "queyashan": [
+      4.2,
+      21.43,
+      114.9119,
+      23.9565,
+      "广东省河源市东源县曾田镇蝉子顶"
+    ],
+    "qinglianshan": [
+      4.1,
+      21.52,
+      113.0975,
+      25.0941,
+      "广东省韶关市乐昌市云岩镇青莲山"
+    ],
+    "lingnanhongye": [
+      4.2,
+      21.39,
+      114.177,
+      24.229,
+      "广东省韶关市新丰县黄磜镇茶峒村（岭南红叶世界附近）"
+    ],
+    "yunfengshan": [
+      3.8,
+      21.73,
+      114.4765,
+      25.0166,
+      "南雄云峰山生态旅游区 · 武岭村"
+    ],
+    "houshanding": [
+      4.2,
+      21.41,
+      113.4584,
+      24.5025,
+      "广东省韶关市曲江区樟市镇后山村"
+    ],
+    "jilongding": [
+      4,
+      21.65,
+      111.388,
+      22.2464,
+      "广东省阳江市阳春市三甲镇鸡笼顶大草原"
+    ],
+    "luokeng": [
+      4.4,
+      21.18,
+      111.2884,
+      21.8242,
+      "广东省茂名市电白区罗坑镇罗坑水库"
+    ],
+    "qingshanzui": [
+      4.3,
+      21.33,
+      112.5599,
+      21.7572,
+      "广东省江门市台山市海宴镇青山咀"
+    ],
+    "xichong": [
+      5.4,
+      20.08,
+      114.5402,
+      22.4833,
+      "广东省深圳市龙岗区南澳街道西涌海滩旅游景区（新屋附近）"
+    ],
+    "huidong-dananshan": [
+      5,
+      20.47,
+      114.9033,
+      22.9184,
+      "广东省惠州市惠东县平山街道大南山"
+    ]
+  },
+  "rejected": [
+    "西涌新屋股份合作公司搜索坐标114.137,22.6881偏离西涌，不采用",
+    "稔山镇大南山114.7663,22.7968偏离目录点，改用平山街道条目",
+    "蓝坪村首条偏离约8公里，采用第二条",
+    "云峰山风景区首条偏离约8公里，采用武岭村生态旅游区",
+    "万绿湖新港镇景区与湖中心距离较远，改查中部锡场镇湖岸"
+  ],
+  "searchQueries": {
+    "xichong": "深圳 西涌海滩",
+    "baipenzhu": "白盆珠水库",
+    "bajieshan": "八界山",
+    "yanluotou": "阎罗头",
+    "nanshui": "南水湖",
+    "dinahai": "地拿海",
+    "yangmeishan": "肇庆 杨梅山",
+    "shitanghai": "阳江 石塘",
+    "apoliu": "广州 溪头村",
+    "lianma": "广州 黄沙坑",
+    "wanshandao": "珠海 万山岛",
+    "hengshiji": "珠海 横石基",
+    "dongaodao": "珠海 东澳岛",
+    "xikeng": "佛山 西坑水库",
+    "dongchong-dapaitou": "深圳 东涌",
+    "xiaosanmen-island": "小三门岛",
+    "wanlvhu": "河源 锡场镇",
+    "huidong-dananshan": "惠州 大南山",
+    "fenghuang-tianchi": "凤凰山天池",
+    "lanping": "惠州 蓝坪村",
+    "fengchedao": "汕尾 风车岛",
+    "yezhuzhang": "河源 野猪嶂",
+    "moliugong": "横山水",
+    "taohuahu": "清远 桃花湖",
+    "shilipang": "石离磅",
+    "tiantangding": "清远 天堂山",
+    "houyan": "猴岩",
+    "queyashan": "河源 禅子顶",
+    "qinglianshan": "乐昌 青莲山",
+    "lingnanhongye": "新丰 茶峒",
+    "yunfengshan": "南雄 云峰山",
+    "houshanding": "韶关 后山村",
+    "jilongding": "阳春 鸡笼顶",
+    "luokeng": "电白 罗坑水库",
+    "qingshanzui": "台山 青山咀"
+  }
+}

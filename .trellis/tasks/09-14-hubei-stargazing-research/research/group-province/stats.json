@@ -1,0 +1,18 @@
+{
+  "queries": {
+    "湖北观星": 52,
+    "湖北星空拍摄": 72,
+    "湖北流星雨拍摄": 61,
+    "湖北银河摄影": 70
+  },
+  "associations": 255,
+  "uniqueNotes": 174,
+  "detailNotes": 17,
+  "placeCandidates": 41,
+  "detailDecisions": {
+    "candidate": 14,
+    "pending-location": 1,
+    "excluded-unconfirmed-province": 1,
+    "excluded-outside-hubei": 1
+  }
+}

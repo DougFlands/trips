@@ -17,7 +17,7 @@
 - 地点保留 WGS84；天气与距深圳市民中心的 Haversine 计算使用 WGS84，高德 marker/定位使用 GCJ-02。深圳起点 `[114.0545223,22.5463725]`，距离为直线公里。
 - POI 与地图视图中心不同。百度分享重定向的 `poi_x/poi_y` 是 BD09MC；`@x,y,z` 可能偏离真实地点数公里，不直接当 POI 坐标。
 - 区域参考点写明精度，不把水库中心或山峰当驾车入口。地图普通点位不要求虚构 `score`、day/order，不连行程线。
-- 模型 Bortle 保存原区间、SQM、年份、查询 WGS84。未知在升降序都排最后；区间用 max 保守排序，同级按距离、ID 稳定排序。
+- 光污染按 `lightPollution` 与 `tianwentong` 分别保存原区间、SQM、年份、核验日、实际采样坐标、坐标系与匹配地名；天文通还保存实际成功的搜索词。目录 WGS84 不被搜索结果覆盖。未知在升降序都排最后；区间用 max 保守排序，同级按距离、ID 稳定排序。
 - 有实际拍摄/观星详情与可核地点坐标的点可以保留未知等级；模型未查到不等于地点无效。搜索卡片计数达标不能替代地点整理，定向补查与原始关键词统计分别保存。
 - 天空亮度网页的旧弹窗可能遮挡地图点击；读取后必须核对弹窗坐标与当前点一致，不能把上一点数值归给新点。区域模型只代表采样参考位置。
 - 天气参数 `forecast_days=8&timezone=Asia/Shanghai&timeformat=unixtime`，九项 hourly 字段与单位由 `weatherFields` 维护。单点 object、多点 array；首点 `location_id` 可能省略（代表0），其余依 ID 映射。网格坐标不能替换 POI。
@@ -98,6 +98,11 @@ if (focusedPlace) {
 
 ## UI composition and motion
 
+- 省份切换使用 Tabs/TabsList/TabsTrigger/TabsContent；列表/地图 useMemo 必须依赖当前 catalog。列表 ScrollArea key 包含省份，切换回到列表顶部。
+- 启动读取两个省份已定位目录的 IndexedDB 缓存，页面缓存计数按当前 catalog 过滤。批量更新只处理当前省份的完整已定位目录；进度和完成提示标注发起省份。
+- 湖北逐点记录见 `.trellis/tasks/09-14-hubei-stargazing-research/research/verified-*.json`；`build-hubei.mjs` 生成静态目录，保持旧 ID 以配合按坐标校验缓存。尚未定位的点保留在 `hubeiPending`，不产生地图标记、距离或天气请求。模型未知可保持 null，不能复用另一站读数。
+- 地名搜索可能返回乡政府、景区中心或省外同名；只有可说明与原帖关系的具名参考点可入目录。参考位置不得冒充营地、弯道、酒店后土路。天文通保留腾讯原坐标，目录另用 GCJ-02 反算 WGS84，并说明原始显示精度。
+
 - 搜索与排序复用 Input、Select、FieldGroup/Field；FieldGroup 带 inline-size containment，在 flex 工具栏里必须给可用宽度，不能仅设 w-auto（固有宽度会归零）。
 - 七晚选择使用 single ToggleGroup；空 value 不清除当前日期。方向键移动焦点，空格选择日期。
 - 列表复用 Card 子组件、Button、Separator 和 ScrollArea；卡片不缩高、摘要不截断。滚动视口 max-height 限制列表，单点筛选时高度自然收缩。
@@ -110,4 +115,13 @@ if (focusedPlace) {
 - 内置预览中原生select曾出现点击不显示选项；排序使用Radix Select。SelectContent渲染到portal，必须附带本页主题类及popover颜色、减少动态效果规则。
 - 下拉验收必须实际点击Trigger、确认可见listbox、点击Option并检查列表首项；selectOption直接设置值不能证明菜单可点击。至少覆盖内置浏览器、键盘选择及窄屏弹层边界。
 
-- 地点详情遵循最新精简约定：顶部以波尔特级别替代“地点笔记”，右上角并排“图层”“查看地点”纯文字按钮；不展示位置精度段落、光污染前缀或模型年份说明。模型出处保留在数据与来源中；不重复天气区标题/介绍。精度仍保留在数据与地图说明，表格可访问标题保留地点和日期。
+- 地点详情展示两站波尔特、SQM 与各自图层按钮；保留匹配地名和采样坐标供复查。模型年份说明放“数据与来源”；不重复天气区标题/介绍。精度仍保留在数据与地图说明，表格可访问标题保留地点和日期。
+
+## 双站光污染核验（2026-09-14）
+
+- `lightpollutionmap.app/?lat=...&lng=...&zoom=11` 已通过 Edge 验证：定位 WGS84 并展开详情。2025 年图层与详情的 `Sep 2026 · EST.` 不同，采用详情估计值必须记为 2026。
+- `darkmap.cn` 的已试 lat/lng/zoom 参数未定位，不能拼出未经验证的坐标链接。图层按钮打开官网并尝试复制 `searchQuery`；页面提示从“地图菜单 → 搜索地点”按 `matchedLocation` 选择。复制失败显示可手动输入的搜索词。
+- 天文通读“光污染·2025”下主弹窗波尔特/SQM，不取中国暗夜环境等级、不取随时刻变动的“今夜光污染”。保存“腾讯地图显示坐标”，不直接标 WGS84。
+- 搜索结果同名不代表同位置。西涌公司条目落在深圳内陆、蓝坪村首条与云峰山首条偏离约8公里，均已排除。详情数值可能先于底部坐标更新；等新坐标出现后才保存。相邻村落/湖岸参考必须在匹配名称中说明。
+- 官网称 LightPollutionMap.app 为天文通国际版，不把两站称为独立测量。两站各自排序、地图等级按钮切换只改标记数值，导航/天气坐标保持目录点。
+- `research/light-pollution/` 保存35点/70条读数、搜索词、匹配名称和排除记录。旧 `lightpollutionmap.info` 读数不再用于页面。

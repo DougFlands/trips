@@ -1,0 +1,123 @@
+{
+  "checkedAt": "2026-09-18",
+  "method": "Codex内置浏览器，天文通菜单搜索地点，读取光污染·2025主弹窗，非今夜光污染、非中国暗夜环境等级",
+  "sourceUrl": "https://www.darkmap.cn/",
+  "places": [
+    {
+      "name": "武当山南岩",
+      "searchQuery": "武当山 南岩",
+      "matchedLocation": "南岩宫 · 武当旅游经济开发特区永乐路14号武当山",
+      "coordinateSystem": "腾讯地图显示坐标",
+      "sampledCoordinates": [
+        111.0169,
+        32.421
+      ],
+      "bortle": 4.1,
+      "sqm": 21.6,
+      "year": 2025,
+      "precision": "南岩宫POI参考点，原帖只称南岩，具体拍摄机位未定位",
+      "evidence": "主弹窗4.1级 / 乡村天空；SQM21.60；底部111.0169, 32.4210；按钮光污染·2025",
+      "excluded": [],
+      "lightPollution": null
+    },
+    {
+      "name": "云台荒",
+      "searchQuery": "云台荒",
+      "matchedLocation": "云台荒 · 湖北省宜昌市长阳土家族自治县榔坪镇云台荒（相同名称地址首条）",
+      "coordinateSystem": "腾讯地图显示坐标",
+      "sampledCoordinates": [
+        110.5449,
+        30.561
+      ],
+      "bortle": 3.3,
+      "sqm": 21.83,
+      "year": 2025,
+      "precision": "山地区域POI参考，原帖称秭归/长阳交界山顶，不代表具体停车或拍摄位置",
+      "evidence": "主弹窗3.3级 / 自然夜空；SQM21.83；底部110.5449, 30.5610；按钮光污染·2025",
+      "excluded": [
+        "秭归县两河口镇云台荒村村委会等行政设施"
+      ],
+      "lightPollution": null
+    },
+    {
+      "name": "火烧坪",
+      "searchQuery": "长阳 火烧坪",
+      "matchedLocation": "火烧坪乡人民政府 · 湖北省宜昌市长阳土家族自治县和平一巷8号",
+      "coordinateSystem": "腾讯地图显示坐标",
+      "sampledCoordinates": [
+        110.7322,
+        30.5037
+      ],
+      "bortle": 4.0,
+      "sqm": 21.67,
+      "year": 2025,
+      "precision": "乡政府行政驻地参考，不能视为原帖山顶亭子/云上旺角具体机位",
+      "evidence": "主弹窗4.0级 / 乡村天空；SQM21.67；底部110.7322, 30.5037；按钮光污染·2025。云上旺角搜索无结果。",
+      "excluded": [
+        "湖南省邵阳市邵阳县长阳铺镇火烧坪"
+      ],
+      "failedQueries": [
+        "云上旺角"
+      ],
+      "lightPollution": null
+    },
+    {
+      "name": "大九湖",
+      "searchQuery": "神农架 大九湖",
+      "matchedLocation": "大九湖 · 湖北省神农架林区大九湖镇大九湖",
+      "coordinateSystem": "腾讯地图显示坐标",
+      "sampledCoordinates": [
+        109.9764,
+        31.4828
+      ],
+      "bortle": 2.5,
+      "sqm": 21.94,
+      "year": 2025,
+      "precision": "湖区POI参考，不代表整片湖区或原帖具体摄影机位",
+      "evidence": "主弹窗2.5级 / 自然夜空；SQM21.94；底部109.9764, 31.4828；按钮光污染·2025",
+      "excluded": [
+        "大九湖司法所及银行等行政商业设施"
+      ],
+      "lightPollution": {
+        "min": 2.5,
+        "max": 2.5,
+        "sqm": 21.94,
+        "year": 2026,
+        "checkedAt": "2026-09-18",
+        "sampledCoordinates": [
+          109.971524,
+          31.484994
+        ],
+        "coordinateSystem": "WGS84",
+        "matchedLocation": "Hubei（大九湖POI转换坐标）",
+        "sourceUrl": "https://lightpollutionmap.app/?lat=31.484994&lng=109.971524&zoom=11",
+        "evidence": "Location Details显示31.484994,109.971524；Sep 2026 · EST.，2.5 BORTLE，SQM21.94；地图瓦片2025与详情年份分别记录。",
+        "coordinateMethod": "主代理按项目GCJ02逆转换腾讯坐标，非新增独立定位证据"
+      }
+    },
+    {
+      "name": "天燕星空营地",
+      "searchQuery": "神农架 天燕",
+      "matchedLocation": "神农架天燕景区 · 湖北省神农架林区红坪镇",
+      "coordinateSystem": "腾讯地图显示坐标",
+      "sampledCoordinates": [
+        110.4656,
+        31.7146
+      ],
+      "bortle": 2.6,
+      "sqm": 21.93,
+      "year": 2025,
+      "precision": "只匹配到景区POI，未定位星空营地，不能把景区中心当营地机位",
+      "evidence": "主弹窗2.6级 / 自然夜空；SQM21.93；底部110.4656, 31.7146；按钮光污染·2025",
+      "excluded": [
+        "浙江、江苏、湖南的星空营地搜索结果",
+        "神农架天燕滑雪场"
+      ],
+      "failedQueries": [
+        "天燕 星空营地",
+        "天燕 露营"
+      ],
+      "lightPollution": null
+    }
+  ]
+}

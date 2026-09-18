@@ -1,0 +1,1489 @@
+[
+  {
+    "name": "大洪山状元台",
+    "province": "湖北",
+    "city": "随州",
+    "aliases": [],
+    "status": "promotion-unverified",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "69cb24bf0000000023004065",
+        "title": "星空爱好者，大洪山状元台解锁银河浪漫",
+        "url": "https://www.xiaohongshu.com/search_result/69cb24bf0000000023004065?xsec_token=ABdM05DmTTULwEera2Wz0HM4OYpOcz-GCY7fJRiFCtknk=&xsec_source=",
+        "readAt": "2026-09-14T09:00:49.821Z",
+        "evidenceType": "detail-text",
+        "evidence": "景区账号推广；明确宝珠峰对面，观光车后步行10分钟，建议住景区；夜间准入需核验",
+        "sourceType": "promotion",
+        "status": "promotion"
+      },
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "景区账号称海拔985米、宝珠峰对面，观光车后步行10分钟，建议住景区。推广性质；夜间通行未核验。"
+    ],
+    "sourceNoteIds": [
+      "69cb24bf0000000023004065",
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "景区账号称海拔985米、宝珠峰对面，观光车后步行10分钟，建议住景区。推广性质；夜间通行未核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "大洪山金顶",
+    "province": "湖北",
+    "city": "随州",
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "693e3b20000000001e039ae6",
+        "title": "2025双子座流星雨｜随州大洪山金顶",
+        "url": "https://www.xiaohongshu.com/search_result/693e3b20000000001e039ae6?xsec_token=ABpPhTo-uJTx3832gNxwBff_lESWgFLeFIc_yOFzImWb4=&xsec_source=",
+        "readAt": "2026-09-14T09:01:05.125Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影实拍双子座流星雨；作者明确抱怨光污染，不能据景区宣传认定无光污染",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "摄影师2024横评称景区内进入不便，夜间探照灯影响；2025双子座实拍仍抱怨光污染。古建筑适合作前景，非优先暗空点。"
+    ],
+    "sourceNoteIds": [
+      "693e3b20000000001e039ae6",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师2024横评称景区内进入不便，夜间探照灯影响；2025双子座实拍仍抱怨光污染。古建筑适合作前景，非优先暗空点。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "大悟山仙居顶",
+    "province": "湖北",
+    "city": "孝感",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a81b26e000000003300a2ae",
+        "title": "大悟山追流星 大雾二度空军",
+        "url": "https://www.xiaohongshu.com/search_result/6a81b26e000000003300a2ae?xsec_token=ABuM8P2L4HwqeyJiAwAKWQ_zyP3i2B_MwxNjxub3drSx0=&xsec_source=",
+        "readAt": "2026-09-14T09:01:21.484Z",
+        "evidenceType": "detail-text",
+        "evidence": "正文确认大悟山仙居顶同一地点；两次上山遇大雾未拍到流星，保留失败证据",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "692c4825000000001e017aba",
+        "title": "仙居顶｜ 去看星星✨",
+        "url": "https://www.xiaohongshu.com/search_result/692c4825000000001e017aba?xsec_token=AB9bY-C8U28O9pWnO-1pHjf_mgLqIIwqCrGENOTWPMvbU=&xsec_source=",
+        "readAt": "2026-09-14T09:01:29.652Z",
+        "evidenceType": "detail-text",
+        "evidence": "实地称武汉出发2小时，高速省道后水泥爬坡山路，冬季猎户座拍摄",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      },
+      {
+        "noteId": "66a9fb400000000005023301",
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "readAt": "2026-09-14T09:04:06.902Z",
+        "evidenceType": "detail-text",
+        "evidence": "实拍机位说明；天台寺停车后爬山半至一小时；仙居顶城镇光害与垃圾，南武当省界归属需核验；帖称暗空等级未经模型核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "独立实地帖称武汉约2小时，经高速省道后水泥爬坡山路；2026流星雨帖两度遇大雾。摄影师称近年露营与城镇灯光加重。"
+    ],
+    "sourceNoteIds": [
+      "6a81b26e000000003300a2ae",
+      "692c4825000000001e017aba",
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c",
+      "6a7ae05c000000002500f979",
+      "66a9fb400000000005023301"
+    ],
+    "summary": "独立实地帖称武汉约2小时，经高速省道后水泥爬坡山路；2026流星雨帖两度遇大雾。摄影师称近年露营与城镇灯光加重。",
+    "access": "2025实地帖子称经水泥山路抵达山顶；当前通行待核验"
+  },
+  {
+    "name": "大悟三爪山",
+    "province": "湖北",
+    "city": "孝感",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "693ecec7000000001e03843c",
+        "title": "武汉周边追流星！三爪山的浪漫受冻",
+        "url": "https://www.xiaohongshu.com/search_result/693ecec7000000001e03843c?xsec_token=ABpPhTo-uJTx3832gNxwBffwJ9GnY-5s_BOSTAVuB6Zn0=&xsec_source=",
+        "readAt": "2026-09-14T09:01:39.353Z",
+        "evidenceType": "detail-text",
+        "evidence": "双子座实拍；山顶风车祖师殿前景，末段颠簸土路，作者称轿车可达寺庙附近；免费与夜间可达须更新核验",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "2025双子座实拍，寺庙附近停车，风车祖师殿前景，最后一段土路颠簸；作者称轿车可上，当前状态待核验。"
+    ],
+    "sourceNoteIds": [
+      "693ecec7000000001e03843c",
+      "6846d288000000002202b36a"
+    ],
+    "summary": "2025双子座实拍，寺庙附近停车，风车祖师殿前景，最后一段土路颠簸；作者称轿车可上，当前状态待核验。",
+    "access": "2025帖子称寺庙附近可停车、末段土路颠簸；当前通行待核验"
+  },
+  {
+    "name": "宜昌百里荒",
+    "province": "湖北",
+    "city": "宜昌",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "武当山金顶",
+    "province": "湖北",
+    "city": "十堰",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "薄刀峰锡锅顶",
+    "province": "湖北",
+    "city": "黄冈",
+    "aliases": [
+      "薄刀峰"
+    ],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "九宫山铜鼓包",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [
+      "汇总推荐但另两篇同作者提封闭或限行，必须核验当前准入。"
+    ],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d",
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "汇总推荐但另两篇同作者提封闭或限行，必须核验当前准入。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "九宫山滑雪场",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "九宫山大风车露营基地",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架大九湖",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架瞭望塔",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架国际滑雪场",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架燕子垭",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架蛇草坪",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架朝阳",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架桃坪",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "神农架机场",
+    "province": "湖北",
+    "city": "神农架林区",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6876244d000000001c030f4d",
+        "title": "湖北省内观星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6876244d000000001c030f4d?xsec_token=AB3QLlzT3FjTSCzONGcMwy90aCvjvg3hlxoMb8Cg0xZbk=&xsec_source=",
+        "readAt": "2026-09-14T09:01:53.739Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "多地点汇总推荐，非每处实拍；具体准入、坐标及暗空均待核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "两篇同作者横评推荐红坪机场附近，称无需门票；该历史自由进入描述不能直接视为当前准入。"
+    ],
+    "sourceNoteIds": [
+      "6876244d000000001c030f4d",
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "两篇同作者横评推荐红坪机场附近，称无需门票；该历史自由进入描述不能直接视为当前准入。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "恩施",
+    "province": "湖北",
+    "city": "恩施州",
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "九宫山桃源星空酒店后方土路",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "九宫山铜鼓包停车场旁亭子",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "摄影师在铜鼓包限行背景下推荐的替代机位，不与铜鼓包山顶强行合并。"
+    ],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师在铜鼓包限行背景下推荐的替代机位，不与铜鼓包山顶强行合并。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "富水水库",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "摄影师多次拍摄通山县周边；山脉遮挡县城光害，富水水库为著名机位，但具体湖岸点未明确。"
+    ],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师多次拍摄通山县周边；山脉遮挡县城光害，富水水库为著名机位，但具体湖岸点未明确。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "雾云山",
+    "province": "湖北",
+    "city": "黄冈",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "摄影师称茶园和梯田两个拍摄区；5月灌水可拍倒影、8月萤火虫。"
+    ],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师称茶园和梯田两个拍摄区；5月灌水可拍倒影、8月萤火虫。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "道观河龙凤桥",
+    "province": "湖北",
+    "city": "武汉",
+    "aliases": [
+      "道观河"
+    ],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "6a787709000000003301ff77",
+        "title": "武汉周边观星攻略",
+        "url": "https://www.xiaohongshu.com/search_result/6a787709000000003301ff77?xsec_token=AB2i1WzFp0J-VPDUjf8yCNQFPz_f8d1bHkGeK5UIIdGas=&xsec_source=",
+        "readAt": "2026-09-14T09:02:52.862Z",
+        "evidenceType": "detail-text",
+        "evidence": "作者明确图13道观河其余天台山，星空实拍，提醒高山起雾需除雾带；天台山确切行政区需另一来源",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "66a9fb400000000005023301",
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "readAt": "2026-09-14T09:04:06.902Z",
+        "evidenceType": "detail-text",
+        "evidence": "实拍机位说明；天台寺停车后爬山半至一小时；仙居顶城镇光害与垃圾，南武当省界归属需核验；帖称暗空等级未经模型核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c",
+      "6a787709000000003301ff77",
+      "66a9fb400000000005023301"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "大幕山",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6846d288000000002202b36a",
+        "title": "家门口的观星圣地！湖北星空地点大盘点！",
+        "url": "https://www.xiaohongshu.com/search_result/6846d288000000002202b36a?xsec_token=ABDFssaauBbYF28HUqdnVA0SwAHn4HLqVcsmWn08rEKms=&xsec_source=",
+        "readAt": "2026-09-14T09:02:03.636Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师经验汇总；自定义一二三级不是波尔特。铜鼓包封闭、仙居顶与大幕山露营光污染加剧，必须保留限制",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "2024和2025同一摄影师均称露营及公共设施灯光让条件变差，个人不推荐。"
+    ],
+    "sourceNoteIds": [
+      "6846d288000000002202b36a",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "2024和2025同一摄影师均称露营及公共设施灯光让条件变差，个人不推荐。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "南顶草原",
+    "province": "湖北",
+    "city": null,
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "清凉寨刘家山观景台",
+    "province": "湖北",
+    "city": "武汉",
+    "aliases": [
+      "清凉寨"
+    ],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c",
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "梁子湖李木匠",
+    "province": "湖北",
+    "city": "武汉",
+    "aliases": [
+      "梁子湖"
+    ],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "671f8d57000000002100752c",
+        "title": "武汉周边星空机位横评，总有一个机位适合你",
+        "url": "https://www.xiaohongshu.com/search_result/671f8d57000000002100752c?xsec_token=AB_7rzyDzz2quKRLJU3mZlqaSNIPpP83PGDVQcL88qsFY=&xsec_source=",
+        "readAt": "2026-09-14T09:02:13.285Z",
+        "evidenceType": "detail-text",
+        "evidence": "摄影师多年实拍横评；金顶夜间探照灯、景区进入不便；仙居顶夏季露营光害。与6846同作者，不算独立交叉验证",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      },
+      {
+        "noteId": "66a9fb400000000005023301",
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "readAt": "2026-09-14T09:04:06.902Z",
+        "evidenceType": "detail-text",
+        "evidence": "实拍机位说明；天台寺停车后爬山半至一小时；仙居顶城镇光害与垃圾，南武当省界归属需核验；帖称暗空等级未经模型核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c",
+      "66a9fb400000000005023301"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "木兰胜天星空营地",
+    "province": "湖北",
+    "city": "武汉",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "石航山观景台",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "双峰山主峰观景台",
+    "province": "湖北",
+    "city": "孝感",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "安陆白兆山山顶",
+    "province": "湖北",
+    "city": "孝感",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "大悟山横岩子观景台",
+    "province": "湖北",
+    "city": "孝感",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "娘娘顶",
+    "province": "湖北",
+    "city": null,
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "大幕山白云山观景台",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "通山大城山山顶湖",
+    "province": "湖北",
+    "city": "咸宁",
+    "aliases": [],
+    "status": "lead-only",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "来源仅提供地点推荐，具体机位及当前条件待核验。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "岭子寨（茅庐寨）",
+    "province": "湖北",
+    "city": null,
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "大洪山简易观星台",
+    "province": "湖北",
+    "city": "随州",
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a7ae05c000000002500f979",
+        "title": "武汉周边14处流星雨观星点",
+        "url": "https://www.xiaohongshu.com/search_result/6a7ae05c000000002500f979?xsec_token=AB0YvYiFxEdPwubpGMLShQw6zs4RYm2Eatfl9LabP70-c=&xsec_source=",
+        "readAt": "2026-09-14T09:02:35.028Z",
+        "evidenceType": "roundup-recommendation",
+        "evidence": "实际查看整张地点图：14项中信阳新县黄毛尖尖在河南排除；其他为户外账号汇总推荐，非独立实拍确认",
+        "sourceType": "promotion",
+        "status": "promotion"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位"
+    ],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "红安天台山",
+    "province": "湖北",
+    "city": "黄冈",
+    "aliases": [
+      "天台山"
+    ],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a787709000000003301ff77",
+        "title": "武汉周边观星攻略",
+        "url": "https://www.xiaohongshu.com/search_result/6a787709000000003301ff77?xsec_token=AB2i1WzFp0J-VPDUjf8yCNQFPz_f8d1bHkGeK5UIIdGas=&xsec_source=",
+        "readAt": "2026-09-14T09:02:52.862Z",
+        "evidenceType": "detail-text",
+        "evidence": "作者明确图13道观河其余天台山，星空实拍，提醒高山起雾需除雾带；天台山确切行政区需另一来源",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "6965ee0f000000001a02174c",
+        "title": "天台山｜武汉周边拍星地推荐",
+        "url": "https://www.xiaohongshu.com/search_result/6965ee0f000000001a02174c?xsec_token=ABkbITxOgGGiVz0NmEbjzh6hBZWBBMzkXobMgU7CLWUoU=&xsec_source=",
+        "readAt": "2026-09-14T09:03:03.518Z",
+        "evidenceType": "detail-text",
+        "evidence": "正文明确湖北天台山，含索尼a7r3银河多角度接片与堆栈参数；非通行攻略",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "6a818db800000000280304da",
+        "title": "红安天台山的英仙座流星雨！",
+        "url": "https://www.xiaohongshu.com/search_result/6a818db800000000280304da?xsec_token=ABuM8P2L4HwqeyJiAwAKWQ_xTozP_AT_pzR2ncV0azm0w=&xsec_source=",
+        "readAt": "2026-09-14T09:03:12.585Z",
+        "evidenceType": "detail-text",
+        "evidence": "GHY同作者标题明确红安，可定位其前篇天台山实拍；无通行资料",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      },
+      {
+        "noteId": "66a9fb400000000005023301",
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "readAt": "2026-09-14T09:04:06.902Z",
+        "evidenceType": "detail-text",
+        "evidence": "实拍机位说明；天台寺停车后爬山半至一小时；仙居顶城镇光害与垃圾，南武当省界归属需核验；帖称暗空等级未经模型核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "GHY实拍标题明确红安。另一摄影师建议导航天台寺，山脚停车后步行半小时至1小时；起雾影响拍摄。"
+    ],
+    "sourceNoteIds": [
+      "6a787709000000003301ff77",
+      "6965ee0f000000001a02174c",
+      "6a818db800000000280304da",
+      "66a9fb400000000005023301"
+    ],
+    "summary": "GHY实拍标题明确红安。另一摄影师建议导航天台寺，山脚停车后步行半小时至1小时；起雾影响拍摄。",
+    "access": "导航天台寺，山脚停车后步行半小时至1小时；夜间准入待核验"
+  },
+  {
+    "name": "将军山将军观下方观景平台",
+    "province": "湖北",
+    "city": "武汉",
+    "aliases": [],
+    "status": "candidate",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "6a579fc9000000002101add8",
+        "title": "武汉将军山银河拍摄攻略",
+        "url": "https://www.xiaohongshu.com/search_result/6a579fc9000000002101add8?xsec_token=ABM1vo3wAQuAfUcqYTbesvHRFJSCxrTCYzvFJ-DIEt5cE=&xsec_source=",
+        "readAt": "2026-09-14T09:03:30.571Z",
+        "evidenceType": "detail-text",
+        "evidence": "银河延时实拍，南至西南朝向、风大、人车灯光干扰；正文跨护栏机位不推荐，优先正规平台",
+        "sourceType": "firsthand",
+        "status": "candidate"
+      }
+    ],
+    "notes": [
+      "2026实拍机位为将军观下方平台，南至西南朝向，风大、人群与车灯影响。帖子跨护栏建议不作为推荐路线。"
+    ],
+    "sourceNoteIds": [
+      "6a579fc9000000002101add8"
+    ],
+    "summary": "2026实拍机位为将军观下方平台，南至西南朝向，风大、人群与车灯影响。帖子跨护栏建议不作为推荐路线。",
+    "access": "夜间准入、路况及收费待核验"
+  },
+  {
+    "name": "南武当",
+    "province": "湖北",
+    "city": null,
+    "aliases": [],
+    "status": "hold",
+    "coordinateStatus": "pending",
+    "bortle": null,
+    "bortleStatus": "pending-model-verification",
+    "sources": [
+      {
+        "noteId": "66a9fb400000000005023301",
+        "title": "⭐武汉周边适合新手入门星空机位推荐",
+        "url": "https://www.xiaohongshu.com/search_result/66a9fb400000000005023301?xsec_token=AB153c5QFp2amoGvQKqO119S7fiVXi-Qtr0O3WQ-qVZb0=&xsec_source=",
+        "readAt": "2026-09-14T09:04:06.902Z",
+        "evidenceType": "detail-text",
+        "evidence": "实拍机位说明；天台寺停车后爬山半至一小时；仙居顶城镇光害与垃圾，南武当省界归属需核验；帖称暗空等级未经模型核验",
+        "sourceType": "roundup",
+        "status": "lead-only"
+      }
+    ],
+    "notes": [
+      "范围或同名地点待准确定位，不直接作为地图点位",
+      "原帖仅写南武当、武汉出发约200公里，未明确行政区；不得自动对应十堰武当山。"
+    ],
+    "sourceNoteIds": [
+      "66a9fb400000000005023301"
+    ],
+    "summary": "范围或同名地点待准确定位，不直接作为地图点位 原帖仅写南武当、武汉出发约200公里，未明确行政区；不得自动对应十堰武当山。",
+    "access": "夜间准入、路况及收费待核验"
+  }
+]

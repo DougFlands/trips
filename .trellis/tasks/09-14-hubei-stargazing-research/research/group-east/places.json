@@ -1,0 +1,557 @@
+[
+  {
+    "name": "道观河龙凤桥",
+    "city": "武汉",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7b37c60000000008013c67",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "桥梁与湖库地景，可拍银河；作者肉眼看不见银河但手机可拍。",
+    "access": "道路与餐饮住宿较成熟；具体停车位置待核验。",
+    "risks": [
+      "桥上拍摄者拥挤",
+      "肉眼与照片效果不同",
+      "夜间水边"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "梁子湖李木匠",
+    "city": "武汉",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a782561000000003303344c",
+      "6a781a460000000022032892"
+    ],
+    "summary": "荷塘前景，两路灯之间避直射，正文实拍银河与星轨经验。",
+    "access": "作者称靠蓝波湾水文化度假村一侧空地；详细坐标仍待核验。",
+    "risks": [
+      "地面光污染较强",
+      "蚊虫多",
+      "湖边风险",
+      "来源P1/P2为AI修图，仅采正文与原片说明"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "梁子湖伽利略灯塔",
+    "city": "武汉",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a782561000000003303344c"
+    ],
+    "summary": "灯塔适合星轨地景，作者给出车灯干扰实测。",
+    "access": "具体停车和夜间开放待核验。",
+    "risks": [
+      "路过车辆容易照亮灯塔，破坏连续星轨素材",
+      "夜间水边",
+      "来源前2图为AI修图"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "九宫山铜鼓包",
+    "city": "咸宁",
+    "status": "candidate",
+    "aliases": [
+      "铜鼓包停车场亭子",
+      "通山九宫山·铜鼓包"
+    ],
+    "sourceNoteIds": [
+      "69e41df5000000001a02c089",
+      "6a74886c0000000021023c5a",
+      "671f8d57000000002100752c",
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "银河相机单张实拍；铜鼓包停车场旁亭子也是摄影师推荐机位。",
+    "access": "2024横评称限行，2026作者评论称自驾可上；不可据此保证当前通行。",
+    "risks": [
+      "大风暴雨浓雾可临时劝离",
+      "夜间路窄弯多",
+      "下坡未开放保护区不进入",
+      "露营政策动态变化"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "九宫山桃源星空酒店后土路",
+    "city": "咸宁",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师横评推荐的替代机位。",
+    "access": "位于酒店后土路，确切位置及夜间合法进入待核验。",
+    "risks": [
+      "土路",
+      "仅2024横评单篇推荐",
+      "不能保证现行开放"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "大幕山",
+    "city": "咸宁",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "69eb8e2f00000000350315f0",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "风车、信号塔和开阔山顶平台可作星空前景。",
+    "access": "2026攻略称无需门票/露营费；当前路况与收费待复核。",
+    "risks": [
+      "非铺装路面",
+      "夜风低温",
+      "露营人群及公共设施灯光干扰"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "红安天台山",
+    "city": "黄冈",
+    "status": "candidate",
+    "aliases": [
+      "天台寺",
+      "望仙崖"
+    ],
+    "sourceNoteIds": [
+      "69e9ea8f000000001a02dd9c"
+    ],
+    "summary": "天台寺广场与望仙崖的观星露营点，古寺前景。",
+    "access": "导航天台寺，山顶停车后石阶约20至30分钟；作者报停车10元，现价待核。",
+    "risks": [
+      "盘山急弯",
+      "停车场光源比山顶明显",
+      "夜间登山和寺院管理待核验"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "黄陂黄牯石",
+    "city": "武汉",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a71927a000000002500932e"
+    ],
+    "summary": "过夜露营可观星、看日出日落。",
+    "access": "山顶和半山露营为作者经验，道路开放待核验。",
+    "risks": [
+      "山顶无信号",
+      "风机噪音大"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "刘家山观景台",
+    "city": "武汉",
+    "status": "candidate",
+    "aliases": [
+      "清凉寨刘家山观景台"
+    ],
+    "sourceNoteIds": [
+      "6a857194000000002702168e",
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "山顶开阔，实测帖明确导航名。",
+    "access": "自驾盘山到刘家山观景台。",
+    "risks": [
+      "弯道多",
+      "夜间低温",
+      "设施及夜间管理待核验"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "仙居顶",
+    "city": "孝感",
+    "status": "candidate",
+    "aliases": [
+      "仙居顶风电场"
+    ],
+    "sourceNoteIds": [
+      "6a647562000000001002a6a5",
+      "671f8d57000000002100752c",
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "夜间登顶拍银河与日出，风电场作为地景。",
+    "access": "具体停车和徒步距离正文未明确。",
+    "risks": [
+      "夏季人群与灯光干扰",
+      "横评更推荐四五月，非绝对季节承诺"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "薄刀峰东门停车场",
+    "city": "黄冈",
+    "status": "candidate",
+    "aliases": [
+      "罗田薄刀峰"
+    ],
+    "sourceNoteIds": [
+      "6a788754000000002402d48e"
+    ],
+    "summary": "东南面可拍银河，相机20mm单张实拍。",
+    "access": "导航薄刀峰风景区东门停车场，停车面积大、有厕所；作者观察到房车及帐篷。",
+    "risks": [
+      "多次起云雾，窗口不稳定",
+      "露营管理和照明待核验"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "蕲春雾云山梯田",
+    "city": "黄冈",
+    "status": "candidate",
+    "aliases": [
+      "雾云山"
+    ],
+    "sourceNoteIds": [
+      "68aa9b3c000000001d00a787",
+      "671f8d57000000002100752c"
+    ],
+    "summary": "梯田、茶园和银河地景，灌水季可拍倒影，夏季有萤火虫。",
+    "access": "雾云山村农宿平台；普通车辆可达，免费停车是发帖时信息。",
+    "risks": [
+      "村庄灯光",
+      "田埂与水面",
+      "当前费用待复核"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "黄陂星星湖营地",
+    "city": "武汉",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "693eabc8000000001f00582a"
+    ],
+    "summary": "2025双子座流星雨实拍，可选完整圆星轨机位。",
+    "access": "营地营业、预约和收费待核。",
+    "risks": [
+      "营地灯光",
+      "未知夜间管理"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "神农架红坪机场周边",
+    "city": "神农架林区",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师称机场附近有多处免费拍摄机位。",
+    "access": "只保留区域候选，不给未经核验的机场周边坐标。",
+    "risks": [
+      "具体机位不明",
+      "机场与道路边界须核验"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "富水水库",
+    "city": "咸宁",
+    "status": "candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c"
+    ],
+    "summary": "摄影师通山星空横评明确提及水库机位。",
+    "access": "广域候选，湖岸具体点待核验。",
+    "risks": [
+      "夜间水边",
+      "点位精度不足"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "大洪山金顶",
+    "city": "随州",
+    "status": "caution-candidate",
+    "aliases": [],
+    "sourceNoteIds": [
+      "671f8d57000000002100752c"
+    ],
+    "summary": "古建筑前景可拍银河，但作者个人不推荐。",
+    "access": "景区内部，夜间进入不便。",
+    "risks": [
+      "金顶可能有探照灯",
+      "不能保证拍摄条件"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "木兰胜天星空营地",
+    "city": "武汉",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "石航山观景台",
+    "city": null,
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "双峰山主峰观景台",
+    "city": "孝感",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "安陆白兆山山顶",
+    "city": "孝感",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "大悟山横岩子观景台",
+    "city": "孝感",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "娘娘顶",
+    "city": null,
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "大幕山白云山观景台",
+    "city": "咸宁",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "通山大城山山顶湖",
+    "city": "咸宁",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "岭子寨（茅庐寨）",
+    "city": null,
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "大洪山简易观星台",
+    "city": "随州",
+    "status": "compilation-only",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a7ae05c000000002500f979"
+    ],
+    "summary": "户外账号14处观星点配图列出；截图已保存。",
+    "access": "无详细正文交通，待独立帖子与地图确认。",
+    "risks": [
+      "仅汇编推荐，非本组独立实拍核验",
+      "同名或别名待归并"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "浠水西冲星空古寨",
+    "city": "黄冈",
+    "status": "needs-stargazing-evidence",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6a9c1ea0000000002a0259b1"
+    ],
+    "summary": "露营木平台可俯瞰白莲河水库，但作者日落前离开。",
+    "access": "陡弯山路，停车后还有土路。",
+    "risks": [
+      "无夜间星空实拍",
+      "土路与陡弯"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "英山上弦月逅影民宿",
+    "city": "黄冈",
+    "status": "commercial-unverified",
+    "aliases": [],
+    "sourceNoteIds": [
+      "6894b5500000000023018142"
+    ],
+    "summary": "民宿套餐推广，泛称可观测星空。",
+    "access": "梅岩村；营业与套餐真实性待核。",
+    "risks": [
+      "商业宣传，无独立实拍"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  },
+  {
+    "name": "武汉大学珞珈山校内天台",
+    "city": "武汉",
+    "status": "access-unverified",
+    "aliases": [],
+    "sourceNoteIds": [
+      "693d9ae5000000001e007ce5"
+    ],
+    "summary": "学生校内天台观看2025流星雨记录。",
+    "access": "建筑位置不明、公众夜间进入未证实。",
+    "risks": [
+      "校园和天台准入不明"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特与当前夜间管理待核验"
+  }
+]

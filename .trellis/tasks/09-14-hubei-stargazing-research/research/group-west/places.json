@@ -1,0 +1,433 @@
+[
+  {
+    "name": "天柱山山顶",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "663b7f29000000001e0375c8"
+    ],
+    "summary": "山顶道观附近可观星和云海",
+    "access": "宜长公路经津洋口，铺装路；末段需登山",
+    "risks": "夜间登山、景区开放须复核",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "天柱山猕猴桃基地",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "663b7f29000000001e0375c8"
+    ],
+    "summary": "较大平地，西对天柱山、东有山体",
+    "access": "种植基地附近，准确入口待查",
+    "risks": "农业用地权限待核验",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "观坪林场灯塔",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "663b7f29000000001e0375c8"
+    ],
+    "summary": "银河升起方向可用悬崖地貌作前景",
+    "access": "天柱山旁小路尽头",
+    "risks": "临崖、夜间视线及林场管理",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "火烧坪",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "662b059e0000000001006afa"
+    ],
+    "summary": "高山开阔视野；未具名亭子与山间田园为区域机位",
+    "access": "宜昌约2.5小时，末段约40分钟山路",
+    "risks": "冬季积雪打滑，夜间低温；亭子未精确定位",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "云上旺角",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "662b059e0000000001006afa"
+    ],
+    "summary": "火烧坪内朝东小平台，碎石路可作银河前景",
+    "access": "登山约15分钟",
+    "risks": "平台小，碎石坡，不适合大型设备",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "黄牛岩",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6720b022000000001901856c"
+    ],
+    "summary": "极顶平台宽敞，南向优于其他方向",
+    "access": "山顶平台，路线待核验",
+    "risks": "北东受坝区/市区、西受秭归光害",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "白云山",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6720b022000000001901856c",
+      "6623cfc40000000001030574"
+    ],
+    "summary": "茶厂平坦但有树遮挡；山顶公路折角开阔但不平",
+    "access": "点军土城与长阳贺家坪交界，铺装双车道",
+    "risks": "风口常年风大，冬季可能积雪；东/北光害",
+    "aliases": [
+      "白云山茶厂",
+      "白云山山顶"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "税家包",
+    "city": "宜昌",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "6720b022000000001901856c"
+    ],
+    "summary": "秭归周边观星清单列名",
+    "access": "待核验",
+    "risks": "东边县城与大坝光害",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "芝兰谷",
+    "city": "宜昌",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "6720b022000000001901856c"
+    ],
+    "summary": "秭归周边观星清单列名",
+    "access": "待核验",
+    "risks": "东边县城与大坝光害",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "芝茅公路",
+    "city": "宜昌",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "6720b022000000001901856c"
+    ],
+    "summary": "秭归周边观星清单列名，道路线索",
+    "access": "准确停车位待核验",
+    "risks": "东边县城与大坝光害，勿在行车道架设备",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "大金坪云上花海",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6720b022000000001901856c"
+    ],
+    "summary": "花园与通往电视塔山顶路开阔平坦；塔本身遮挡多",
+    "access": "宜昌约3小时，具体公共停车点待核验",
+    "risks": "山路、花园权限、东向残余光害",
+    "aliases": [
+      "大金坪"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "云台荒",
+    "city": "宜昌",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6720b022000000001901856c",
+      "6623cfc40000000001030574"
+    ],
+    "summary": "秭归/长阳交界高山，平坦位置多",
+    "access": "两县均有上山道路，宜昌约3.5小时",
+    "risks": "已有风电建设；另一帖评论反馈红灯影响，不能当纯黑区",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "G348星空停车区",
+    "city": "宜昌",
+    "status": "hold",
+    "sourceNoteIds": [
+      "69e5e0dc000000001f00095c"
+    ],
+    "summary": "江景及观景台指南，文中自称极暗却有七星步道夜灯",
+    "access": "乐天溪镇王家坪村、干沟子大桥旁，帖称免费停车",
+    "risks": "暗空说法矛盾；车位有限、临崖，开放需核验",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "石板岭",
+    "city": "恩施州",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6a8258b000000000250155b7"
+    ],
+    "summary": "作者明确图1为石板岭星空",
+    "access": "具体机位和公共入口待核验",
+    "risks": "无夜间交通与管理信息",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "柳池",
+    "city": "恩施州",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6a8258b000000000250155b7"
+    ],
+    "summary": "作者明确图5-9为柳池星空",
+    "access": "具体机位和公共入口待核验",
+    "risks": "地名范围较宽，不能直接定坐标",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "富尔山茅古司部落星空露营基地",
+    "city": "恩施州",
+    "status": "hold",
+    "sourceNoteIds": [
+      "66d80508000000001f0393d0"
+    ],
+    "summary": "文旅推广，声称富尔山可赏流星",
+    "access": "恩施市国有富尔山林场，帖称市区约1小时",
+    "risks": "摄影作者评论质疑照片用于其他营地广告；实际拍摄地待独立证据",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "夕施露营地",
+    "city": "恩施州",
+    "status": "promotion-unverified",
+    "sourceNoteIds": [
+      "663edf5f000000001e0361d5"
+    ],
+    "summary": "商家推广望远镜与帐篷住宿",
+    "access": "沐抚办事处高台村槽房组小湾东南200米；尾段碎石路",
+    "risks": "收费/预订待查；篝火电影等照明可能影响拍摄",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "木耳山",
+    "city": "恩施州",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "68d75f73000000000b0128d7"
+    ],
+    "summary": "作者明确鹤峰县走马镇、银河与流星实拍",
+    "access": "准确机位待核验",
+    "risks": "2.7是作者光害说法，不作为波尔特",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "望城坡笔架山",
+    "city": "恩施州",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "66cffcb1000000001f03cdca"
+    ],
+    "summary": "星空和日出实拍，作者称肉眼看不到银河",
+    "access": "需上山，稍低位置可露营为2024年经历",
+    "risks": "山顶低温；露营权限和设施未知",
+    "aliases": [
+      "望城坡"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "神农架红坪机场外围",
+    "city": "神农架林区",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6a9e6ee80000000027008bd1"
+    ],
+    "summary": "近期星空实拍，夜间露水多",
+    "access": "合法外围观景点待定位，不指向受控区域",
+    "risks": "雷达闪烁红灯影响、低温结露、进入权限",
+    "aliases": [
+      "红坪机场"
+    ],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "大九湖",
+    "city": "神农架林区",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6a84441c00000000330315b7"
+    ],
+    "summary": "游客夜观星空和流星，睡车等晨雾",
+    "access": "星空机位未明确；二号湖仅明确晨雾拍摄，不作为星空坐标",
+    "risks": "夜间开放和车宿许可待查",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "神农顶景区",
+    "city": "神农架林区",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "6a3a9f140000000011004eca"
+    ],
+    "summary": "7小时1500张星空记录，但机位未明确",
+    "access": "不能确定开车可达",
+    "risks": "第三方评论称不知位置，不采用其通行说法",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "天燕星空营地",
+    "city": "神农架林区",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6a89abeb000000000302abd9"
+    ],
+    "summary": "游客过夜看到繁星，营地能看到彩虹桥",
+    "access": "天燕景区内帐篷房，需预约核价",
+    "risks": "有夜间留灯；作者没实际看到银河",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "丹江口朱家寨",
+    "city": "十堰",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "685fe6070000000024009381"
+    ],
+    "summary": "摄影者列入拍星地点清单",
+    "access": "待核验",
+    "risks": "缺少具体交通和拍摄条件",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "汉江绿谷附近",
+    "city": "十堰",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "685fe6070000000024009381"
+    ],
+    "summary": "摄影者推荐且评论有独立拍摄经历",
+    "access": "郧阳区安阳镇，具体机位待查",
+    "risks": "朝县城银河方向光害严重",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "葫芦包崖观景台",
+    "city": "十堰",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "685fe6070000000024009381"
+    ],
+    "summary": "摄影者推荐，作者评论说明230省道弯道",
+    "access": "郧阳区大柳乡；地图可能搜不到名称",
+    "risks": "需核对作者图片标点，临崖风险",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "花田酒溪旁茶场",
+    "city": "十堰",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "685fe6070000000024009381"
+    ],
+    "summary": "作者回复房县拍银河地点",
+    "access": "房县，具体茶场名称待核验",
+    "risks": "评论线索，未有独立实拍核验",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  },
+  {
+    "name": "武当山南岩",
+    "city": "十堰",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "6a5263ba000000001603f58d"
+    ],
+    "summary": "作者评论明确南岩约22点银河拍摄",
+    "access": "景区夜间进入办法待复核",
+    "risks": "山路、照明与开放时段未知",
+    "aliases": [],
+    "coordinates": null,
+    "bortle": null,
+    "verification": "坐标、波尔特及当前夜间开放规则待核验"
+  }
+]

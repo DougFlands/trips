@@ -1,0 +1,143 @@
+{
+  "checkedAt": "2026-09-18",
+  "method": "Codex 内置浏览器可见页面与 DOM；天文通地点搜索后读取主弹窗、图层、底部腾讯坐标；LightPollution 使用统一换算坐标并核对 Location Details。",
+  "places": [
+    {
+      "name": "漳河水库大坝",
+      "status": "dam-poi-reference-darkness-pending",
+      "coordinate": {
+        "rawDisplay": [
+          111.9323,
+          31.067017
+        ],
+        "rawSource": "高德公开 POI 页面 B0FFKHN4X3",
+        "rawCoordinateSystem": "GCJ-02",
+        "wgs84": null,
+        "precision": "已定位明确坝体 POI；与原帖未写坝名的漳河大坝是否同一机位未确认"
+      },
+      "tianwentong": null,
+      "lightPollution": null,
+      "sourceNoteIds": [
+        "66b93fe70000000005032e20",
+        "68d69291000000001202e757"
+      ],
+      "searches": [
+        {
+          "query": "漳河水库大坝",
+          "result": "漳河水库（荆门市东宝区漳河镇）及多处干渠管理处；没有大坝精确 POI。"
+        },
+        {
+          "query": "漳河大坝",
+          "result": "没有找到相关地点。"
+        },
+        {
+          "query": "漳河 观音寺大坝",
+          "result": "仅出现贵州、河南、湖南等外省桥梁/酒店/寺庙；全部排除。"
+        },
+        {
+          "query": "观音寺水库",
+          "result": "仅云南昆明、四川雅安同名水库；全部排除。"
+        }
+      ],
+      "limitations": "可采用观音寺大坝作为漳河水库的明确坝体参考点；原小红书只写漳河大坝，不能断言原帖机位即此坝。双站尚未对此 POI 采样，夜间准入未核验。",
+      "sourceUrl": "https://www.darkmap.cn/",
+      "matchedPoi": "观音寺大坝",
+      "coordinateUrl": "https://www.amap.com/place/B0FFKHN4X3",
+      "relationshipSource": "https://wlt.hubei.gov.cn/bmdt/ztzl/wltztwhlvj/wltztalzs/wltztwljaljt/202607/t20260715_5977140.shtml",
+      "supplementalChecks": {
+        "method": "公开网页搜索与高德 POI 原页读取；自身内置浏览器已不在列表，未读取新暗空值",
+        "queries": [
+          "漳河观音寺 高德地图",
+          "观音寺大坝 荆门 高德地图",
+          "漳河 观音寺大坝 site.gov.cn"
+        ],
+        "amapEvidence": "观音寺大坝，地理坐标：31.067017,111.932300。",
+        "relationshipEvidence": "省文旅页面列漳河旅游码头至观音寺大坝等区域，运行区域荆门市漳河新区。"
+      }
+    },
+    {
+      "name": "汉江绿谷",
+      "status": "poi-reference-two-sites-read",
+      "matchedPoi": "郧阳区汉江绿谷生态旅游区",
+      "matchedAddress": "湖北省十堰市郧阳区安阳镇青龙村",
+      "searchQuery": "汉江绿谷",
+      "searchResult": "唯一匹配 POI，与原帖郧阳区安阳镇一致。",
+      "sourceNoteIds": [
+        "685fe6070000000024009381"
+      ],
+      "coordinate": {
+        "rawDisplay": [
+          111.0464,
+          32.8231
+        ],
+        "rawSource": "天文通搜索 POI 后底部腾讯地图显示坐标",
+        "rawCoordinateSystem": "Tencent / GCJ-02",
+        "wgs84": [
+          111.040655,
+          32.825035
+        ],
+        "conversion": "主代理按项目现有 wgs84ToGcj02 函数迭代反算 8 轮；原始坐标仅显示四位小数，换算小数位不代表实地定位精度。",
+        "precision": "景区 POI 参考点；原帖为汉江绿谷附近，具体岸段/拍摄机位未确认。"
+      },
+      "tianwentong": {
+        "url": "https://www.darkmap.cn/",
+        "layer": "光污染·2025",
+        "bortle": 4.0,
+        "sqm": 21.68,
+        "rawDisplay": [
+          111.0464,
+          32.8231
+        ],
+        "evidence": "主弹窗：波特尔光污染 4.0 级 / 乡村天空；SQM 21.68；底部 111.0464, 32.8231；图层按钮光污染·2025。",
+        "type": "页面模型读数，非现场实测"
+      },
+      "lightPollution": {
+        "url": "https://lightpollutionmap.app/?lat=32.825035&lng=111.040655&zoom=11",
+        "wgs84": [
+          111.040655,
+          32.825035
+        ],
+        "locationLabel": "Anyang, Hubei",
+        "bortle": 4.1,
+        "sqm": 21.63,
+        "modelLabel": "Sep 2026 · EST.",
+        "modelDescription": "Sep 2026 annual baseline with limited seasonal data",
+        "tileLayer": "classic light pollution map tile (2025)",
+        "evidence": "Location Details 32.825035,111.040655；Anyang,Hubei；Light Pollution Sep 2026 · EST.；4.1 BORTLE；SQM 21.63。",
+        "type": "页面预测/估算模型读数，非现场实测"
+      },
+      "limitations": "两站不是独立实测；读数年份/模型标签不同，不能把 LP 2026 EST. 当 2025 值。原帖评论提及面向县城方向光害明显，天顶模型不能反映所有方向。夜间通行与具体机位仍待核。"
+    },
+    {
+      "name": "葫芦包崖观景台",
+      "status": "coordinate-unresolved",
+      "coordinate": null,
+      "tianwentong": null,
+      "lightPollution": null,
+      "sourceNoteIds": [
+        "685fe6070000000024009381"
+      ],
+      "searches": [
+        {
+          "query": "葫芦包崖",
+          "result": "没有找到相关地点。"
+        },
+        {
+          "query": "葫芦包",
+          "result": "陕西安康镇坪/平利、湖南湘西/石门、重庆开州、四川广元/巴中同名地点，均不在十堰郧阳，全部排除。"
+        },
+        {
+          "query": "郧阳 葫芦包",
+          "result": "没有找到相关地点。"
+        },
+        {
+          "query": "葫芦包崖观景台",
+          "result": "没有找到相关地点。"
+        }
+      ],
+      "limitations": "原帖定位为郧阳区大柳乡，作者评论称在 230 省道弯道标记处。仅文字无法定位具体弯道，需要读取原帖地图标记图片并匹配道路；不能拿乡镇中心代替观景台。",
+      "sourceUrl": "https://www.darkmap.cn/",
+      "existingScreenshots": "检查 research/group-west，只有 summary.md、records.jsonl、places.json、details.jsonl，无原帖图片或标点截图。"
+    }
+  ]
+}

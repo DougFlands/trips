@@ -2,7 +2,13 @@ import { distanceKm, wgs84ToGcj02, type Coordinate } from "../../lib/coordinates
 import type { MapPlace } from "../../TravelMap";
 
 export type Source = { title: string; url: string; date: string };
-export type Bortle = { min: number; max: number; sqm: number; year: number; sampledWgs84: Coordinate };
+export type PollutionReading = {
+  min: number; max: number; sqm: number; year: number; checkedAt: string;
+  sampledCoordinates: Coordinate; coordinateSystem: "WGS84" | "腾讯地图显示坐标";
+  matchedLocation: string; searchQuery?: string;
+};
+export type PollutionSource = "lightPollution" | "tianwentong";
+export const pollutionCheckedAt = "2026-09-14";
 export type StargazingPlace = {
   id: string;
   name: string;
@@ -17,13 +23,13 @@ export type StargazingPlace = {
   nightAccess: string;
   caution: string;
   sources: Source[];
-  bortle: Bortle | null;
+  lightPollution: PollutionReading | null;
+  tianwentong: PollutionReading | null;
   mapUrl: string;
 };
 export const checkedAt = "2026-09-08";
 export const shenzhenOrigin: Coordinate = [114.0545223, 22.5463725];
 const note = (id: string, title: string, date: string): Source => ({ title, date, url: `https://www.xiaohongshu.com/explore/${id}` });
-const model = (level: number, sqm: number, sampledWgs84: Coordinate): Bortle => ({ min: level, max: level, sqm, year: 2025, sampledWgs84 });
 const searchMap = (name: string, city: string) => `https://uri.amap.com/search?${new URLSearchParams({ keyword: name, city, view: "map", src: "travel-guides" })}`;
 
 export const places: StargazingPlace[] = [
@@ -36,7 +42,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "公共绿道的夜间管理仍需出发前核对。四号沙滩礁石区夜间不让进，不列为机位。",
     caution: "渔船灯随夜晚变化；不能从这里推断天文台本体可自由夜入。",
     sources: [note("6a5b3d160000000022018964", "爱拍照的Flora · 西涌躲渔灯拍摄，含位置攻略", "页面显示07-18")],
-    bortle: model(5, 20.31, [114.54199, 22.48934]), mapUrl: "https://www.amap.com/ssr/place/B0LBPURDSO",
+    lightPollution: {"min":5.5,"max":5.5,"sqm":19.95,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.5419908,22.4893432],"coordinateSystem":"WGS84","matchedLocation":"Dapeng New District, Longgang District, Guangdong"},
+    tianwentong: {"min":5.4,"max":5.4,"sqm":20.08,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.5402,22.4833],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省深圳市龙岗区南澳街道西涌海滩旅游景区（新屋附近）","searchQuery":"深圳 西涌海滩"}, mapUrl: "https://www.amap.com/ssr/place/B0LBPURDSO",
   },
   {
     id: "baipenzhu", name: "白盆珠水库", city: "惠州", district: "惠东县", terrain: "湖畔",
@@ -47,7 +54,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "2025年有通宵拍摄经历，当前水源保护、岸线和夜间通行规定待确认。地图链接搜索新庵酒厂集合地名。",
     caution: "水边湿气重、蚊虫多。热门流星雨夜的车灯和照明可能明显干扰拍摄，不下水。",
     sources: [note("688649ee00000000170378b0", "菜心 · 惠州白盆珠观星实拍", "2025-07-27"), note("68840d960000000012023cd0", "Vida · 7.25白盆珠追星攻略", "2025-07-26"), note("6882543a000000001502229d", "Lin · 白盆珠机位与停车示意图", "2025-07-25")],
-    bortle: model(4, 21.26, [115.14023, 23.13122]), mapUrl: searchMap("惠东县新庵酒厂", "惠州"),
+    lightPollution: {"min":4.5,"max":4.5,"sqm":21.1,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[115.1402315,23.1308393],"coordinateSystem":"WGS84","matchedLocation":"Huizhou, Guangdong"},
+    tianwentong: {"min":4.5,"max":4.5,"sqm":21.1,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[115.1932,23.1391],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省惠州市惠东县白盆珠镇白盆珠水库","searchQuery":"白盆珠水库"}, mapUrl: searchMap("惠东县新庵酒厂", "惠州"),
   },
   {
     id: "bajieshan", name: "八界山", city: "清远", district: "阳山县 · 黎埠镇", terrain: "风车山",
@@ -58,7 +66,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "仅有历史露营经验，现行夜间管理待确认。",
     caution: "强风、无厕所；风机附近需避开设施作业范围。不要沿用评论中互相矛盾的光污染等级。",
     sources: [note("686a2b22000000001203cbff", "Sun的光影手记 · 清远八界山银河实拍", "2025-07-06")],
-    bortle: model(3, 21.80, [112.51889, 24.66331]), mapUrl: searchMap("八界山 阳山县黎埠镇", "清远"),
+    lightPollution: {"min":3.9,"max":3.9,"sqm":21.71,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.51889044,24.66306677],"coordinateSystem":"WGS84","matchedLocation":"Qingyuan City, Guangdong"},
+    tianwentong: {"min":4,"max":4,"sqm":21.69,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.5261,24.6519],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省清远市阳山县小江镇八界山","searchQuery":"八界山"}, mapUrl: searchMap("八界山 阳山县黎埠镇", "清远"),
   },
   {
     id: "yanluotou", name: "阎罗头", city: "韶关", district: "乳源 · 大布镇", terrain: "高山草甸",
@@ -69,7 +78,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "夜间进入与露营许可尚未核准，需先确认管理要求。",
     caution: "凌晨易起薄雾，山顶强风、温差大。帖子固定银河时刻表有争议，未采用。",
     sources: [note("6a5d653e000000000c015014", "小企鹅cunning · 韶关两座山顶银河", "页面显示07-20")],
-    bortle: model(3, 21.72, [113.17627, 24.50366]), mapUrl: searchMap("阎罗头 乳源大布镇", "韶关"),
+    lightPollution: {"min":4,"max":4,"sqm":21.64,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.176271,24.5032891],"coordinateSystem":"WGS84","matchedLocation":"Dabu Town, Guangdong, Ruyuan Yao Autonomous County"},
+    tianwentong: {"min":4,"max":4,"sqm":21.65,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.1823,24.5001],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省韶关市乳源瑶族自治县大布镇阎罗头","searchQuery":"阎罗头"}, mapUrl: searchMap("阎罗头 乳源大布镇", "韶关"),
   },
   {
     id: "nanshui", name: "南水湖", city: "韶关", district: "乳源", terrain: "湖畔",
@@ -80,7 +90,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "当前湿地保护、岸线与夜间停车规定待确认。地图链接查找湿地公园区域。",
     caution: "不把区域中心当成道路终点。湖边湿气、低云和局部车灯会影响实际成片。",
     sources: [note("6a530dac000000000f01cb24", "韶关追星 · 南水湖银河实拍", "2026年采集，详情日期未完整显示")],
-    bortle: model(3, 21.71, [113.18223, 24.80068]), mapUrl: searchMap("南水湖国家湿地公园", "韶关"),
+    lightPollution: {"min":4.1,"max":4.1,"sqm":21.6,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.1822252,24.8006821],"coordinateSystem":"WGS84","matchedLocation":"Dongping Town, Guangdong, Ruyuan Yao Autonomous County"},
+    tianwentong: {"min":4.2,"max":4.2,"sqm":21.42,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.211,24.7816],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省韶关市乳源瑶族自治县东坪镇南水湖国家湿地公园","searchQuery":"南水湖"}, mapUrl: searchMap("南水湖国家湿地公园", "韶关"),
   },
   {
     id: "dinahai", name: "海陵岛 · 地拿海", city: "阳江", district: "海陵岛", terrain: "海岸礁石",
@@ -91,7 +102,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "夜间开放和海岸通行未核准；先确认潮汐、海浪与现场管理。",
     caution: "资料较旧，照片采用拼接。灯塔与渔灯有局部影响，蓝眼泪不保证出现。",
     sources: [note("62764a18000000002103bb80", "Nicola在海边 · 地拿海银河与蓝眼泪", "2022-08-05")],
-    bortle: model(4, 21.10, [111.95817, 21.61075]), mapUrl: searchMap("地拿海 海陵岛", "阳江"),
+    lightPollution: {"min":4.8,"max":4.8,"sqm":20.72,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[111.9581731,21.6107548],"coordinateSystem":"WGS84","matchedLocation":"Zhapo, Guangdong, Jiangcheng District"},
+    tianwentong: {"min":4.6,"max":4.6,"sqm":20.97,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[111.9633,21.6081],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省阳江市江城区闸坡镇地拿海","searchQuery":"地拿海"}, mapUrl: searchMap("地拿海 海陵岛", "阳江"),
   },
   {
     id: "yangmeishan", name: "德庆大顶山 · 杨梅山", city: "肇庆", district: "德庆县 · 官圩镇", terrain: "风车山",
@@ -102,7 +114,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "2026-08作者称当时无夜间管制、轿车可上，仍须核对出发当日管理。",
     caution: "路况评价有分歧：雨季可能泥路和破损；路窄、会车少、弱信号、无厕所，夜间可能有木材货车。",
     sources: [note("69f93db9000000001a037b0c", "德庆大顶山攻略 · 风车编号与道路", "2026年采集"), note("6a7a6bb7000000003301cc0b", "大顶山18号风车实拍与通行回复", "2026-08-10 / 08-11")],
-    bortle: model(4, 21.65, [111.86709, 23.38271]), mapUrl: searchMap("杨梅山 德庆县官圩镇", "肇庆"),
+    lightPollution: {"min":4.1,"max":4.1,"sqm":21.54,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[111.867090001,23.382709602],"coordinateSystem":"WGS84","matchedLocation":"Zhaoqing City, Guangdong"},
+    tianwentong: {"min":4.1,"max":4.1,"sqm":21.59,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[111.8725,23.3799],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省肇庆市德庆县官圩镇杨梅山","searchQuery":"肇庆 杨梅山"}, mapUrl: searchMap("杨梅山 德庆县官圩镇", "肇庆"),
   },
   {
     id: "shitanghai", name: "石塘海湾休闲园", city: "阳江", district: "海陵湾", terrain: "海滨园区",
@@ -113,7 +126,8 @@ export const places: StargazingPlace[] = [
     nightAccess: "2026-09-08百度地图显示10:30–22:30，不默认可通宵，实际以园方当日通知为准。",
     caution: "园内照明可能干扰；银河质量仅为作者体验，未宣传为最暗地点。",
     sources: [note("66889062000000000d00fdf3", "按快门的毛毛先森 · 石塘海银河", "2025-10-11，回复2025-05-04")],
-    bortle: model(4, 20.91, [112.07935, 21.78594]), mapUrl: searchMap("石塘海湾休闲园", "阳江"),
+    lightPollution: {"min":5,"max":5,"sqm":20.52,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.07934687,21.78594474],"coordinateSystem":"WGS84","matchedLocation":"Guangdong, Yangdong District"},
+    tianwentong: {"min":5.6,"max":5.6,"sqm":19.89,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.0611,21.82],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省阳江市阳东区雅韶镇石塘（园区附近村落）","searchQuery":"阳江 石塘"}, mapUrl: searchMap("石塘海湾休闲园", "阳江"),
   },
   // Expanded catalog from reviewed research.
   {
@@ -139,16 +153,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-08-26实拍；2026-08预约更新"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.02,
-      "year": 2025,
-      "sampledWgs84": [
-        113.87535,
-        23.69358
-      ]
-    },
+    lightPollution: {"min":4.6,"max":4.6,"sqm":20.96,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.8753474804382,23.693581997352727],"coordinateSystem":"WGS84","matchedLocation":"Guangzhou City, Guangdong"},
+    tianwentong: {"min":4.7,"max":4.7,"sqm":20.82,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.8664,23.7146],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省广州市从化区良口镇溪头村（阿婆六附近）","searchQuery":"广州 溪头村"},
     "mapUrl": "https://uri.amap.com/search?keyword=从化阿婆六村&city=广州&view=map"
   },
   {
@@ -174,16 +180,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示08-13"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.37,
-      "year": 2025,
-      "sampledWgs84": [
-        113.97654,
-        23.8946
-      ]
-    },
+    lightPollution: {"min":4.4,"max":4.4,"sqm":21.23,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.97654155955121,23.894596456955046],"coordinateSystem":"WGS84","matchedLocation":"Guangzhou City, Guangdong"},
+    tianwentong: {"min":4.3,"max":4.3,"sqm":21.29,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.9813,23.8924],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省广州市从化区吕田镇黄沙坑","searchQuery":"广州 黄沙坑"},
     "mapUrl": "https://uri.amap.com/search?keyword=黄沙坑革命遗址纪念馆&city=广州&view=map"
   },
   {
@@ -209,16 +207,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示08-09"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 20.84,
-      "year": 2025,
-      "sampledWgs84": [
-        113.72787,
-        21.94172
-      ]
-    },
+    lightPollution: {"min":5,"max":5,"sqm":20.46,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.72787317221226,21.941715417028004],"coordinateSystem":"WGS84","matchedLocation":"Zhuhai Wanshan Marine Development Experimental Zone, Xiangzhou, Guangdong"},
+    tianwentong: {"min":5.1,"max":5.1,"sqm":20.42,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.7329,21.9391],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省珠海市香洲区万山镇大万山岛","searchQuery":"珠海 万山岛"},
     "mapUrl": "https://uri.amap.com/search?keyword=大万山岛&city=珠海&view=map"
   },
   {
@@ -244,16 +234,8 @@ export const places: StargazingPlace[] = [
         "date": "2026-08-09实拍；编辑于08-10"
       }
     ],
-    "bortle": {
-      "min": 5,
-      "max": 5,
-      "sqm": 19.85,
-      "year": 2025,
-      "sampledWgs84": [
-        113.3075,
-        22.00371
-      ]
-    },
+    lightPollution: {"min":6.3,"max":6.3,"sqm":19.35,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.30749496845486,22.00370544074695],"coordinateSystem":"WGS84","matchedLocation":"Zhuhai, Guangdong"},
+    tianwentong: {"min":6.1,"max":6.1,"sqm":19.44,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.3121,22.0068],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"珠海横石基公交站（沙滩附近）","searchQuery":"珠海 横石基"},
     "mapUrl": "https://uri.amap.com/search?keyword=横石基沙滩&city=珠海&view=map"
   },
   {
@@ -279,16 +261,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示编辑于02-21"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 20.55,
-      "year": 2025,
-      "sampledWgs84": [
-        113.69126,
-        22.02426
-      ]
-    },
+    lightPollution: {"min":5.2,"max":5.2,"sqm":20.28,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.691260044139,22.02426030904554],"coordinateSystem":"WGS84","matchedLocation":"Zhuhai Wanshan Marine Development Experimental Zone, Xiangzhou, Guangdong"},
+    tianwentong: {"min":5.1,"max":5.1,"sqm":20.34,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.712,22.0192],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省珠海市香洲区万山镇东澳岛","searchQuery":"珠海 东澳岛"},
     "mapUrl": "https://uri.amap.com/search?keyword=东澳岛观景台&city=珠海&view=map"
   },
   {
@@ -314,16 +288,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示编辑于08-12"
       }
     ],
-    "bortle": {
-      "min": 5,
-      "max": 5,
-      "sqm": 20.47,
-      "year": 2025,
-      "sampledWgs84": [
-        112.72284,
-        22.71362
-      ]
-    },
+    lightPollution: {"min":5.2,"max":5.2,"sqm":20.28,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.72283830719715,22.71362420216038],"coordinateSystem":"WGS84","matchedLocation":"Foshan, Guangdong, Gaoming"},
+    tianwentong: {"min":5.1,"max":5.1,"sqm":20.38,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.7274,22.7078],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省佛山市高明区杨和镇西坑水库","searchQuery":"佛山 西坑水库"},
     "mapUrl": "https://uri.amap.com/search?keyword=佛山高明西坑水库&city=佛山&view=map"
   },
   {
@@ -349,16 +315,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-08-14"
       }
     ],
-    "bortle": {
-      "min": 5,
-      "max": 5,
-      "sqm": 20.37,
-      "year": 2025,
-      "sampledWgs84": [
-        114.5692,
-        22.49622
-      ]
-    },
+    lightPollution: {"min":5.4,"max":5.4,"sqm":20.06,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.5692043,22.4962212],"coordinateSystem":"WGS84","matchedLocation":"Nan’ao Sub-district, Dapeng New District, Longgang District, Guangdong"},
+    tianwentong: {"min":5.2,"max":5.2,"sqm":20.27,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.5857,22.4898],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省深圳市龙岗区东涌海滩（大排头附近）","searchQuery":"深圳 东涌"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E4%B8%9C%E6%B6%8C%E7%A0%81%E5%A4%B4&city=%E6%B7%B1%E5%9C%B3&view=map&src=travel-guides"
   },
   {
@@ -384,16 +342,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-07-29"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 20.8,
-      "year": 2025,
-      "sampledWgs84": [
-        114.64586,
-        22.43936
-      ]
-    },
+    lightPollution: {"min":5,"max":5,"sqm":20.52,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.645858,22.4393616],"coordinateSystem":"WGS84","matchedLocation":"Huizhou, Guangdong"},
+    tianwentong: {"min":4.9,"max":4.9,"sqm":20.58,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.6499,22.4362],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省惠州市惠阳区澳头街道小三门岛","searchQuery":"小三门岛"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E6%83%A0%E5%B7%9E%E5%B0%8F%E4%B8%89%E9%97%A8%E5%B2%9B&city=%E6%83%A0%E5%B7%9E&view=map&src=travel-guides"
   },
   {
@@ -419,16 +369,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示04-26"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.45,
-      "year": 2025,
-      "sampledWgs84": [
-        114.53823,
-        23.91586
-      ]
-    },
+    lightPollution: {"min":4.2,"max":4.2,"sqm":21.44,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.5382303,23.9158553],"coordinateSystem":"WGS84","matchedLocation":"Guangdong, Dongyuan County"},
+    tianwentong: {"min":4.2,"max":4.2,"sqm":21.39,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.4587,23.9271],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省河源市东源县锡场镇（万绿湖中部湖岸）","searchQuery":"河源 锡场镇"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E4%B8%87%E7%BB%BF%E6%B9%96&city=%E6%B2%B3%E6%BA%90&view=map&src=travel-guides"
   },
   {
@@ -454,16 +396,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示02-19，拍摄早于发帖"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 20.73,
-      "year": 2025,
-      "sampledWgs84": [
-        114.92581,
-        22.92366
-      ]
-    },
+    lightPollution: {"min":5,"max":5,"sqm":20.46,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.925814,22.9236604],"coordinateSystem":"WGS84","matchedLocation":"Huizhou, Guangdong"},
+    tianwentong: {"min":5,"max":5,"sqm":20.47,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.9033,22.9184],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省惠州市惠东县平山街道大南山","searchQuery":"惠州 大南山"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E6%83%A0%E4%B8%9C%E5%A4%A7%E5%8D%97%E5%B1%B1&city=%E6%83%A0%E5%B7%9E&view=map&src=travel-guides"
   },
   {
@@ -489,16 +423,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示07-24"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.29,
-      "year": 2025,
-      "sampledWgs84": [
-        116.64445,
-        23.95695
-      ]
-    },
+    lightPollution: {"min":4.6,"max":4.6,"sqm":20.98,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[116.6444499,23.9569456],"coordinateSystem":"WGS84","matchedLocation":"Chaozhou, Guangdong"},
+    tianwentong: {"min":4.5,"max":4.5,"sqm":21.04,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[116.6484,23.9535],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省潮州市潮安区凤凰镇凤凰山天池","searchQuery":"凤凰山天池"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E5%87%A4%E5%87%B0%E5%B1%B1%E5%A4%A9%E6%B1%A0&city=%E6%BD%AE%E5%B7%9E&view=map&src=travel-guides"
   },
   {
@@ -524,16 +450,8 @@ export const places: StargazingPlace[] = [
         "date": "07-03"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 20.94,
-      "year": 2025,
-      "sampledWgs84": [
-        114.42013,
-        23.61106
-      ]
-    },
+    lightPollution: {"min":4.9,"max":4.9,"sqm":20.66,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.42013288350054,23.61106310352625],"coordinateSystem":"WGS84","matchedLocation":"Huizhou, Guangdong"},
+    tianwentong: {"min":4.8,"max":4.8,"sqm":20.72,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.422,23.6098],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省惠州市博罗县公庄镇蓝坪村（第二条同名）","searchQuery":"惠州 蓝坪村"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E8%93%9D%E5%9D%AA%E6%9D%91&city=%E6%83%A0%E5%B7%9E&view=map&src=travel-guides"
   },
   {
@@ -559,16 +477,8 @@ export const places: StargazingPlace[] = [
         "date": "03-17"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 20.94,
-      "year": 2025,
-      "sampledWgs84": [
-        115.57793,
-        22.7391
-      ]
-    },
+    lightPollution: {"min":5,"max":5,"sqm":20.53,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[115.57792891426051,22.739104134212287],"coordinateSystem":"WGS84","matchedLocation":"Chengqu, Guangdong"},
+    tianwentong: {"min":4.9,"max":4.9,"sqm":20.63,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[115.5813,22.7393],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省汕尾市遮浪街道城区风车岛","searchQuery":"汕尾 风车岛"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E6%B1%95%E5%B0%BE%E9%A3%8E%E8%BD%A6%E5%B2%9B&city=%E6%B1%95%E5%B0%BE&view=map&src=travel-guides"
   },
   {
@@ -594,16 +504,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-07-28"
       }
     ],
-    "bortle": {
-      "min": 3,
-      "max": 3,
-      "sqm": 21.85,
-      "year": 2025,
-      "sampledWgs84": [
-        115.36755,
-        24.71228
-      ]
-    },
+    lightPollution: {"min":3.9,"max":3.9,"sqm":21.71,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[115.36755188314031,24.712275984989702],"coordinateSystem":"WGS84","matchedLocation":"Shangping, Guangdong, Longchuan County"},
+    tianwentong: {"min":3.7,"max":3.7,"sqm":21.74,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[115.3734,24.7096],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省河源市龙川县上坪镇野猪嶂","searchQuery":"河源 野猪嶂"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E9%87%8E%E7%8C%AA%E5%B6%82&city=%E6%B2%B3%E6%BA%90&view=map&src=travel-guides"
   },
   {
@@ -629,16 +531,8 @@ export const places: StargazingPlace[] = [
         "date": "2024-08-09"
       }
     ],
-    "bortle": {
-      "min": 3,
-      "max": 3,
-      "sqm": 21.75,
-      "year": 2025,
-      "sampledWgs84": [
-        112.77011,
-        24.37336
-      ]
-    },
+    lightPollution: {"min":4,"max":4,"sqm":21.69,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.77010752595838,24.37336205914406],"coordinateSystem":"WGS84","matchedLocation":"Qingyuan City, Guangdong"},
+    tianwentong: {"min":4,"max":4,"sqm":21.67,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.7743,24.3691],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省清远市阳山县阳城镇横山水","searchQuery":"横山水"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E8%8E%AB%E5%85%AD%E5%85%AC+%C2%B7+%E6%A8%AA%E5%B1%B1%E6%B0%B4%E6%98%9F%E7%A9%BA%E8%90%A5%E5%9C%B0&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides"
   },
   {
@@ -664,16 +558,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-07-26"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.56,
-      "year": 2025,
-      "sampledWgs84": [
-        112.69565,
-        24.09436
-      ]
-    },
+    lightPollution: {"min":4.3,"max":4.3,"sqm":21.3,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.69564660301981,24.09436276034079],"coordinateSystem":"WGS84","matchedLocation":"Qingyuan City, Guangdong"},
+    tianwentong: {"min":4.2,"max":4.2,"sqm":21.39,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.7173,24.088],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省清远市清新区浸潭镇桃花湖","searchQuery":"清远 桃花湖"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E6%B8%85%E8%BF%9C%E6%A1%83%E8%8A%B1%E6%B9%96&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides"
   },
   {
@@ -704,16 +590,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示07-11"
       }
     ],
-    "bortle": {
-      "min": 3,
-      "max": 3,
-      "sqm": 21.88,
-      "year": 2025,
-      "sampledWgs84": [
-        112.76424,
-        24.83233
-      ]
-    },
+    lightPollution: {"min":3.4,"max":3.4,"sqm":21.81,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.76424440368307,24.832328934041023],"coordinateSystem":"WGS84","matchedLocation":"Chengjia, Yangshan County, Guangdong"},
+    tianwentong: {"min":3.4,"max":3.4,"sqm":21.82,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.7688,24.83],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省清远市阳山县秤架瑶族乡石离塝","searchQuery":"石离磅"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E7%9F%B3%E7%A6%BB%E7%A3%85+%C2%B7+%E7%9F%B3%E6%9E%97%E5%91%A8%E8%BE%B9&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides"
   },
   {
@@ -739,16 +617,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-10-20"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.36,
-      "year": 2025,
-      "sampledWgs84": [
-        112.80499,
-        23.95484
-      ]
-    },
+    lightPollution: {"min":4.3,"max":4.3,"sqm":21.28,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.80499187984363,23.95484488593004],"coordinateSystem":"WGS84","matchedLocation":"Qingyuan City, Guangdong"},
+    tianwentong: {"min":4.3,"max":4.3,"sqm":21.3,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.8074,23.9564],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省清远市清新区禾云镇桂湖村天堂山林场（天塘山区域）","searchQuery":"清远 天堂山"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E5%A4%A9%E5%A1%98%E9%A1%B6+%C2%B7+%E7%A6%BE%E4%BA%91%E6%BB%91%E7%BF%94%E5%9F%BA%E5%9C%B0&city=%E6%B8%85%E8%BF%9C&view=map&src=travel-guides"
   },
   {
@@ -774,16 +644,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示07-18"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.51,
-      "year": 2025,
-      "sampledWgs84": [
-        114.02367,
-        24.07173
-      ]
-    },
+    lightPollution: {"min":4.3,"max":4.3,"sqm":21.34,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.02367164446291,24.071730085584413],"coordinateSystem":"WGS84","matchedLocation":"Xinfeng County, Guangdong"},
+    tianwentong: {"min":4.3,"max":4.3,"sqm":21.38,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.0285,24.0692],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省韶关市新丰县沙田镇猴岩","searchQuery":"猴岩"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E6%96%B0%E4%B8%B0%E7%8C%B4%E5%B2%A9%E9%A3%8E%E8%BD%A6%E5%B1%B1&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides"
   },
   {
@@ -809,16 +671,8 @@ export const places: StargazingPlace[] = [
         "date": "2026-08-10 / 08-19"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.59,
-      "year": 2025,
-      "sampledWgs84": [
-        114.92399,
-        23.96151
-      ]
-    },
+    lightPollution: {"min":4.2,"max":4.2,"sqm":21.48,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.9239865,23.9615057],"coordinateSystem":"WGS84","matchedLocation":"Guangdong, Dongyuan County"},
+    tianwentong: {"min":4.2,"max":4.2,"sqm":21.43,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.9119,23.9565],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省河源市东源县曾田镇蝉子顶","searchQuery":"河源 禅子顶"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E7%A6%85%E5%AD%90%E9%A1%B6+%E7%BC%BA%E7%89%99%E5%B1%B1&city=%E6%B2%B3%E6%BA%90&view=map&src=travel-guides"
   },
   {
@@ -844,16 +698,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示07-11"
       }
     ],
-    "bortle": {
-      "min": 3,
-      "max": 3,
-      "sqm": 21.78,
-      "year": 2025,
-      "sampledWgs84": [
-        113.08852,
-        25.10498
-      ]
-    },
+    lightPollution: {"min":4.1,"max":4.1,"sqm":21.54,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.08852341340176,25.104984444550688],"coordinateSystem":"WGS84","matchedLocation":"Yunyan Town, Guangdong, Lechang City"},
+    tianwentong: {"min":4.1,"max":4.1,"sqm":21.52,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.0975,25.0941],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省韶关市乐昌市云岩镇青莲山","searchQuery":"乐昌 青莲山"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E4%B9%90%E6%98%8C%E9%9D%92%E8%8E%B2%E5%B1%B1&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides"
   },
   {
@@ -879,16 +725,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-07-30"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.57,
-      "year": 2025,
-      "sampledWgs84": [
-        114.14714,
-        24.23472
-      ]
-    },
+    lightPollution: {"min":4.3,"max":4.3,"sqm":21.36,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.14713519344211,24.234720355368903],"coordinateSystem":"WGS84","matchedLocation":"Xinfeng County, Guangdong"},
+    tianwentong: {"min":4.2,"max":4.2,"sqm":21.39,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.177,24.229],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省韶关市新丰县黄磜镇茶峒村（岭南红叶世界附近）","searchQuery":"新丰 茶峒"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E5%B2%AD%E5%8D%97%E7%BA%A2%E5%8F%B6%E4%B8%96%E7%95%8C&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides"
   },
   {
@@ -914,16 +752,8 @@ export const places: StargazingPlace[] = [
         "date": "2026-08-13"
       }
     ],
-    "bortle": {
-      "min": 3,
-      "max": 3,
-      "sqm": 21.8,
-      "year": 2025,
-      "sampledWgs84": [
-        114.47266,
-        25.01501
-      ]
-    },
+    lightPollution: {"min":4,"max":4,"sqm":21.69,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[114.47265877196048,25.015014977573443],"coordinateSystem":"WGS84","matchedLocation":"Jiangtou Town, Guangdong, Nanxiong City"},
+    tianwentong: {"min":3.8,"max":3.8,"sqm":21.73,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[114.4765,25.0166],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"南雄云峰山生态旅游区 · 武岭村","searchQuery":"南雄 云峰山"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E5%8D%97%E9%9B%84%E4%BA%91%E5%B3%B0%E5%B1%B1+%E7%8B%AE%E5%AD%90%E5%AF%A8&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides"
   },
   {
@@ -949,16 +779,8 @@ export const places: StargazingPlace[] = [
         "date": "页面显示07-20"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.53,
-      "year": 2025,
-      "sampledWgs84": [
-        113.45438,
-        24.5046
-      ]
-    },
+    lightPollution: {"min":4.2,"max":4.2,"sqm":21.46,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[113.45438121452516,24.50460398905411],"coordinateSystem":"WGS84","matchedLocation":"Zhangshi Town, Guangdong"},
+    tianwentong: {"min":4.2,"max":4.2,"sqm":21.41,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[113.4584,24.5025],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省韶关市曲江区樟市镇后山村","searchQuery":"韶关 后山村"},
     "mapUrl": "https://uri.amap.com/search?keyword=%E5%90%8E%E5%B1%B1%E6%9D%91+%E6%9B%B2%E6%B1%9F+%E6%A8%9F%E5%B8%82%E9%95%87&city=%E9%9F%B6%E5%85%B3&view=map&src=travel-guides"
   },
   {
@@ -984,16 +806,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-09-14"
       }
     ],
-    "bortle": {
-      "min": 3,
-      "max": 3,
-      "sqm": 21.72,
-      "year": 2025,
-      "sampledWgs84": [
-        111.38355,
-        22.25061
-      ]
-    },
+    lightPollution: {"min":4.1,"max":4.1,"sqm":21.61,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[111.383548,22.250605],"coordinateSystem":"WGS84","matchedLocation":"Guangdong, Yangchun"},
+    tianwentong: {"min":4,"max":4,"sqm":21.65,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[111.388,22.2464],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省阳江市阳春市三甲镇鸡笼顶大草原","searchQuery":"阳春 鸡笼顶"},
     "mapUrl": "https://uri.amap.com/search?keyword=阳春鸡笼顶&city=阳江&view=map&src=travel-guides"
   },
   {
@@ -1019,16 +833,8 @@ export const places: StargazingPlace[] = [
         "date": "2025-11-23，后续04-08回复机位"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.29,
-      "year": 2025,
-      "sampledWgs84": [
-        111.27094,
-        21.82481
-      ]
-    },
+    lightPollution: {"min":4.5,"max":4.5,"sqm":21.05,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[111.2709385,21.8248062],"coordinateSystem":"WGS84","matchedLocation":"Maoming City, Guangdong"},
+    tianwentong: {"min":4.4,"max":4.4,"sqm":21.18,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[111.2884,21.8242],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省茂名市电白区罗坑镇罗坑水库","searchQuery":"电白 罗坑水库"},
     "mapUrl": "https://uri.amap.com/search?keyword=电白罗坑水库&city=茂名&view=map&src=travel-guides"
   },
   {
@@ -1054,44 +860,38 @@ export const places: StargazingPlace[] = [
         "date": "2025-07-28"
       }
     ],
-    "bortle": {
-      "min": 4,
-      "max": 4,
-      "sqm": 21.46,
-      "year": 2025,
-      "sampledWgs84": [
-        112.55535,
-        21.75948
-      ]
-    },
+    lightPollution: {"min":4.4,"max":4.4,"sqm":21.17,"year":2026,"checkedAt":"2026-09-14","sampledCoordinates":[112.55535370862887,21.759480298110663],"coordinateSystem":"WGS84","matchedLocation":"Haiqiaojingji, Jiangmen, Guangdong"},
+    tianwentong: {"min":4.3,"max":4.3,"sqm":21.33,"year":2025,"checkedAt":"2026-09-14","sampledCoordinates":[112.5599,21.7572],"coordinateSystem":"腾讯地图显示坐标","matchedLocation":"广东省江门市台山市海宴镇青山咀","searchQuery":"台山 青山咀"},
     "mapUrl": "https://uri.amap.com/search?keyword=台山海宴青山咀灯塔&city=江门&view=map&src=travel-guides"
   },
   // End expanded catalog.
 ];
 
-export function bortleLabel(value: Bortle | null) {
-  return value ? (value.min === value.max ? String(value.min) : `${value.min}–${value.max}`) : "待核验";
+export function bortleLabel(value: PollutionReading | null) {
+  return value ? (value.min === value.max ? value.min.toFixed(1) : `${value.min}–${value.max}`) : "待核验";
 }
-export function darkSkyUrl(place: StargazingPlace) {
-  const [lng, lat] = place.bortle?.sampledWgs84 ?? place.wgs84;
-  const state = btoa(JSON.stringify({ basemap: "LayerBingRoad", overlay: `sb_${place.bortle?.year ?? 2025}`, overlayopacity: "60" }));
-  return `https://www.lightpollutionmap.info/#zoom=10.00&lat=${lat}&lon=${lng}&state=${encodeURIComponent(state)}`;
+export function lightPollutionUrl(place: StargazingPlace) {
+  const [lng, lat] = place.lightPollution?.sampledCoordinates ?? place.wgs84;
+  return `https://lightpollutionmap.app/?lat=${lat}&lng=${lng}&zoom=11`;
 }
-export type SortKey = "distance" | "bortle";
+// DarkMap ignores the tested coordinate query parameters. Use its verified search UI.
+export const tianwentongUrl = "https://www.darkmap.cn/";
+export type SortKey = "distance" | PollutionSource;
 export function sortPlaces(input: StargazingPlace[], key: SortKey, direction: "asc" | "desc") {
   return [...input].sort((a, b) => {
     const distance = distanceKm(shenzhenOrigin, a.wgs84) - distanceKm(shenzhenOrigin, b.wgs84);
-    if (key === "bortle") {
-      if (!a.bortle || !b.bortle) return a.bortle ? -1 : b.bortle ? 1 : distance || a.id.localeCompare(b.id);
-      const grade = a.bortle.max - b.bortle.max;
+    if (key !== "distance") {
+      const left = a[key], right = b[key];
+      if (!left || !right) return left ? -1 : right ? 1 : distance || a.id.localeCompare(b.id);
+      const grade = left.max - right.max;
       if (grade) return direction === "asc" ? grade : -grade;
     } else if (distance) return direction === "asc" ? distance : -distance;
     return distance || a.id.localeCompare(b.id);
   });
 }
-export function toMapPlace(place: StargazingPlace): MapPlace {
+export function toMapPlace(place: StargazingPlace, source: PollutionSource = "lightPollution"): MapPlace {
   return { id: place.id, name: place.name, coord: wgs84ToGcj02(place.wgs84), note: place.precision,
-    markerLabel: place.bortle ? bortleLabel(place.bortle) : "?", markerColor: "#36594a",
-    meta: `${place.city} · ${place.bortle ? `波尔特 ${bortleLabel(place.bortle)} 级（估算）` : "等级待核验"}`,
+    markerLabel: place[source] ? bortleLabel(place[source]) : "?", markerColor: "#36594a",
+    meta: `${place.city} · 波尔特（模型）：LightPollution ${bortleLabel(place.lightPollution)} / 天文通 ${bortleLabel(place.tianwentong)}`,
     url: place.mapUrl, linkLabel: "高德查看地点 ↗" };
 }

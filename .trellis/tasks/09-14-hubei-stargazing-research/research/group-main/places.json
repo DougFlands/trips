@@ -1,0 +1,109 @@
+[
+  {
+    "name": "漳河水库 · 大坝区域",
+    "city": "荆门",
+    "status": "candidate-area",
+    "sourceNoteIds": [
+      "68d69291000000001202e757",
+      "66b93fe70000000005032e20"
+    ],
+    "summary": "两位作者提供银河或英仙座流星拍摄经历，仍缺精确岸段/坝段。",
+    "access": "水库夜间管理与合法停留范围待核。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "南顶大草原",
+    "city": "襄阳",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "673ffc4e000000000201a503",
+      "6aa246a800000000260239bd"
+    ],
+    "summary": "近期到访记录银河、星空，车到尽头后背装备步行10–20分钟。",
+    "access": "山顶潮湿、低温、多雾，不能标为车到拍摄点；行政区县待地图核准。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "扁石岩",
+    "city": "襄阳",
+    "status": "candidate",
+    "sourceNoteIds": [
+      "673ffc4e000000000201a503",
+      "6899ee15000000000500479f"
+    ],
+    "summary": "作者称南/西南较暗，相机能拍银河，北侧城市灯光强。",
+    "access": "道路较窄、风机有噪声；当前通行待核。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "石门集村",
+    "city": "待核（襄阳周边）",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "673ffc4e000000000201a503"
+    ],
+    "summary": "作者自驾银河拍摄汇总列名，未确认具体机位和行政区。",
+    "access": "待核。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "琵琶湖",
+    "city": "待核（襄阳周边）",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "673ffc4e000000000201a503"
+    ],
+    "summary": "作者自驾银河拍摄汇总列名，同名湖泊须独立核准。",
+    "access": "待核。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "大薤山",
+    "city": "待核（襄阳周边）",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "673ffc4e000000000201a503"
+    ],
+    "summary": "作者自驾银河拍摄汇总列名，未提供山上精确位置。",
+    "access": "待核。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "鹿门寺林场 · 牌坊",
+    "city": "襄阳 · 东津新区",
+    "status": "hold-access-conflict",
+    "sourceNoteIds": [
+      "657ef156000000001502e49c"
+    ],
+    "summary": "有参数和具体前景，但后续评论报告夜间无法进入。",
+    "access": "先确认夜间通行，暂不纳入优先候选。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  },
+  {
+    "name": "圣境山",
+    "city": "荆门",
+    "status": "lead-only",
+    "sourceNoteIds": [
+      "66b93fe70000000005032e20"
+    ],
+    "summary": "仅读者评论称看到流星但未拍到，暂无主帖机位证据。",
+    "access": "待核。",
+    "coordinates": null,
+    "bortle": null,
+    "verification": "仅小红书来源；坐标及模型未核验"
+  }
+]

@@ -13,7 +13,7 @@ async function moduleUrl(path, dependencies = {}) {
 }
 const coordinatesUrl = await moduleUrl('../src/lib/coordinates.ts');
 const { distanceKm, wgs84ToGcj02 } = await import(coordinatesUrl);
-const { places, sortPlaces, shenzhenOrigin } = await import(await moduleUrl('../src/trips/guangdong-stargazing/places.ts', { '../../lib/coordinates': coordinatesUrl }));
+const { places, sortPlaces, shenzhenOrigin, toMapPlace, lightPollutionUrl, tianwentongUrl } = await import(await moduleUrl('../src/trips/guangdong-stargazing/places.ts', { '../../lib/coordinates': coordinatesUrl }));
 const weather = await import(await moduleUrl('../src/trips/guangdong-stargazing/weather.ts'));
 const point = { id: 'fixture-a', wgs84: [114.06, 22.54] };
 const other = { id: 'fixture-b', wgs84: [114.4, 23.1] };
@@ -40,11 +40,26 @@ test('distance/grade sorting is stable, conservative for ranges, unknown always 
   const references = places.filter(place => ['xichong', 'bajieshan'].includes(place.id));
   assert.equal(sortPlaces(references, 'distance', 'asc')[0].id, 'xichong');
   assert.equal(sortPlaces(references, 'distance', 'desc')[0].id, 'bajieshan');
-  const make = (id, max, wgs84 = [114, 24]) => ({ ...places[0], id, wgs84, bortle: max === null ? null : { min: 2, max } });
-  const input = [make('unknown', null), make('b', 4), make('dark', 3), make('a', 4)];
-  assert.deepEqual(sortPlaces(input, 'bortle', 'asc').map(p => p.id), ['dark', 'a', 'b', 'unknown']);
-  assert.deepEqual(sortPlaces(input, 'bortle', 'desc').map(p => p.id), ['a', 'b', 'dark', 'unknown']);
-  assert.equal(input[0].id, 'unknown');
+  for (const source of ['lightPollution', 'tianwentong']) {
+    const make = (id, max, wgs84 = [114, 24]) => ({ ...places[0], id, wgs84, [source]: max === null ? null : { min: 2, max } });
+    const input = [make('unknown', null), make('b', 4), make('dark', 3), make('a', 4)];
+    assert.deepEqual(sortPlaces(input, source, 'asc').map(p => p.id), ['dark', 'a', 'b', 'unknown']);
+    assert.deepEqual(sortPlaces(input, source, 'desc').map(p => p.id), ['a', 'b', 'dark', 'unknown']);
+    assert.equal(input[0].id, 'unknown');
+  }
+});
+
+test('map source switches grades without moving the place; links use verified behavior', () => {
+  const place = places.find(p => p.id === 'xichong');
+  const lp = toMapPlace(place, 'lightPollution'), tw = toMapPlace(place, 'tianwentong');
+  assert.equal(lp.markerLabel, '5.5');
+  assert.equal(tw.markerLabel, '5.4');
+  assert.deepEqual(lp.coord, tw.coord);
+  const url = new URL(lightPollutionUrl(place));
+  assert.equal(url.hostname, 'lightpollutionmap.app');
+  assert.equal(Number(url.searchParams.get('lat')), place.wgs84[1]);
+  assert.equal(Number(url.searchParams.get('lng')), place.wgs84[0]);
+  assert.equal(tianwentongUrl, 'https://www.darkmap.cn/');
 });
 
 test('single/multi API responses map missing first location_id and reordered IDs', () => {
@@ -103,10 +118,25 @@ test('catalog contains unique Guangdong references with real sources and grade p
     assert.ok(place.sources.length > 0 && place.sources.every(s => s.url.startsWith('https://www.xiaohongshu.com/explore/')));
     assert.ok(place.wgs84[0] > 109 && place.wgs84[0] < 118 && place.wgs84[1] > 20 && place.wgs84[1] < 26);
     assert.ok(place.coordinateUrl.startsWith('https://'));
-    if (place.bortle) {
-      assert.ok(place.bortle.year === 2025 && place.bortle.min >= 1 && place.bortle.max <= 9);
-      assert.ok(place.bortle.min <= place.bortle.max && Number.isFinite(place.bortle.sqm));
-      assert.ok(distanceKm(place.wgs84, place.bortle.sampledWgs84) < 2);
+    assert.equal('bortle' in place, false);
+    for (const source of ['lightPollution', 'tianwentong']) {
+      const reading = place[source];
+      assert.ok(reading, `${place.id} ${source} missing`);
+      assert.ok(reading.min >= 1 && reading.max <= 9 && reading.min <= reading.max);
+      assert.ok(reading.sqm > 10 && reading.sqm < 23);
+      assert.equal(reading.checkedAt, '2026-09-14');
+      assert.ok(reading.matchedLocation);
+      if (source === 'lightPollution') {
+        assert.equal(reading.year, 2026);
+        assert.equal(reading.coordinateSystem, 'WGS84');
+        assert.deepEqual(reading.sampledCoordinates, place.wgs84);
+      } else {
+        assert.equal(reading.year, 2025);
+        assert.equal(reading.coordinateSystem, '腾讯地图显示坐标');
+        assert.ok(reading.searchQuery);
+        // A loose geographic sanity check, not a datum conversion or precision claim.
+        assert.ok(distanceKm(place.wgs84, reading.sampledCoordinates) < 10, place.id);
+      }
     }
   }
 });

@@ -1,0 +1,158 @@
+[
+  {
+    "name": "九宫山桃源后土路",
+    "status": "excluded-province-unresolved",
+    "checkedAt": "2026-09-18",
+    "matchedLocation": "九宫山星空桃园的民宿(九宫山店) 湖北省咸宁市通山县九宫山镇",
+    "searchQuery": "九宫山 桃源",
+    "tianwentong": {
+      "min": 4,
+      "max": 4,
+      "sqm": 21.67,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.6659,
+        29.4105
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "九宫山星空桃园民宿（后土路机位未确认）",
+      "searchQuery": "九宫山 桃源"
+    },
+    "note": "湖北日报2024景区指引明确星空桃园酒店背山露营区位于江西武宁。原后土路精确机位未定位，不纳入湖北地图；保留本次民宿参考读数但不冒充后山。",
+    "wgs84": [
+      114.660868,
+      29.413284
+    ],
+    "coordinateMethod": "腾讯地图POI显示坐标按GCJ-02反算WGS84，四位小数源精度；区域参考",
+    "lightPollution": {
+      "min": 4.0,
+      "max": 4.0,
+      "sqm": 21.65,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.660868,
+        29.413284
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Jiugongshan, Tongshan County, Hubei",
+      "sourceUrl": "https://lightpollutionmap.app/?lat=29.413284&lng=114.660868&zoom=11"
+    },
+    "exclusionSource": "https://news.hubeidaily.net/pc/c_2922658.html"
+  },
+  {
+    "name": "大幕山",
+    "status": "poi-reference",
+    "checkedAt": "2026-09-18",
+    "matchedLocation": "大幕山 湖北省咸宁市通山县黄沙铺镇",
+    "searchQuery": "大幕山",
+    "tianwentong": {
+      "min": 4.2,
+      "max": 4.2,
+      "sqm": 21.49,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.5894,
+        29.7613
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "大幕山·通山县黄沙铺镇山体POI（非特定摄影平台）",
+      "searchQuery": "大幕山"
+    },
+    "note": "坐标参考山体POI，原页面错误坐标114.2,29.8不再采用。",
+    "wgs84": [
+      114.584405,
+      29.764035
+    ],
+    "coordinateMethod": "腾讯地图POI显示坐标按GCJ-02反算WGS84，四位小数源精度；区域参考",
+    "lightPollution": {
+      "min": 4.2,
+      "max": 4.2,
+      "sqm": 21.46,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.584405,
+        29.764035
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Damu, Xianning, Hubei",
+      "sourceUrl": "https://lightpollutionmap.app/?lat=29.764035&lng=114.584405&zoom=11"
+    }
+  },
+  {
+    "name": "九宫山铜鼓包",
+    "status": "poi-reference",
+    "checkedAt": "2026-09-18",
+    "matchedLocation": "铜鼓包 九宫山镇九宫山风景名胜区",
+    "searchQuery": "九宫山 铜鼓",
+    "tianwentong": {
+      "min": 3.7,
+      "max": 3.7,
+      "sqm": 21.74,
+      "year": 2025,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.6572,
+        29.3898
+      ],
+      "coordinateSystem": "腾讯地图显示坐标",
+      "matchedLocation": "铜鼓包·九宫山风景名胜区（山峰POI，非停车点）",
+      "searchQuery": "九宫山 铜鼓"
+    },
+    "note": "搜索铜鼓包/铜鼓峰排除了外省同名；通山铜鼓包仅铜鼓包路山庄，九宫山铜鼓命中景区山峰。",
+    "wgs84": [
+      114.652187,
+      29.392611
+    ],
+    "coordinateMethod": "腾讯地图POI显示坐标按GCJ-02反算WGS84，四位小数源精度；区域参考",
+    "lightPollution": {
+      "min": 4.0,
+      "max": 4.0,
+      "sqm": 21.69,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        114.652187,
+        29.392611
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Jiugongshan, Tongshan County, Hubei",
+      "sourceUrl": "https://lightpollutionmap.app/?lat=29.392611&lng=114.652187&zoom=11"
+    }
+  },
+  {
+    "name": "漳河水库大坝",
+    "status": "dam-reference",
+    "wgs84": [
+      111.926671,
+      31.069433
+    ],
+    "coordinateUrl": "https://www.amap.com/place/B0FFKHN4X3",
+    "mapUrl": "https://www.amap.com/place/B0FFKHN4X3",
+    "rawGcj02": [
+      111.9323,
+      31.067017
+    ],
+    "precision": "高德观音寺大坝POI参考；原帖未指明坝名，不能确认为同一拍摄机位。",
+    "matchedLocation": "观音寺大坝（漳河参考）",
+    "tianwentong": null,
+    "lightPollution": {
+      "min": 4.0,
+      "max": 4.0,
+      "sqm": 21.64,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.926671,
+        31.069433
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Zhanghe, Dongbao District, Hubei"
+    },
+    "note": "天文通荆门观音寺大坝仍返回外省桥梁；不取水库中心的天文通读数。高德原坐标GCJ02，迭代反算WGS84。",
+    "corroboratingSource": "https://wlt.hubei.gov.cn/bmdt/ztzl/wltztwhlvj/wltztalzs/wltztwljaljt/202607/t20260715_5977140.shtml"
+  }
+]

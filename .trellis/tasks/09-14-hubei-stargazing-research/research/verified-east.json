@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-09-18",
+  "method": "Codex 内置浏览器，天文通可见地点搜索与DOM弹窗；读取主波特尔/SQM，不取今夜变化区间。",
+  "source": "https://www.darkmap.cn/",
+  "layer": "光污染·2025",
+  "places": [
+    {
+      "name": "薄刀峰东门停车场",
+      "searchQuery": "薄刀峰东门",
+      "matchedLocation": "薄刀峰景区东门2号停车场",
+      "matchedAddress": "湖北省黄冈市罗田县罗田大别山薄刀峰风景区(大别山国家地质公园薄刀峰景区东门)",
+      "displayedCoordinates": [115.6027,31.1173],
+      "coordinateSystem": "Tencent map displayed coordinates; not WGS84",
+      "precision": "东门2号停车场POI；原帖未细分停车场内机位，不是停车场内部精确拍摄点。",
+      "bortle": 3.8,
+      "sqm": 21.73,
+      "lightPollution": null,
+      "searchNotes": "完整词薄刀峰东门停车场错误匹配宁湖停车场，未选；罗田薄刀峰多为西门商户；薄刀峰东门结果同时含浙江宁海薄刀峰，排除外省。",
+      "evidence": "主弹窗3.8级 / 自然夜空，SQM21.73；底部115.6027,31.1173；图层光污染·2025。"
+    },
+    {
+      "name": "蕲春雾云山梯田",
+      "searchQuery": "雾云山村",
+      "matchedLocation": "雾云山村",
+      "matchedAddress": "湖北省黄冈市蕲春县檀林镇雾云山村",
+      "displayedCoordinates": [115.7694,30.6594],
+      "coordinateSystem": "Tencent map displayed coordinates; not WGS84",
+      "precision": "村域参考点；梯田、茶园或民宿平台的具体机位仍未取得。",
+      "bortle": 3.9,
+      "sqm": 21.70,
+      "lightPollution": null,
+      "searchNotes": "蕲春雾云山梯田仅返回其他山名，雾云山梯田无结果，雾云山结果为湖南、陕西、通城、贵州同名地点，均未选；雾云山村准确匹配蕲春檀林镇。",
+      "evidence": "主弹窗3.9级 / 自然夜空，SQM21.70；底部115.7694,30.6594；图层光污染·2025。"
+    },
+    {
+      "name": "道观河龙凤桥",
+      "searchQuery": "新洲 龙凤桥",
+      "matchedLocation": "龙凤桥",
+      "matchedAddress": "湖北省武汉市新洲区库北路5正西方向130米",
+      "displayedCoordinates": [115.0018,30.8736],
+      "coordinateSystem": "Tencent map displayed coordinates; not WGS84",
+      "precision": "桥梁POI参考，具体桥面拍摄位置待核；行政区应为新洲，原前端黄陂错误。",
+      "bortle": 4.4,
+      "sqm": 21.20,
+      "lightPollution": {
+        "url": "https://lightpollutionmap.app/?lat=30.875922&lng=114.9965&zoom=11",
+        "sampledCoordinates": [114.996500,30.875922],
+        "coordinateSystem": "WGS84",
+        "coordinateMethod": "主代理按项目坐标函数对天文通腾讯坐标GCJ02反算；浏览器弹窗核对6位坐标一致。",
+        "matchedLocation": "Xinzhou District, Hubei",
+        "bortle": 4.5,
+        "sqm": 21.12,
+        "label": "Sep 2026 · EST.",
+        "estimateNote": "Sep 2026 local seasonal estimate for reference"
+      },
+      "searchNotes": "道观河 龙凤桥只返回桥头硚口政府度假村；新洲 龙凤桥匹配桥梁本体。",
+      "evidence": "天文通主弹窗4.4级 / 乡村天空，SQM21.20；底部115.0018,30.8736；光污染·2025。LP实际读到30.875922,114.996500 / 4.5 / 21.12。"
+    },
+    {
+      "name": "仙居顶",
+      "searchQuery": "大悟 仙居顶",
+      "matchedLocation": "仙居顶",
+      "matchedAddress": "湖北省孝感市大悟县吕王镇",
+      "displayedCoordinates": [114.4334,31.5333],
+      "coordinateSystem": "Tencent map displayed coordinates; not WGS84",
+      "precision": "山峰POI参考；具体风机、停车或拍摄机位待核。",
+      "bortle": 4.0,
+      "sqm": 21.65,
+      "lightPollution": {
+        "url": "https://lightpollutionmap.app/?lat=31.535166&lng=114.427798&zoom=11",
+        "sampledCoordinates": [114.427798,31.535166],
+        "coordinateSystem": "WGS84",
+        "coordinateMethod": "主代理按项目坐标函数对天文通腾讯坐标GCJ02反算；浏览器弹窗核对6位坐标一致。",
+        "matchedLocation": "Lüwang, Hubei, Dawu County",
+        "bortle": 4.0,
+        "sqm": 21.65,
+        "label": "Sep 2026 · EST.",
+        "estimateNote": "Sep 2026 seasonal estimate with lower confidence"
+      },
+      "searchNotes": "大悟 仙居顶只有湖北孝感大悟吕王镇一个结果。",
+      "evidence": "天文通主弹窗4.0级 / 乡村天空，SQM21.65；底部114.4334,31.5333；光污染·2025。LP实际读到31.535166,114.427798 / 4.0 / 21.65。"
+    },
+    {
+      "name": "红安天台山",
+      "searchQuery": "红安 天台寺",
+      "matchedLocation": "天台寺文化广场",
+      "matchedAddress": "湖北省黄冈市红安县七里坪镇",
+      "displayedCoordinates": [114.6316,31.5830],
+      "coordinateSystem": "Tencent map displayed coordinates; not WGS84",
+      "precision": "天台寺文化广场POI；对应原帖广场机位区域，不代表望仙崖或停车场。",
+      "bortle": 3.8,
+      "sqm": 21.73,
+      "lightPollution": {
+        "url": "https://lightpollutionmap.app/?lat=31.585198&lng=114.626446&zoom=11",
+        "sampledCoordinates": [114.626446,31.585198],
+        "coordinateSystem": "WGS84",
+        "coordinateMethod": "主代理按项目坐标函数对天文通腾讯坐标GCJ02反算；浏览器弹窗核对6位坐标一致。",
+        "matchedLocation": "Huanggang, Hubei",
+        "bortle": 3.7,
+        "sqm": 21.74,
+        "label": "Sep 2026 · EST.",
+        "estimateNote": "Sep 2026 seasonal estimate with lower confidence"
+      },
+      "searchNotes": "红安 天台寺返回寺本体、牌坊、佛顶、休息平台与文化广场；选择原帖所述广场。",
+      "evidence": "天文通主弹窗3.8级 / 自然夜空，SQM21.73；底部114.6316,31.5830；光污染·2025。LP实际读到31.585198,114.626446 / 3.7 / 21.74。"
+    }
+  ]
+}

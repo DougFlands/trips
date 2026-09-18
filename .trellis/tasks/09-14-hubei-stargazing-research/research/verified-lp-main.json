@@ -1,0 +1,82 @@
+[
+  {
+    "name": "薄刀峰东门停车场",
+    "wgs84": [
+      115.597553,
+      31.119647
+    ],
+    "lightPollution": {
+      "min": 3.8,
+      "max": 3.8,
+      "sqm": 21.73,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.597553,
+        31.119647
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Bodaofeng Forestry Station, Huanggang, Hubei"
+    }
+  },
+  {
+    "name": "蕲春雾云山梯田",
+    "wgs84": [
+      115.764134,
+      30.661816
+    ],
+    "lightPollution": {
+      "min": 3.9,
+      "max": 3.9,
+      "sqm": 21.7,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        115.764134,
+        30.661816
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Huanggang, Hubei, Qichun County（雾云山村参考）"
+    }
+  },
+  {
+    "name": "武当山南岩",
+    "wgs84": [
+      111.011313,
+      32.42316
+    ],
+    "lightPollution": {
+      "min": 4.0,
+      "max": 4.0,
+      "sqm": 21.67,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        111.011313,
+        32.42316
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Hubei, Danjiangkou City（南岩宫参考）"
+    }
+  },
+  {
+    "name": "云台荒",
+    "wgs84": [
+      110.540018,
+      30.563639
+    ],
+    "lightPollution": {
+      "min": 3.4,
+      "max": 3.4,
+      "sqm": 21.81,
+      "year": 2026,
+      "checkedAt": "2026-09-18",
+      "sampledCoordinates": [
+        110.540018,
+        30.563639
+      ],
+      "coordinateSystem": "WGS84",
+      "matchedLocation": "Langping, Yichang, Hubei"
+    }
+  }
+]
