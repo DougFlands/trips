@@ -66,7 +66,11 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
   const visibleAlternatives =
     activeDay === "all"
       ? trip.alternatives
-      : trip.alternatives.filter((place) => place.city === activeInfo?.city);
+      : trip.alternatives.filter(
+          (place) =>
+            place.city === activeInfo?.city ||
+            /替换|备选|触发/.test(place.category ?? ""),
+        );
   const cities = [...new Set(trip.days.map((day) => day.city))];
   const mapNodeCount = trip.stops.length + trip.alternatives.length;
   const timelineStep = activeDay === "all" ? trip.days.length : activeDay + 1;
@@ -99,13 +103,15 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
           {trip.code}
         </a>
         <div className="hidden gap-7 text-[#596052] md:flex">
-          {[
-            ["MAP", "#map"],
-            ["K-FOOD", "#korean-food"],
-            ["PLAN", "#plan"],
-            ["MEAL", "#meal"],
-            ["BOOK", "#book"],
-          ].map(([label, href]) => (
+          {(
+            [
+              ["MAP", "#map"],
+              ...(trip.koreanRestaurants?.length ? [["K-FOOD", "#korean-food"]] : []),
+              ["PLAN", "#plan"],
+              ["MEAL", "#meal"],
+              ["BOOK", "#book"],
+            ] as Array<[string, string]>
+          ).map(([label, href]) => (
             <a className="hover:text-[#008f9c]" href={href} key={href}>
               {label}
             </a>
@@ -379,7 +385,7 @@ export function QingdaoTripPage({ trip }: { trip: Trip }) {
 
       <section className={`${shell} pt-20 sm:pt-[90px]`} id="plan">
         <SectionHeading number="02" eyebrow="DAY BY DAY" title="逐日计划">
-          时间是节奏参考。排队过长时，保住动车和换城。
+          时间是节奏参考。排队过长时，优先保住主线和离开余量。
         </SectionHeading>
         <div className="grid gap-3 md:grid-cols-2">
           {trip.days.map((day, index) => (

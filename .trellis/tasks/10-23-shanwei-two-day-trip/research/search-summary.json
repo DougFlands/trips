@@ -1,0 +1,131 @@
+{
+  "collectedAt": "2026-10-23T10:10:00+08:00",
+  "scope": "汕尾本地游玩；不含深圳出发、高铁或跨城交通",
+  "mode": "轻量本地研究",
+  "queries": [
+    {
+      "query": "汕尾旅游攻略",
+      "rows": 20,
+      "uniqueNoteIds": 20,
+      "crossQueryRows": 0,
+      "detailRows": 3,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 10
+    },
+    {
+      "query": "汕尾两天一夜",
+      "rows": 20,
+      "uniqueNoteIds": 20,
+      "crossQueryRows": 0,
+      "detailRows": 0,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 10
+    },
+    {
+      "query": "汕尾citywalk",
+      "rows": 18,
+      "uniqueNoteIds": 18,
+      "crossQueryRows": 0,
+      "detailRows": 1,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 12
+    },
+    {
+      "query": "汕尾二马路美食",
+      "rows": 19,
+      "uniqueNoteIds": 19,
+      "crossQueryRows": 0,
+      "detailRows": 2,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 11
+    },
+    {
+      "query": "汕尾五马路美食",
+      "rows": 19,
+      "uniqueNoteIds": 19,
+      "crossQueryRows": 0,
+      "detailRows": 0,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 11
+    },
+    {
+      "query": "汕尾早茶小吃",
+      "rows": 20,
+      "uniqueNoteIds": 20,
+      "crossQueryRows": 0,
+      "detailRows": 0,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 10
+    },
+    {
+      "query": "汕尾红海湾拍照",
+      "rows": 20,
+      "uniqueNoteIds": 20,
+      "crossQueryRows": 0,
+      "detailRows": 1,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 10
+    },
+    {
+      "query": "汕尾风车岛浮日湾",
+      "rows": 10,
+      "uniqueNoteIds": 10,
+      "crossQueryRows": 10,
+      "detailRows": 0,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 20
+    },
+    {
+      "query": "汕尾金町湾拍照",
+      "rows": 10,
+      "uniqueNoteIds": 10,
+      "crossQueryRows": 10,
+      "detailRows": 0,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 20
+    },
+    {
+      "query": "汕尾美食避坑",
+      "rows": 9,
+      "uniqueNoteIds": 9,
+      "crossQueryRows": 9,
+      "detailRows": 0,
+      "status": "partial",
+      "targetRows": 30,
+      "shortfall": 21
+    }
+  ],
+  "totals": {
+    "searchRows": 165,
+    "uniqueNoteIds": 127,
+    "detailRows": 7,
+    "crossQueryDuplicateRows": 38
+  },
+  "detailCoverage": {
+    "status": "partial",
+    "note": "已打开并保存 7 篇详情；剩余查询页在本轮浏览器状态下无法稳定加载，跨词卡片已明确标记 cross-query，不当作详情证据。",
+    "byQuery": {
+      "汕尾旅游攻略": 3,
+      "汕尾二马路美食": 2,
+      "汕尾红海湾拍照": 1,
+      "汕尾citywalk": 1
+    }
+  },
+  "auditNotes": [
+    "搜索记录按 query + noteId 复核；同词不重复，跨词重复保留并按全局 noteId 计数。",
+    "规范帖子 URL 已去除 xsec_token 等会话参数。",
+    "标题含深圳出发的帖子只取本地景点与餐饮信息，跨城交通不进入路线。",
+    "餐厅与玻璃海结论保留正反证据，并要求出发前复核。",
+    "每词目标约 30 条；本轮以实际可见 9—20 条记录为准，短缺量保留在 queries[].shortfall。"
+  ],
+  "targetRowsPerQuery": 30
+}

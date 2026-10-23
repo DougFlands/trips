@@ -1,0 +1,83 @@
+.shanwei-page .amap-container {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+.shanwei-page .amap-logo,
+.shanwei-page .amap-copyright {
+  opacity: 0.82;
+}
+
+.shanwei-page .map-marker {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  color: #101519;
+  background: var(--marker);
+  border: 2px solid #fff3a6;
+  box-shadow: 0 0 0 3px rgb(21 25 29 / 42%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  font: 900 11px/1 ui-monospace, monospace;
+}
+
+.shanwei-page .map-marker.alternative {
+  width: 42px;
+  height: 26px;
+  color: var(--marker);
+  background: #fff3a6;
+  border-color: var(--marker);
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px rgb(255 243 166 / 82%);
+  clip-path: none;
+  font-size: 9px;
+}
+
+.shanwei-page .map-popup {
+  width: 220px;
+  padding: 15px 17px;
+  color: #15191d;
+  background: #fff3a6;
+  border: 1px solid #182126;
+  box-shadow: 6px 6px 0 rgb(21 25 29 / 18%);
+}
+
+.shanwei-page .map-popup span {
+  color: #008f9c;
+  font: 800 9px/1 ui-monospace, monospace;
+}
+
+.shanwei-page .map-popup strong {
+  display: block;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.shanwei-page .map-popup p {
+  margin: 0 0 10px;
+  color: #596052;
+  line-height: 1.5;
+}
+
+.shanwei-page .map-popup a {
+  color: #d93047;
+  font-weight: 900;
+}
+
+.shanwei-page .map-user-marker {
+  width: 17px;
+  height: 17px;
+  display: block;
+  background: #1687f5;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgb(22 135 245 / 28%), 0 0 0 2px #1687f5;
+}
+
+.shanwei-horizontal-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.shanwei-horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}

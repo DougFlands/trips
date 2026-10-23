@@ -30,6 +30,7 @@ VITE_AMAP_SECURITY_JS_CODE=
 
 - 旅行列表：`http://localhost:5173/`
 - 青烟威详情：`http://localhost:5173/trips/qingdao-yantai-weihai/`
+- 汕尾本地两天一夜：`http://localhost:5173/trips/shanwei-two-day-trip/`
 - 广东观星地图：`http://localhost:5173/trips/guangdong-stargazing/`
 
 ## 常用命令
