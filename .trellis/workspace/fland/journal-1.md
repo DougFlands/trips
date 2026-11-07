@@ -202,3 +202,24 @@ Edge实际阅读60篇有效小红书正文，北海道整体/札幌/小樽/函�
 ### Status
 
 [OK] **Completed**
+
+
+## Session 9: OpenFreeMap 旅行指南页面
+
+**Date**: 2026-11-08
+**Task**: OpenFreeMap 旅行指南页面
+**Branch**: `main`
+
+### Summary
+
+完成北海道明信片旅行页和 OpenFreeMap 接入：加入30个札幌、小樽、函馆推荐点，地图筛选与列表联动、弹窗、缩放定位、右侧滚动按钮；移除天地图组件；通过 lint、typecheck、build、npm audit，并推送到 main。
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `7604c55` | (see git log) |
+
+### Status
+
+[OK] **Completed**
