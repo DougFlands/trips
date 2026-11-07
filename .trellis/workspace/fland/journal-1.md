@@ -141,3 +141,43 @@ Installed Tailwind v4 with shadcn source components, ReUI Timeline, Kibo Announc
 ### Status
 
 [OK] **Completed**
+
+
+## Session 6: 北海道三城冬季攻略研究完成
+
+**Date**: 2026-11-07
+**Task**: 北海道三城冬季攻略研究完成
+**Branch**: `main`
+
+### Summary
+
+Edge实际阅读60篇有效小红书正文，北海道整体/札幌/小樽/函馆各15篇，52篇攻略；交付2027-01-29至02-08经典路线、冬季避坑、官方核验。用户取消机票研究。无产品代码修改，研究数据校验通过。
+
+### Git Commits
+
+(No commits - planning session)
+
+### Status
+
+[OK] **Completed**
+
+
+## Session 7: 接入天地图双地图组件
+
+**Date**: 2026-11-07
+**Task**: 接入天地图双地图组件
+**Branch**: `main`
+
+### Summary
+
+保留高德 TravelMap，新增独立 TiandituMap 和共享地图类型；加入天地图 Key 配置、README、回归 fixture 与前端架构规范。通过 lint、typecheck、build 和观星测试；npm audit 因网络连接失败未完成。归档任务 11-07-integrate-tianditu-map。
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `052296d` | (see git log) |
+
+### Status
+
+[OK] **Completed**
