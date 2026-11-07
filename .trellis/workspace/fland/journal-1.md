@@ -181,3 +181,24 @@ Edge实际阅读60篇有效小红书正文，北海道整体/札幌/小樽/函�
 ### Status
 
 [OK] **Completed**
+
+
+## Session 8: 天地图真实 Key 浏览器验收
+
+**Date**: 2026-11-07
+**Task**: 天地图真实 Key 浏览器验收
+**Branch**: `main`
+
+### Summary
+
+使用已配置的 VITE_TIANDITU_KEY 打开真实回归页，确认天地图底图加载、测试点标记、点击弹窗和缩放按钮。将回归页从 SDK 替身改为真实 SDK，并修正测试容器高度。通过 lint、typecheck、build；任务已归档。
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `e6bed4b` | (see git log) |
+
+### Status
+
+[OK] **Completed**
