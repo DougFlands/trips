@@ -4,10 +4,13 @@ import { shanweiTwoDayTrip } from "./shanwei-two-day-trip/trip";
 import { ShanweiTripPage } from "./shanwei-two-day-trip/page";
 import type { ComponentType } from "react";
 import type { Trip } from "./types";
+import { hokkaidoWinterTrip } from "./hokkaido-winter/trip";
+import { HokkaidoWinterPage } from "./hokkaido-winter/page";
 
-export const trips = [qingdaoYantaiWeihaiTrip, shanweiTwoDayTrip];
+export const trips = [hokkaidoWinterTrip, shanweiTwoDayTrip, qingdaoYantaiWeihaiTrip];
 
 const tripPages: Record<string, ComponentType<{ trip: Trip }>> = {
+  [hokkaidoWinterTrip.slug]: HokkaidoWinterPage,
   [qingdaoYantaiWeihaiTrip.slug]: QingdaoTripPage,
   [shanweiTwoDayTrip.slug]: ShanweiTripPage,
 };

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenFreeMap 标记演示与回归</title>
+    <style>
+      body { margin: 0; padding: 24px; background: #f7f5ef; color: #24352d; font: 15px/1.6 system-ui, sans-serif; }
+      main { max-width: 1000px; margin: auto; }
+      h1 { font-size: 24px; } button { cursor: pointer; font: inherit; }
+      .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+      .toolbar button, .toolbar a { padding: 6px 12px; color: inherit; background: white; border: 1px solid #ccc; border-radius: 6px; }
+      pre { white-space: pre-wrap; font: 13px/1.7 system-ui, sans-serif; }
+      @media (max-width: 640px) { body { padding: 12px; } }
+    </style>
+  </head>
+  <body>
+    <main><h1>OpenFreeMap 地点标记</h1><p>札幌、小樽、函馆 · WGS84 示例坐标 · 点击标记查看详情</p><div id="root"></div></main>
+    <script type="module" src="./openfreemap-map.tsx"></script>
+  </body>
+</html>

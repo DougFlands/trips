@@ -1,0 +1,31 @@
+{
+  "id": "hokkaido-recommendation-map",
+  "name": "hokkaido-recommendation-map",
+  "title": "北海道推荐景点接入 OpenFreeMap",
+  "description": "仅调整哪些值得去区块：使用 OpenFreeMap 展示30个推荐地点，列表联动、缩放和页面右侧上下滚动，沿用明信片主题。",
+  "status": "in_progress",
+  "dev_type": "frontend",
+  "scope": "hokkaido-recommendation-map",
+  "package": null,
+  "priority": "P2",
+  "creator": "fland",
+  "assignee": "fland",
+  "createdAt": "2026-11-07",
+  "completedAt": null,
+  "branch": null,
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": [
+    "src/trips/hokkaido-winter/page.tsx",
+    "src/trips/hokkaido-winter/trip.ts",
+    "src/OpenFreeMap.tsx",
+    "src/map/openfreemap.css"
+  ],
+  "notes": "地图供应商按用户要求改为 OpenFreeMap。已完成北海道30个推荐点接入、城市筛选、地图/列表联动和右侧滚动按钮。前置通用组件任务为 11-08-openfreemap-map；代码未提交。",
+  "meta": {}
+}

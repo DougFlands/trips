@@ -1,0 +1,116 @@
+.hokkaido-page {
+  --background: #fffaf0;
+  --foreground: #293858;
+  --card: #fffcf6;
+  --card-foreground: #293858;
+  --primary: #a74440;
+  --primary-foreground: #fffaf0;
+  --secondary: #f3e2e2;
+  --secondary-foreground: #703b40;
+  --muted: #eee9df;
+  --muted-foreground: #626777;
+  --accent: #f3e2e2;
+  --accent-foreground: #293858;
+  --border: #d8ccd1;
+  --input: #d8ccd1;
+  --ring: #a74440;
+  --destructive: #a74440;
+}
+
+.hokkaido-page [id] { scroll-margin-top: 90px; }
+.hokkaido-page a { text-underline-offset: 4px; }
+.hokkaido-page nav a:hover, .hokkaido-page footer a:hover { text-decoration: underline; }
+.hokkaido-page [data-slot="card"] { border-radius: 2px; box-shadow: none; }
+.hokkaido-page [data-slot="badge"] { border-radius: 2px; }
+.hokkaido-page [data-slot="alert"] { border-radius: 2px; border-style: dashed; }
+
+.hokkaido-page .postcard-cover {
+  border: 2px solid var(--foreground);
+  box-shadow: 7px 7px 0 #b94f4a;
+  background: var(--card);
+}
+
+.hokkaido-page .winter-art {
+  position: relative;
+  min-height: 220px;
+  background: var(--secondary);
+  overflow: hidden;
+}
+
+.hokkaido-page .postmark {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--primary);
+  outline: 1px solid var(--primary);
+  outline-offset: -6px;
+  border-radius: 50%;
+  color: var(--primary);
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  transform: rotate(12deg);
+}
+
+.hokkaido-page .postmark b { font-size: 22px; font-weight: normal; }
+.hokkaido-page .source-ref { color: var(--muted-foreground); font: 11px monospace; text-decoration: underline; }
+.hokkaido-page .source-ref:hover { color: var(--primary); }
+.hokkaido-page .source-entry:hover, .hokkaido-page .source-entry:focus { background: var(--secondary); }
+
+.hokkaido-page .hokkaido-recommendation-map {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 12px;
+  box-shadow: 5px 5px 0 #a7444030;
+}
+.hokkaido-page .hokkaido-recommendation-map .openfreemap-frame { border: 1px dashed var(--border); }
+.hokkaido-page .hokkaido-recommendation-map .openfreemap-places { display: none; }
+.hokkaido-page .hokkaido-recommendation-list {
+  max-height: 720px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-color: var(--primary) var(--muted);
+}
+.hokkaido-page .hokkaido-recommendation-list section + section { margin-top: 18px; }
+.hokkaido-page .hokkaido-recommendation-list li:hover,
+.hokkaido-page .hokkaido-recommendation-item-active { background: color-mix(in srgb, var(--secondary) 55%, transparent); }
+.hokkaido-page .hokkaido-page-scroll-controls {
+  position: fixed;
+  right: 14px;
+  bottom: 18px;
+  z-index: 25;
+  display: grid;
+  gap: 6px;
+}
+.hokkaido-page .hokkaido-page-scroll-controls button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--foreground);
+  background: var(--foreground);
+  color: var(--primary-foreground);
+  font: 700 18px/1 sans-serif;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--primary);
+}
+.hokkaido-page .hokkaido-page-scroll-controls button:hover { background: var(--primary); }
+.hokkaido-page .hokkaido-page-scroll-controls button:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+
+@media (max-width: 767px) {
+  .hokkaido-page .winter-art { height: 210px; border-top: 1px dashed var(--border); }
+  .hokkaido-page .postmark { width: 80px; height: 80px; top: 18px; right: 18px; font-size: 7px; }
+  .hokkaido-page .hokkaido-recommendation-map { padding: 8px; }
+  .hokkaido-page .hokkaido-recommendation-list { max-height: 620px; }
+  .hokkaido-page .hokkaido-page-scroll-controls { right: 8px; bottom: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hokkaido-page *, .hokkaido-page *::before, .hokkaido-page *::after { animation: none !important; }
+}

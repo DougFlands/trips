@@ -37,6 +37,15 @@ return Page ? <Page trip={trip} /> : <NotFound />;
 
 普通控件从 `src/components/ui` 的 shadcn 源码组件组合；需要复杂交互时，按需从 `@reui` registry 或 Kibo CLI 下载源码到 `src/components/reui` / `src/components/kibo-ui`。安装后必须阅读生成文件、修正项目别名并运行 lint/typecheck/build，不能把整套 registry 当运行时依赖。
 
+### Convention: Editorial trips without maps
+
+`hokkaido-winter` 使用本页 `DayPlan`、`Recommendation` 与公开 `sources`，从同一份日程映射 `Trip.days`。没有地图的旅行可将 `stops`、`alternatives` 留空，首页仅在两者数量之和大于零时展示地图节点徽标。
+
+- 编辑推荐使用“优先／可选／可省”和独立安排状态；不要为旧地图的 `TripPlace.score/coord` 编造分数或坐标。
+- 来源随前端发布，使用公开 URL 和稳定 sourceId；不能链接 `.trellis` 工作区文件或保留会话 token。
+- 引用被折叠的来源时，先展开所在分组，再定位并聚焦链接；键盘与鼠标行为一致。
+- 验证日期连续、住宿晚数、城市推荐数量，以及每个 sourceId 和日程引用均能解析。
+
 ## Design Decision: Trip Folder, Place Data
 
 旅行是独立维护和发布的内容单元，因此使用目录。景点数量多、结构重复，默认作为旅行数据项。`stops` 是按天排序的确定行程，`alternatives` 是未排入行程的高分点；两者复用 `TripPlace`。只有景点拥有专属页面或大量资源时再建立目录。
@@ -45,6 +54,17 @@ return Page ? <Page trip={trip} /> : <NotFound />;
 src/trips/qingdao-yantai-weihai/trip.ts  # correct
 src/trips/qingdao/yantai-station/...     # avoid
 ```
+
+### Convention: Editorial Recommendation Maps
+
+旅行页已有推荐排序、时长和理由时，地图点位放在该旅行目录的独立映射文件中。映射只补 WGS84 概览坐标和地图展示字段，不改旧高德 `TripPlace` 坐标契约；城市筛选、列表文案和弹窗详情都从同一份推荐数据派生。
+
+```tsx
+const mapPlaces = useMemo(() => buildRecommendationMapPlaces(recommendations), []);
+<OpenFreeMap places={shownMapPlaces} focusPlaceId={focusedId} onSelectPlace={selectFromMap} />
+```
+
+地图点位必须在映射构建时检查稳定 ID、两项有限坐标和城市归属。页面筛选后传入当前点集，选点状态由页面控制；列表滚动只作用于列表容器，不能把地图移出视口。
 
 ## Scenario: Static Trip and AMap Contract
 
@@ -141,58 +161,72 @@ if (referer) upstreamHeaders.set("Referer", referer);
 - 直接瓦片 URL、地图 CSS 滤镜或覆盖全页的扫描线遮罩。
 - 在组件里重复旅行内容或环境变量名称。
 
-## Scenario: Dual Map Components
+## Scenario: Independent Map Components
 
 ### 1. Scope / Trigger
 
-新增天地图浏览器地图，同时保留现有高德地图时适用。
+`src/TravelMap.tsx` 服务现有高德页面；`src/OpenFreeMap.tsx` 使用 MapLibre GL JS + OpenFreeMap 展示独立地点数组。页面通过显式导入选择组件，无全局 provider。
 
 ### 2. Signatures
 
 ```ts
-TravelMap(props: TravelMapProps): JSX.Element       // 高德
-TiandituMap(props: TravelMapProps): JSX.Element     // 天地图
+TravelMap(props: TravelMapProps): JSX.Element
+OpenFreeMap(props: {
+  places: MapPlace[];
+  label: string;
+  focusPlaceId?: string | null;
+  onSelectPlace?: (id: string) => void;
+  fitMaxZoom?: number; // default 12
+  focusZoom?: number;  // default 14
+}): JSX.Element
 ```
-
-`TravelMapProps` 和 `MapPlace` 位于 `src/map/types.ts`；`TravelMap` 继续从原路径 re-export 类型，旧导入不需要改动。
 
 ### 3. Contracts
 
-- 业务页面通过导入 `TravelMap` 或 `TiandituMap` 选择地图供应商，不使用全局 provider 或 `VITE_MAP_PROVIDER`。
-- `VITE_AMAP_KEY`、`VITE_AMAP_SECURITY_JS_CODE` 只服务高德；`VITE_TIANDITU_KEY` 只服务天地图。
-- 两个组件都要有 `loading`、`missing`、`error`、`ready` 状态；Key 缺失时不注入对应脚本。
-- 两套 SDK 的实例、覆盖物和清理逻辑保持在各自组件内，不能混用全局地图对象。
-- 共享点位继续使用 `[longitude, latitude]`；供应商坐标转换只放在对应适配层。
+- `MapPlace` 位于 `src/map/types.ts`，只复用展示字段；OpenFreeMap 的 `coord` 必须为 WGS84 `[longitude, latitude]`，旧高德页面传入 GCJ-02。禁止直接复用已转换的高德点数组。
+- OpenFreeMap 无 Key，组件配置官方 Liberty style URL、MapLibre CSS 和 Vite Worker。不要硬编码底层瓦片路径。保留默认署名。
+- `onSelectPlace` + `focusPlaceId` 组成受控选择；无回调则点击直接定位并开窗。重复点击可重开详情。按钮标记使用原生键盘激活，不再叠加 Marker.setPopup 的键盘监听。
+- 标记构建与选点取景使用独立 effect；仅改变 focus 不重建 DOM 标记，否则原生键盘焦点会丢失。回归需断言选点前后的 activeElement 一致。
+- 有效 focus 优先；全图、单点和选点取景互斥，使用 stop + jumpTo / duration: 0 的 fitBounds，避免旧动画覆盖目标位置。
+- 地点过滤/清空须删除旧标记和弹窗；effect 清理监听、控件、popup、ResizeObserver 和地图。StrictMode 重挂不能留下重复实例。
+- 弹窗文本使用 DOM/textContent，外链只接受 HTTP(S)，设置 target/rel。失败时地点列表仍可读。
+- 新组件有 loading/ready/error，20 秒加载超时可重试；无 missing-config 状态。初始化失败和全量底图失败不可仅凭 canvas 存在判断成功；部分瓦片错误显示提示，后续成功加载可以恢复。
+- 专用样式限定 `.openfreemap*`，不依赖某趟旅行主题。窄屏不能遮挡控件和署名，容器尺寸改变要 resize。
 
 ### 4. Validation & Error Matrix
 
-| Condition | Behavior |
-|---|---|
-| 页面使用 `TravelMap` | 只加载高德 SDK，保持原有代理和交互 |
-| 页面使用 `TiandituMap` | 只加载天地图 SDK，使用 `VITE_TIANDITU_KEY` |
-| 对应 Key 缺失 | 显示配置提示，不注入脚本，地点内容仍可读 |
-| 对应 SDK 加载/初始化失败 | 显示失败提示，清理已创建资源 |
-| 两种组件在不同页面使用 | 各自缓存和清理 SDK 实例，不共享覆盖物 |
+| 条件 | 行为 |
+| --- | --- |
+| 无 Key | 新组件仍可加载真实底图 |
+| 多点且无 focus | 全图取景，最大缩放 fitMaxZoom |
+| 单点 | 居中；有 focus 时使用 focusZoom 并开窗 |
+| focus 在当前点集中不存在 | 关闭旧弹窗，重新按当前点集取景 |
+| 空数组 | 无标记、无弹窗，地点列表显示空状态 |
+| SDK/网络失败 | 提示失败并可重试，列表继续可读 |
+| 当前高德页面 | 沿用高德 SDK、Key、代理、坐标与接口 |
 
-### 5. Good / Base / Bad Cases
+### 5. Good / Base / Bad
 
-- Good：旅行页继续导入 `TravelMap`，新页面明确导入 `TiandituMap`，两者共用 `TravelMapProps`。
-- Base：天地图没有 Key 时地图区域显示提示，地点列表和外链仍可用。
-- Bad：在 `TravelMap` 中加入供应商分支，或用环境变量让同一组件隐式改变地图类型。
+- Good：新地点数组使用原始 WGS84，React 管选择、MapLibre 管渲染，选点保留键盘焦点。
+- Base：底图失败显示可重试提示，地点与外链继续可读。
+- Bad：直接传入高德已偏移坐标，或每次选择都销毁并重建按钮标记。
 
 ### 6. Tests Required
 
-- 类型检查 `TravelMap` 的旧导入和 `TiandituMap` 的新导入。
-- 高德原有 `tests/travel-map-focus.html` 继续通过。
-- `tests/tianditu-map.html` 在配置 Key 后验证 SDK 替身初始化和单点聚焦。
-- 浏览器分别检查两组件的 missing/error 状态，确认对应 SDK 未配置时其他内容可读。
+- `npm run lint`、`npm run typecheck`、`npm run build`、`npm audit`。
+- `/tests/openfreemap-map.html` 的真实 SDK 回归检查：取景、受控/无回调选点、筛选、空点集、危险文本/外链、StrictMode 重挂。
+- `/tests/openfreemap-map.html?fail=1` 的网络失败与重试回归。
+- 浏览器桌面和窄屏实际检查底图、标记、弹窗、键盘 Enter/空格及署名；生产构建还须验证 Worker/CSS 输出。
+- 高德 `/tests/travel-map-focus.html` 的既有回归保持通过。
 
 ### 7. Wrong vs Correct
 
 ```tsx
-// Wrong: 页面无法从代码上看出供应商，组件内部隐式分支会耦合两套 SDK。
-<TravelMap provider={import.meta.env.VITE_MAP_PROVIDER} {...props} />
+// Wrong: 将现有高德适配器输出误当 WGS84。
+<OpenFreeMap places={catalog.map(toMapPlace)} label="地点" />
 
-// Correct: 业务代码显式选择组件，数据契约仍共享。
-<TiandituMap {...props} />
+// Correct: 提供原始 WGS84 坐标，展示字段按需映射。
+<OpenFreeMap places={catalog.map(place => ({
+  id: place.id, name: place.name, coord: place.wgs84, note: place.note,
+}))} label="地点" />
 ```

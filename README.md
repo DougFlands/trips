@@ -1,6 +1,6 @@
 # 旅行攻略
 
-基于 Vite、React、TypeScript、Tailwind CSS、高德地图 JS API 2.0 与天地图 JS API 4.0 的静态旅行站点。
+基于 Vite、React、TypeScript、Tailwind CSS、高德地图 JS API 2.0 与 MapLibre GL JS / OpenFreeMap 的静态旅行站点。
 
 ## 本地运行
 
@@ -24,10 +24,33 @@ npx kibo-ui add announcement
 ```env
 VITE_AMAP_KEY=
 VITE_AMAP_SECURITY_JS_CODE=
-VITE_TIANDITU_KEY=
 ```
 
-地图组件按业务页面直接选择：`src/TravelMap.tsx` 使用高德，`src/TiandituMap.tsx` 使用天地图。两套 SDK 和 Key 独立维护，不使用运行时切换按钮或统一供应商环境变量。天地图浏览器端 Key 在[天地图云中心](https://cloudcenter.tianditu.gov.cn/)创建应用后填写到 `VITE_TIANDITU_KEY`，上线前配置域名白名单。
+地图组件按业务页面直接选择：`src/TravelMap.tsx` 使用高德，`src/OpenFreeMap.tsx` 使用 MapLibre GL JS 渲染 OpenFreeMap 底图。OpenFreeMap 无需 Key；高德沿用上述配置。两套组件独立维护，不使用运行时供应商切换。
+
+### OpenFreeMap 地点标记
+
+`OpenFreeMap` 只接收 **WGS84 `[经度, 纬度]`**，不要直接传入旧高德页面的 GCJ-02 坐标。支持自定义标记、详情弹窗、受控选点、全图取景、缩放与浏览器定位。
+
+```tsx
+import { useState } from "react";
+import { OpenFreeMap } from "./OpenFreeMap";
+import type { MapPlace } from "./map/types";
+
+const places: MapPlace[] = [
+  { id: "sapporo", name: "札幌", coord: [141.3545, 43.0618], note: "城市参考位置", markerLabel: "1" },
+];
+
+function PlacesMap() {
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  return <OpenFreeMap places={places} label="旅行地点地图"
+    focusPlaceId={selectedId} onSelectPlace={setSelectedId} />;
+}
+```
+
+省略 `onSelectPlace` 时点击标记直接定位并开窗。`fitMaxZoom` 默认 12，`focusZoom` 默认 14。地点可附加 `markerColor`、`meta`、`url`、`linkLabel`；外链只接受 HTTP(S)。清空选中 ID 可回到全图；传入空数组清理标记。
+
+运行 `npm run dev`，打开 `/tests/openfreemap-map.html` 查看真实地图并点击“运行回归检查”；`?fail=1` 验证网络失败和重试。组件已导入 MapLibre CSS 并配置 Vite Worker；保留底图自动署名。定位需浏览器权限及 HTTPS（localhost 可用）。公共底图依赖网络，失败时可继续阅读地点列表。此组件不提供地点搜索或路线计算。
 
 浏览器打开：
 
@@ -70,7 +93,7 @@ node --test tests/stargazing.test.mjs
 
 `src/App.tsx` 只负责路径解析和入口状态；旅行页面可以共享 `TravelMap`、类型和 UI primitives，但不要复制其他旅行的页面样式。
 
-地图组件位于 `src/TravelMap.tsx` 和 `src/TiandituMap.tsx`，两者按 `stops`、`alternatives`、`days`、`activeDay` 和 `focusPlaceId` 传入同一套数据。业务页面通过导入哪个组件来选择地图供应商。
+`src/TravelMap.tsx` 支持旧行程模式和普通地点模式；`src/OpenFreeMap.tsx` 接收 `places` 地点数组与可选的 `focusPlaceId`、`onSelectPlace`。业务页面通过导入组件选择地图，并提供对应坐标系的数据。
 
 广东观星页独立维护于 `src/trips/guangdong-stargazing/`，当前收录 **35 个广东省内点位**，采用 Sketchbook 手帐风和地图的 `places` 模式。列表支持按距深圳市民中心的直线距离、波尔特等级排序，并查看七个夜晚的逐小时天气。天气通过单点或全部更新按钮获取并写入 IndexedDB；打开页面只读缓存，全部更新覆盖完整目录，不受地点筛选影响。跨批写入失败的地点会保留未保存提示，直到对应数据成功写入。
 

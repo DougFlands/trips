@@ -1,0 +1,31 @@
+{
+  "id": "hokkaido-postcard-page",
+  "name": "hokkaido-postcard-page",
+  "title": "北海道明信片旅行页面",
+  "description": "北海道明信片主题旅行页：11天慢游、三城30项推荐、提醒和来源。",
+  "status": "in_progress",
+  "dev_type": "frontend",
+  "scope": "hokkaido-winter",
+  "package": null,
+  "priority": "P2",
+  "creator": "fland",
+  "assignee": "fland",
+  "createdAt": "2026-11-07",
+  "completedAt": null,
+  "branch": null,
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": [
+    "src/trips/hokkaido-winter/",
+    "src/trips/index.ts",
+    "src/App.tsx",
+    ".trellis/spec/frontend/architecture.md"
+  ],
+  "notes": "用户批准方案后已完成实现与浏览器验收。lint/typecheck/build通过，npm audit网络失败。待提交确认；见quality-review.md和commit-plan.md。",
+  "meta": {}
+}
