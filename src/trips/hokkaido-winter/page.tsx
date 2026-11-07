@@ -21,6 +21,29 @@ const reminders = [
   { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，晚饭后回酒店；函馆、小樽日落另看当地信息。", sources: ["O14"] },
 ];
 
+const routeQa = [
+  {
+    question: "为什么函馆结束后先回札幌？",
+    answer: "2/3是长途转场缓冲，2/4正好接札幌雪祭。函馆到小樽通常要经札幌转车，直接去小樽会把换乘、寄存和入住叠在一起。",
+    sources: ["O1", "O7", "O10"],
+  },
+  {
+    question: "能不能函馆后先去小樽，再去札幌？",
+    answer: "可以，但要接受更长的转场和第二天一早回札幌。若要看2/6小樽雪灯，住小樽两晚、2/7再回札幌会更稳。",
+    sources: ["O1", "O2", "O10"],
+  },
+  {
+    question: "这条路线是不是绕路？",
+    answer: "地图上像回头，铁路衔接上札幌本来就是函馆与小樽之间的中转节点。先在札幌休息一晚，再去小樽，少一次长途日换酒店。",
+    sources: ["O7", "O10"],
+  },
+  {
+    question: "什么情况下值得改成函馆→小樽→札幌？",
+    answer: "不参加札幌雪祭或小樽雪灯，或已经订好小樽住宿时可以改。只保留小樽运河、堺町等市区内容，天狗山按天气和转场余量取舍。",
+    sources: ["O1", "O2", "T04"],
+  },
+];
+
 function WinterPostcard() {
   return (
     <div className="winter-art" aria-hidden="true">
@@ -111,7 +134,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
       <nav aria-label="页面导航" className="sticky top-0 z-20 border-b border-border bg-background/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 sm:px-8">
           <a href="/" className="flex items-center gap-2 text-sm"><ArrowLeft className="size-4" aria-hidden="true" /><span>旅行列表</span></a>
-          <div className="flex gap-5 text-sm sm:gap-8"><a href="#itinerary">行程</a><a href="#places">推荐</a><a href="#reminders">提醒</a></div>
+          <div className="flex gap-5 text-sm sm:gap-8"><a href="#itinerary">行程</a><a href="#places">推荐</a><a href="#reminders">提醒</a><a href="#qa">QA</a></div>
         </div>
       </nav>
       <div className="hokkaido-page-scroll-controls" aria-label="页面滚动">
@@ -263,6 +286,18 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
             })}
           </Accordion>
           <p className="mt-5 text-xs leading-6 text-muted-foreground">帖子提供个人经验，活动与运营以官方公告为准。点灯细节、临时停运和酒店位置，出发前再确认。</p>
+        </section>
+        <section id="qa" aria-labelledby="qa-heading" className="mt-14 sm:mt-20">
+          <SectionHeading number="05" title="路线 QA" id="qa-heading" description="把城市顺序和可调整的地方说清楚。" />
+          <Accordion type="multiple" className="mt-4">
+            {routeQa.map(({ question, answer, sources: ids }) => <AccordionItem key={question} value={question}>
+              <AccordionTrigger>{question}</AccordionTrigger>
+              <AccordionContent>
+                <p className="leading-7">{answer}</p>
+                <div className="mt-3 flex flex-wrap items-center gap-2"><span className="text-[11px] text-muted-foreground">依据</span>{sourceRefs(ids)}</div>
+              </AccordionContent>
+            </AccordionItem>)}
+          </Accordion>
         </section>
         <footer className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-foreground/40 pt-6 text-xs text-muted-foreground"><span className="font-mono tracking-widest">HOKKAIDO · WINTER 2027</span><a href="#top">回到顶部 ↑</a></footer>
       </main>
