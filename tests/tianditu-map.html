@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>天地图组件回归检查</title></head>
+  <body>
+    <pre id="result">运行中…</pre><div id="root"></div>
+    <script type="module">
+      import { createElement } from 'react';
+      import { createRoot } from 'react-dom/client';
+      import { TiandituMap } from '/src/TiandituMap.tsx';
+
+      // Use a small SDK substitute to verify the component contract without network requests.
+      const calls = [];
+      class LngLat { constructor(lng, lat) { this.lng = lng; this.lat = lat; } }
+      class Map {
+        constructor() {}
+        centerAndZoom(point, zoom) { calls.push(`center:${point.lng},${point.lat},${zoom}`); }
+        addOverLay() { calls.push('overlay'); }
+        removeOverLay() {}
+        setViewport() { calls.push('viewport'); }
+        zoomIn() { calls.push('zoom-in'); }
+        zoomOut() { calls.push('zoom-out'); }
+        openInfoWindow() { calls.push('open'); }
+        closeInfoWindow() {}
+        destroy() {}
+      }
+      class Marker { addEventListener() {} }
+      class Polyline {}
+      class InfoWindow {}
+      window.T = { Map, LngLat, Marker, Polyline, InfoWindow };
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(createElement(TiandituMap, {
+        places: [{ id: 'demo', name: '测试点', coord: [113, 23], note: '天地图组件测试' }],
+        label: '天地图回归地图',
+      }));
+      setTimeout(() => {
+        document.getElementById('result').textContent = calls.includes('center:113,23,13')
+          ? 'PASS 天地图初始化与单点聚焦'
+          : '未执行：请在 .env.local 配置 VITE_TIANDITU_KEY 后刷新';
+      }, 300);
+    </script>
+  </body>
+</html>

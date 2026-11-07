@@ -140,3 +140,59 @@ if (referer) upstreamHeaders.set("Referer", referer);
 - 全局 store、路由库、UI 框架或请求库，除非已有功能无法用平台能力完成。
 - 直接瓦片 URL、地图 CSS 滤镜或覆盖全页的扫描线遮罩。
 - 在组件里重复旅行内容或环境变量名称。
+
+## Scenario: Dual Map Components
+
+### 1. Scope / Trigger
+
+新增天地图浏览器地图，同时保留现有高德地图时适用。
+
+### 2. Signatures
+
+```ts
+TravelMap(props: TravelMapProps): JSX.Element       // 高德
+TiandituMap(props: TravelMapProps): JSX.Element     // 天地图
+```
+
+`TravelMapProps` 和 `MapPlace` 位于 `src/map/types.ts`；`TravelMap` 继续从原路径 re-export 类型，旧导入不需要改动。
+
+### 3. Contracts
+
+- 业务页面通过导入 `TravelMap` 或 `TiandituMap` 选择地图供应商，不使用全局 provider 或 `VITE_MAP_PROVIDER`。
+- `VITE_AMAP_KEY`、`VITE_AMAP_SECURITY_JS_CODE` 只服务高德；`VITE_TIANDITU_KEY` 只服务天地图。
+- 两个组件都要有 `loading`、`missing`、`error`、`ready` 状态；Key 缺失时不注入对应脚本。
+- 两套 SDK 的实例、覆盖物和清理逻辑保持在各自组件内，不能混用全局地图对象。
+- 共享点位继续使用 `[longitude, latitude]`；供应商坐标转换只放在对应适配层。
+
+### 4. Validation & Error Matrix
+
+| Condition | Behavior |
+|---|---|
+| 页面使用 `TravelMap` | 只加载高德 SDK，保持原有代理和交互 |
+| 页面使用 `TiandituMap` | 只加载天地图 SDK，使用 `VITE_TIANDITU_KEY` |
+| 对应 Key 缺失 | 显示配置提示，不注入脚本，地点内容仍可读 |
+| 对应 SDK 加载/初始化失败 | 显示失败提示，清理已创建资源 |
+| 两种组件在不同页面使用 | 各自缓存和清理 SDK 实例，不共享覆盖物 |
+
+### 5. Good / Base / Bad Cases
+
+- Good：旅行页继续导入 `TravelMap`，新页面明确导入 `TiandituMap`，两者共用 `TravelMapProps`。
+- Base：天地图没有 Key 时地图区域显示提示，地点列表和外链仍可用。
+- Bad：在 `TravelMap` 中加入供应商分支，或用环境变量让同一组件隐式改变地图类型。
+
+### 6. Tests Required
+
+- 类型检查 `TravelMap` 的旧导入和 `TiandituMap` 的新导入。
+- 高德原有 `tests/travel-map-focus.html` 继续通过。
+- `tests/tianditu-map.html` 在配置 Key 后验证 SDK 替身初始化和单点聚焦。
+- 浏览器分别检查两组件的 missing/error 状态，确认对应 SDK 未配置时其他内容可读。
+
+### 7. Wrong vs Correct
+
+```tsx
+// Wrong: 页面无法从代码上看出供应商，组件内部隐式分支会耦合两套 SDK。
+<TravelMap provider={import.meta.env.VITE_MAP_PROVIDER} {...props} />
+
+// Correct: 业务代码显式选择组件，数据契约仍共享。
+<TiandituMap {...props} />
+```

@@ -1,6 +1,6 @@
 # 旅行攻略
 
-基于 Vite、React、TypeScript、Tailwind CSS 与高德地图 JS API 2.0 的静态旅行站点。
+基于 Vite、React、TypeScript、Tailwind CSS、高德地图 JS API 2.0 与天地图 JS API 4.0 的静态旅行站点。
 
 ## 本地运行
 
@@ -24,7 +24,10 @@ npx kibo-ui add announcement
 ```env
 VITE_AMAP_KEY=
 VITE_AMAP_SECURITY_JS_CODE=
+VITE_TIANDITU_KEY=
 ```
+
+地图组件按业务页面直接选择：`src/TravelMap.tsx` 使用高德，`src/TiandituMap.tsx` 使用天地图。两套 SDK 和 Key 独立维护，不使用运行时切换按钮或统一供应商环境变量。天地图浏览器端 Key 在[天地图云中心](https://cloudcenter.tianditu.gov.cn/)创建应用后填写到 `VITE_TIANDITU_KEY`，上线前配置域名白名单。
 
 浏览器打开：
 
@@ -67,7 +70,7 @@ node --test tests/stargazing.test.mjs
 
 `src/App.tsx` 只负责路径解析和入口状态；旅行页面可以共享 `TravelMap`、类型和 UI primitives，但不要复制其他旅行的页面样式。
 
-地图组件位于 `src/TravelMap.tsx`，按 `stops`、`alternatives`、`days`、`activeDay` 和 `focusPlaceId` 传入数据即可复用。
+地图组件位于 `src/TravelMap.tsx` 和 `src/TiandituMap.tsx`，两者按 `stops`、`alternatives`、`days`、`activeDay` 和 `focusPlaceId` 传入同一套数据。业务页面通过导入哪个组件来选择地图供应商。
 
 广东观星页独立维护于 `src/trips/guangdong-stargazing/`，当前收录 **35 个广东省内点位**，采用 Sketchbook 手帐风和地图的 `places` 模式。列表支持按距深圳市民中心的直线距离、波尔特等级排序，并查看七个夜晚的逐小时天气。天气通过单点或全部更新按钮获取并写入 IndexedDB；打开页面只读缓存，全部更新覆盖完整目录，不受地点筛选影响。跨批写入失败的地点会保留未保存提示，直到对应数据成功写入。
 

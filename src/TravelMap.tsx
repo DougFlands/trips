@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { TripDay, TripPlace, TripStop } from "./trips/types";
 import { wgs84ToGcj02 } from "./lib/coordinates";
-
-export type DayFilter = number | "all";
+import type { MapPlace, TravelMapProps } from "./map/types";
+export type { DayFilter, MapPlace, TravelMapProps } from "./map/types";
 
 type AMapOverlay = {
   on?: (event: string, handler: () => void) => void;
@@ -114,14 +114,6 @@ async function loadAMap(
   return amapPromise;
 }
 
-export type MapPlace = Pick<TripPlace, "id" | "name" | "coord" | "note"> & {
-  markerLabel?: string;
-  markerColor?: string;
-  meta?: string;
-  url?: string;
-  linkLabel?: string;
-};
-
 function popupContent(place: MapPlace, metaText: string, theme: string, onClose: () => void) {
   const box = document.createElement("div");
   box.className = `map-popup relative${theme === "paper" ? " stargazing-popup" : ""}`;
@@ -176,16 +168,6 @@ export function amapUrl(place: Pick<MapPlace, "name" | "coord">) {
 const emptyStops: TripStop[] = [];
 const emptyPlaces: TripPlace[] = [];
 const emptyDays: TripDay[] = [];
-
-export type TravelMapProps = {
-  focusPlaceId?: string | null;
-  label: string;
-  fitMaxZoom?: number;
-  focusZoom?: number;
-  onSelectPlace?: (id: string) => void;
-  theme?: "default" | "paper";
-} & ({ places: MapPlace[]; stops?: never; alternatives?: never; days?: never; activeDay?: never }
-  | { places?: never; stops: TripStop[]; alternatives: TripPlace[]; days: TripDay[]; activeDay: DayFilter });
 
 export function TravelMap({
   stops = emptyStops,
