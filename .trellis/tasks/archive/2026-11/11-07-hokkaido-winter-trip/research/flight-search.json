@@ -1,0 +1,1281 @@
+{
+  "checkedAt": "2026-11-07",
+  "request": {
+    "depart": "2027-01-29",
+    "returnDepart": "2027-02-08",
+    "origin": "CSX",
+    "destination": "SPK",
+    "airline": "CX",
+    "via": "HKG"
+  },
+  "result": {
+    "success": true,
+    "message": "Found 9 round-trip options",
+    "flights": [
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX580,CX587,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX580%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX587%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 14:50:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 995,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "16小時35分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX580",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 09:10:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 14:50:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 19:05:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1000,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "16小時40分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX587",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 19:05:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 23:55:00",
+                "isStop": false,
+                "craftType": "空中巴士A330-300",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX580,CX583,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX580%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX583%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 14:50:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 995,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "16小時35分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX580",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 09:10:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 14:50:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 17:15:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1110,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "18小時30分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX583",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 17:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 22:10:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX580,CX581,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX580%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX581%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 14:50:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 995,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "16小時35分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX580",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 09:10:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 14:50:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 16:05:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1180,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "19小時40分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX581",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 16:05:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 20:55:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX584,CX587,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX584%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX587%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 16:00:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 1065,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "17小時45分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX584",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 10:25:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 16:00:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 19:05:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1000,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "16小時40分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX587",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 19:05:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 23:55:00",
+                "isStop": false,
+                "craftType": "空中巴士A330-300",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX584,CX583,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX584%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX583%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 16:00:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 1065,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "17小時45分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX584",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 10:25:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 16:00:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 17:15:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1110,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "18小時30分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX583",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 17:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 22:10:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX584,CX581,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX584%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX581%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 16:00:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 1065,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "17小時45分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX584",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 10:25:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 16:00:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 16:05:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1180,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "19小時40分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX581",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 16:05:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 20:55:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX586,CX587,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX586%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX587%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 17:50:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 1175,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "19小時35分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX586",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 12:20:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 17:50:00",
+                "isStop": false,
+                "craftType": "空中巴士A330-300",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 19:05:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1000,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "16小時40分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX587",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 19:05:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 23:55:00",
+                "isStop": false,
+                "craftType": "空中巴士A330-300",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX586,CX583,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX586%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX583%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 17:50:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 1175,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "19小時35分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX586",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 12:20:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 17:50:00",
+                "isStop": false,
+                "craftType": "空中巴士A330-300",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 17:15:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1110,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "18小時30分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX583",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 17:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 22:10:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      },
+      {
+        "price": 952,
+        "currency": "USD",
+        "currencyDesc": "USD",
+        "deeplinkUrls": {
+          "onlineUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&topflightno=CX943,CX586,CX581,CX968&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+          "h5MiddleUrl": "https://us.trip.com/m/flights/xdetail/?triptype=1&dcitycode=CSX&acitycode=CSX&dairportcode=CSX&aairportcode=CSX&ddate=2027-01-29&classtype=0&classgroupsearch=true&adult=1&child=0&infant=0&locale=en-US&scene=chatgpt&currency=USD&segment_list=%5B%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX943%22%2C%22d_airport%22%3A%22CSX%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-01-29%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX586%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CTS%22%2C%22d_date%22%3A%222027-01-30%22%2C%22class%22%3A%22Y%22%7D%5D%7D%2C%7B%22flight_list%22%3A%5B%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX581%22%2C%22d_airport%22%3A%22CTS%22%2C%22a_airport%22%3A%22HKG%22%2C%22d_date%22%3A%222027-02-08%22%2C%22class%22%3A%22Y%22%7D%2C%7B%22airline%22%3A%22CX%22%2C%22flight_no%22%3A%22CX968%22%2C%22d_airport%22%3A%22HKG%22%2C%22a_airport%22%3A%22CSX%22%2C%22d_date%22%3A%222027-02-09%22%2C%22class%22%3A%22Y%22%7D%5D%7D%5D&wkp=1&allianceid=8006699&sid=302809151&adate=2027-02-08"
+        },
+        "journalList": [
+          {
+            "journal": {
+              "departTime": "2027-01-29 21:15:00",
+              "arriveTime": "2027-01-30 17:50:00",
+              "departCity": "CSX",
+              "departCityName": "長沙",
+              "arriveCity": "SPK",
+              "arriveCityName": "札幌",
+              "duration": 1175,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "1月29日",
+              "formatArriveTime": "1月30日",
+              "formatDuration": "19小時35分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX943",
+                "departAirport": "CSX",
+                "departAirportName": "長沙黃花國際機場",
+                "departTime": "2027-01-29 21:15:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-01-29 23:05:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T2",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX586",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-01-30 12:20:00",
+                "arriveAirport": "CTS",
+                "arriveAirportName": "新千歲機場",
+                "arriveTime": "2027-01-30 17:50:00",
+                "isStop": false,
+                "craftType": "空中巴士A330-300",
+                "departTerminal": "T1",
+                "arriveTerminal": "I"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          },
+          {
+            "journal": {
+              "departTime": "2027-02-08 16:05:00",
+              "arriveTime": "2027-02-09 10:45:00",
+              "departCity": "SPK",
+              "departCityName": "札幌",
+              "arriveCity": "CSX",
+              "arriveCityName": "長沙",
+              "duration": 1180,
+              "isTransfer": true,
+              "transferCities": [
+                "香港"
+              ],
+              "cabinClass": "Y",
+              "dayOffset": "+1",
+              "baggageAllowance": {
+                "hasCheckedBaggage": true,
+                "hasCarryOn": true
+              },
+              "cabinClassText": "經濟艙",
+              "stopInfo": "1個停留站",
+              "formatDepartTime": "2月8日",
+              "formatArriveTime": "2月9日",
+              "formatDuration": "19小時40分"
+            },
+            "segments": [
+              {
+                "segmentNo": 1,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX581",
+                "departAirport": "CTS",
+                "departAirportName": "新千歲機場",
+                "departTime": "2027-02-08 16:05:00",
+                "arriveAirport": "HKG",
+                "arriveAirportName": "香港國際機場",
+                "arriveTime": "2027-02-08 20:55:00",
+                "isStop": false,
+                "craftType": "波音 777-300ER",
+                "departTerminal": "I",
+                "arriveTerminal": "T1"
+              },
+              {
+                "segmentNo": 2,
+                "airlineCode": "CX",
+                "airlineName": "國泰航空",
+                "flightNo": "CX968",
+                "departAirport": "HKG",
+                "departAirportName": "香港國際機場",
+                "departTime": "2027-02-09 09:00:00",
+                "arriveAirport": "CSX",
+                "arriveAirportName": "長沙黃花國際機場",
+                "arriveTime": "2027-02-09 10:45:00",
+                "isStop": false,
+                "craftType": "空中巴士A321neo",
+                "departTerminal": "T1",
+                "arriveTerminal": "T2"
+              }
+            ],
+            "labels": [
+              "cheapest"
+            ]
+          }
+        ],
+        "routeTitle": "由長沙飛往札幌",
+        "formattedPrice": "US$ 952"
+      }
+    ],
+    "totalCount": 9,
+    "tripType": "roundTrip",
+    "transactionId": "c17167d2-4108-4d2f-82a5-ebc22d5dbbc5",
+    "rawQuery": "",
+    "searchSummary": "由長沙飛往札幌 · 1月29日 - 2月8日 · 來回",
+    "deeplinkUrlParams": {
+      "onlineListUrl": "https://us.trip.com/flights/showfarefirst?dcity=CSX&acity=SPK&ddate=2027-01-29&class=Y&triptype=RT&quantity=1&childqty=0&babyqty=0&rdate=2027-02-08&sort=price&locale=en-US&curr=USD&from=chatgpt&allianceid=8006699&sid=302809151",
+      "h5ListUrl": "https://us.trip.com/m/flights/flightfirst?dcitycode=CSX&acitycode=SPK&triptype=1&ddate=2027-01-29&classtype=0&adult=1&child=0&infant=0&locale=en-US&currency=USD&scene=chatgpt&allianceid=8006699&sid=302809151&adate=2027-02-08"
+    },
+    "queryOriginCityCode": "CSX",
+    "queryDestCityCode": "SPK",
+    "queryDepartDate": "2027-01-29",
+    "queryReturnDate": "2027-02-08"
+  }
+}

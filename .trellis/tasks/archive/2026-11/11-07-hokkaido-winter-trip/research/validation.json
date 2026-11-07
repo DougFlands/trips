@@ -1,0 +1,15 @@
+{
+  "uniqueDetailPosts": 60,
+  "groups": {
+    "hokkaido": 15,
+    "sapporo": 15,
+    "otaru": 15,
+    "hakodate": 15
+  },
+  "guidePosts": 52,
+  "otherExperiencePosts": 8,
+  "duplicates": 0,
+  "tokenizedUrls": 0,
+  "reading": "detail-body",
+  "scope": "three cities; no restaurant research; flight research stopped by user"
+}
