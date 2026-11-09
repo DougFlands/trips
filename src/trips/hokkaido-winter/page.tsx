@@ -230,6 +230,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
                       {recommendations[city].map((place, index) => {
                         const mapPlace = mapPlaces.find((item) => item.id === place.id);
                         if (!mapPlace) return null;
+                        const isScheduled = place.schedule.includes("已安排");
                         return <li key={place.id} data-recommendation-id={place.id} className={`grid grid-cols-[2rem_1fr] gap-3 border-b border-dashed border-border py-5 sm:grid-cols-[3rem_1fr] sm:gap-5 sm:py-6 ${focusedRecommendationId === place.id ? "hokkaido-recommendation-item-active" : ""}`}>
                           <span className="font-mono text-xl text-primary/80 sm:text-2xl">{String(index + 1).padStart(2, "0")}</span>
                           <div
@@ -245,7 +246,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
                               }
                             }}
                           >
-                            <div className="flex flex-wrap items-center gap-x-3 gap-y-2"><h4 className="text-base font-semibold sm:text-lg">{place.name}</h4><Badge variant={place.priority === "优先" ? "default" : place.priority === "可选" ? "secondary" : "outline"}>{place.condition ?? place.priority}</Badge></div>
+                            <div className="flex flex-wrap items-center gap-x-3 gap-y-2"><h4 className="text-base font-semibold sm:text-lg">{place.name}</h4><Badge variant={place.priority === "优先" ? "default" : place.priority === "可选" ? "secondary" : "outline"}>{place.condition ?? place.priority}</Badge>{!isScheduled && <Badge variant="outline" className="border-primary/60 text-primary">未安排</Badge>}</div>
                             <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1 text-xs"><span className="font-mono text-muted-foreground">{place.duration}</span>{place.day ? <a href={`#day-${place.day}`} className="text-primary underline decoration-primary/40 underline-offset-4" onClick={(event) => event.stopPropagation()}>{place.schedule} ↗</a> : <span className="text-muted-foreground">{place.schedule}</span>}</div>
                             <p className="mt-2 text-sm leading-7">{place.reason}</p>
                             <div className="mt-2 flex flex-wrap items-center gap-2"><span className="text-[11px] text-muted-foreground">依据</span>{sourceRefs(place.sources)}</div>
