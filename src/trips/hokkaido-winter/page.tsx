@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, ArrowUpRight, CalendarDays, CloudSnow, Footprints, MountainSnow, Snowflake, TrainFront } from "lucide-react";
+import { ArrowLeft, CalendarDays, CloudSnow, Footprints, MountainSnow, Snowflake, TrainFront } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
@@ -8,39 +8,55 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OpenFreeMap } from "../../OpenFreeMap";
 import type { Trip } from "../types";
 import { buildHokkaidoMapPlaces, type HokkaidoMapPlace } from "./recommendation-map";
-import { cityNames, dayPlans, nights, recommendations, type City } from "./trip";
-import { sourceGroups, sources } from "./sources";
+import { recommendationCities, dayPlans, nights, recommendations, type RecommendationCity } from "./trip";
+import { sources } from "./sources";
+import { FoodList } from "./food-list";
 import "./styles.css";
 
 const reminders = [
   { icon: CalendarDays, title: "两场雪节，日期别记错", text: "札幌雪祭2/4–11；小樽雪灯2/6–13。2/5没有正式雪灯，2/6点灯时间待公告。", sources: ["O1", "O2"] },
   { icon: TrainFront, title: "函馆转场，留半天", text: "北斗号约4小时，全车指定席；终点选“函館”。先订座，雪天出发前查停运。", sources: ["O7", "O9", "O10"] },
   { icon: MountainSnow, title: "索道停运，就取消登山", text: "函馆山冬季道路封闭，不能改打车上山。天狗山先看能见度，再买索道票。", sources: ["O3", "O4", "O5"] },
-  { icon: CloudSnow, title: "2/7留在札幌", text: "返程前一天回札幌，不补远处景点。酒店尽量近站，雪天候车和步行多留余量。", sources: ["O10"] },
+  { icon: CloudSnow, title: "2/7留在札幌", text: "2/6晚回札幌，2/7留在市区，不补远处景点。酒店尽量近站，雪天候车和步行多留余量。", sources: ["O10"] },
   { icon: Footprints, title: "坡道慢走，随时取暖", text: "穿防滑防水鞋；结冰就缩短坡道路线。室外与室内交替，累了删可选点。", sources: ["T02", "T13", "K09"] },
-  { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，晚饭后回酒店；函馆、小樽日落另看当地信息。", sources: ["O14"] },
+  { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，通常20点收尾；雪灯、转场日可到22点。", sources: ["O14"] },
 ];
 
 const routeQa = [
+  {
+    question: "大通雪祭什么时候开始？",
+    answer: "2027年2月4日（周四）开始，2月11日结束。本计划2/4看开幕，2/7可补看。",
+    sources: ["O1"],
+  },
+  {
+    question: "小樽雪灯之路什么时候开始？",
+    answer: "2027年2月6日（周六）开始，2月13日结束。2/5还没有正式雪灯，想看就至少留到2/6傍晚；2027年具体点灯时段待官方公告。",
+    sources: ["O2"],
+  },
   {
     question: "为什么函馆结束后先回札幌？",
     answer: "2/3是长途转场缓冲，2/4正好接札幌雪祭。函馆到小樽通常要经札幌转车，直接去小樽会把换乘、寄存和入住叠在一起。",
     sources: ["O1", "O7", "O10"],
   },
   {
-    question: "能不能函馆后先去小樽，再去札幌？",
-    answer: "可以，但要接受更长的转场和第二天一早回札幌。若要看2/6小樽雪灯，住小樽两晚、2/7再回札幌会更稳。",
-    sources: ["O1", "O2", "O10"],
+    question: "小樽住几晚，什么时候回札幌？",
+    answer: "2/5住小樽一晚，2/6看完雪灯后坐19:56列车回札幌；延后备选20:22。2/7留在札幌，2/8返程。",
+    sources: ["O2", "N19"],
   },
   {
-    question: "这条路线是不是绕路？",
-    answer: "地图上像回头，铁路衔接上札幌本来就是函馆与小樽之间的中转节点。先在札幌休息一晚，再去小樽，少一次长途日换酒店。",
-    sources: ["O7", "O10"],
+    question: "去小樽能把大箱子留在札幌吗？",
+    answer: "建议前后订同一家札幌酒店，先确认允许跨一晚寄存；允许就只带换洗小包。否则带去小樽酒店，退房后寄存须确认19点后还能取。车站柜作备选，空位不保证。",
+    sources: ["N10"],
   },
   {
-    question: "什么情况下值得改成函馆→小樽→札幌？",
-    answer: "不参加札幌雪祭或小樽雪灯，或已经订好小樽住宿时可以改。只保留小樽运河、堺町等市区内容，天狗山按天气和转场余量取舍。",
-    sources: ["O1", "O2", "T04"],
+    question: "早班和Silo交通有哪些待确认？",
+    answer: "登别08:03北斗须接07:25温泉巴士，约07:10离店，或预约出租车。Silo巴士短途订位待确认；未落实就预约出租车往返，约¥8,000起另询等候费。普通JR、巴士为现行时刻，出行前复核。",
+    sources: ["N06", "N09", "N12", "N13", "N14"],
+  },
+  {
+    question: "冰涛节能看夜景吗？函馆山有几次机会？",
+    answer: "1/31看白天冰涛节，16:30亮灯时已去登别，留时间泡汤和晚餐。函馆山主要安排2/2；天气差就取消上山，次日早班赴札幌不补夜景。",
+    sources: ["N02", "O4", "O5"],
   },
 ];
 
@@ -72,23 +88,13 @@ function WinterPostcard() {
 }
 
 export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
-  const [openSources, setOpenSources] = useState<string[]>([]);
-  const [pendingSource, setPendingSource] = useState<string | null>(null);
-  const [activeRecommendationCity, setActiveRecommendationCity] = useState<"all" | City>("all");
+  const [activeRecommendationCity, setActiveRecommendationCity] = useState<"all" | RecommendationCity>("all");
   const [focusedRecommendationId, setFocusedRecommendationId] = useState<string | null>(null);
   const recommendationListRef = useRef<HTMLDivElement>(null);
   const mapPlaces = useMemo(() => buildHokkaidoMapPlaces(recommendations), []);
   const visibleMapPlaces = useMemo(() => activeRecommendationCity === "all"
     ? mapPlaces
     : mapPlaces.filter((place) => place.city === activeRecommendationCity), [activeRecommendationCity, mapPlaces]);
-
-  useEffect(() => {
-    if (!pendingSource) return;
-    const target = document.getElementById(`source-${pendingSource}`);
-    target?.focus({ preventScroll: true });
-    target?.scrollIntoView({ block: "center", behavior: "instant" });
-    setPendingSource(null);
-  }, [pendingSource, openSources]);
 
   useEffect(() => {
     if (!focusedRecommendationId) return;
@@ -119,12 +125,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
     return ids.map((id) => {
       const source = sources.find((item) => item.sourceId === id);
       if (!source) return null;
-      return <a key={id} href={`#source-${id}`} className="source-ref" aria-label={`查看来源 ${id}：${source.title}`} onClick={(event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        setOpenSources((current) => current.includes(source.group) ? current : [...current, source.group]);
-        setPendingSource(id);
-      }}>{id}</a>;
+      return <a key={id} href={source.url} target="_blank" rel="noreferrer" className="source-ref" aria-label={`查看来源 ${id}：${source.title}`} title={source.title} onClick={(event) => event.stopPropagation()}>{id}</a>;
     });
   }
 
@@ -134,7 +135,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
       <nav aria-label="页面导航" className="sticky top-0 z-20 border-b border-border bg-background/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 sm:px-8">
           <a href="/" className="flex items-center gap-2 text-sm"><ArrowLeft className="size-4" aria-hidden="true" /><span>旅行列表</span></a>
-          <div className="flex gap-5 text-sm sm:gap-8"><a href="#itinerary">行程</a><a href="#places">推荐</a><a href="#reminders">提醒</a><a href="#qa">QA</a></div>
+          <div className="flex gap-3 text-sm sm:gap-8"><a href="#itinerary">行程</a><a href="#places">推荐</a><a href="#food">美食</a><a href="#reminders">提醒</a><a href="#qa">QA</a></div>
         </div>
       </nav>
       <div className="hokkaido-page-scroll-controls" aria-label="页面滚动">
@@ -149,22 +150,22 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               <p className="mb-5 flex items-center gap-3 font-mono text-xs tracking-[.16em] text-primary"><span className="h-px w-8 bg-primary" />HOKKAIDO / WINTER 2027</p>
               <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] font-semibold leading-[1.2] tracking-tight">北海道<br /><span className="font-serif text-primary">冬季慢游</span></h1>
               <p className="mt-5 font-mono text-sm tracking-wider">{trip.fullDateRange}</p>
-              <p className="mt-3 text-sm leading-7 text-muted-foreground">10点起 · 11点出门 · 晚饭后回酒店</p>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">转场日7点起 · 游玩日8:30–9点起 · 最晚22点收尾</p>
             </div>
             <WinterPostcard />
           </div>
           <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-dashed border-border px-6 py-5 sm:px-10">
             <div className="flex flex-wrap gap-x-5 gap-y-2">{nights.map(({ city, count }) => <span key={city} className="text-sm">{city} <b className="ml-1 font-mono text-xl text-primary">{count}</b> 晚</span>)}</div>
-            <p className="text-xs text-muted-foreground">1/30–2/7共9晚 · 1/29抵达则另加一晚</p>
+            <p className="text-xs text-muted-foreground">1/30–2/7共9晚 · 1/30 16:30抵达新千岁</p>
           </div>
         </header>
 
         <div className="my-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs sm:my-10 sm:gap-x-5 sm:text-sm" aria-label="城市路线">
-          <span>札幌</span><span aria-hidden="true" className="text-primary">→</span><span>函馆 <small className="text-muted-foreground">3晚</small></span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span><span aria-hidden="true" className="text-primary">→</span><span>小樽 <small className="text-muted-foreground">2晚</small></span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span>
+          <span>千岁</span><span aria-hidden="true" className="text-primary">→</span><span>登别温泉</span><span aria-hidden="true" className="text-primary">→</span><span>洞爷湖</span><span aria-hidden="true" className="text-primary">→</span><span>函馆</span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span><span aria-hidden="true" className="text-primary">→</span><span>小樽</span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span>
         </div>
 
         <section id="itinerary" aria-labelledby="itinerary-heading">
-          <SectionHeading number="01" title="每天怎么走" id="itinerary-heading" description="日本当地时间 · 每天最多两处重点 · 晚饭后回酒店" />
+          <SectionHeading number="01" title="每天怎么走" id="itinerary-heading" description="日本当地时间 · 推荐列车附前后备选 · 寄存与接驳写在当天" />
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {dayPlans.map((day, index) => (
               <article key={day.date} id={`day-${day.date}`} className={index === dayPlans.length - 1 ? "md:col-span-2" : undefined}>
@@ -184,13 +185,29 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
                         <span>{slot.text}{slot.optional && <span className="ml-1.5 text-xs text-primary">〔可选〕</span>}</span>
                       </li>)}
                     </ol>
+                    <p className="mt-4 border-t border-dashed pt-3 text-xs leading-6 text-muted-foreground"><span className="font-semibold text-foreground">行李 · </span>{day.luggage}</p>
+                    {day.trains?.map((train) => (
+                      <div key={train.route} className="mt-4 rounded-md border border-border bg-muted/30 p-3 text-xs leading-6">
+                        <p className="font-semibold">{train.route} · 列车备选</p>
+                        <dl className="mt-2 grid grid-cols-[3.5rem_minmax(0,1fr)] gap-x-2 gap-y-1">
+                          <dt className="text-muted-foreground">提前</dt><dd>{train.earlier}</dd>
+                          <dt className="font-semibold text-primary">推荐</dt><dd className="font-semibold text-primary">{train.recommended}</dd>
+                          <dt className="text-muted-foreground">延后</dt><dd>{train.later}</dd>
+                        </dl>
+                        <p className="mt-2 text-muted-foreground">{train.note}</p>
+                        <div className="mt-2 flex flex-wrap gap-2">{sourceRefs(train.sources)}</div>
+                      </div>
+                    ))}
                   </CardContent>
-                  <CardFooter className="mt-auto border-t border-dashed"><p className="text-xs leading-6 text-muted-foreground">{day.note}</p></CardFooter>
+                  <CardFooter className="mt-auto flex-col items-start gap-2 border-t border-dashed">
+                    <p className="text-xs leading-6 text-muted-foreground"><span className="font-semibold text-foreground">说明 · </span>{day.note}</p>
+                    {day.sources && <div className="flex flex-wrap gap-2">{sourceRefs(day.sources)}</div>}
+                  </CardFooter>
                 </Card>
               </article>
             ))}
           </div>
-          <p className="mt-4 text-xs leading-6 text-muted-foreground">列车为目标时段，按实际班次调整。酒店未定，交通按近站住宿估算；雪天或排队超时，先删可选点。</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">JR与普通巴士按2026.11.20核验的现行时刻规划，2027年出行前复核；冰涛节接驳车已公布2027班次。转场日通常07:30离店，登别早班另看接驳要求。北斗、铃兰提前订指定席，换班先改签；酒店未定，雪天留足步行与取件时间。</p>
         </section>
 
         <section id="places" aria-labelledby="places-heading" className="mt-14 sm:mt-20">
@@ -209,19 +226,19 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
           <Tabs
             value={activeRecommendationCity}
             onValueChange={(value) => {
-              const next = value === "all" || cityNames.includes(value as City) ? value as "all" | City : "all";
+              const next = value === "all" || recommendationCities.includes(value as RecommendationCity) ? value as "all" | RecommendationCity : "all";
               setActiveRecommendationCity(next);
               setFocusedRecommendationId(null);
             }}
             className="mt-6 gap-5"
           >
-            <TabsList variant="line" className="w-full max-w-lg" aria-label="选择城市">
+            <TabsList variant="line" className="grid w-full grid-cols-4 group-data-[orientation=horizontal]/tabs:h-auto sm:grid-cols-7" aria-label="选择城市">
               <TabsTrigger value="all">全部<span className="font-mono text-xs">{mapPlaces.length}</span></TabsTrigger>
-              {cityNames.map((city) => <TabsTrigger key={city} value={city}>{city}<span className="font-mono text-xs">{recommendations[city].length}</span></TabsTrigger>)}
+              {recommendationCities.map((city) => <TabsTrigger key={city} value={city}>{city}<span className="font-mono text-xs">{recommendations[city].length}</span></TabsTrigger>)}
             </TabsList>
             <TabsContent value={activeRecommendationCity} forceMount>
               <div ref={recommendationListRef} className="hokkaido-recommendation-list">
-                {(activeRecommendationCity === "all" ? cityNames : [activeRecommendationCity]).map((city) => (
+                {(activeRecommendationCity === "all" ? recommendationCities : [activeRecommendationCity]).map((city) => (
                   <section key={city} aria-labelledby={`recommendation-${city}`}>
                     <h3 id={`recommendation-${city}`} className="flex items-baseline justify-between border-t border-foreground/50 px-1 py-3 text-sm font-semibold">
                       <span>{city}</span><span className="font-mono text-xs text-muted-foreground">{recommendations[city].length} 个点</span>
@@ -246,7 +263,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
                               }
                             }}
                           >
-                            <div className="flex flex-wrap items-center gap-x-3 gap-y-2"><h4 className="text-base font-semibold sm:text-lg">{place.name}</h4><Badge variant={place.priority === "优先" ? "default" : place.priority === "可选" ? "secondary" : "outline"}>{place.condition ?? place.priority}</Badge>{!isScheduled && <Badge variant="outline" className="border-primary/60 text-primary">未安排</Badge>}</div>
+                            <div className="flex flex-wrap items-center gap-x-3 gap-y-2"><h4 className="text-base font-semibold sm:text-lg">{place.name}</h4><Badge variant={place.priority === "优先" ? "default" : place.priority === "可选" ? "secondary" : "outline"}>{place.condition ?? place.priority}</Badge>{!isScheduled && <Badge variant="outline" className="border-primary/60 text-primary">{place.day ? "备选" : "未安排"}</Badge>}</div>
                             <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1 text-xs"><span className="font-mono text-muted-foreground">{place.duration}</span>{place.day ? <a href={`#day-${place.day}`} className="text-primary underline decoration-primary/40 underline-offset-4" onClick={(event) => event.stopPropagation()}>{place.schedule} ↗</a> : <span className="text-muted-foreground">{place.schedule}</span>}</div>
                             <p className="mt-2 text-sm leading-7">{place.reason}</p>
                             <div className="mt-2 flex flex-wrap items-center gap-2"><span className="text-[11px] text-muted-foreground">依据</span>{sourceRefs(place.sources)}</div>
@@ -262,8 +279,13 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
           <p className="mt-4 text-xs leading-6 text-muted-foreground">推荐为本次行程的编辑判断。时长默认不含酒店往返；山顶项目已计接驳与排队，堺町总时长已含子景点。</p>
         </section>
 
+        <section id="food" aria-labelledby="food-heading" className="mt-14 scroll-mt-24 sm:mt-20">
+          <SectionHeading number="03" title="吃点什么" id="food-heading" description="按城市找店 · 列表内可滚动 · 口味评价来自原帖作者" />
+          <FoodList />
+        </section>
+
         <section id="reminders" aria-labelledby="reminders-heading" className="mt-14 sm:mt-20">
-          <SectionHeading number="03" title="出发前，记这几件事" id="reminders-heading" description="天气差就减项目，把时间留给吃饭、休息和交通。" />
+          <SectionHeading number="04" title="出发前，记这几件事" id="reminders-heading" description="天气差就减项目，把时间留给吃饭、休息和交通。" />
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {reminders.map(({ icon: Icon, title, text, sources: ids }) => <Alert key={title} role="note">
               <Icon aria-hidden="true" /><AlertTitle>{title}</AlertTitle><AlertDescription><p>{text}</p><div className="mt-2 flex flex-wrap gap-2">{sourceRefs(ids)}</div></AlertDescription>
@@ -271,23 +293,6 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
           </div>
         </section>
 
-        <section id="sources" aria-labelledby="sources-heading" className="mt-14 sm:mt-20">
-          <SectionHeading number="04" title="调研来源" id="sources-heading" description="60篇小红书正文 · 北海道总体与三城各15篇 · 核验于2026.11.07" />
-          <Accordion type="multiple" value={openSources} onValueChange={setOpenSources} className="mt-4">
-            {sourceGroups.map((group) => {
-              const entries = sources.filter((source) => source.group === group.id);
-              return <AccordionItem key={group.id} value={group.id}>
-                <AccordionTrigger>{group.label}<span className="ml-auto font-mono text-xs text-muted-foreground">{entries.length} 条</span></AccordionTrigger>
-                <AccordionContent><ul className="grid gap-2 md:grid-cols-2">{entries.map((source) => <li key={source.sourceId}>
-                  <a id={`source-${source.sourceId}`} href={source.url} target="_blank" rel="noreferrer" className="source-entry flex items-start gap-3 p-2 text-sm leading-6">
-                    <span className="min-w-7 pt-0.5 font-mono text-[11px] text-primary">{source.sourceId}</span><span className="min-w-0 flex-1">{source.title}</span><ArrowUpRight className="mt-1 size-3 shrink-0" aria-hidden="true" />
-                  </a>
-                </li>)}</ul></AccordionContent>
-              </AccordionItem>;
-            })}
-          </Accordion>
-          <p className="mt-5 text-xs leading-6 text-muted-foreground">帖子提供个人经验，活动与运营以官方公告为准。点灯细节、临时停运和酒店位置，出发前再确认。</p>
-        </section>
         <section id="qa" aria-labelledby="qa-heading" className="mt-14 sm:mt-20">
           <SectionHeading number="05" title="路线 QA" id="qa-heading" description="把城市顺序和可调整的地方说清楚。" />
           <Accordion type="multiple" className="mt-4">
