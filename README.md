@@ -129,10 +129,10 @@ node --test tests/stargazing.test.mjs
 本地运行完整表格功能（Node >=22.13）：
 
 ```powershell
-npm run dev:tables
+npm run dev
 ```
 
-访问 `http://127.0.0.1:5173/tools/tables/`，本地默认密码 **trips**。可通过 `TABLE_EDIT_PASSWORD` 环境变量覆盖本地密码。SQLite 数据在忽略的 `.local/documents.sqlite` 中，刷新或重启服务会保留。此命令使用与 Cloudflare 相同的 API 处理器和 SQL；普通 `npm run dev` 仅启动前端，不提供数据 API。
+访问 `http://127.0.0.1:5173/tools/tables/`，本地默认密码 **trips**。可通过 `TABLE_EDIT_PASSWORD` 环境变量覆盖本地密码。SQLite 数据在忽略的 `.local/documents.sqlite` 中，刷新或重启服务会保留。默认开发命令同时启动前端和数据 API，使用与 Cloudflare 相同的处理器和 SQL；`npm run dev:tables` 是兼容别名。不要另外启动裸 Vite，否则 API 会落到 SPA 的 HTML 页面。
 
 自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。未保存草稿缓存在本地，关闭未保存页面时有浏览器提醒。同一份文档并发修改时提示选择保留本地或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
 

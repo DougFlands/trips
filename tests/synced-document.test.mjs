@@ -1,6 +1,15 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { SyncedDocument, DocumentError } from "../src/lib/synced-document.ts";
+import { SyncedDocument, DocumentError, createDocumentTransport } from "../src/lib/synced-document.ts";
+
+test("HTML fallback from a missing API is a readable error, never an empty document", async t => {
+  t.mock.method(globalThis, "fetch", async () => new Response("<!doctype html><html></html>", {
+    headers: { "Content-Type": "text/html" },
+  }));
+  const transport = createDocumentTransport(value => typeof value?.note === "string", () => "");
+  await assert.rejects(transport.read("notes:test", new AbortController().signal), error =>
+    error instanceof DocumentError && error.status === 502 && error.message === "同步服务暂不可用，请稍后重试。");
+});
 
 const validate = value => typeof value?.note === "string";
 const initialValue = { note: "" }; // Deliberately not a table: the transport/controller are generic.

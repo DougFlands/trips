@@ -7,8 +7,8 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "vite",
-    "dev:tables": "node --experimental-sqlite scripts/dev-tables.mjs",
+    "dev": "node --experimental-sqlite scripts/dev-tables.mjs",
+    "dev:tables": "npm run dev",
     "test:tables": "node --experimental-strip-types --experimental-sqlite --test tests/synced-document.test.mjs tests/document-api.test.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",

@@ -43,6 +43,9 @@ export async function requestDocumentApi(path: string, init: RequestInit = {}) {
     };
     throw new DocumentError(messages[response.status] ?? "同步失败，请检查网络后重试。", response.status);
   }
+  if (!response.headers.get("Content-Type")?.includes("application/json")) {
+    throw new DocumentError("同步服务暂不可用，请稍后重试。", 502);
+  }
   return response;
 }
 

@@ -19,6 +19,7 @@
 - Pages Functions 的 `params.id` 保留 URL 编码，路由边界必须 `decodeURIComponent` 一次后交给业务校验；格式错误返回 400。测试及本地服务复用真实路由入口，覆盖 `tables%3Anotes` 的创建/读取，避免本地提前解码掩盖生产差异。
 - DB binding `DB`；Secret `TABLE_EDIT_PASSWORD`。客户端发送 `X-Edit-Password: encodeURIComponent(password)`；服务端核对，不能仅信任客户端 unlocked 布尔值。
 - 只有读取的 404 表示不存在；格式错误、网络失败、503 不可当空文档。所有 API 响应禁缓存。
+- `npm run dev` 必须同时提供前端与本地数据 API；不要在同一端口的 IPv4/IPv6 上分别启动完整服务与裸 Vite。客户端拒绝 200 HTML 回退响应，显示可读服务错误并保留草稿。
 - hook 的配置初始值、验证函数、transport 需稳定；组件 key 或 hook id 改变后，旧请求不得回写新资源。
 - 1 秒尾部节流，写串行；15 秒轮询；隐藏页面暂停，online/visible 后恢复。新修改不能被旧写响应覆盖。
 - 草稿按标签页和资源隔离存 localStorage；有未提交输入时通过 setEditing 暂停应用远端数据。离开时清理请求与定时器。
