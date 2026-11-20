@@ -5,6 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SyncedTable } from "@/components/synced-table";
 import { OpenFreeMap } from "../../OpenFreeMap";
 import type { Trip } from "../types";
 import { buildHokkaidoMapPlaces, type HokkaidoMapPlace } from "./recommendation-map";
@@ -283,6 +284,14 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
         <section id="food" aria-labelledby="food-heading" className="mt-14 scroll-mt-24 sm:mt-20">
           <SectionHeading number="03" title="吃点什么" id="food-heading" description="按城市找店 · 列表内可滚动 · 口味评价来自原帖作者" />
           <FoodList />
+        </section>
+
+        <section id="stays" aria-labelledby="stays-heading" className="mt-14 scroll-mt-24 sm:mt-20">
+          <div className="mb-6">
+            <h2 id="stays-heading" className="text-2xl font-semibold tracking-tight sm:text-3xl">住宿与预订记录</h2>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">记下酒店、民宿和预订信息。输入编辑密码后，双击填写，自动保存。</p>
+          </div>
+          <SyncedTable id="hokkaido-stays" title="北海道住宿" />
         </section>
 
         <section id="tickets" aria-labelledby="tickets-heading" className="mt-14 scroll-mt-24 sm:mt-20">

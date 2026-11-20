@@ -139,6 +139,7 @@ npm run dev:tables
 复用入口：
 
 - `src/components/editable-table.tsx`：受控组件 `value / onChange / readOnly / onEditingChange`，不依赖密码或服务端。
+- `src/components/synced-table.tsx`：`SyncedTable({ id, title? })`，组合密码验证、同步状态与表格，可直接嵌入旅行页；北海道第 04 节前使用 `hokkaido-stays`，与 `/tools/tables/?id=hokkaido-stays` 共用数据。
 - `src/hooks/use-synced-document.ts`：`useSyncedDocument<T>`，可用于任意通过校验的 JSON 数据；`id`、初始值、验证函数和 transport 保持稳定。
 - `src/lib/synced-document.ts`：HTTP transport 与可测试的同步控制器，服务端契约为 `{ data, revision, updatedAt }`。
 - `src/hooks/use-edit-access.ts`：共享密码验证、浏览器记忆与锁定。
