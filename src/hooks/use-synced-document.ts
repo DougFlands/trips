@@ -2,21 +2,13 @@ import { useEffect, useMemo, useSyncExternalStore } from "react";
 import { SyncedDocument } from "../lib/synced-document";
 import type { DocumentTransport } from "../lib/synced-document";
 
-function draftStorage(id: string) {
-  try {
-    let tab = sessionStorage.getItem("document-draft-tab");
-    if (!tab) { tab = crypto.randomUUID(); sessionStorage.setItem("document-draft-tab", tab); }
-    return { storage: localStorage, draftKey: `document-draft:${tab}:${id}` };
-  } catch { return {}; }
-}
-
 /** Keep initialValue, validate and transport stable (module constants or useMemo). */
 export function useSyncedDocument<T>({ id, initialValue, validate, transport, canEdit = false, saveDelay = 1000, pollInterval = 15000 }: {
   id: string; initialValue: T; validate: (data: unknown) => data is T;
   transport: DocumentTransport<T>; canEdit?: boolean; saveDelay?: number; pollInterval?: number;
 }) {
   const store = useMemo(() => new SyncedDocument({ id, initialValue, validate, transport,
-    saveDelay, ...draftStorage(id) }), [id, initialValue, validate, transport, saveDelay]);
+    saveDelay }), [id, initialValue, validate, transport, saveDelay]);
   const state = useSyncExternalStore(store.subscribe, store.getSnapshot);
   useEffect(() => {
     store.start();

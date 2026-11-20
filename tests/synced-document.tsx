@@ -16,7 +16,7 @@ function Notes() {
   const document = useSyncedDocument({ id: "test:plain-note", initialValue, validate, transport, canEdit: access.canEdit, pollInterval: 1000 });
   return <main className="mx-auto flex max-w-xl flex-col gap-5 p-8">
     <h1>通用同步 Hook 验收：普通备忘</h1>
-    <p>用 npm run dev:tables 启动；默认本地密码 trips。开两个页面检查同步。</p>
+    <p>用 npm run dev 启动；连接线上数据，使用线上编辑密码。开两个页面检查同步。</p>
     {!access.canEdit && <form onSubmit={event => { event.preventDefault(); void access.unlock(password); }}>
       <label>密码<input aria-label="密码" type="password" value={password} onChange={event => setPassword(event.target.value)} /></label>
       <button>解锁</button>

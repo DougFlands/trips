@@ -13,10 +13,6 @@ test("HTML fallback from a missing API is a readable error, never an empty docum
 
 const validate = value => typeof value?.note === "string";
 const initialValue = { note: "" }; // Deliberately not a table: the transport/controller are generic.
-const storage = () => {
-  const map = new Map();
-  return { getItem: key => map.get(key) ?? null, setItem: (key, value) => map.set(key, value), removeItem: key => map.delete(key) };
-};
 const deferred = () => {
   let resolve;
   const promise = new Promise(done => { resolve = done; });
@@ -44,7 +40,7 @@ function backend() {
   };
 }
 async function client(t, transport, options = {}) {
-  const store = new SyncedDocument({ id: "notes:a", initialValue, validate, transport, saveDelay: 20, storage: storage(), ...options });
+  const store = new SyncedDocument({ id: "notes:a", initialValue, validate, transport, saveDelay: 20, ...options });
   t.after(() => store.stop());
   store.start(); store.setEditable(true);
   await until(() => store.getSnapshot().ready);
@@ -95,15 +91,29 @@ test("polls do not replace an open editor or a pending local draft", async t => 
   assert.equal(store.getSnapshot().dirty, false);
 });
 
-test("offline save preserves a draft across remount, then reconciles and retries", async t => {
-  const remote = backend(); const local = storage();
-  const first = await client(t, { read: remote.read, async write() { throw new Error("offline"); } }, { storage: local });
-  first.update({ note: "keep me" }); await until(() => first.getSnapshot().status === "error");
-  first.stop();
-  const next = await client(t, remote, { storage: local });
-  await until(() => !next.getSnapshot().dirty);
+test("offline edits stay in memory and retry after reconnecting", async t => {
+  const remote = backend(); let online = false;
+  const store = await client(t, { read: remote.read, async write(...args) {
+    if (!online) throw new Error("offline");
+    return remote.write(...args);
+  } });
+  store.update({ note: "keep me" }); await until(() => store.getSnapshot().status === "error");
+  assert.equal(store.getSnapshot().data.note, "keep me");
+  online = true; await store.refresh();
+  await until(() => !store.getSnapshot().dirty);
   assert.equal(remote.remote.data.note, "keep me");
-  assert.equal(local.getItem("document-draft:notes:a"), null);
+});
+
+test("a new page loads cloud data without restoring unsaved edits", async t => {
+  const remote = backend();
+  await remote.write("notes:a", { note: "cloud" }, 0);
+  const first = await client(t, { read: remote.read, async write() { throw new Error("offline"); } });
+  first.update({ note: "unsaved" }); await until(() => first.getSnapshot().status === "error");
+  first.stop();
+  const next = await client(t, remote);
+  assert.equal(next.getSnapshot().data.note, "cloud");
+  assert.equal(next.getSnapshot().dirty, false);
+  assert.equal(remote.writes.length, 1);
 });
 
 test("lost response is reconciled without replaying the successful write", async t => {
@@ -116,7 +126,7 @@ test("lost response is reconciled without replaying the successful write", async
 
 test("initial read errors never create a blank document", async t => {
   let writes = 0;
-  const store = new SyncedDocument({ id: "broken", initialValue, validate, storage: storage(), saveDelay: 5,
+  const store = new SyncedDocument({ id: "broken", initialValue, validate, saveDelay: 5,
     transport: { async read() { throw new Error("bad format"); }, async write() { writes++; throw new Error("unexpected"); } } });
   t.after(store.stop); store.start(); store.setEditable(true);
   await until(() => store.getSnapshot().status === "error");
@@ -126,19 +136,12 @@ test("initial read errors never create a blank document", async t => {
 
 test("stopped instances ignore late responses and do not write into another resource", async t => {
   const remote = backend(); const gate = deferred();
-  const old = new SyncedDocument({ id: "old", initialValue, validate, storage: storage(), transport: { ...remote, read: () => gate.promise } });
+  const old = new SyncedDocument({ id: "old", initialValue, validate, transport: { ...remote, read: () => gate.promise } });
   old.start(); old.stop();
   const next = await client(t, remote, { id: "new" });
   gate.resolve({ data: { note: "old" }, revision: 1, updatedAt: new Date().toISOString() });
   await Promise.resolve();
   assert.equal(next.getSnapshot().data.note, ""); assert.equal(old.getSnapshot().ready, false);
-});
-
-test("storage failures are visible while cloud saving remains usable", async t => {
-  const remote = backend(); const local = storage(); local.setItem = () => { throw new Error("quota"); };
-  const store = await client(t, remote, { storage: local });
-  store.update({ note: "still saved" }); assert.match(store.getSnapshot().storageError, /草稿/);
-  await until(() => !store.getSnapshot().dirty); assert.equal(remote.remote.data.note, "still saved");
 });
 
 test("a read started before a successful write cannot roll back its revision", async t => {

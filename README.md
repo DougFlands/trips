@@ -132,9 +132,9 @@ node --test tests/stargazing.test.mjs
 npm run dev
 ```
 
-访问 `http://127.0.0.1:5173/tools/tables/`，本地默认密码 **trips**。可通过 `TABLE_EDIT_PASSWORD` 环境变量覆盖本地密码。SQLite 数据在忽略的 `.local/documents.sqlite` 中，刷新或重启服务会保留。默认开发命令同时启动前端和数据 API，使用与 Cloudflare 相同的处理器和 SQL；`npm run dev:tables` 是兼容别名。不要另外启动裸 Vite，否则 API 会落到 SPA 的 HTML 页面。
+访问 `http://localhost:5173/tools/tables/`。Vite 将 `/api` 请求代理到 `https://trip.flands.com`，开发页面和线上页面共用 D1 数据与编辑密码；`npm run dev:tables` 是兼容别名。不再使用本地 SQLite 数据库。
 
-自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。未保存草稿缓存在本地，关闭未保存页面时有浏览器提醒。同一份文档并发修改时提示选择保留本地或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
+自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。表格数据只存线上 D1，不写入浏览器存储；未保存修改仅留在当前页面内存，关闭前有浏览器提醒。浏览器仅记住编辑密码。同一份文档并发修改时提示选择保存当前内容或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
 
 复用入口：
 
@@ -160,7 +160,7 @@ const note = useSyncedDocument({
   canEdit: access.canEdit,
 });
 // note.update({ text: "需要带护照" });
-// 显示 note.status / error / storageError；用 resolveConflict 处理 note.remote。
+// 显示 note.status / error；用 resolveConflict 处理 note.remote。
 ```
 
 `onEditingChange={document.setEditing}` 保护尚未提交的单元格输入。若自定义编辑器保有输入草稿，也应在编辑开始/结束时调用此方法。

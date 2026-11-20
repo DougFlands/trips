@@ -9,7 +9,7 @@ export type SyncStatus = "loading" | "synced" | "pending" | "saving" | "error" |
 export type DocumentSnapshot<T> = {
   data: T; revision: number; updatedAt: string | null; ready: boolean;
   dirty: boolean; status: SyncStatus; error: string | null;
-  storageError: string | null; unauthorized: boolean;
+  unauthorized: boolean;
   remote: VersionedDocument<T> | null;
 };
 
@@ -72,11 +72,10 @@ export function createDocumentTransport<T>(validate: (data: unknown) => data is 
   };
 }
 
-type DraftStorage = Pick<Storage, "getItem" | "setItem" | "removeItem">;
 type SyncOptions<T> = {
   id: string; initialValue: T; transport: DocumentTransport<T>;
   validate: (data: unknown) => data is T;
-  saveDelay?: number; storage?: DraftStorage; draftKey?: string;
+  saveDelay?: number;
 };
 
 // One document controller per hook. Kept outside React so races can be tested with real deferred requests.
@@ -88,7 +87,6 @@ export class SyncedDocument<T> {
   private epoch = 0;
   private editable = false;
   private editing = false;
-  private restored = false;
   private generation = 0;
   private reading = false;
   private writing = false;
@@ -98,7 +96,7 @@ export class SyncedDocument<T> {
   constructor(options: SyncOptions<T>) {
     this.options = options;
     this.state = { data: options.initialValue, revision: 0, updatedAt: null, ready: false,
-      dirty: false, status: "loading", error: null, storageError: null, unauthorized: false, remote: null };
+      dirty: false, status: "loading", error: null, unauthorized: false, remote: null };
   }
   getSnapshot = () => this.state;
   subscribe = (listener: () => void) => { this.listeners.add(listener); return () => { this.listeners.delete(listener); }; };
@@ -106,30 +104,8 @@ export class SyncedDocument<T> {
     this.state = { ...this.state, ...patch };
     this.listeners.forEach(listener => listener());
   }
-  private get draftKey() { return this.options.draftKey ?? `document-draft:${this.options.id}`; }
-  private persist() {
-    try {
-      if (!this.options.storage) throw new Error("unavailable");
-      if (this.state.dirty) this.options.storage.setItem(this.draftKey,
-        JSON.stringify({ data: this.state.data, revision: this.state.revision }));
-      else this.options.storage.removeItem(this.draftKey);
-      if (this.state.storageError) this.publish({ storageError: null });
-    } catch { this.publish({ storageError: "本地草稿无法保存，请在云端同步成功前保留此页面。" }); }
-  }
   start = () => {
     this.active = true; this.epoch++; this.reading = false; this.writing = false;
-    if (!this.restored) {
-      this.restored = true;
-      try {
-        const raw = this.options.storage?.getItem(this.draftKey);
-        if (raw) {
-          const draft: unknown = JSON.parse(raw);
-          if (!isRecord(draft) || !this.options.validate(draft.data)
-            || typeof draft.revision !== "number" || !Number.isSafeInteger(draft.revision) || draft.revision < 0) throw new Error("invalid draft");
-          this.publish({ data: draft.data, revision: draft.revision, dirty: true });
-        }
-      } catch { this.publish({ storageError: "本地草稿无法读取，云端数据仍可加载。" }); }
-    }
     void this.refresh();
   };
   stop = () => {
@@ -154,7 +130,7 @@ export class SyncedDocument<T> {
     if (JSON.stringify(data) === JSON.stringify(this.state.data)) return;
     this.generation++;
     this.publish({ data, dirty: true, status: this.state.remote ? "conflict" : "pending", error: null });
-    this.persist(); this.schedule();
+    this.schedule();
   };
   private schedule() {
     if (!this.active || !this.editable || !this.state.ready || !this.state.dirty
@@ -171,12 +147,11 @@ export class SyncedDocument<T> {
       if (!this.active || epoch !== this.epoch || this.writing) return;
       const revision = remote?.revision ?? 0;
       if (revision < this.state.revision && requestedRevision !== this.state.revision) return;
-      if (revision < this.state.revision) throw new Error("云端版本落后，请重试；本地内容已保留。");
+      if (revision < this.state.revision) throw new Error("云端版本落后，请重试；当前页面内容已保留。");
       if (this.editing) return;
       if (this.state.dirty) {
         if (remote && JSON.stringify(remote.data) === JSON.stringify(this.state.data)) {
           this.publish({ ...remote, ready: true, dirty: false, remote: null, status: "synced", error: null });
-          this.persist();
         } else if (revision !== this.state.revision) {
           this.publish({ ready: true, remote, status: "conflict", error: null });
         } else if (!this.state.remote) {
@@ -210,7 +185,6 @@ export class SyncedDocument<T> {
       const dirty = generation !== this.generation;
       this.publish({ revision: remote.revision, updatedAt: remote.updatedAt, dirty,
         status: dirty ? "pending" : "synced", error: null });
-      this.persist();
     } catch (error) {
       if (this.active && epoch === this.epoch) {
         conflict = error instanceof DocumentError && error.status === 409;
@@ -232,6 +206,6 @@ export class SyncedDocument<T> {
     this.publish({ data: choice === "remote" ? remote.data : this.state.data,
       revision: remote.revision, updatedAt: remote.updatedAt, remote: null,
       dirty: choice === "local", status: choice === "local" ? "pending" : "synced", error: null });
-    this.persist(); this.schedule();
+    this.schedule();
   };
 }

@@ -60,12 +60,11 @@ export function SyncedTable({ id, title }: { id: string; title?: string }) {
             <Button variant="ghost" size="sm" onClick={() => void document.retry()}><RefreshCw data-icon="inline-start" />刷新</Button>
           </div>
         </div>
-        {document.error && <Alert variant="destructive"><AlertTitle>暂未完成同步</AlertTitle><AlertDescription>{document.error} 本地修改会保留。</AlertDescription></Alert>}
-        {document.storageError && <Alert variant="destructive"><AlertTitle>草稿提醒</AlertTitle><AlertDescription>{document.storageError}</AlertDescription></Alert>}
+        {document.error && <Alert variant="destructive"><AlertTitle>暂未完成同步</AlertTitle><AlertDescription>{document.error} {document.dirty && "修改仅保留在当前页面，请同步成功后再关闭。"}</AlertDescription></Alert>}
         {document.remote && <Alert><AlertTitle>其他页面也修改了这份记录</AlertTitle><AlertDescription>
-          <p>你的草稿仍在。选择保留本地内容，或放弃草稿并使用云端版本。</p>
+          <p>云端已有更新。选择保存当前页面内容，或使用云端版本。</p>
           <div className="mt-2 flex flex-wrap gap-2">
-            <Button size="sm" disabled={!access.canEdit} onClick={() => document.resolveConflict("local")}>保留本地并保存</Button>
+            <Button size="sm" disabled={!access.canEdit} onClick={() => document.resolveConflict("local")}>保存当前内容</Button>
             <Button variant="outline" size="sm" onClick={() => document.resolveConflict("remote")}>使用云端版本</Button>
           </div>
         </AlertDescription></Alert>}
