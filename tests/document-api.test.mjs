@@ -3,6 +3,31 @@ import assert from "node:assert/strict";
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync } from "node:fs";
 import { documentRequest, editAccess } from "../server/documents.js";
+import { onRequest as documentRoute } from "../functions/api/documents/[id].js";
+
+test("Pages route decodes namespaced IDs exactly once and rejects malformed paths", async () => {
+  const db = new DatabaseSync(":memory:");
+  db.exec(readFileSync(new URL("../migrations/0001_documents.sql", import.meta.url), "utf8"));
+  const env = { TABLE_EDIT_PASSWORD: "test", DB: {
+    prepare: sql => ({ bind: (...args) => ({ first: async () => db.prepare(sql).get(...args) ?? null }) }),
+  } };
+  const route = (id, method = "GET") => documentRoute({ env, params: { id }, request: new Request(`https://local/api/documents/${id}`, {
+    method, headers: { "X-Edit-Password": "test" },
+    ...(method === "PUT" ? { body: JSON.stringify({ data: { note: "云端" }, expectedRevision: 0 }) } : {}),
+  }) });
+  try {
+    assert.equal((await route("tables%3Anotes", "PUT")).status, 200);
+    assert.equal(db.prepare("SELECT id FROM documents").get().id, "tables:notes");
+    for (const id of ["tables%3Anotes", "tables:notes"]) {
+      assert.equal((await (await route(id)).json()).data.note, "云端");
+    }
+    for (const id of ["tables%253Anotes", "%", "%E0%A4%A", "tables%2Fnotes"]) {
+      const response = await route(id);
+      assert.equal(response.status, 400);
+      assert.equal(response.headers.get("Cache-Control"), "no-store");
+    }
+  } finally { db.close(); }
+});
 
 test("real SQLite/D1 SQL contract: authorization, create race, versioned updates, validation", async () => {
   const db = new DatabaseSync(":memory:");

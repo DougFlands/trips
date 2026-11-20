@@ -3,7 +3,8 @@ import { Readable } from "node:stream";
 import { mkdirSync, readFileSync } from "node:fs";
 import { DatabaseSync } from "node:sqlite";
 import { createServer } from "vite";
-import { documentRequest, editAccess } from "../server/documents.js";
+import { editAccess } from "../server/documents.js";
+import { onRequest as documentRoute } from "../functions/api/documents/[id].js";
 
 // Local SQLite uses the same migration and handlers as D1. No mock saves.
 mkdirSync(new URL("../.local/", import.meta.url), { recursive: true });
@@ -23,7 +24,7 @@ const server = createHttpServer(async (req, res) => {
       ...(req.method !== "GET" && req.method !== "HEAD" ? { body: Readable.toWeb(req), duplex: "half" } : {}),
     });
     const match = url.pathname.match(/^\/api\/documents\/([^/]+)$/);
-    const response = match ? await documentRequest(request, env, decodeURIComponent(match[1]))
+    const response = match ? await documentRoute({ request, env, params: { id: match[1] } })
       : url.pathname === "/api/edit-access" ? editAccess(request, env) : new Response(null, { status: 404 });
     res.writeHead(response.status, Object.fromEntries(response.headers));
     res.end(Buffer.from(await response.arrayBuffer()));
