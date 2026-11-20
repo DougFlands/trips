@@ -11,6 +11,7 @@ import { buildHokkaidoMapPlaces, type HokkaidoMapPlace } from "./recommendation-
 import { recommendationCities, dayPlans, nights, recommendations, type RecommendationCity } from "./trip";
 import { sources } from "./sources";
 import { FoodList } from "./food-list";
+import { ticketGroups } from "./tickets";
 import "./styles.css";
 
 const reminders = [
@@ -284,8 +285,38 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
           <FoodList />
         </section>
 
+        <section id="tickets" aria-labelledby="tickets-heading" className="mt-14 scroll-mt-24 sm:mt-20">
+          <SectionHeading number="04" title="哪些票要先买" id="tickets-heading" description="按类型查购买时间 · 不含酒店 · 成人日元价格 · JR单独买票" />
+          <Tabs defaultValue="rail" className="mt-6 gap-5">
+            <TabsList variant="line" className="w-full max-w-2xl" aria-label="购票类型">
+              {ticketGroups.map((group) => <TabsTrigger key={group.id} value={group.id}>{group.label}</TabsTrigger>)}
+            </TabsList>
+            {ticketGroups.map((group) => (
+              <TabsContent key={group.id} value={group.id}>
+                <ul className="grid gap-4 md:grid-cols-2">
+                  {group.items.map((ticket) => (
+                    <li key={ticket.name} className="flex min-w-0 flex-col gap-3 rounded-lg border border-border bg-card p-4 sm:p-5">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="text-base font-semibold">{ticket.name}</h3>
+                        <Badge variant={ticket.status === "提前订" ? "default" : ticket.status === "按需预约" ? "secondary" : "outline"}>{ticket.status}</Badge>
+                      </div>
+                      <p className="text-xs text-muted-foreground">使用：{ticket.date}</p>
+                      <p className="font-mono text-sm text-primary">{ticket.price}</p>
+                      <p className="text-sm leading-6"><span className="font-semibold">购买时间 · </span>{ticket.timing}</p>
+                      <p className="text-sm leading-6 text-muted-foreground">{ticket.note}</p>
+                      <div className="mt-auto flex flex-wrap items-center gap-2"><span className="text-xs text-muted-foreground">官方说明</span>{sourceRefs(ticket.sources)}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-xs leading-6 text-muted-foreground">{group.note}</p>
+              </TabsContent>
+            ))}
+          </Tabs>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">价格与规则核验于2026.11.20，2027出行前复核。JR开售时间为北京时间09:00／日本时间10:00；接驳车截止时间、乘车与游览时间均为日本当地时间。</p>
+        </section>
+
         <section id="reminders" aria-labelledby="reminders-heading" className="mt-14 sm:mt-20">
-          <SectionHeading number="04" title="出发前，记这几件事" id="reminders-heading" description="天气差就减项目，把时间留给吃饭、休息和交通。" />
+          <SectionHeading number="05" title="出发前，记这几件事" id="reminders-heading" description="天气差就减项目，把时间留给吃饭、休息和交通。" />
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {reminders.map(({ icon: Icon, title, text, sources: ids }) => <Alert key={title} role="note">
               <Icon aria-hidden="true" /><AlertTitle>{title}</AlertTitle><AlertDescription><p>{text}</p><div className="mt-2 flex flex-wrap gap-2">{sourceRefs(ids)}</div></AlertDescription>
@@ -294,7 +325,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
         </section>
 
         <section id="qa" aria-labelledby="qa-heading" className="mt-14 sm:mt-20">
-          <SectionHeading number="05" title="路线 QA" id="qa-heading" description="把城市顺序和可调整的地方说清楚。" />
+          <SectionHeading number="06" title="路线 QA" id="qa-heading" description="把城市顺序和可调整的地方说清楚。" />
           <Accordion type="multiple" className="mt-4">
             {routeQa.map(({ question, answer, sources: ids }) => <AccordionItem key={question} value={question}>
               <AccordionTrigger>{question}</AccordionTrigger>

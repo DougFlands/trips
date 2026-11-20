@@ -1,6 +1,13 @@
 export type Source = { sourceId: string; group: string; title: string; url: string; collectedAt: string };
 
 export const sources: Source[] = [
+  {"sourceId": "N22", "group": "official", "title": "JR北海道：预订、开售时间与取票", "url": "https://www.jrhokkaido.co.jp/global/english/ticket/reservation/index.html", "collectedAt": "2026-11-20"},
+  {"sourceId": "N23", "group": "official", "title": "白色恋人：入馆价格与体验预约", "url": "https://www.shiroikoibitopark.jp/facility/counter.html", "collectedAt": "2026-11-20"},
+  {"sourceId": "N24", "group": "official", "title": "札幌交通局：平日与周末地铁券", "url": "https://www.city.sapporo.jp/st/josyaken/card.html", "collectedAt": "2026-11-20"},
+  {"sourceId": "N25", "group": "official", "title": "函馆市电：一日券与联合票", "url": "https://www.city.hakodate.hokkaido.jp/docs/2014012100977/", "collectedAt": "2026-11-20"},
+  {"sourceId": "N26", "group": "official", "title": "JR北海道：主要区间票价", "url": "https://www.jrhokkaido.co.jp/global/english/ticket/regular/index.html", "collectedAt": "2026-11-20"},
+  {"sourceId": "N27", "group": "official", "title": "函馆山索道：预售票无折扣、不优先搭乘", "url": "https://334.co.jp/ropeway/advance-ticket/", "collectedAt": "2026-11-20"},
+  {"sourceId": "N28", "group": "official", "title": "中央巴士：小樽天狗山套票内容（冬季价格另见天狗山官网）", "url": "https://www.chuo-bus.co.jp/main/setticket/index.cgi?ope=list&r=5", "collectedAt": "2026-11-20"},
   {"sourceId": "N20", "group": "official", "title": "登别温泉观光协会：地狱谷", "url": "https://noboribetsu-spa.jp/spot/spot0034/", "collectedAt": "2026-11-20"},
   {"sourceId": "N21", "group": "official", "title": "有珠山缆车：交通与运行信息", "url": "https://usuzan.hokkaido.jp/", "collectedAt": "2026-11-20"},
   {"sourceId": "N01", "group": "transport", "title": "千岁站酒店：退房后免费寄存", "url": "https://www.chitose-sh.com/faq/", "collectedAt": "2026-11-20"},

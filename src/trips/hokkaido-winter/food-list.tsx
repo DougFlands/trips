@@ -20,7 +20,11 @@ export function FoodList() {
                 const source = foodSources[place.source];
                 return (
                   <li key={place.id} className="flex min-w-0 flex-col gap-2 py-5">
-                    <h3 className="text-base font-semibold sm:text-lg">{place.name}</h3>
+                    <h3 className="text-base font-semibold sm:text-lg">
+                      <a href={place.mapUrl} target="_blank" rel="noreferrer" title={`在谷歌地图查看${place.name}（新窗口打开）`} className="rounded-sm underline decoration-border underline-offset-4 hover:text-primary focus-visible:outline-2 focus-visible:outline-primary">
+                        {place.name}<span aria-hidden="true" className="ml-1 text-sm text-muted-foreground">↗</span>
+                      </a>
+                    </h3>
                     <p className="text-sm leading-7">{place.description}</p>
                     <a href={source.url} target="_blank" rel="noreferrer" title={`来源：${source.title} · ${source.author}（新窗口打开）`} className="w-fit max-w-full truncate text-xs text-muted-foreground underline decoration-border underline-offset-4 hover:text-primary">
                       来源：{source.title} · {source.author} ↗
