@@ -2,7 +2,7 @@
   "id": "shared-table-tool",
   "name": "shared-table-tool",
   "title": "通用表格工具与 Cloudflare 自动同步",
-  "description": "可复用编辑表格、通用 JSON 同步 Hook、固定密码只读/编辑与 Cloudflare D1 接入。组件及本地验证已完成，线上绑定待接入。",
+  "description": "可复用编辑表格、通用 JSON 同步 Hook、固定密码和 Cloudflare D1 已上线，真实双页面同步验收完成。",
   "status": "in_progress",
   "dev_type": null,
   "scope": null,
@@ -15,7 +15,7 @@
   "branch": null,
   "base_branch": "main",
   "worktree_path": null,
-  "commit": null,
+  "commit": "eecaa29",
   "pr_url": null,
   "subtasks": [],
   "children": [],
@@ -30,6 +30,6 @@
     "functions/api/documents/[id].js",
     "migrations/0001_documents.sql"
   ],
-  "notes": "2026-11-20：用户确认方案后实现。11 项自动测试、浏览器双页面/离线/窄屏检查及 Wrangler Functions 编译通过。真实 Cloudflare 配置未变更；继续时先阅读 research/verification.md。",
+  "notes": "2026-11-21：通过 Edge GPT 插件创建 travel-notes D1、生产 DB 绑定与编辑 Secret；功能已部署到 trip.flands.com。修复 Pages 路由编码差异，12 项测试及线上双页面双向同步、密码恢复均通过。",
   "meta": {}
 }

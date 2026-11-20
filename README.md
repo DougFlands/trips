@@ -164,7 +164,9 @@ const note = useSyncedDocument({
 
 `onEditingChange={document.setEditing}` 保护尚未提交的单元格输入。若自定义编辑器保有输入草稿，也应在编辑开始/结束时调用此方法。
 
-生产项目为 `trips`，域名 `trip.flands.com`。2026-11-21 已创建 D1 `travel-notes`（`e5eae112-49ba-4e25-894c-09eb142f41dd`）、执行建表 SQL，并保存生产环境 `DB` binding 和加密的 `TABLE_EDIT_PASSWORD`。配置在下一次部署生效；密码不写入仓库。预览环境暂未绑定生产数据库。
+生产项目为 `trips`，域名 `trip.flands.com`。2026-11-21 已创建 D1 `travel-notes`（`e5eae112-49ba-4e25-894c-09eb142f41dd`）、执行建表 SQL，并保存生产环境 `DB` binding 和加密的 `TABLE_EDIT_PASSWORD`。已部署并通过真实 HTTPS 双页面读写验收；密码不写入仓库。预览环境暂未绑定生产数据库。
+
+线上入口：[通用记录](https://trip.flands.com/tools/tables/) · [住宿记录](https://trip.flands.com/tools/tables/?id=stays)。更换 `id` 即可使用独立表格。
 
 迁移或新环境接入步骤（代码包含 `functions/api/`、`server/documents.js` 和 `migrations/0001_documents.sql`）：
 
