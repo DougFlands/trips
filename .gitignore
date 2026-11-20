@@ -9,3 +9,5 @@
 .DS_Store
 /outputs/
 /work/
+/.local/
+/.wrangler/

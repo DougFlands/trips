@@ -120,6 +120,72 @@ node --test tests/stargazing.test.mjs
 
 ## Cloudflare Pages
 
+### 通用表格与自动同步
+
+入口：`/tools/tables/`，首页有“打开记录表格”链接。不同表格可使用不同地址，例如 `/tools/tables/?id=stays`、`?id=expenses`；ID 限字母、数字和连字符，最长 64 个字符。
+
+支持双击或铅笔按钮编辑、Enter/失焦确认、Escape 取消、添加行列与修改表头。首版为文本单元格，最多 50 列、1000 行，单份 JSON 不超过 512 KiB。未解锁可读；固定密码验证成功后可编辑，浏览器记住密码，锁定后清除。
+
+本地运行完整表格功能（Node >=22.13）：
+
+```powershell
+npm run dev:tables
+```
+
+访问 `http://127.0.0.1:5173/tools/tables/`，本地默认密码 **trips**。可通过 `TABLE_EDIT_PASSWORD` 环境变量覆盖本地密码。SQLite 数据在忽略的 `.local/documents.sqlite` 中，刷新或重启服务会保留。此命令使用与 Cloudflare 相同的 API 处理器和 SQL；普通 `npm run dev` 仅启动前端，不提供数据 API。
+
+自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。未保存草稿缓存在本地，关闭未保存页面时有浏览器提醒。同一份文档并发修改时提示选择保留本地或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
+
+复用入口：
+
+- `src/components/editable-table.tsx`：受控组件 `value / onChange / readOnly / onEditingChange`，不依赖密码或服务端。
+- `src/hooks/use-synced-document.ts`：`useSyncedDocument<T>`，可用于任意通过校验的 JSON 数据；`id`、初始值、验证函数和 transport 保持稳定。
+- `src/lib/synced-document.ts`：HTTP transport 与可测试的同步控制器，服务端契约为 `{ data, revision, updatedAt }`。
+- `src/hooks/use-edit-access.ts`：共享密码验证、浏览器记忆与锁定。
+
+非表格数据示例（组件内；`initialNote` 和 `isNote` 放模块作用域）：
+
+```tsx
+const access = useEditAccess();
+const transport = useMemo(
+  () => createDocumentTransport(isNote, access.getPassword),
+  [access.getPassword],
+);
+const note = useSyncedDocument({
+  id: "notes:travel",
+  initialValue: initialNote, // 例如 { text: "" }
+  validate: isNote, // 从 unknown 校验业务数据
+  transport,
+  canEdit: access.canEdit,
+});
+// note.update({ text: "需要带护照" });
+// 显示 note.status / error / storageError；用 resolveConflict 处理 note.remote。
+```
+
+`onEditingChange={document.setEditing}` 保护尚未提交的单元格输入。若自定义编辑器保有输入草稿，也应在编辑开始/结束时调用此方法。
+
+生产项目为 `trips`，域名 `trip.flands.com`。2026-11-21 已创建 D1 `travel-notes`（`e5eae112-49ba-4e25-894c-09eb142f41dd`）、执行建表 SQL，并保存生产环境 `DB` binding 和加密的 `TABLE_EDIT_PASSWORD`。配置在下一次部署生效；密码不写入仓库。预览环境暂未绑定生产数据库。
+
+迁移或新环境接入步骤（代码包含 `functions/api/`、`server/documents.js` 和 `migrations/0001_documents.sql`）：
+
+1. 在目标账号创建 D1 数据库，在 D1 Console 执行 `migrations/0001_documents.sql`。
+2. 在原 Pages 项目的 Settings → Bindings 添加 D1 binding，变量名 **DB**，选择该数据库。
+3. 在 Settings → Variables and Secrets 添加 Secret **TABLE_EDIT_PASSWORD**，填写固定编辑密码。生产代码没有默认密码。
+4. 将本次代码部署到同一 Pages 项目，使 API、binding 和 Secret 生效；预览环境也需单独配置。
+5. 两个页面验证实际云端同步。未配置数据库/密码返回 503，不会显示保存成功。
+
+读取接口公开，写入接口核对共享密码。密码不进入前端构建产物；按本工具的简单使用方式，验证后的密码保存在该浏览器 localStorage 中。
+
+```powershell
+npm run test:tables
+npm run check
+npx wrangler pages functions build functions --outdir work/pages-functions
+```
+
+非表格 Hook 验收页：开发服务下的 `/tests/synced-document.html`，使用同一 API 保存普通备忘 JSON。
+
+### 现有站点部署
+
 - Framework preset：`Vite`
 - Build command：`npm run build`
 - Build output directory：`dist`

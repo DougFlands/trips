@@ -2,6 +2,7 @@ import { Fragment, useEffect } from "react";
 import { findTrip, findTripPage, trips } from "./trips";
 import StargazingPage from "./trips/guangdong-stargazing/page";
 import StylePreviewsPage from "./style-previews/page";
+import TablesPage from "./tools/tables/page";
 
 const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
 const segments = pathname.split("/").filter(Boolean);
@@ -14,14 +15,15 @@ export function App() {
   const isIndex = pathname === "/";
   const isStargazing = pathname === "/trips/guangdong-stargazing";
   const isStylePreviews = pathname === "/style-previews";
-  const title = isStylePreviews ? "北海道冬季页面预览"
+  const isTables = pathname === "/tools/tables";
+  const title = isTables ? "随手记录 · 通用表格" : isStylePreviews ? "北海道冬季页面预览"
     : isStargazing ? "观星地图 · 流星雨与星空拍摄"
     : trip
     ? `${trip.title}${trip.subtitle ? ` · ${trip.subtitle}` : ""}`
     : isIndex
       ? "旅行攻略"
       : "页面不存在 · 旅行攻略";
-  const description = isStylePreviews ? "北海道冬季旅行页面的五种视觉风格预览。" : isStargazing ? "比较多地星空拍摄地点、直线距离、波尔特等级与未来七晚天气。" : trip?.intro ?? "逐日安排、高德地图点位与预订清单。";
+  const description = isTables ? "记录住宿、花费与待办，表格内容自动同步。" : isStylePreviews ? "北海道冬季旅行页面的五种视觉风格预览。" : isStargazing ? "比较多地星空拍摄地点、直线距离、波尔特等级与未来七晚天气。" : trip?.intro ?? "逐日安排、高德地图点位与预订清单。";
 
   useEffect(() => {
     document.title = title;
@@ -30,6 +32,7 @@ export function App() {
       ?.setAttribute("content", description);
   }, [description, title]);
 
+  if (isTables) return <TablesPage />;
   if (isStargazing) return <StargazingPage />;
   if (isStylePreviews) return <StylePreviewsPage />;
   if (trip) {
@@ -68,6 +71,7 @@ function TripIndex() {
           旅行攻略<span className="text-[#d93047]">//</span>
         </h1>
         <p className="max-w-[650px] text-[17px] leading-[1.8] text-[#596052]">逐日行程、高德地图点位与临行清单。选一条路线开始。</p>
+        <a href="/tools/tables/" className="mt-6 inline-flex items-center gap-3 text-sm font-semibold underline underline-offset-4">打开记录表格 ↗</a>
       </header>
 
       <section className="mx-auto w-[min(1120px,calc(100%-2.5rem))] pb-24" aria-label="旅行列表">

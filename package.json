@@ -8,6 +8,8 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:tables": "node --experimental-sqlite scripts/dev-tables.mjs",
+    "test:tables": "node --experimental-strip-types --experimental-sqlite --test tests/synced-document.test.mjs tests/document-api.test.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "oxlint src",
