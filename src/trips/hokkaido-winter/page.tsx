@@ -17,11 +17,11 @@ import "./styles.css";
 
 const reminders = [
   { icon: CalendarDays, title: "两场雪节，日期别记错", text: "札幌雪祭2/4–11；小樽雪灯2/6–13。2/5没有正式雪灯，2/6点灯时间待公告。", sources: ["O1", "O2"] },
-  { icon: TrainFront, title: "函馆转场，留半天", text: "2/4函馆到札幌约4小时，实际从中午开始玩。北斗全车指定席，先订座；雪天出发前查停运。", sources: ["O7", "O9", "O10"] },
-  { icon: MountainSnow, title: "索道停运，就取消登山", text: "函馆山冬季道路封闭，不能改打车上山。天狗山先看能见度，再买索道票。", sources: ["O3", "O4", "O5"] },
+  { icon: TrainFront, title: "函馆转场，留半天", text: "2/2函馆到札幌约4小时，实际从中午开始玩。北斗全车指定席，先订座；雪天出发前查停运。", sources: ["O7", "O9", "O10"] },
+  { icon: MountainSnow, title: "索道停运，就取消登山", text: "函馆山冬季不能打车上山；天狗山先看能见度。冬季团注明有珠山1/12–3/13停运，本次不排。", sources: ["O3", "O4", "O5", "N29"] },
   { icon: CloudSnow, title: "2/7早回札幌", text: "小樽住两晚，2/7早班回札幌，2/8返程。抵达后以市区活动为主，雪天晚到就减项目。", sources: ["O10"] },
   { icon: Footprints, title: "坡道慢走，随时取暖", text: "穿防滑防水鞋；结冰就缩短坡道路线。室外与室内交替，累了删可选点。", sources: ["T02", "T13", "K09"] },
-  { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，通常20点收尾；雪灯、转场日可到22点。", sources: ["O14"] },
+  { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，通常20点收尾；1/30赶末班北斗，约23点才入住。", sources: ["O14"] },
 ];
 
 const routeQa = [
@@ -36,29 +36,34 @@ const routeQa = [
     sources: ["O2"],
   },
   {
-    question: "为什么函馆结束后先回札幌？",
-    answer: "2/4早班函馆到札幌，中午抵达，下午看大通雪祭；2/5白天继续玩札幌，晚上去小樽。JR约4小时，2/4无法安排完整白天。",
-    sources: ["O1", "O7", "O10"],
+    question: "落地当晚去函馆，来得及吗？",
+    answer: "按16:30落地、南千岁19:18北斗22号规划，22:31到函馆，约23点入住。机场先坐JR一站到南千岁，争取18:40前后候车。17:26前班不建议赶；19:18是现行末班直达北斗，延误赶不上需改住千岁。",
+    sources: ["N14", "N22", "O10"],
   },
   {
-    question: "小樽住几晚，什么时候回札幌？",
-    answer: "2/5晚到小樽，连住5日、6日两晚；6日看完雪灯直接回酒店。2/7坐08:05→08:50列车回札幌，前后备选07:57、08:18；2/8返程。",
-    sources: ["O2", "N19"],
+    question: "2日到札幌，能玩一整天吗？",
+    answer: "推荐08:56→12:41北斗5号，实际玩下午和晚上，安排大学、旧道厅与狸小路。想早到可选07:37→11:29；晚班10:05→14:01。大通雪祭留到2/4开幕。",
+    sources: ["N16", "O1"],
+  },
+  {
+    question: "为什么5日上午去小樽，住几晚？",
+    answer: "札幌有2日下午、4日和7日，现有景点基本够排。5日09:33→10:07去小樽，白天逛堺町；6日天狗山与雪灯分开玩。住5、6日两晚，7日08:05→08:50回札幌，8日返程。",
+    sources: ["N17", "N19", "O2", "O3"],
   },
   {
     question: "去小樽能把大箱子留在札幌吗？",
-    answer: "札幌2/4和2/7尽量订同一家，先确认允许跨两晚寄存；允许就只带两晚换洗小包。否则2/5晚取回大箱带去小樽，2/7退房后带回札幌。",
+    answer: "札幌2/2–4和2/7尽量订同一家，先确认允许跨两晚寄存；允许就只带两晚换洗小包。否则2/5早上带去小樽酒店寄存，2/7退房后带回札幌。",
     sources: ["N10"],
   },
   {
-    question: "早班和Silo交通有哪些待确认？",
-    answer: "登别08:03北斗须接07:25温泉巴士，约07:10离店，或预约出租车。Silo巴士短途订位待确认；未落实就预约出租车往返，约¥8,000起另询等候费。普通JR、巴士为现行时刻，出行前复核。",
-    sources: ["N06", "N09", "N12", "N13", "N14"],
+    question: "3日一日游怎么订，包含温泉和有珠山吗？",
+    answer: "候选冬季团适用2027/1/30–2/23，2/3余位仍待确认。08:30电视塔集合，约18:20返回；基础¥7,600起，冰涛节平日票¥1,000、餐费另计。选湖畔A线，不含泡汤；产品注明有珠山索道1/12–3/13停运，不安排上山。",
+    sources: ["N29"],
   },
   {
     question: "冰涛节能看夜景吗？函馆山有几次机会？",
-    answer: "1/31看白天冰涛节，16:30亮灯时已去登别，留时间泡汤和晚餐。函馆山主要安排2/2，2/3留作天气备选；两天择晴一次，2/4早班赴札幌。",
-    sources: ["N02", "O4", "O5"],
+    answer: "候选团2/3预计16:10–17:10停留冰涛节，跨傍晚亮灯时段，现场安排与路况为准，游览约1小时。函馆山1/31优先、2/1留天气备选，两天择晴一次。",
+    sources: ["N29", "N02", "O4", "O5"],
   },
 ];
 
@@ -152,7 +157,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               <p className="mb-5 flex items-center gap-3 font-mono text-xs tracking-[.16em] text-primary"><span className="h-px w-8 bg-primary" />HOKKAIDO / WINTER 2027</p>
               <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] font-semibold leading-[1.2] tracking-tight">北海道<br /><span className="font-serif text-primary">冬季慢游</span></h1>
               <p className="mt-5 font-mono text-sm tracking-wider">{trip.fullDateRange}</p>
-              <p className="mt-3 text-sm leading-7 text-muted-foreground">转场日7点起 · 游玩日8:30–9点起 · 最晚22点收尾</p>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">转场日7点起 · 游玩日8:30–9点起 · 抵达夜约23点入住</p>
             </div>
             <WinterPostcard />
           </div>
@@ -163,7 +168,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
         </header>
 
         <div className="my-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs sm:my-10 sm:gap-x-5 sm:text-sm" aria-label="城市路线">
-          <span>千岁</span><span aria-hidden="true" className="text-primary">→</span><span>登别温泉</span><span aria-hidden="true" className="text-primary">→</span><span>洞爷湖</span><span aria-hidden="true" className="text-primary">→</span><span>函馆</span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span><span aria-hidden="true" className="text-primary">→</span><span>小樽</span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span>
+          <span>新千岁机场</span><span aria-hidden="true" className="text-primary">→</span><span>函馆</span><span aria-hidden="true" className="text-primary">→</span><span>札幌（洞爷湖·登别·冰涛节一日游）</span><span aria-hidden="true" className="text-primary">→</span><span>小樽</span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span>
         </div>
 
         <section id="itinerary" aria-labelledby="itinerary-heading">
@@ -209,7 +214,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               </article>
             ))}
           </div>
-          <p className="mt-4 text-xs leading-6 text-muted-foreground">JR与普通巴士按2026.11.20核验的现行时刻规划，2027年出行前复核；冰涛节接驳车已公布2027班次。转场日通常07:30离店，登别早班另看接驳要求。北斗、铃兰提前订指定席，换班先改签；酒店未定，雪天留足步行与取件时间。</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">JR按2026.11.20–21核验的现行时刻规划，2027年出行前复核。2/3一日游已公布冬季路线，余位待确认；北斗提前订指定席，换班先改签。1/30约23点入住；雪天留足换乘、取票与寄存时间。</p>
         </section>
 
         <section id="places" aria-labelledby="places-heading" className="mt-14 sm:mt-20">
@@ -321,7 +326,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               </TabsContent>
             ))}
           </Tabs>
-          <p className="mt-4 text-xs leading-6 text-muted-foreground">价格与规则核验于2026.11.20，2027出行前复核。JR开售时间为北京时间09:00／日本时间10:00；接驳车截止时间、乘车与游览时间均为日本当地时间。</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">价格与规则核验于2026.11.20–21，2027出行前复核，一日游以选定日期报价与余位为准。JR开售时间为北京时间09:00／日本时间10:00；集合、乘车与游览时间均为日本当地时间。</p>
         </section>
 
         <section id="reminders" aria-labelledby="reminders-heading" className="mt-14 sm:mt-20">

@@ -1,6 +1,7 @@
 export type Source = { sourceId: string; group: string; title: string; url: string; collectedAt: string };
 
 export const sources: Source[] = [
+  {"sourceId": "N29", "group": "transport", "title": "VELTRA：2027冬季洞爷湖、登别、冰涛节一日游（含停运提示，余位待确认）", "url": "https://www.veltra.com/jp/japan/hokkaido/sapporo/a/166508", "collectedAt": "2026-11-21"},
   {"sourceId": "N22", "group": "official", "title": "JR北海道：预订、开售时间与取票", "url": "https://www.jrhokkaido.co.jp/global/english/ticket/reservation/index.html", "collectedAt": "2026-11-20"},
   {"sourceId": "N23", "group": "official", "title": "白色恋人：入馆价格与体验预约", "url": "https://www.shiroikoibitopark.jp/facility/counter.html", "collectedAt": "2026-11-20"},
   {"sourceId": "N24", "group": "official", "title": "札幌交通局：平日与周末地铁券", "url": "https://www.city.sapporo.jp/st/josyaken/card.html", "collectedAt": "2026-11-20"},
