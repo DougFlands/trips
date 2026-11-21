@@ -18,7 +18,7 @@
 
 - 响应 `{data, revision, updatedAt}`；PUT `{data, expectedRevision}`。首次创建预期版本 0，成功为 1；后续原子条件更新并递增。
 - ID 为 `[a-zA-Z0-9][a-zA-Z0-9:_-]{0,127}`，JSON 上限 512 KiB。表格额外限制 50 列、1000 行；列/行稳定 ID 独立于名称和位置。
-- 行顺序以 `rows` 数组为准；上下移动交换整行，保留 ID 与全部单元格，沿用自动同步与版本冲突处理。只读隐藏移动按钮，首尾禁用越界方向。
+- 行顺序以 `rows` 数组为准；通过拖拽手柄移动整行，保留 ID 与全部单元格，沿用自动同步与版本冲突处理。只读隐藏手柄，不提供额外上下移动按钮。
 - ReUI 使用 TanStack v9 `useTable` + `dataGridFeatures`，显式 `manualPagination: true`、关闭排序；稳定 `getRowId` 与 DnD `dataIds` 一致。拖拽、单元格编辑、字段设置通过 `onEditingChange` 暂停远端覆盖；取消/锁定/卸载释放。使用自定义编辑器保留多行 Enter 换行；编辑器内部切焦点不提交。
 - 九种字段为 text/multiline/number/currency/date/select/multiselect/checkbox/url。数字必须有限，空数字为 null，0/false 不作空；金额只在展示时保留两位。日期为校验过的 YYYY-MM-DD；网址仅 HTTP(S)。单行文本拒绝换行；选项最多100个且唯一。
 - v1 全字符串列在内存中变为 multiline，保持值、ID、顺序、revision、updatedAt；读取不写，首次实际修改才保存 v2。不推测旧字段类型。字段转换必须整列成功，失败返回行号；禁止删除已使用选项或截断文本（如 `001` 转数字）。旧客户端读到 v2 拒绝解码，旧 revision 写入由 409 拦截。

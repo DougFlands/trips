@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTable } from "@tanstack/react-table";
 import type { ColumnDef } from "@tanstack/react-table";
-import { ArrowDown, ArrowUp, Plus, Settings2 } from "lucide-react";
+import { Plus, Settings2 } from "lucide-react";
 import { DataGrid, dataGridFeatures } from "../reui/data-grid/data-grid";
 import type { DataGridFeatures } from "../reui/data-grid/data-grid";
 import { DataGridTableDndRowHandle, DataGridTableDndRows } from "../reui/data-grid/data-grid-table-dnd-rows";
@@ -36,16 +36,10 @@ export function RecordTable({ value, onChange, readOnly = false, onEditingChange
       setError(""); onChange(next); return true;
     };
     return [{
-      id: "row-actions", header: () => <span aria-label="行号">#</span>, size: readOnly ? 48 : 126,
+      id: "row-actions", header: () => <span aria-label="行号">#</span>, size: readOnly ? 48 : 80,
       cell: ({ row }) => <div className="flex items-center gap-1">
         <span className="min-w-4 font-mono text-xs text-muted-foreground">{row.index + 1}</span>
-        {!readOnly && <>
-          <DataGridTableDndRowHandle disabled={!!editing || !!configuring} disabledLabel="请先完成编辑" />
-          <Button type="button" variant="ghost" size="icon-xs" aria-label={`上移第 ${row.index + 1} 行`} disabled={busy || row.index === 0}
-            onClick={() => commit(reorderRows(value, row.id, value.rows[row.index - 1].id))}><ArrowUp /></Button>
-          <Button type="button" variant="ghost" size="icon-xs" aria-label={`下移第 ${row.index + 1} 行`} disabled={busy || row.index === value.rows.length - 1}
-            onClick={() => commit(reorderRows(value, row.id, value.rows[row.index + 1].id))}><ArrowDown /></Button>
-        </>}
+        {!readOnly && <DataGridTableDndRowHandle disabled={!!editing || !!configuring} disabledLabel="请先完成编辑" />}
       </div>,
     }, ...value.columns.map((column): ColumnDef<DataGridFeatures, TableRow> => ({
       id: column.id, accessorFn: row => row.cells[column.id], size: 240, minSize: 180,
