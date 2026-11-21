@@ -8,7 +8,7 @@
 
 <!-- @@@auto:current-status -->
 - **Active File**: `journal-1.md`
-- **Total Sessions**: 11
+- **Total Sessions**: 12
 - **Last Active**: 2026-11-21
 <!-- @@@/auto:current-status -->
 
@@ -19,7 +19,7 @@
 <!-- @@@auto:active-documents -->
 | File | Lines | Status |
 |------|-------|--------|
-| `journal-1.md` | ~269 | Active |
+| `journal-1.md` | ~290 | Active |
 <!-- @@@/auto:active-documents -->
 
 ---
@@ -29,6 +29,7 @@
 <!-- @@@auto:session-history -->
 | # | Date | Title | Commits | Branch |
 |---|------|-------|---------|--------|
+| 12 | 2026-11-21 | Direct browser access to cloud document API | `0d8d4c9` | `main` |
 | 11 | 2026-11-21 | Reusable ReUI typed table | `d5962d1` | `main` |
 | 10 | 2026-11-21 | 通用表格上线与 Cloudflare D1 配置 | `71bf689`, `eecaa29`, `f7f774e` | `main` |
 | 9 | 2026-11-08 | OpenFreeMap 旅行指南页面 | `7604c55` | `main` |

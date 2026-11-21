@@ -267,3 +267,24 @@ Implemented reusable RecordTable, independent cell editors/column settings and v
 ### Status
 
 [OK] **Completed**
+
+
+## Session 12: Direct browser access to cloud document API
+
+**Date**: 2026-11-21
+**Task**: Direct browser access to cloud document API
+**Branch**: `main`
+
+### Summary
+
+Removed Vite Node API proxy; shared request function uses production API in DEV and same origin in production. Added loopback CORS middleware, preflight validation and readable timeout errors. 22 tests/check/Functions build pass. Deployed: Edge localhost and 127.0.0.1 read successfully; direct network responses 93-427ms versus previous 3-15s/timeouts. Password401 and rejected-origin403 verified, no production data writes. Unrelated Hokkaido work preserved.
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `0d8d4c9` | (see git log) |
+
+### Status
+
+[OK] **Completed**
