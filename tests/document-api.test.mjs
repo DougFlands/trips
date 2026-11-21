@@ -4,6 +4,52 @@ import { DatabaseSync } from "node:sqlite";
 import { readFileSync } from "node:fs";
 import { documentRequest, editAccess } from "../server/documents.js";
 import { onRequest as documentRoute } from "../functions/api/documents/[id].js";
+import { onRequest as cors } from "../functions/api/_middleware.js";
+import { onRequest as accessRoute } from "../functions/api/edit-access.js";
+
+test("CORS permits loopback preflights, rejects other origins and preserves password checks/errors", async () => {
+  const request = (origin, method = "OPTIONS", headers = {}) => new Request("https://trip.flands.com/api/edit-access", {
+    method, headers: { ...(origin ? { Origin: origin } : {}), ...headers },
+  });
+  for (const origin of ["http://localhost:5173", "http://127.0.0.1:5174", "https://localhost:5173"]) {
+    for (const method of ["GET", "PUT", "POST"]) {
+      const result = await cors({ request: request(origin, "OPTIONS", {
+        "Access-Control-Request-Method": method, "Access-Control-Request-Headers": "Content-Type, X-Edit-Password",
+      }), next: () => assert.fail("Preflight must not access the database or password handler") });
+      assert.equal(result.status, 204);
+      assert.equal(result.headers.get("Access-Control-Allow-Origin"), origin);
+      assert.equal(result.headers.get("Access-Control-Allow-Credentials"), null);
+    }
+  }
+  for (const origin of ["https://example.com", "http://localhost.evil.test:5173", "null", "http://192.168.1.2:5173", "http://localhost:5173/path"]) {
+    const result = await cors({ request: request(origin), next: () => assert.fail("Unapproved origin reached handler") });
+    assert.equal(result.status, 403);
+    assert.equal(result.headers.get("Access-Control-Allow-Origin"), null);
+  }
+  for (const headers of [{ "Access-Control-Request-Method": "DELETE" }, {
+    "Access-Control-Request-Method": "PUT", "Access-Control-Request-Headers": "Authorization",
+  }]) {
+    assert.equal((await cors({ request: request("http://localhost:5173", "OPTIONS", headers), next: () => assert.fail() })).status, 403);
+  }
+  for (const password of ["", "bad", "test"]) {
+    const req = request("http://localhost:5173", "POST", { "X-Edit-Password": password });
+    const result = await cors({ request: req, next: () => accessRoute({ request: req, env: { TABLE_EDIT_PASSWORD: "test" } }) });
+    assert.equal(result.status, password === "test" ? 200 : 401);
+    assert.equal(result.headers.get("Access-Control-Allow-Origin"), "http://localhost:5173");
+  }
+  for (const status of [400, 404, 409, 413, 503]) {
+    const result = await cors({ request: request("http://127.0.0.1:5173", "GET"),
+      next: () => Response.json({ error: "test" }, { status, headers: { Vary: "Accept" } }) });
+    assert.equal(result.status, status);
+    assert.equal(result.headers.get("Access-Control-Allow-Origin"), "http://127.0.0.1:5173");
+    assert.equal(result.headers.get("Vary"), "Accept, Origin");
+    assert.deepEqual(await result.json(), { error: "test" });
+  }
+  for (const origin of [undefined, "https://trip.flands.com"]) {
+    const response = Response.json({ ok: true });
+    assert.equal(await cors({ request: request(origin, "POST"), next: () => response }), response);
+  }
+});
 
 test("Pages route decodes namespaced IDs exactly once and rejects malformed paths", async () => {
   const db = new DatabaseSync(":memory:");
@@ -11,10 +57,13 @@ test("Pages route decodes namespaced IDs exactly once and rejects malformed path
   const env = { TABLE_EDIT_PASSWORD: "test", DB: {
     prepare: sql => ({ bind: (...args) => ({ first: async () => db.prepare(sql).get(...args) ?? null }) }),
   } };
-  const route = (id, method = "GET") => documentRoute({ env, params: { id }, request: new Request(`https://local/api/documents/${id}`, {
-    method, headers: { "X-Edit-Password": "test" },
-    ...(method === "PUT" ? { body: JSON.stringify({ data: { note: "云端" }, expectedRevision: 0 }) } : {}),
-  }) });
+  const route = (id, method = "GET") => {
+    const request = new Request(`https://local/api/documents/${id}`, {
+      method, headers: { "X-Edit-Password": "test", Origin: "http://localhost:5173" },
+      ...(method === "PUT" ? { body: JSON.stringify({ data: { note: "云端" }, expectedRevision: 0 }) } : {}),
+    });
+    return cors({ request, next: () => documentRoute({ env, params: { id }, request }) });
+  };
   try {
     assert.equal((await route("tables%3Anotes", "PUT")).status, 200);
     assert.equal(db.prepare("SELECT id FROM documents").get().id, "tables:notes");

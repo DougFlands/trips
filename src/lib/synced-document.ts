@@ -32,10 +32,20 @@ export function decodeDocument<T>(value: unknown, validate: (data: unknown) => d
 }
 
 export async function requestDocumentApi(path: string, init: RequestInit = {}) {
-  const response = await fetch(path, {
-    ...init, cache: "no-store",
-    signal: AbortSignal.any([...(init.signal ? [init.signal] : []), AbortSignal.timeout(12000)]),
-  });
+  // Browser networking follows the system proxy; Vite's Node proxy does not.
+  const origin = import.meta.env?.DEV ? "https://trip.flands.com" : "";
+  let response: Response;
+  try {
+    response = await fetch(`${origin}${path}`, {
+      ...init, cache: "no-store",
+      signal: AbortSignal.any([...(init.signal ? [init.signal] : []), AbortSignal.timeout(12000)]),
+    });
+  } catch (error) {
+    if (!init.signal?.aborted && error instanceof Error && error.name === "TimeoutError") {
+      throw new DocumentError("连接同步服务超时，请检查网络后重试。", 504);
+    }
+    throw error;
+  }
   if (!response.ok) {
     const messages: Record<number, string> = {
       401: "编辑密码已失效，请重新输入。", 409: "其他页面已更新，请选择要保留的内容。",

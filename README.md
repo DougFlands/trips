@@ -132,7 +132,9 @@ node --test tests/stargazing.test.mjs
 npm run dev
 ```
 
-访问 `http://localhost:5173/tools/tables/`。Vite 将 `/api` 请求代理到 `https://trip.flands.com`，开发页面和线上页面共用 D1 数据与编辑密码；`npm run dev:tables` 是兼容别名。不再使用本地 SQLite 数据库。
+访问 `http://localhost:5173/tools/tables/` 或 `http://127.0.0.1:5173/tools/tables/`。开发页面由浏览器直接请求 `https://trip.flands.com/api`，读取、密码验证与保存均绕过 Vite 转发；线上继续使用同源 `/api`。两边共用 D1 数据与编辑密码，`npm run dev:tables` 是兼容别名，不使用本地数据库。浏览器按系统网络/代理设置联网，避免 Node 直连 Cloudflare 时超时。
+
+`functions/api/_middleware.js` 允许 HTTP/HTTPS 的 `localhost`、`127.0.0.1` 开发源（任意端口），处理 GET/PUT/POST 的跨域预检；不允许任意域名或局域网 IP。`X-Edit-Password` 仍由服务端核对，CORS 不代替身份校验。请求超时会显示“连接同步服务超时，请检查网络后重试”。
 
 自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。表格数据只存线上 D1，不写入浏览器存储；未保存修改仅留在当前页面内存，关闭前有浏览器提醒。浏览器仅记住编辑密码。同一份文档并发修改时提示选择保存当前内容或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
 

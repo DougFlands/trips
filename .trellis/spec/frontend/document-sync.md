@@ -11,6 +11,7 @@
 - `useSyncedDocument<T>({ id, initialValue, validate, transport, canEdit?, saveDelay?, pollInterval? })`。
 - transport：`read(id, signal) -> VersionedDocument<T> | null`；`write(id, data, expectedRevision, signal) -> VersionedDocument<T>`。
 - GET/PUT `/api/documents/:id`；POST `/api/edit-access`。
+- `functions/api/_middleware.js::onRequest({request,next})` 统一处理开发源 CORS；OPTIONS 预检不进入密码/数据库处理器。
 - D1：`documents(id PRIMARY KEY, data JSON text, revision INTEGER, updated_at TEXT)`，迁移 `migrations/0001_documents.sql`。
 
 ## 3. Contracts
@@ -25,7 +26,8 @@
 - Pages Functions 的 `params.id` 保留 URL 编码，路由边界必须 `decodeURIComponent` 一次后交给业务校验；格式错误返回 400。API 测试复用真实路由入口，覆盖 `tables%3Anotes` 的创建/读取，避免本地提前解码掩盖生产差异。
 - DB binding `DB`；Secret `TABLE_EDIT_PASSWORD`。客户端发送 `X-Edit-Password: encodeURIComponent(password)`；服务端核对，不能仅信任客户端 unlocked 布尔值。
 - 只有读取的 404 表示不存在；格式错误、网络失败、503 不可当空文档。所有 API 响应禁缓存。
-- `npm run dev` 使用 Vite，将 `/api` 代理到 `https://trip.flands.com`，共用线上 D1 与编辑密码，不启动本地数据库。客户端拒绝 200 HTML 回退响应，显示可读服务错误并保留当前页面修改。
+- `requestDocumentApi` 在 Vite DEV 环境将 `/api/...` 拼接到 `https://trip.flands.com`，由浏览器直接访问，生产环境保持同源；读、写、密码验证必须经过同一入口。不使用 Vite Node 转发（不自动继承 Windows 系统代理，曾导致频繁12秒超时），不启动本地数据库。12秒超时转换为中文 DocumentError(504)，调用方取消保持原取消信号；HTML响应仍拒绝解码。
+- CORS 精确允许 HTTP/HTTPS 的 localhost、127.0.0.1 源及任意合法端口；不接受 null、其他域名、域名后缀或局域网IP。同源/无Origin请求沿用原流程。允许源的 GET/PUT/POST 预检只放行 Content-Type、X-Edit-Password，返回204；未知来源/方法/头返回403。成功和400/401/404/409/413/503响应均带对应 Allow-Origin 与 Vary: Origin，禁止通配符及 Allow-Credentials；写操作仍验证密码/revision。
 - hook 的配置初始值、验证函数、transport 需稳定；组件 key 或 hook id 改变后，旧请求不得回写新资源。
 - 1 秒尾部节流，写串行；15 秒轮询；隐藏页面暂停，online/visible 后恢复。新修改不能被旧写响应覆盖。
 - 表格数据不写入 localStorage/sessionStorage，不恢复旧草稿；未保存修改仅留在页面内存，关闭前提示。仅编辑密码允许浏览器记忆。有未提交输入时通过 setEditing 暂停应用远端数据，离开时清理请求与定时器。
@@ -47,6 +49,9 @@
 | 离线 | 显示失败，修改仅在当前页面保留，不误报已同步 |
 | 字段转换失败/删除已用选项 | 提示具体行号，整列和原配置保持不变 |
 | v1 读取 | 内存升级 v2，云端版本与 JSON 不变 |
+| 允许的本地源 OPTIONS | 204，允许方法和请求头，无数据库操作 |
+| 未批准跨域来源/预检头 | 403；未知来源不返回 Allow-Origin |
+| 请求12秒超时 | 中文错误，页面保留修改；用户取消不改写为超时 |
 
 ## 5. Good / Base / Bad
 
@@ -61,6 +66,7 @@
 - 浏览器桌面和窄屏：双击、铅笔、Enter 换行、Ctrl/⌘+Enter 或失焦保存、Escape 取消、IME、改表头、行列新增、密码恢复/锁定、两页面同步、当前页面离线重试。单元格与表头使用自动高度 Textarea（field-sizing-content），显示时保留换行。
 - `/tests/synced-document.html`：普通备忘 JSON 复用同一 hook，不能只测试表格。
 - `/tests/record-table.html`：内存样例覆盖九种字段、12行不分页、变高行拖拽、只读和窄屏横向滚动。`table-data.test.mjs` 覆盖类型/迁移/无损转换；`table-transport.test.mjs` 使用真实 API 处理器与内存 SQLite 覆盖只读迁移不写、v2回读、401/409，不连接生产数据库。
+- CORS测试必须覆盖预检不进入业务、精确源校验、拒绝未知头、401/409可读、真实路由PUT/GET保持密码/版本契约；开发 transport 测试断言请求绝对线上URL。发布后用浏览器本地页面确认跨域成功，不能仅依靠 curl（curl不执行CORS策略）。
 
 ## 7. Wrong vs Correct
 

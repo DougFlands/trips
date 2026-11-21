@@ -23,6 +23,7 @@ test("table transport migrates only on edit, round trips typed values and reject
     assert.equal(seed.status, 200);
     const requests = [];
     t.mock.method(globalThis, "fetch", async (path, init) => {
+      assert.ok(path.startsWith("https://trip.flands.com/api/documents/"), "development requests go directly to production");
       requests.push(init?.method ?? "GET");
       return documentRequest(new Request(new URL(path, "https://test"), init), env, decodeURIComponent(path.split("/").pop()));
     });

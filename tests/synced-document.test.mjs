@@ -1,6 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { SyncedDocument, DocumentError, createDocumentTransport } from "../src/lib/synced-document.ts";
+import { SyncedDocument, DocumentError, createDocumentTransport, requestDocumentApi } from "../src/lib/synced-document.ts";
+
+test("request timeout has a readable message while caller cancellation is preserved", async t => {
+  const timeout = new DOMException("signal timed out", "TimeoutError");
+  t.mock.method(globalThis, "fetch", async () => { throw timeout; });
+  await assert.rejects(requestDocumentApi("/api/edit-access"), error => error.status === 504 && error.message.includes("连接同步服务超时"));
+  const controller = new AbortController(); controller.abort();
+  await assert.rejects(requestDocumentApi("/api/edit-access", { signal: controller.signal }), error => error === timeout);
+});
 
 test("HTML fallback from a missing API is a readable error, never an empty document", async t => {
   t.mock.method(globalThis, "fetch", async () => new Response("<!doctype html><html></html>", {
