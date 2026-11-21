@@ -9,12 +9,12 @@ import { Field, FieldGroup, FieldLabel } from "./ui/field";
 import { Input } from "./ui/input";
 import { useEditAccess } from "../hooks/use-edit-access";
 import { useSyncedDocument } from "../hooks/use-synced-document";
-import { createDocumentTransport } from "../lib/synced-document";
+import { createTableTransport } from "../lib/table-transport";
 import type { SyncStatus } from "../lib/synced-document";
 
 const initialTable: TableData = {
-  schemaVersion: 1,
-  columns: [{ id: "name", name: "名称" }, { id: "date", name: "日期" }, { id: "notes", name: "备注" }],
+  schemaVersion: 2,
+  columns: [{ id: "name", name: "名称", type: "text" }, { id: "date", name: "日期", type: "date" }, { id: "notes", name: "备注", type: "multiline" }],
   rows: [],
 };
 const statuses: Record<SyncStatus, string> = {
@@ -25,7 +25,7 @@ export function SyncedTable({ id, title }: { id: string; title?: string }) {
   const passwordId = useId();
   const access = useEditAccess();
   const [password, setPassword] = useState("");
-  const transport = useMemo(() => createDocumentTransport(isTableData, access.getPassword), [access.getPassword]);
+  const transport = useMemo(() => createTableTransport(access.getPassword), [access.getPassword]);
   const document = useSyncedDocument({ id: `tables:${id}`, initialValue: initialTable, validate: isTableData,
     transport, canEdit: access.canEdit });
   useEffect(() => { if (document.unauthorized) access.lock(); }, [document.unauthorized, access.lock]);
@@ -73,7 +73,7 @@ export function SyncedTable({ id, title }: { id: string; title?: string }) {
           : <p className="rounded-lg border p-10 text-center text-sm text-muted-foreground">
             {document.status === "loading" ? "正在读取记录…" : "记录暂时无法读取，请稍后重试。"}
           </p>}
-        <p className="text-xs leading-6 text-muted-foreground">{readOnly ? "所有人都可以查看，输入密码后可编辑。" : "双击或点击铅笔编辑 · Enter 换行 · 失焦或 Ctrl/⌘+Enter 保存 · Esc 取消"} 更新约每 15 秒自动读取。</p>
+        <p className="text-xs leading-6 text-muted-foreground">{readOnly ? "所有人都可以查看，输入密码后可编辑。" : "拖动行号旁的手柄排序 · 点击表头设置字段 · 多行文本 Enter 换行 · Ctrl/⌘+Enter 保存 · Esc 取消"} 更新约每 15 秒自动读取。</p>
       </section>
   </div>;
 }

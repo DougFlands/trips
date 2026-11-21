@@ -124,7 +124,7 @@ node --test tests/stargazing.test.mjs
 
 入口：`/tools/tables/`，首页有“打开记录表格”链接。不同表格可使用不同地址，例如 `/tools/tables/?id=stays`、`?id=expenses`；ID 限字母、数字和连字符，最长 64 个字符。
 
-支持双击或铅笔按钮编辑、Enter 换行、Ctrl/⌘+Enter 或失焦保存、Escape 取消、添加行列与修改表头。单元格与表头均可多行输入，输入框和行高随内容自动增减。首版为文本单元格，最多 50 列、1000 行，单份 JSON 不超过 512 KiB。未解锁可读；固定密码验证成功后可编辑，浏览器记住密码，锁定后清除。
+采用 [ReUI Data Grid](https://reui.io/docs/data-grid)，支持文本、多行文本、数字、金额、日期、单选、多选、勾选和网址。双击或铅笔按钮编辑；多行文本 Enter 换行，Ctrl/⌘+Enter 或失焦保存，Escape 取消。可添加行、添加字段、修改表头名称/类型/选项；行高随内容调整。最多 50 列、1000 行，单份 JSON 不超过 512 KiB。未解锁可读；固定密码验证成功后可编辑，浏览器记住密码，锁定后清除。
 
 本地运行完整表格功能（Node >=22.13）：
 
@@ -136,15 +136,29 @@ npm run dev
 
 自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。表格数据只存线上 D1，不写入浏览器存储；未保存修改仅留在当前页面内存，关闭前有浏览器提醒。浏览器仅记住编辑密码。同一份文档并发修改时提示选择保存当前内容或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
 
-行号旁的上下箭头可调整行顺序，首行不可上移、末行不可下移；只读时隐藏。移动整行保留原有内容与 ID，顺序随表格自动同步到云端。
+拖动行号旁的手柄可调整整行顺序，也可使用上下箭头；首行不可上移、末行不可下移，只读时隐藏。移动保留所有单元格与 ID，顺序自动同步。编辑、配置字段或拖拽期间暂停应用远端刷新。
+
+旧版字符串表格按多行文本完整读取，打开页面不会写入升级数据；首次修改才按原 revision 保存 v2。字段转换会检查整列：非法数字/日期、含换行文本转单行、删除仍被使用的选项等会提示并保留原数据。
 
 复用入口：
 
-- `src/components/editable-table.tsx`：受控组件 `value / onChange / readOnly / onEditingChange`，不依赖密码或服务端。
+- `src/components/record-table/record-table.tsx`：受控组件 `RecordTable({ value, onChange, readOnly, onEditingChange })`，不依赖密码或服务端；`editable-table.tsx` 保留兼容导出。
+- `src/components/record-table/cell-editor.tsx`、`column-settings.tsx`：独立单元格展示/编辑与字段配置；ReUI 上游源码单独放在 `components/reui/data-grid/`。
+- `src/lib/table-data.ts`：JSON 类型、校验、旧数据升级、字段转换与行移动；`table-transport.ts` 仅适配表格读写，不改变通用同步协议。
 - `src/components/synced-table.tsx`：`SyncedTable({ id, title? })`，组合密码验证、同步状态与表格，可直接嵌入旅行页；北海道第 04 节前使用 `hokkaido-stays`，与 `/tools/tables/?id=hokkaido-stays` 共用数据。
 - `src/hooks/use-synced-document.ts`：`useSyncedDocument<T>`，可用于任意通过校验的 JSON 数据；`id`、初始值、验证函数和 transport 保持稳定。
 - `src/lib/synced-document.ts`：HTTP transport 与可测试的同步控制器，服务端契约为 `{ data, revision, updatedAt }`。
 - `src/hooks/use-edit-access.ts`：共享密码验证、浏览器记忆与锁定。
+
+其他页面直接接云端（相同 ID 共用记录，不同 ID 独立）：
+
+```tsx
+import { SyncedTable } from "@/components/synced-table";
+
+<SyncedTable id="trip-expenses" title="旅行费用" />
+```
+
+已有自己的状态管理时，使用 `<RecordTable value={table} onChange={setTable} readOnly={false} />`，数据格式由 `TableData` 约束。开发服务的 `/tests/record-table.html` 提供九种字段的内存验收样例。
 
 非表格数据示例（组件内；`initialNote` 和 `isNote` 放模块作用域）：
 

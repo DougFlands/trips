@@ -6,7 +6,8 @@
 
 ## 2. Signatures
 
-- `EditableTable({ value, onChange, readOnly, onEditingChange })`；`TableData = { schemaVersion: 1, columns: {id,name}[], rows: {id,cells}[] }`。
+- `RecordTable({ value, onChange, readOnly, onEditingChange })`；`EditableTable` 为兼容导出。`TableData = { schemaVersion: 2, columns: {id,name,type,options?}[], rows: {id,cells}[] }`；`CellValue = string | number | boolean | string[] | null`。
+- `createTableTransport(getPassword)` 读取 v1/v2，返回 v2；`table-data.ts` 提供纯校验/迁移/字段转换/行移动。`SyncedTable({id,title?})` 包装权限和同步；单元格编辑/字段设置与 ReUI 上游源码分目录。
 - `useSyncedDocument<T>({ id, initialValue, validate, transport, canEdit?, saveDelay?, pollInterval? })`。
 - transport：`read(id, signal) -> VersionedDocument<T> | null`；`write(id, data, expectedRevision, signal) -> VersionedDocument<T>`。
 - GET/PUT `/api/documents/:id`；POST `/api/edit-access`。
@@ -17,6 +18,10 @@
 - 响应 `{data, revision, updatedAt}`；PUT `{data, expectedRevision}`。首次创建预期版本 0，成功为 1；后续原子条件更新并递增。
 - ID 为 `[a-zA-Z0-9][a-zA-Z0-9:_-]{0,127}`，JSON 上限 512 KiB。表格额外限制 50 列、1000 行；列/行稳定 ID 独立于名称和位置。
 - 行顺序以 `rows` 数组为准；上下移动交换整行，保留 ID 与全部单元格，沿用自动同步与版本冲突处理。只读隐藏移动按钮，首尾禁用越界方向。
+- ReUI 使用 TanStack v9 `useTable` + `dataGridFeatures`，显式 `manualPagination: true`、关闭排序；稳定 `getRowId` 与 DnD `dataIds` 一致。拖拽、单元格编辑、字段设置通过 `onEditingChange` 暂停远端覆盖；取消/锁定/卸载释放。使用自定义编辑器保留多行 Enter 换行；编辑器内部切焦点不提交。
+- 九种字段为 text/multiline/number/currency/date/select/multiselect/checkbox/url。数字必须有限，空数字为 null，0/false 不作空；金额只在展示时保留两位。日期为校验过的 YYYY-MM-DD；网址仅 HTTP(S)。单行文本拒绝换行；选项最多100个且唯一。
+- v1 全字符串列在内存中变为 multiline，保持值、ID、顺序、revision、updatedAt；读取不写，首次实际修改才保存 v2。不推测旧字段类型。字段转换必须整列成功，失败返回行号；禁止删除已使用选项或截断文本（如 `001` 转数字）。旧客户端读到 v2 拒绝解码，旧 revision 写入由 409 拦截。
+- ReUI registry 的 Checkbox 需适配项目 Radix API：部分选中用 `checked="indeterminate"`；沿用 `@/lib/utils` 的 cn，不能引入同名第三方包。保留上游 `use no memo` 指令，目前构建的指令提示不影响未启用 React Compiler 的项目。
 - Pages Functions 的 `params.id` 保留 URL 编码，路由边界必须 `decodeURIComponent` 一次后交给业务校验；格式错误返回 400。API 测试复用真实路由入口，覆盖 `tables%3Anotes` 的创建/读取，避免本地提前解码掩盖生产差异。
 - DB binding `DB`；Secret `TABLE_EDIT_PASSWORD`。客户端发送 `X-Edit-Password: encodeURIComponent(password)`；服务端核对，不能仅信任客户端 unlocked 布尔值。
 - 只有读取的 404 表示不存在；格式错误、网络失败、503 不可当空文档。所有 API 响应禁缓存。
@@ -40,6 +45,8 @@
 | 保存期间继续改动 | 旧响应仅确认其提交，尾部继续保存 |
 | 成功写入但响应丢失 | 重读对账，相同数据确认成功，避免盲目重复写 |
 | 离线 | 显示失败，修改仅在当前页面保留，不误报已同步 |
+| 字段转换失败/删除已用选项 | 提示具体行号，整列和原配置保持不变 |
+| v1 读取 | 内存升级 v2，云端版本与 JSON 不变 |
 
 ## 5. Good / Base / Bad
 
@@ -53,6 +60,7 @@
 - `npm run check`；`npx wrangler pages functions build functions --outdir work/pages-functions`。
 - 浏览器桌面和窄屏：双击、铅笔、Enter 换行、Ctrl/⌘+Enter 或失焦保存、Escape 取消、IME、改表头、行列新增、密码恢复/锁定、两页面同步、当前页面离线重试。单元格与表头使用自动高度 Textarea（field-sizing-content），显示时保留换行。
 - `/tests/synced-document.html`：普通备忘 JSON 复用同一 hook，不能只测试表格。
+- `/tests/record-table.html`：内存样例覆盖九种字段、12行不分页、变高行拖拽、只读和窄屏横向滚动。`table-data.test.mjs` 覆盖类型/迁移/无损转换；`table-transport.test.mjs` 使用真实 API 处理器与内存 SQLite 覆盖只读迁移不写、v2回读、401/409，不连接生产数据库。
 
 ## 7. Wrong vs Correct
 
