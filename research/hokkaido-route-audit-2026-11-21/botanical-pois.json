@@ -1,0 +1,170 @@
+[
+  {
+    "name": "熱帯植物園入口",
+    "type": "node",
+    "id": "262997288",
+    "tags": {
+      "highway": "traffic_signals",
+      "name": "熱帯植物園入口",
+      "name:en": "Tropical Botanical Garden Ent.",
+      "name:ja": "熱帯植物園入口",
+      "traffic_signals": "signal"
+    },
+    "lat": 41.7749129,
+    "lon": 140.7905513
+  },
+  {
+    "name": "湯の川温泉",
+    "type": "node",
+    "id": "264463511",
+    "tags": {
+      "KSJ2:LIN": "湯の川線",
+      "KSJ2:STN": "湯の川温泉",
+      "name": "湯の川温泉",
+      "name:en": "Yunokawa-Onsen",
+      "name:ja": "湯の川温泉",
+      "note": "National-Land Numerical Information (Railway) 2007, MLIT Japan",
+      "note:ja": "国土数値情報（鉄道データ）平成19年　国土交通省",
+      "public_transport": "stop_position",
+      "railway": "tram_stop",
+      "ref": "DY2",
+      "source": "KSJ2",
+      "source_ref": "http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-N02-v1_1.html",
+      "tram": "yes",
+      "wheelchair": "no",
+      "wheelchair:description": "市電に乗るための段差は杖を使っても厳しく 車椅子では誰かに運んでもらわない限り乗れません また内部に車椅子のためのスペースもないため通路を塞ぐ形になってしまいます。"
+    },
+    "lat": 41.7800403,
+    "lon": 140.7851715
+  },
+  {
+    "name": "湯の川温泉足湯「湯巡り舞台」",
+    "type": "node",
+    "id": "2700680941",
+    "tags": {
+      "name": "湯の川温泉足湯「湯巡り舞台」",
+      "tourism": "viewpoint"
+    },
+    "lat": 41.7796142,
+    "lon": 140.7856804
+  },
+  {
+    "name": "湯の川温泉 ホテル雨宮館",
+    "type": "node",
+    "id": "4292203390",
+    "tags": {
+      "name": "湯の川温泉 ホテル雨宮館",
+      "tourism": "hotel"
+    },
+    "lat": 41.7808199,
+    "lon": 140.7839067
+  },
+  {
+    "name": "湯の川温泉",
+    "type": "node",
+    "id": "5683464376",
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "湯の川温泉",
+      "public_transport": "platform"
+    },
+    "lat": 41.774746,
+    "lon": 140.7865848
+  },
+  {
+    "name": "湯の川温泉",
+    "type": "node",
+    "id": "6194038634",
+    "tags": {
+      "KSJ2:LIN": "湯の川線",
+      "KSJ2:STN": "湯の川温泉",
+      "name": "湯の川温泉",
+      "name:en": "Yunokawa-Onsen",
+      "name:ja": "湯の川温泉",
+      "note": "National-Land Numerical Information (Railway) 2007, MLIT Japan",
+      "note:ja": "国土数値情報（鉄道データ）平成19年　国土交通省",
+      "public_transport": "stop_position",
+      "railway": "tram_stop",
+      "ref": "DY2",
+      "source": "KSJ2",
+      "source_ref": "http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-N02-v1_1.html",
+      "tram": "yes",
+      "wheelchair": "no",
+      "wheelchair:description": "市電に乗るための段差は杖を使っても厳しく 車椅子では誰かに運んでもらわない限り乗れません また内部に車椅子のためのスペースもないため通路を塞ぐ形になってしまいます。"
+    },
+    "lat": 41.7800211,
+    "lon": 140.7851553
+  },
+  {
+    "name": "湯の川温泉",
+    "type": "node",
+    "id": "11708147899",
+    "tags": {
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "湯の川温泉",
+      "public_transport": "platform"
+    },
+    "lat": 41.7747063,
+    "lon": 140.7870497
+  },
+  {
+    "name": "函館 湯の川温泉 海と灯／ヒューイットリゾート",
+    "type": "node",
+    "id": "13179689331",
+    "tags": {
+      "addr:province": "北海道",
+      "amenity": "bicycle_rental",
+      "authentication:app": "yes",
+      "brand": "HELLO CYCLING",
+      "brand:ja": "ハローサイクリング",
+      "brand:wikidata": "Q91231927",
+      "capacity": "7",
+      "contact:website": "https://www.hellocycling.jp",
+      "fee": "yes",
+      "gbfs:station_id": "17650",
+      "gbfs:system_id": "hellocycling",
+      "name": "函館 湯の川温泉 海と灯／ヒューイットリゾート",
+      "name:ja": "函館 湯の川温泉 海と灯／ヒューイットリゾート",
+      "network": "HELLO CYCLING",
+      "network:ja": "ハローサイクリング",
+      "network:wikidata": "Q91231927"
+    },
+    "lat": 41.7755764,
+    "lon": 140.790149
+  },
+  {
+    "name": "函館市熱帯植物園",
+    "type": "way",
+    "id": "241423246",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "函館市",
+      "addr:neighbourhood": "3丁目",
+      "addr:province": "北海道",
+      "addr:quarter": "湯川町",
+      "leisure": "park",
+      "name": "函館市熱帯植物園",
+      "name:en": "Hakodate City Tropical Botanical Garden",
+      "name:ja": "函館市熱帯植物園",
+      "name:ko": "하코다테시 열대식물원",
+      "phone": "+81 138 57 7833",
+      "website": "https://hako-eco.com/"
+    },
+    "lat": 41.77421685,
+    "lon": 140.78936388
+  },
+  {
+    "name": "函館湯の川温泉　海と灯／ヒューイットリゾート",
+    "type": "way",
+    "id": "1575983422",
+    "tags": {
+      "building": "hotel",
+      "building:levels": "12",
+      "name": "函館湯の川温泉　海と灯／ヒューイットリゾート"
+    },
+    "lat": 41.77516498,
+    "lon": 140.79059683999998
+  }
+]

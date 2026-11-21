@@ -1,0 +1,1050 @@
+[
+  {
+    "name": "札幌ビューホテル 大通公園",
+    "type": "node",
+    "id": "2015945642",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "8丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "check_date": "2026-03-05",
+      "internet_access": "yes",
+      "name": "札幌ビューホテル 大通公園",
+      "name:en": "Sapporo View Hotel Odori Park",
+      "name:ja": "札幌ビューホテル 大通公園",
+      "name:ja_rm": "Sapporo Byū Hoteru Sapporo Ōdōri",
+      "operator": "日本ビューホテル",
+      "phone": "+81-570-000-933",
+      "tourism": "hotel",
+      "website": "https://www.viewhotels.co.jp/sapporo/",
+      "wikidata": "Q28137575"
+    },
+    "coord": [
+      141.3448781,
+      43.0588658
+    ]
+  },
+  {
+    "name": "SAN GRAN HOTEL 札幌大通公園",
+    "type": "node",
+    "id": "2021086981",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:neighbourhood": "北1条西4丁目",
+      "addr:postcode": "060-0001",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "air_conditioning": "yes",
+      "name": "SAN GRAN HOTEL 札幌大通公園",
+      "name:en": "San Gran Hotel Sapporo Odori Koen",
+      "name:ja": "SAN GRAN HOTEL 札幌大通公園",
+      "name:ja_rm": "Hoteru Daburyūbīefu Sapporo ōdōri",
+      "operator": "三甲株式会社",
+      "phone": "+81-11-555-3336",
+      "rooms": "57",
+      "toilets:wheelchair": "yes",
+      "tourism": "hotel",
+      "website": "https://sangranhotel.com/",
+      "wheelchair:description": "バリアフリールームあり"
+    },
+    "coord": [
+      141.3511394,
+      43.0616249
+    ]
+  },
+  {
+    "name": "札幌大通公園前郵便局",
+    "type": "node",
+    "id": "2021091139",
+    "tags": {
+      "addr:block_number": "6",
+      "addr:city": "札幌市",
+      "addr:floor": "0",
+      "addr:housenumber": "8",
+      "addr:neighbourhood": "大通西4丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "amenity": "post_office",
+      "atm": "yes",
+      "fax": "+81-11-222-1006",
+      "name": "札幌大通公園前郵便局",
+      "name:en": "Sapporo Odori Koen mae Post Office",
+      "name:ja": "札幌大通公園前郵便局",
+      "name:ja-Hira": "さっぽろおおどおりこうえんまえゆうびんきょく",
+      "name:ja-Latn": "Sapporo Ōdōri Kōen mae Yūbinkyoku",
+      "opening_hours": "Mo-Fr 09:00-17:00; Sa off; Su off; PH off",
+      "operator": "日本郵便",
+      "operator:en": "Japan Post",
+      "operator:ja": "日本郵便",
+      "operator:short": "郵便局",
+      "operator:short:en": "JP",
+      "operator:short:ja": "郵便局",
+      "operator:wikidata": "Q11509260",
+      "payment:alipay": "yes",
+      "payment:amazon_pay": "yes",
+      "payment:american_express": "yes",
+      "payment:au_pay": "yes",
+      "payment:cash": "yes",
+      "payment:d_barai": "yes",
+      "payment:diners_club": "yes",
+      "payment:icsf": "yes",
+      "payment:id": "yes",
+      "payment:jcb": "yes",
+      "payment:jcoin_pay": "yes",
+      "payment:line_pay": "yes",
+      "payment:mastercard": "yes",
+      "payment:merpay": "yes",
+      "payment:paypay": "yes",
+      "payment:quicpay": "yes",
+      "payment:rakuten_pay": "yes",
+      "payment:unionpay": "yes",
+      "payment:visa": "yes",
+      "payment:waon": "yes",
+      "payment:wechat": "yes",
+      "payment:yucho_pay": "yes",
+      "phone": "+81-11-242-7088",
+      "ref": "905650",
+      "short_name": "郵便局",
+      "short_name:en": "JP",
+      "short_name:ja": "郵便局",
+      "url": "https://map.japanpost.jp/p/search/dtl/300190565000/",
+      "website": "https://www.japanpost.jp/"
+    },
+    "coord": [
+      141.3512712,
+      43.0609355
+    ]
+  },
+  {
+    "name": "大通公園",
+    "type": "node",
+    "id": "2287712217",
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "大通公園",
+      "name:en": "Odori koen",
+      "name:ja": "大通公園",
+      "public_transport": "platform",
+      "shelter": "no",
+      "tactile_paving": "yes"
+    },
+    "coord": [
+      141.3535386,
+      43.0607249
+    ]
+  },
+  {
+    "name": "正門",
+    "type": "node",
+    "id": "2696114471",
+    "tags": {
+      "barrier": "gate",
+      "name": "正門",
+      "name:en": "Main gate",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.3446055,
+      43.0635016
+    ]
+  },
+  {
+    "name": "北海道大学植物園",
+    "type": "node",
+    "id": "2903774601",
+    "tags": {
+      "amenity": "toilets",
+      "name": "北海道大学植物園",
+      "toilets:wheelchair": "yes",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.344579,
+      43.062642
+    ]
+  },
+  {
+    "name": "オディシス札幌大通公園ホテル",
+    "type": "node",
+    "id": "5391145726",
+    "tags": {
+      "addr:block_number": "2",
+      "addr:city": "札幌市",
+      "addr:housenumber": "36",
+      "addr:neighbourhood": "8丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "internet_access": "wlan",
+      "name": "オディシス札幌大通公園ホテル",
+      "name:en": "Odysis Sapporo Odori Park Hotel",
+      "name:ja": "オディシス札幌大通公園ホテル",
+      "name:ja_rm": "Besuto Wesutan Sapporo Ōdōri Kōen",
+      "operator": "フィーノホテルズ",
+      "tourism": "hotel"
+    },
+    "coord": [
+      141.344601,
+      43.0601067
+    ]
+  },
+  {
+    "name": "グランドメルキュール札幌大通公園",
+    "type": "node",
+    "id": "11826904305",
+    "tags": {
+      "amenity": "bicycle_rental",
+      "authentication:app": "yes",
+      "brand": "ドコモ・バイクシェア",
+      "brand:en": "Docomo Bike Share",
+      "brand:ja": "ドコモ・バイクシェア",
+      "brand:website": "https://docomo-cycle.jp/",
+      "brand:wikidata": "Q55533296",
+      "capacity": "24",
+      "fee": "yes",
+      "gbfs:name": "08.グランドメルキュール札幌大通公園",
+      "gbfs:station_id": "2742",
+      "gbfs:system_id": "docomo-cycle",
+      "name": "グランドメルキュール札幌大通公園",
+      "name:en": "Docomo Bike Share",
+      "name:ja": "グランドメルキュール札幌大通公園",
+      "operator": "ドコモ・バイクシェア",
+      "operator:en": "Docomo Bike Share",
+      "operator:ja": "ドコモ・バイクシェア",
+      "operator:type": "private",
+      "operator:wikidata": "Q55533296",
+      "ref": "8"
+    },
+    "coord": [
+      141.340511,
+      43.060673
+    ]
+  },
+  {
+    "name": "札幌ビューホテル大通公園（降車専用）",
+    "type": "node",
+    "id": "12446535743",
+    "tags": {
+      "bus": "yes",
+      "departures_board": "no",
+      "highway": "bus_stop",
+      "name": "札幌ビューホテル大通公園（降車専用）",
+      "network": "北都交通",
+      "network:en": "Hokuto Kotsu",
+      "network:ja": "北都交通",
+      "network:wikidata": "Q11404223",
+      "operator": "北都交通",
+      "operator:en": "Hokuto Kotsu",
+      "operator:ja": "北都交通",
+      "operator:wikidata": "Q11404223",
+      "public_transport": "platform",
+      "shelter": "no"
+    },
+    "coord": [
+      141.3449465,
+      43.0591095
+    ]
+  },
+  {
+    "name": "丸美珈琲店　大通公園8丁目　F-60",
+    "type": "node",
+    "id": "12597591812",
+    "tags": {
+      "addr:block_number": "1番地8",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:street": "大通西8丁目",
+      "amenity": "cafe",
+      "check_date": "2026-07-15",
+      "check_date:opening_hours": "2026-07-15",
+      "internet_access": "no",
+      "name": "丸美珈琲店　大通公園8丁目　F-60",
+      "opening_hours": "08:00-19:00",
+      "payment:cards": "no",
+      "payment:cash": "yes",
+      "payment:credit_cards": "no",
+      "payment:debit_cards": "no",
+      "phone": "07044771740",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.3457287,
+      43.0591269
+    ]
+  },
+  {
+    "name": "グランドメルキュール札幌大通公園",
+    "type": "node",
+    "id": "13540638985",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:neighbourhood": "北1条西11丁目",
+      "addr:postcode": "060-0001",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "description": "旧ロイトン札幌",
+      "name": "グランドメルキュール札幌大通公園",
+      "name:en": "Grand Mercure Sapporo Odori Park",
+      "name:ja": "グランドメルキュール札幌大通公園",
+      "phone": "+81-11-271-2711",
+      "tourism": "hotel",
+      "website": "https://grand-mercure-sapporo-odoripark.jp/",
+      "wikidata": "Q28052505",
+      "wikipedia": "ja:グランドメルキュール札幌大通公園"
+    },
+    "coord": [
+      141.3398084,
+      43.061014
+    ]
+  },
+  {
+    "name": "ザ ロイヤルパーク キャンバス 札幌大通公園",
+    "type": "node",
+    "id": "13540823693",
+    "tags": {
+      "addr:block_number": "12",
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "1丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "brand": "The Royal Park Camvas",
+      "name": "ザ ロイヤルパーク キャンバス 札幌大通公園",
+      "name:en": "The Royal Park Camvas Sapporo Odori Park",
+      "name:ja": "ザ ロイヤルパーク キャンバス 札幌大通公園",
+      "phone": "+81-11-208-1555",
+      "tourism": "hotel",
+      "website": "https://www.royalparkhotels.co.jp/canvas/sapporoodoripark/"
+    },
+    "coord": [
+      141.3559885,
+      43.0604498
+    ]
+  },
+  {
+    "name": "ALPHABED INN 札幌大通公園",
+    "type": "node",
+    "id": "13620257081",
+    "tags": {
+      "addr:block_number": "20",
+      "addr:city": "札幌市",
+      "addr:housenumber": "2",
+      "addr:neighbourhood": "南1条西7丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "brand": "ALPHABED INN",
+      "email": "alphabed@anabuki-housing.co.jp",
+      "name": "ALPHABED INN 札幌大通公園",
+      "name:ja": "アルファベット イン 札幌大通公園",
+      "tourism": "hotel",
+      "website": "https://alphabed.airhost.co/ja/houses/206930"
+    },
+    "coord": [
+      141.3464567,
+      43.0583981
+    ]
+  },
+  {
+    "name": "ホテルリブマックス PREMIUM札幌大通公園",
+    "type": "node",
+    "id": "13620318601",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "20",
+      "addr:neighbourhood": "南2条西9丁目",
+      "addr:postcode": "060-0062",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "brand": "ホテルリブマックス",
+      "check_date": "2026-03-05",
+      "name": "ホテルリブマックス PREMIUM札幌大通公園",
+      "name:en": "HOTEL LiVEMAX PREMIUM Sapporo Odori koen",
+      "name:ja": "ホテルリブマックス PREMIUM札幌大通公園",
+      "phone": "+81-11-219-4400",
+      "tourism": "hotel",
+      "url": "https://www.hotel-livemax.com/hokkaido/sapporo_odorikoen/",
+      "website": "https://www.hotel-livemax.com/hokkaido/sapporo_odorikoen/"
+    },
+    "coord": [
+      141.3441418,
+      43.0570869
+    ]
+  },
+  {
+    "name": "大通公園",
+    "type": "way",
+    "id": "64733385",
+    "tags": {
+      "architect": "長岡安平",
+      "architect:wikidata": "Q11652033",
+      "contact:tripadvisor": "319638",
+      "contact:website": "https://odori-park.jp/",
+      "leisure": "park",
+      "name": "大通公園",
+      "name:en": "Ōdōri Park",
+      "name:fr": "Parc Ōdōri",
+      "name:it": "Parco Ōdōri",
+      "name:ja": "大通公園",
+      "name:ja-Hira": "おおどおりこうえん",
+      "name:ja-Latn": "Ōdōri-kōen",
+      "name:ko": "오도리 공원",
+      "name:ru": "Одори парк",
+      "name:zh": "大通公園",
+      "source": "Bing",
+      "start_date": "1869",
+      "wikidata": "Q3107971",
+      "wikimedia_commons": "Category:Odori Park",
+      "wikipedia": "ja:大通公園"
+    },
+    "coord": [
+      141.35213359629628,
+      43.0604996962963
+    ]
+  },
+  {
+    "name": "北海道大学植物園",
+    "type": "way",
+    "id": "102474363",
+    "tags": {
+      "fee": "yes",
+      "garden:type": "botanical",
+      "leisure": "garden",
+      "name": "北海道大学植物園",
+      "name:en": "Botanical Garden of Hokkaido University",
+      "name:zh": "北海道大學植物園",
+      "website": "https://www.hokudai.ac.jp/fsc/bg/",
+      "wikidata": "Q2842754",
+      "wikipedia": "ja:北海道大学北方生物圏フィールド科学センター耕地圏ステーション植物園"
+    },
+    "coord": [
+      141.34339568125,
+      43.063386221875
+    ]
+  },
+  {
+    "name": "大通公園ビル",
+    "type": "way",
+    "id": "191520560",
+    "tags": {
+      "building": "yes",
+      "name": "大通公園ビル",
+      "source": "Bing"
+    },
+    "coord": [
+      141.34784580000002,
+      43.06069095555555
+    ]
+  },
+  {
+    "name": "三甲大通公園ビル",
+    "type": "way",
+    "id": "191520565",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:neighbourhood": "北1条西4丁目",
+      "addr:postcode": "060-0001",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "commercial",
+      "building:levels": "7",
+      "name": "三甲大通公園ビル",
+      "name:en": "Sanko Odori Park Building",
+      "name:ja": "三甲大通公園ビル",
+      "source": "Bing",
+      "website": "https://www.homes.co.jp/archive/b-35395714/"
+    },
+    "coord": [
+      141.3512897111111,
+      43.06140064444445
+    ]
+  },
+  {
+    "name": "ザ・ライオンズ大通公園タワー",
+    "type": "way",
+    "id": "194940092",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "10丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "30",
+      "name": "ザ・ライオンズ大通公園タワー",
+      "name:en": "The Lions Odorikoen Tower",
+      "name:ja": "ザ・ライオンズ大通公園タワー",
+      "source": "Bing",
+      "website": "https://suumo.jp/library/tf_01/sc_01101/to_0000297888/",
+      "wikidata": "Q11306788"
+    },
+    "coord": [
+      141.34230927500002,
+      43.059842725
+    ]
+  },
+  {
+    "name": "大通公園ウエストビル",
+    "type": "way",
+    "id": "196303177",
+    "tags": {
+      "addr:block_number": "12",
+      "addr:city": "札幌市",
+      "addr:housenumber": "2",
+      "addr:neighbourhood": "南1条西7丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "commercial",
+      "building:levels": "4",
+      "name": "大通公園ウエストビル",
+      "name:ja": "大通公園ウエストビル",
+      "source": "Bing"
+    },
+    "coord": [
+      141.34751118,
+      43.058601620000005
+    ]
+  },
+  {
+    "name": "ライオンズマンション大通公園小六ビル",
+    "type": "way",
+    "id": "196305276",
+    "tags": {
+      "addr:block_number": "20",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:neighbourhood": "南1条西8丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "10",
+      "name": "ライオンズマンション大通公園小六ビル",
+      "name:en": "Lions Mansion",
+      "name:ja": "ライオンズマンション大通公園小六ビル",
+      "source": "Bing",
+      "website": "https://www.homes.co.jp/archive/b-35403611/"
+    },
+    "coord": [
+      141.34485928823528,
+      43.058312670588236
+    ]
+  },
+  {
+    "name": "S-RESIDENCE 大通公園 admirio の賃貸物件情報",
+    "type": "way",
+    "id": "196306402",
+    "tags": {
+      "building": "apartments",
+      "condo": "yes",
+      "name": "S-RESIDENCE 大通公園 admirio の賃貸物件情報"
+    },
+    "coord": [
+      141.34572336000002,
+      43.057650820000006
+    ]
+  },
+  {
+    "name": "キタコー大通公園ビル",
+    "type": "way",
+    "id": "196310188",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:neighbourhood": "9丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "commercial",
+      "building:levels": "10",
+      "name": "キタコー大通公園ビル",
+      "name:ja": "キタコー大通公園ビル",
+      "source": "Bing",
+      "website": "http://www.kitakou.co.jp/tenant/detail/009/"
+    },
+    "coord": [
+      141.34415042499998,
+      43.058785408333335
+    ]
+  },
+  {
+    "name": "プライムアーバン大通公園Ⅰ",
+    "type": "way",
+    "id": "196312752",
+    "tags": {
+      "addr:block_number": "12",
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "南1条西9丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "11",
+      "name": "プライムアーバン大通公園Ⅰ",
+      "name:ja": "プライムアーバン大通公園Ⅰ",
+      "source": "Bing",
+      "website": "https://www.homes.co.jp/archive/b-35403636/"
+    },
+    "coord": [
+      141.34419647142857,
+      43.058272114285714
+    ]
+  },
+  {
+    "name": "プライムアーバン大通公園II",
+    "type": "way",
+    "id": "196312756",
+    "tags": {
+      "addr:block_number": "12",
+      "addr:city": "札幌市",
+      "addr:housenumber": "1",
+      "addr:neighbourhood": "南1条西9丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "10",
+      "name": "プライムアーバン大通公園II",
+      "name:ja": "プライムアーバン大通公園II",
+      "source": "Bing",
+      "website": "https://suumo.jp/library/tf_01/sc_01101/to_0001127484/"
+    },
+    "coord": [
+      141.34431282,
+      43.058115980000004
+    ]
+  },
+  {
+    "name": "さっぽろテレビ塔",
+    "type": "way",
+    "id": "199758828",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "1丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:street": "大通",
+      "addr:suburb": "中央区",
+      "building": "public",
+      "building:colour": "#67312A",
+      "communication:television": "yes",
+      "height": "147.2",
+      "man_made": "tower",
+      "material": "steel",
+      "name": "さっぽろテレビ塔",
+      "name:en": "Sapporo TV Tower",
+      "name:ja": "さっぽろテレビ塔",
+      "name:zh": "札幌電視塔",
+      "opening_hours": "Mo-Su 10:00-22:00",
+      "operator": "札幌市　北海道",
+      "roof:shape": "pyramidal",
+      "source": "Bing",
+      "toilets:wheelchair": "yes",
+      "tourism": "attraction",
+      "tower:construction": "lattice",
+      "tower:type": "communication",
+      "website": "https://www.tv-tower.co.jp/",
+      "wheelchair": "yes",
+      "wikidata": "Q1063319",
+      "wikipedia": "ja:さっぽろテレビ塔"
+    },
+    "coord": [
+      141.35640632,
+      43.0611339
+    ]
+  },
+  {
+    "name": "パークホームズ大通公園",
+    "type": "way",
+    "id": "208988368",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "4",
+      "addr:neighbourhood": "北1条西13丁目",
+      "addr:postcode": "060-0001",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "15",
+      "name": "パークホームズ大通公園",
+      "name:ja": "パークホームズ大通公園",
+      "source": "Bing",
+      "website": "https://www.homes.co.jp/archive/b-35395817/"
+    },
+    "coord": [
+      141.33719818,
+      43.06105068000001
+    ]
+  },
+  {
+    "name": "アールヴェール大通公園",
+    "type": "way",
+    "id": "209143038",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "41",
+      "addr:neighbourhood": "北2条西13丁目",
+      "addr:postcode": "060-0002",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "13",
+      "name": "アールヴェール大通公園",
+      "name:ja": "アールヴェール大通公園",
+      "source": "Bing",
+      "website": "https://www.homes.co.jp/archive/b-35396696/"
+    },
+    "coord": [
+      141.33678237647058,
+      43.061387970588235
+    ]
+  },
+  {
+    "name": "ドエル・ラクーン・大通公園",
+    "type": "way",
+    "id": "227481747",
+    "tags": {
+      "addr:block_number": "4",
+      "addr:city": "札幌市",
+      "addr:housenumber": "188",
+      "addr:neighbourhood": "南1条西12丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "9",
+      "name": "ドエル・ラクーン・大通公園",
+      "name:ja": "ドエル・ラクーン・大通公園",
+      "source": "Bing"
+    },
+    "coord": [
+      141.33902992857142,
+      43.05765032857143
+    ]
+  },
+  {
+    "name": "レジディア大通公園",
+    "type": "way",
+    "id": "227482607",
+    "tags": {
+      "addr:block_number": "4",
+      "addr:city": "札幌市",
+      "addr:housenumber": "102",
+      "addr:neighbourhood": "13丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "14",
+      "name": "レジディア大通公園",
+      "name:ja": "レジディア大通公園",
+      "source": "Bing"
+    },
+    "coord": [
+      141.33777805555553,
+      43.05794711111111
+    ]
+  },
+  {
+    "name": "ニューライフ大通公園",
+    "type": "way",
+    "id": "228321761",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "13",
+      "addr:neighbourhood": "15丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "7",
+      "name": "ニューライフ大通公園",
+      "name:ja": "ニューライフ大通公園"
+    },
+    "coord": [
+      141.33379177333333,
+      43.05728927333334
+    ]
+  },
+  {
+    "name": "プライムメゾン大通公園",
+    "type": "way",
+    "id": "501289408",
+    "tags": {
+      "addr:block_number": "5",
+      "addr:city": "札幌市",
+      "addr:housenumber": "2",
+      "addr:neighbourhood": "6丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "19",
+      "height": "62.13",
+      "name": "プライムメゾン大通公園",
+      "name:en": "Prime Maison Odorikoen",
+      "name:ja": "プライムメゾン大通公園",
+      "website": "http://oodori.primemaison.jp/"
+    },
+    "coord": [
+      141.34818175555557,
+      43.059309355555555
+    ]
+  },
+  {
+    "name": "ライオンズ大通公園ステーションレジデンス",
+    "type": "way",
+    "id": "502219738",
+    "tags": {
+      "addr:block_number": "4",
+      "addr:city": "札幌市",
+      "addr:housenumber": "127",
+      "addr:neighbourhood": "10丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "15",
+      "name": "ライオンズ大通公園ステーションレジデンス",
+      "name:en": "Lions Odorikoen Station Residence",
+      "name:ja": "ライオンズ大通公園ステーションレジデンス"
+    },
+    "coord": [
+      141.34197832,
+      43.05837128
+    ]
+  },
+  {
+    "name": "パークホームズ大通公園コンフォートプレミア",
+    "type": "way",
+    "id": "772815032",
+    "tags": {
+      "addr:block_number": "3",
+      "addr:city": "札幌市",
+      "addr:housenumber": "2",
+      "addr:neighbourhood": "15丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "12",
+      "name": "パークホームズ大通公園コンフォートプレミア",
+      "name:ja": "パークホームズ大通公園コンフォートプレミア"
+    },
+    "coord": [
+      141.33471538749998,
+      43.0580339375
+    ]
+  },
+  {
+    "name": "クリーンリバーフィネス大通公園西",
+    "type": "way",
+    "id": "772815033",
+    "tags": {
+      "addr:block_number": "3",
+      "addr:city": "札幌市",
+      "addr:housenumber": "4",
+      "addr:neighbourhood": "15丁目",
+      "addr:postcode": "060-0042",
+      "addr:province": "北海道",
+      "addr:quarter": "大通西",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "14",
+      "name": "クリーンリバーフィネス大通公園西",
+      "name:ja": "クリーンリバーフィネス大通公園西"
+    },
+    "coord": [
+      141.33428944,
+      43.05795768
+    ]
+  },
+  {
+    "name": "大通公園 インフォメーションセンター",
+    "type": "way",
+    "id": "782403109",
+    "tags": {
+      "building": "yes",
+      "building:levels": "1",
+      "information": "office",
+      "name": "大通公園 インフォメーションセンター",
+      "name:en": "Odori Park Information Center & Official Shop",
+      "name:ja": "大通公園 インフォメーションセンター",
+      "name:ja-Hira": "おおどおりこうえん いんふぉめーしょんせんたー",
+      "tourism": "information"
+    },
+    "coord": [
+      141.34705044,
+      43.059620259999996
+    ]
+  },
+  {
+    "name": "ニューシティ・レジデンス大通公園",
+    "type": "way",
+    "id": "789308681",
+    "tags": {
+      "addr:block_number": "4",
+      "addr:city": "札幌市",
+      "addr:housenumber": "60",
+      "addr:neighbourhood": "南1条西13丁目",
+      "addr:postcode": "060-0061",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "9",
+      "name": "ニューシティ・レジデンス大通公園",
+      "name:ja": "ニューシティ・レジデンス大通公園"
+    },
+    "coord": [
+      141.33730255454546,
+      43.057415872727276
+    ]
+  },
+  {
+    "name": "ファインシティ札幌 ザ・タワー大通公園",
+    "type": "way",
+    "id": "1079666214",
+    "tags": {
+      "addr:block_number": "6",
+      "addr:city": "札幌市",
+      "addr:housenumber": "6",
+      "addr:neighbourhood": "南1条西7丁目",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "31",
+      "height": "98.6",
+      "name": "ファインシティ札幌 ザ・タワー大通公園",
+      "name:en": "FINE CITY SAPPORO THE TOWER ODORI KOEN",
+      "name:ja": "ファインシティ札幌 ザ・タワー大通公園"
+    },
+    "coord": [
+      141.3467545,
+      43.05795442
+    ]
+  },
+  {
+    "name": "ブランズタワーアイム札幌大通公園",
+    "type": "way",
+    "id": "1582403523",
+    "tags": {
+      "addr:block_number": "1",
+      "addr:city": "札幌市",
+      "addr:housenumber": "28",
+      "addr:neighbourhood": "北1条西10丁目",
+      "addr:postcode": "060-0001",
+      "addr:province": "北海道",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:colour": "#aaa7a7",
+      "building:levels": "26",
+      "building:levels:underground": "1",
+      "name": "ブランズタワーアイム札幌大通公園",
+      "name:ja": "ブランズタワーアイム札幌大通公園"
+    },
+    "coord": [
+      141.34092564,
+      43.061302047999995
+    ]
+  },
+  {
+    "name": "札幌大通公園前郵便局",
+    "type": "relation",
+    "id": "14181091",
+    "tags": {
+      "name": "札幌大通公園前郵便局",
+      "name:en": "Sapporo Odori koen mae Post Office",
+      "name:ja": "札幌大通公園前郵便局",
+      "type": "site"
+    }
+  },
+  {
+    "name": "Bus 南55 : 札幌駅 => すすきの => 藻岩高校前",
+    "type": "relation",
+    "id": "15422412",
+    "tags": {
+      "colour": "#FFA500",
+      "duration": "00:43",
+      "from": "札幌駅",
+      "name": "Bus 南55 : 札幌駅 => すすきの => 藻岩高校前",
+      "name:en": "Bus Minami55 : Sapporo station => Moiwa koko mae",
+      "name:ja": "Bus 南55 : 札幌駅 => すすきの => 藻岩高校前",
+      "network": "じょうてつ",
+      "network:en": "Jotetsu",
+      "network:ja": "じょうてつ",
+      "network:wikidata": "Q11269473",
+      "official_name": "藻岩線",
+      "official_name:en": "Moiwa Bus Line",
+      "official_name:ja": "藻岩線",
+      "operator": "じょうてつ",
+      "operator:en": "Jotetsu",
+      "operator:ja": "じょうてつ",
+      "operator:wikidata": "Q11269473",
+      "public_transport:version": "2",
+      "ref": "南55",
+      "route": "bus",
+      "to": "藻岩高校前",
+      "type": "route",
+      "via": "すすきの"
+    }
+  },
+  {
+    "name": "Bus 南55 : 藻岩高校前 => すすきの => 札幌駅",
+    "type": "relation",
+    "id": "15422414",
+    "tags": {
+      "colour": "#FFA500",
+      "duration": "00:42",
+      "from": "藻岩高校前",
+      "name": "Bus 南55 : 藻岩高校前 => すすきの => 札幌駅",
+      "name:en": "Bus Minami55 : Moiwa koko => Sapporo station",
+      "name:ja": "Bus 南55 : 藻岩高校前 => すすきの => 札幌駅",
+      "network": "じょうてつ",
+      "network:en": "Jotetsu",
+      "network:ja": "じょうてつ",
+      "network:wikidata": "Q11269473",
+      "official_name": "藻岩線",
+      "official_name:en": "Moiwa Bus Line",
+      "official_name:ja": "藻岩線",
+      "operator": "じょうてつ",
+      "operator:en": "Jotetsu",
+      "operator:ja": "じょうてつ",
+      "operator:wikidata": "Q11269473",
+      "public_transport:version": "2",
+      "ref": "南55",
+      "route": "bus",
+      "to": "札幌駅",
+      "type": "route",
+      "via": "すすきの"
+    }
+  }
+]

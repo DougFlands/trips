@@ -1,6 +1,18 @@
-import type { City } from "./trip";
+import { cityNames, type City } from "./trip";
+
+export const foodAreas = [...cityNames, "新千岁机场"] as const;
 
 export const foodSources = {
+  airportFirst: {
+    title: "北海道第一站：新千岁机场✈️",
+    author: "savokiii",
+    url: "https://www.douyin.com/video/7697995755377963098",
+  },
+  airportShopping: {
+    title: "北海道機場真好逛",
+    author: "Roy趴趴照",
+    url: "https://www.douyin.com/video/7707301402759332196",
+  },
   solo: {
     title: "一个人去北海道都吃了什么（合集）",
     author: "一颗桦梅糖",
@@ -15,12 +27,12 @@ export const foodSources = {
 
 export interface FoodPlace {
   id: string;
-  city: City;
+  city: City | "新千岁机场";
   name: string;
   description: string;
-  mapUrl: string;
-  tabelogScore: number;
-  tabelogUrl: string;
+  mapUrl?: string;
+  tabelogScore?: number;
+  tabelogUrl?: string;
   source: keyof typeof foodSources;
 }
 
@@ -28,6 +40,15 @@ export interface FoodPlace {
 // Locations come from the notes and the user's verified Google Maps additions.
 // The first post's image/OCR attachments are unavailable locally: do not invent tasting notes.
 export const foodPlaces: FoodPlace[] = [
+  { id: "airport-milk-dessert", city: "新千岁机场", name: "牛乳冰淇淋、芝士乳酪塔", description: "作者喜欢浓郁奶味，提到排队较多。转写店名疑似 KINOTOYA，具体门店待确认。", source: "airportFirst" },
+  { id: "airport-calbee", city: "新千岁机场", name: "卡乐比现炸薯条", description: "作者推荐趁热吃，口感酥脆。具体柜台、营业时间和价格待确认。", source: "airportFirst" },
+  { id: "airport-milk-stand", city: "新千岁机场", name: "MILK STAND 牛乳", description: "笔记提到多种牧场牛乳，作者偏爱咖啡味；具体品牌和商品名称待确认。", source: "airportFirst" },
+  { id: "airport-ramen", city: "新千岁机场", name: "拉面道场", description: "作者吃了叉烧味噌拉面，返程又选黄油玉米拉面。首家疑似弟子屈，第二家店名不明。", source: "airportFirst" },
+  { id: "airport-snow", city: "新千岁机场", name: "SNOW 伴手礼", description: "作者列为伴手礼候选，完整品牌名、具体商品和柜台位置尚未确认。", source: "airportFirst" },
+  { id: "airport-pudding", city: "新千岁机场", name: "布丁、蛋糕甜品套餐", description: "作者返程特地买布丁，也点了蛋糕配冰淇淋、咖啡牛奶的套餐；店名与价格待确认。", source: "airportFirst" },
+  { id: "airport-cake-melon", city: "新千岁机场", name: "蛋糕、哈密瓜伴手礼", description: "作者提到蛋糕试吃和哈密瓜土特产；画面出现花畑牧场品牌，具体柜台不明，试吃以现场为准。", source: "airportShopping" },
+  { id: "airport-corn-bread", city: "新千岁机场", name: "牛奶玉米面包", description: "按原视频转写记录，作者偏爱咖喱口味；准确商品名和商户待确认。", source: "airportShopping" },
+  { id: "airport-meat-patty", city: "新千岁机场", name: "大肉饼", description: "作者称分量大，视频报价¥500；当前价格、具体商户和楼层待确认。", source: "airportShopping" },
   { id: "samurai-sakura", tabelogScore: 3.31, tabelogUrl: "https://tabelog.com/en/hokkaido/A0101/A010103/1031790/", mapUrl: "https://www.google.com/maps/search/?api=1&query=Rojiura%20Curry%20SAMURAI%20%E3%81%95%E3%81%8F%E3%82%89%E5%BA%97%20%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%973%E6%9D%A1%E8%A5%BF6%E4%B8%81%E7%9B%AE1-3", city: "札幌", name: "Rojiura Curry SAMURAI · さくら店", description: "椰浆鸡腿汤咖喱，搭配油炸蔬菜。作者喜欢它的辣度和蔬菜口感，比起 SAMA 更偏爱这家。", source: "casual" },
   { id: "picante", tabelogScore: 3.65, tabelogUrl: "https://tabelog.com/en/hokkaido/A0101/A010201/1000060/", mapUrl: "https://www.google.com/maps/search/?api=1&query=Picante%20Soup%20curry%20%E6%9C%AD%E5%B9%8C%E5%B8%82%E5%8C%97%E5%8C%BA%E5%8C%9713%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE2-23", city: "札幌", name: "PICANTE · 北13条店", description: "原帖收录的汤咖喱店。位于北13条西3丁目，靠近北海道大学，可和校园散步一起安排。", source: "solo" },
   { id: "espresso-dworks", tabelogScore: 3.51, tabelogUrl: "https://tabelog.com/en/hokkaido/A0101/A010103/1076745/", mapUrl: "https://www.google.com/maps/search/?api=1&query=Espresso%20D%20Works%20COCONO%20SUSUKINO%20%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF4%E4%B8%81%E7%9B%AE1", city: "札幌", name: "Espresso D’Works · COCONO SUSUKINO", description: "薄野的咖啡馆，位于南4条西4丁目 COCONO SUSUKINO。逛商场时的咖啡休息点。", source: "solo" },

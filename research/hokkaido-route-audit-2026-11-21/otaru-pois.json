@@ -1,0 +1,829 @@
+[
+  {
+    "name": "北一硝子 アウトレット",
+    "type": "node",
+    "id": "1256671118",
+    "tags": {
+      "check_date": "2025-06-22",
+      "check_date:opening_hours": "2025-06-22",
+      "craft": "glaziery",
+      "name": "北一硝子 アウトレット",
+      "name:en": "Kitaichi Glass Outlet",
+      "name:ja": "北一硝子 アウトレット",
+      "opening_hours": "Mo-Su 09:00-18:00",
+      "shop": "gift",
+      "wheelchair": "limited"
+    },
+    "lat": 43.1915406,
+    "lon": 141.0073024
+  },
+  {
+    "name": "小樽オルゴール堂",
+    "type": "node",
+    "id": "1256671137",
+    "tags": {
+      "branch": "本館",
+      "name": "小樽オルゴール堂",
+      "name:en": "Otaru Music Box",
+      "name:ja": "小樽オルゴール堂",
+      "name:ko": "오타루 오르골당",
+      "name:zh": "小樽音樂盒堂本館",
+      "opening_hours": "Mo-Su 09:00-18:00",
+      "shop": "gift",
+      "tourism": "attraction",
+      "wheelchair": "yes",
+      "wheelchair:description": "正面が段差なし　　店内は狭い",
+      "wikidata": "Q48765500",
+      "wikipedia": "ja:小樽オルゴール堂"
+    },
+    "lat": 43.1905785,
+    "lon": 141.007792
+  },
+  {
+    "name": "運河プラザ",
+    "type": "node",
+    "id": "2331622496",
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "運河プラザ",
+      "public_transport": "platform",
+      "shelter": "no",
+      "source": "image,2013-05;Bing,2006",
+      "tactile_paving": "no",
+      "toilets:wheelchair": "yes",
+      "wheelchair": "yes"
+    },
+    "lat": 43.1998272,
+    "lon": 141.0004876
+  },
+  {
+    "name": "小樽運河",
+    "type": "node",
+    "id": "3846190258",
+    "tags": {
+      "addr:block_number": "5",
+      "addr:city": "小樽市",
+      "addr:postcode": "047-0007",
+      "addr:province": "北海道",
+      "addr:quarter": "港町",
+      "name": "小樽運河",
+      "name:ko": "오타루 운하",
+      "tourism": "attraction",
+      "website": "https://otaru.gr.jp/shop/otarucanal",
+      "wheelchair": "limited",
+      "wheelchair:description": "道幅は大体車イス一台と人1人が通れる程度路面は場所によってガタガタである。"
+    },
+    "lat": 43.2047267,
+    "lon": 140.9994261
+  },
+  {
+    "name": "小樽運河",
+    "type": "node",
+    "id": "4279688789",
+    "tags": {
+      "name": "小樽運河",
+      "name:en": "Otaru Canal",
+      "name:ja": "小樽運河",
+      "name:ko": "오타루 운하",
+      "tourism": "viewpoint"
+    },
+    "lat": 43.197773,
+    "lon": 141.0030447
+  },
+  {
+    "name": "末日聖徒イエス•キリスト教会",
+    "type": "node",
+    "id": "4471933392",
+    "tags": {
+      "amenity": "place_of_worship",
+      "check_date": "2025-06-22",
+      "name": "末日聖徒イエス•キリスト教会",
+      "name:en": "The Church of Jesus Christ of Latter Day Saints",
+      "phone": "+81 134 32 7969",
+      "religion": "christian",
+      "website": "https://www.ldschurch.jp/"
+    },
+    "lat": 43.194102,
+    "lon": 140.9937492
+  },
+  {
+    "name": "小樽運河クルーズ",
+    "type": "node",
+    "id": "4607329891",
+    "tags": {
+      "name": "小樽運河クルーズ",
+      "name:en": "Otaru Canal Cruise",
+      "name:ja": "小樽運河クルーズ",
+      "name:ko": "오타루 운하 크루즈",
+      "opening_hours": "Mo-Su 10:00-18:30",
+      "phone": "+81-134-31-1733",
+      "tourism": "attraction",
+      "website": "https://otaru.cc/"
+    },
+    "lat": 43.1999384,
+    "lon": 141.0017623
+  },
+  {
+    "name": "小樽運河クルーズ",
+    "type": "node",
+    "id": "4609322610",
+    "tags": {
+      "check_date": "2024-09-16",
+      "name": "小樽運河クルーズ",
+      "name:ja": "運河クルーズ",
+      "shop": "ticket"
+    },
+    "lat": 43.1999754,
+    "lon": 141.0017903
+  },
+  {
+    "name": "北一硝子三号館",
+    "type": "node",
+    "id": "5603040059",
+    "tags": {
+      "check_date": "2024-09-17",
+      "name": "北一硝子三号館",
+      "shop": "gift"
+    },
+    "lat": 43.1923093,
+    "lon": 141.0073169
+  },
+  {
+    "name": "スナックおたる運河",
+    "type": "node",
+    "id": "6016890088",
+    "tags": {
+      "amenity": "pub",
+      "name": "スナックおたる運河"
+    },
+    "lat": 43.1935801,
+    "lon": 141.0002937
+  },
+  {
+    "name": "小樽泉教会",
+    "type": "node",
+    "id": "6017155653",
+    "tags": {
+      "amenity": "place_of_worship",
+      "name": "小樽泉教会",
+      "religion": "christian"
+    },
+    "lat": 43.1895047,
+    "lon": 141.000006
+  },
+  {
+    "name": "運河家",
+    "type": "node",
+    "id": "7143765385",
+    "tags": {
+      "amenity": "restaurant",
+      "cuisine": "local",
+      "name": "運河家"
+    },
+    "lat": 43.1974282,
+    "lon": 141.0029494
+  },
+  {
+    "name": "小樽 大正硝子館",
+    "type": "node",
+    "id": "9421932504",
+    "tags": {
+      "check_date": "2024-09-17",
+      "name": "小樽 大正硝子館",
+      "shop": "art"
+    },
+    "lat": 43.1965291,
+    "lon": 141.0025447
+  },
+  {
+    "name": "大正硝子宇宙",
+    "type": "node",
+    "id": "9963246085",
+    "tags": {
+      "check_date:opening_hours": "2025-06-22",
+      "name": "大正硝子宇宙",
+      "opening_hours:signed": "no",
+      "shop": "art"
+    },
+    "lat": 43.196064,
+    "lon": 141.0030397
+  },
+  {
+    "name": "オルゴール堂海鳴楼",
+    "type": "node",
+    "id": "9963246092",
+    "tags": {
+      "name": "オルゴール堂海鳴楼",
+      "shop": "art"
+    },
+    "lat": 43.1958959,
+    "lon": 141.003403
+  },
+  {
+    "name": "大正硝子酒器蔵",
+    "type": "node",
+    "id": "9963278641",
+    "tags": {
+      "name": "大正硝子酒器蔵",
+      "shop": "gift"
+    },
+    "lat": 43.1949885,
+    "lon": 141.0052926
+  },
+  {
+    "name": "ホテル・トリフィート小樽運河",
+    "type": "node",
+    "id": "12976463268",
+    "tags": {
+      "name": "ホテル・トリフィート小樽運河",
+      "name:en": "Hotel Torifito Otaru Canal",
+      "tourism": "hotel",
+      "website": "https://torifito.jp/otarucanal/"
+    },
+    "lat": 43.1987048,
+    "lon": 141.0007839
+  },
+  {
+    "name": "浅草橋",
+    "type": "way",
+    "id": "38939135",
+    "tags": {
+      "bridge": "yes",
+      "cycleway:both": "no",
+      "highway": "tertiary",
+      "lanes": "2",
+      "layer": "1",
+      "maxweight:signed": "no",
+      "name": "浅草橋",
+      "surface": "asphalt"
+    },
+    "lat": 43.1978359,
+    "lon": 141.00328050000002
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "38939644",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "tourism": "yes",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.19811071111111,
+    "lon": 140.99904865
+  },
+  {
+    "name": "小樽運河",
+    "type": "way",
+    "id": "131961299",
+    "tags": {
+      "KSJ2:ODC": "数値地図25000空間データ基盤",
+      "name": "小樽運河",
+      "name:en": "Otaru Canal",
+      "name:ja": "小樽運河",
+      "name:ko": "오타루 운하",
+      "note": "National-Land Numerical Information (River) 2009, MLIT Japan",
+      "note:ja": "国土数値情報(河川データ)平成21年度 国土交通省",
+      "source": "KSJ2",
+      "source_ref": "http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-W05.html",
+      "waterway": "canal"
+    },
+    "lat": 43.20145805,
+    "lon": 141.0012313
+  },
+  {
+    "name": "船見坂",
+    "type": "way",
+    "id": "151600904",
+    "tags": {
+      "highway": "unclassified",
+      "name": "船見坂",
+      "name:en": "Funamizaka",
+      "name:ja": "船見坂",
+      "name:ja-Hira": "ふなみざか",
+      "name:ja-Latn": "Funamizaka",
+      "source": "YahooJapan/ALPSMAP"
+    },
+    "lat": 43.19910445,
+    "lon": 140.9930975
+  },
+  {
+    "name": "船見坂",
+    "type": "way",
+    "id": "151601603",
+    "tags": {
+      "highway": "unclassified",
+      "lane_markings": "yes",
+      "lanes": "2",
+      "name": "船見坂",
+      "name:en": "Funamizaka",
+      "name:ja": "船見坂",
+      "name:ja-Hira": "ふなみざか",
+      "name:ja-Latn": "Funamizaka",
+      "source": "YahooJapan/ALPSMAP",
+      "surface": "asphalt"
+    },
+    "lat": 43.199239425,
+    "lon": 140.993624375
+  },
+  {
+    "name": "小樽運河",
+    "type": "way",
+    "id": "205065355",
+    "tags": {
+      "KSJ2:ODC": "数値地図25000空間データ基盤",
+      "name": "小樽運河",
+      "name:en": "Otaru Canal",
+      "name:ja": "小樽運河",
+      "name:ko": "오타루 운하",
+      "note": "National-Land Numerical Information (River) 2009, MLIT Japan",
+      "note:ja": "国土数値情報(河川データ)平成21年度 国土交通省",
+      "source": "KSJ2;survey",
+      "source_ref": "http://nlftp.mlit.go.jp/ksj/jpgis/datalist/KsjTmplt-W05.html",
+      "tourism": "attraction",
+      "waterway": "canal"
+    },
+    "lat": 43.20188293076923,
+    "lon": 141.00115355384617
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "257877185",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.201827072727276,
+    "lon": 140.99795264545455
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "439097375",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "abandoned",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.19242071,
+    "lon": 141.00131086000002
+  },
+  {
+    "name": "北一硝子特約駐車場",
+    "type": "way",
+    "id": "439828860",
+    "tags": {
+      "amenity": "parking",
+      "name": "北一硝子特約駐車場"
+    },
+    "lat": 43.193559522222216,
+    "lon": 141.0079305666667
+  },
+  {
+    "name": "大正硝子館 クリエイターズマーケット 創",
+    "type": "way",
+    "id": "525960323",
+    "tags": {
+      "building": "yes",
+      "check_date": "2024-09-17",
+      "name": "大正硝子館 クリエイターズマーケット 創",
+      "name:en": "Otaru Taishou Glass Palace Creators' Market Sou",
+      "name:ja": "大正硝子館 クリエイターズマーケット 創",
+      "name:ko": "다이쇼 유리관",
+      "shop": "art",
+      "website": "http://www.otaru-glass.jp/store/sakaimachiten"
+    },
+    "lat": 43.1915181923077,
+    "lon": 141.00694562307692
+  },
+  {
+    "name": "小樽オルゴール堂 2号館 アンティーク ミュージアム",
+    "type": "way",
+    "id": "525960324",
+    "tags": {
+      "building": "yes",
+      "fee": "no",
+      "name": "小樽オルゴール堂 2号館 アンティーク ミュージアム",
+      "name:en": "Otaru Music Box Hall Number 2 Antique Museum",
+      "name:ja": "小樽オルゴール堂 2号館 アンティーク ミュージアム",
+      "name:ja-Hira": "おたるおるごーるどう にごうかん あんてぃーく みゅーじあむ",
+      "name:ja-Latn": "otaru orugōrudō nigōkan antei-ku myūjiamu",
+      "name:ko": "오타루 오르골당 골동품 박물관",
+      "name:zh": "音樂盒古董博物館",
+      "tourism": "museum",
+      "wheelchair": "limited"
+    },
+    "lat": 43.1911434,
+    "lon": 141.00688454285714
+  },
+  {
+    "name": "小樽運河ターミナル",
+    "type": "way",
+    "id": "526372031",
+    "tags": {
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "historic": "building",
+      "name": "小樽運河ターミナル",
+      "name:en": "Otaru Canal Terminal",
+      "name:ja": "小樽運河ターミナル",
+      "public_transport": "station",
+      "wheelchair": "limited",
+      "wikidata": "Q11462174",
+      "wikipedia": "ja:小樽運河ターミナル"
+    },
+    "lat": 43.197117322222226,
+    "lon": 141.00233284444442
+  },
+  {
+    "name": "運河通り",
+    "type": "way",
+    "id": "561930690",
+    "tags": {
+      "cycleway:both": "no",
+      "highway": "tertiary",
+      "lanes": "2",
+      "lit": "yes",
+      "maxspeed": "40",
+      "name": "運河通り",
+      "sidewalk": "both",
+      "sidewalk:both:surface": "paving_stones",
+      "surface": "asphalt"
+    },
+    "lat": 43.20596603333333,
+    "lon": 140.9996647
+  },
+  {
+    "name": "運河通り",
+    "type": "way",
+    "id": "561932353",
+    "tags": {
+      "cycleway:left": "no",
+      "foot": "no",
+      "highway": "tertiary",
+      "lanes": "1",
+      "lit": "yes",
+      "maxspeed": "40",
+      "name": "運河通り",
+      "oneway": "yes",
+      "sidewalk": "no",
+      "surface": "asphalt",
+      "width": "5"
+    },
+    "lat": 43.2031675,
+    "lon": 140.99956994
+  },
+  {
+    "name": "小樽運河",
+    "type": "way",
+    "id": "562432317",
+    "tags": {
+      "name": "小樽運河",
+      "name:en": "Otaru Canal",
+      "name:ja": "小樽運河",
+      "natural": "water",
+      "source": "GSImaps/ort",
+      "tourism": "attraction",
+      "water": "canal"
+    },
+    "lat": 43.20267952727273,
+    "lon": 141.00093242857145
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "849396550",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.206468547368424,
+    "lon": 140.99800734736843
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915674",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.1895642,
+    "lon": 141.00413014999998
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915675",
+    "tags": {
+      "abandoned:railway": "rail",
+      "bridge": "yes",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "abandoned",
+      "wikidata": "Q7698128",
+      "wikipedia": "ja:手宮線"
+    },
+    "lat": 43.1944474,
+    "lon": 141.00023295
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915676",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.18775438,
+    "lon": 141.00637142
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915677",
+    "tags": {
+      "bridge": "yes",
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "layer": "1",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.18842465,
+    "lon": 141.0055423
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915680",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.190194399999996,
+    "lon": 141.00334859999998
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915681",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.189019200000004,
+    "lon": 141.00480620000002
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915685",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.19009259999999,
+    "lon": 141.00347496666666
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915686",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.1899606,
+    "lon": 141.00363944999998
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915687",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.1898788,
+    "lon": 141.00374019999998
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1332915702",
+    "tags": {
+      "abandoned:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "abandoned",
+      "wikidata": "Q7698128",
+      "wikipedia": "ja:手宮線"
+    },
+    "lat": 43.19460885,
+    "lon": 141.00018135
+  },
+  {
+    "name": "小樽市総合博物館 運河館",
+    "type": "way",
+    "id": "1444266306",
+    "tags": {
+      "building": "yes",
+      "fee": "yes",
+      "name": "小樽市総合博物館 運河館",
+      "name:en": "Otaru City General Museum Canal Hall",
+      "name:ja": "小樽市総合博物館 運河館",
+      "name:ja-Hira": "おたるしそうごうはくぶつかん うんがかん",
+      "name:zh": "小樽綜合博物館 運河館",
+      "source": "GSImaps/seamless",
+      "tourism": "museum"
+    },
+    "lat": 43.200696942857135,
+    "lon": 141.00037145714285
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1463713386",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "disused",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.1904853,
+    "lon": 141.00298709999998
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "way",
+    "id": "1463713387",
+    "tags": {
+      "disused:railway": "rail",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "railway": "abandoned",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    },
+    "lat": 43.203028825000004,
+    "lon": 140.99789775
+  },
+  {
+    "name": "小樽運河散策路",
+    "type": "relation",
+    "id": "7255552",
+    "tags": {
+      "highway": "pedestrian",
+      "name": "小樽運河散策路",
+      "type": "multipolygon",
+      "website": "https://otaru.gr.jp/shop/otarucanal"
+    }
+  },
+  {
+    "name": "手宮線跡地",
+    "type": "relation",
+    "id": "13470818",
+    "tags": {
+      "disused:route": "railway",
+      "electrified": "no",
+      "end_date": "1985-11-04",
+      "gauge": "1067",
+      "name": "手宮線跡地",
+      "name:en": "Temiya Line",
+      "name:ko": "옛 테미야선",
+      "type": "route",
+      "wikidata": "Q7698128",
+      "wikipedia": "en:Temiya Line"
+    }
+  },
+  {
+    "name": "小樽運河",
+    "type": "relation",
+    "id": "19192654",
+    "tags": {
+      "name": "小樽運河",
+      "natural": "water",
+      "type": "multipolygon",
+      "water": "canal",
+      "wikidata": "Q10959355"
+    }
+  }
+]

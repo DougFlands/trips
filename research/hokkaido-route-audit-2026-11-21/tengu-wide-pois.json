@@ -1,0 +1,148 @@
+[
+  {
+    "name": "",
+    "type": "node",
+    "id": "2838629962",
+    "tags": {
+      "aerialway": "station"
+    },
+    "lat": 43.1778746,
+    "lon": 140.9731692
+  },
+  {
+    "name": "",
+    "type": "node",
+    "id": "2838629963",
+    "tags": {
+      "aerialway": "station"
+    },
+    "lat": 43.1689339,
+    "lon": 140.9692761
+  },
+  {
+    "name": "天狗山ロープウェイ山麓駅",
+    "type": "node",
+    "id": "6057324224",
+    "tags": {
+      "aerialway": "station",
+      "name": "天狗山ロープウェイ山麓駅",
+      "public_transport": "station"
+    },
+    "lat": 43.1779003,
+    "lon": 140.9751704
+  },
+  {
+    "name": "天狗山ロープウェイ山頂駅",
+    "type": "node",
+    "id": "6057324225",
+    "tags": {
+      "aerialway": "station",
+      "name": "天狗山ロープウェイ山頂駅",
+      "public_transport": "station"
+    },
+    "lat": 43.1719793,
+    "lon": 140.9721664
+  },
+  {
+    "name": "天狗山",
+    "type": "node",
+    "id": "6222664089",
+    "tags": {
+      "ele": "532.5",
+      "name": "天狗山",
+      "name:en": "Mount Tengu",
+      "name:ja": "天狗山",
+      "name:ja-Hira": "てんぐやま",
+      "name:ja-Latn": "Tengu yama",
+      "natural": "peak",
+      "wikidata": "Q17176894",
+      "wikipedia": "ja:天狗山_(小樽市)"
+    },
+    "lat": 43.1684092,
+    "lon": 140.9698141
+  },
+  {
+    "name": "",
+    "type": "node",
+    "id": "8952576608",
+    "tags": {
+      "aerialway": "station"
+    },
+    "lat": 43.1719005,
+    "lon": 140.9712172
+  },
+  {
+    "name": "",
+    "type": "node",
+    "id": "8952576609",
+    "tags": {
+      "aerialway": "station"
+    },
+    "lat": 43.1688921,
+    "lon": 140.9695425
+  },
+  {
+    "name": "天狗山ロープウェイ山麓駅",
+    "type": "way",
+    "id": "260292979",
+    "tags": {
+      "building": "yes",
+      "name": "天狗山ロープウェイ山麓駅"
+    },
+    "lat": 43.177903542857145,
+    "lon": 140.97515962857142
+  },
+  {
+    "name": "天狗山ロープウェイ山頂駅",
+    "type": "way",
+    "id": "260292980",
+    "tags": {
+      "building": "yes",
+      "name": "天狗山ロープウェイ山頂駅"
+    },
+    "lat": 43.171945699999995,
+    "lon": 140.97199170714285
+  },
+  {
+    "name": "小樽商科大学",
+    "type": "way",
+    "id": "569512764",
+    "tags": {
+      "addr:block_number": "5",
+      "addr:city": "小樽市",
+      "addr:housenumber": "21",
+      "addr:neighbourhood": "3丁目",
+      "addr:postcode": "047-8501",
+      "addr:province": "北海道",
+      "addr:quarter": "緑",
+      "amenity": "university",
+      "name": "小樽商科大学",
+      "name:en": "Otaru University of Commerce",
+      "name:ja": "小樽商科大学",
+      "name:ja-Hira": "おたるしょうかだいがく",
+      "name:ja-Latn": "Otaru shōka daigaku",
+      "operator": "国立大学法人小樽商科大学",
+      "phone": "+81 134 27 5206",
+      "website": "https://www.otaru-uc.ac.jp/",
+      "wikidata": "Q1152933",
+      "wikipedia": "ja:小樽商科大学"
+    },
+    "lat": 43.19115223846154,
+    "lon": 140.97969221538463
+  },
+  {
+    "name": "小樽天狗山スキー場",
+    "type": "way",
+    "id": "1080161782",
+    "tags": {
+      "landuse": "winter_sports",
+      "name": "小樽天狗山スキー場",
+      "name:en": "Otaru Tenguyama Ski Area",
+      "name:ja": "小樽天狗山スキー場",
+      "wikidata": "Q11462148",
+      "wikipedia": "ja:小樽天狗山スキー場"
+    },
+    "lat": 43.17350504545455,
+    "lon": 140.97060502727274
+  }
+]

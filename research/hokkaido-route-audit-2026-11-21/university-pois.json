@@ -1,0 +1,905 @@
+[
+  {
+    "name": "北海道大学教職員住宅",
+    "type": "node",
+    "id": "1206941835",
+    "tags": {
+      "drive_in": "no",
+      "int_name": "cafe",
+      "landuse": "residential",
+      "name": "北海道大学教職員住宅",
+      "name:en": "Teachers' Residence",
+      "operator": "北海道大学",
+      "residential": "apartments",
+      "smoking": "no",
+      "toilets:wheelchair": "yes",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.3446828,
+      43.070063
+    ]
+  },
+  {
+    "name": "北海道大学 薬学部",
+    "type": "node",
+    "id": "2026391707",
+    "tags": {
+      "building": "college",
+      "name": "北海道大学 薬学部",
+      "name:en": "Faculty of Pharmaceutical Sciences",
+      "operator": "北海道大学",
+      "website": "https://www.pharm.hokudai.ac.jp/",
+      "wheelchair": "limited"
+    },
+    "coord": [
+      141.344333,
+      43.0749448
+    ]
+  },
+  {
+    "name": "北海道大学 数学連携研究センター",
+    "type": "node",
+    "id": "2026395515",
+    "tags": {
+      "name": "北海道大学 数学連携研究センター",
+      "name:en": "Research Center for Integrative Mathematics",
+      "office": "research",
+      "operator": "北海道大学",
+      "source": "Bing",
+      "website": "http://www.math.sci.hokudai.ac.jp/center/"
+    },
+    "coord": [
+      141.3435243,
+      43.0744667
+    ]
+  },
+  {
+    "name": "北海道大学 電子科学研究所",
+    "type": "node",
+    "id": "2026395519",
+    "tags": {
+      "alt_name:en": "RIES",
+      "name": "北海道大学 電子科学研究所",
+      "name:en": "Research Institute for Electronic Science",
+      "office": "research",
+      "operator": "北海道大学",
+      "source": "Bing",
+      "website": "http://www.es.hokudai.ac.jp/"
+    },
+    "coord": [
+      141.3434948,
+      43.0746529
+    ]
+  },
+  {
+    "name": "北海道大学 環境健康科学研究教育センター",
+    "type": "node",
+    "id": "2026395524",
+    "tags": {
+      "building": "hospital",
+      "name": "北海道大学 環境健康科学研究教育センター",
+      "operator": "北海道大学",
+      "source": "Bing",
+      "website": "https://www.cehs.hokudai.ac.jp/"
+    },
+    "coord": [
+      141.3428859,
+      43.0745157
+    ]
+  },
+  {
+    "name": "北海道大学病院 歯科診療センター",
+    "type": "node",
+    "id": "2034744983",
+    "tags": {
+      "amenity": "dentist",
+      "healthcare": "dentist",
+      "name": "北海道大学病院 歯科診療センター",
+      "operator": "北海道大学",
+      "website": "http://www-mhp.med.hokudai.ac.jp/",
+      "wheelchair": "limited"
+    },
+    "coord": [
+      141.3433146,
+      43.0757981
+    ]
+  },
+  {
+    "name": "北海道大学 歯学部.",
+    "type": "node",
+    "id": "2034744984",
+    "tags": {
+      "amenity": "university",
+      "building:colour": "white",
+      "education": "university",
+      "level": "6",
+      "name": "北海道大学 歯学部.",
+      "operator": "北海道大学",
+      "source": "Bing",
+      "website": "https://www.den.hokudai.ac.jp/",
+      "wheelchair": "yes",
+      "wheelchair:description": "エレベーターはあるが、ボタンの位置が高い。診療センターには、身障者トイレが1階にしかない。"
+    },
+    "coord": [
+      141.3424615,
+      43.0756298
+    ]
+  },
+  {
+    "name": "北海道大学 医学部",
+    "type": "node",
+    "id": "2034744985",
+    "tags": {
+      "building": "college",
+      "name": "北海道大学 医学部",
+      "name:en": "School of Medicine",
+      "operator": "北海道大学",
+      "website": "https://www.med.hokudai.ac.jp/"
+    },
+    "coord": [
+      141.3428906,
+      43.0768876
+    ]
+  },
+  {
+    "name": "北海道大学 環境ナノ・バイオ工学研究センター",
+    "type": "node",
+    "id": "2039211466",
+    "tags": {
+      "building": "hospital",
+      "name": "北海道大学 環境ナノ・バイオ工学研究センター",
+      "operator": "北海道大学",
+      "website": "https://www.eng.hokudai.ac.jp/nanobio/"
+    },
+    "coord": [
+      141.3406033,
+      43.0763889
+    ]
+  },
+  {
+    "name": "北海道大学 トポロジー理工学教育研究センター",
+    "type": "node",
+    "id": "2039211522",
+    "tags": {
+      "building": "college",
+      "name": "北海道大学 トポロジー理工学教育研究センター",
+      "operator": "北海道大学",
+      "website": "http://www.topo.hokudai.ac.jp/"
+    },
+    "coord": [
+      141.3408393,
+      43.0754192
+    ]
+  },
+  {
+    "name": "北海道大学生協",
+    "type": "node",
+    "id": "2632083319",
+    "tags": {
+      "name": "北海道大学生協",
+      "name:en": "KAIKANTEN, Main building store of  Hokkaido University COOP UNIV.",
+      "name:ja": "北海道大学生協会館店",
+      "opening_hours": "Mo-Fr 10:00-17:00",
+      "operator": "北海道大学生協",
+      "shop": "country_store",
+      "website": "https://www.hokudai.seikyou.ne.jp/",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.344577,
+      43.0696152
+    ]
+  },
+  {
+    "name": "北海道大学　工学部",
+    "type": "node",
+    "id": "3462869693",
+    "tags": {
+      "building": "university",
+      "name": "北海道大学　工学部",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.3403416,
+      43.0758552
+    ]
+  },
+  {
+    "name": "北大正門前",
+    "type": "node",
+    "id": "3652288309",
+    "tags": {
+      "bench": "yes",
+      "bin": "no",
+      "bus": "yes",
+      "covered": "yes",
+      "highway": "bus_stop",
+      "name": "北大正門前",
+      "name:en": "Hokudai Shomen mae",
+      "name:ja": "北大正門前",
+      "name:ja_rm": "Hokudai Shōmen mae",
+      "network": "北海道中央バス",
+      "network:en": "Hokkaido Chuo Bus",
+      "network:ja": "北海道中央バス",
+      "network:wikidata": "Q1284698",
+      "operator": "北海道中央バス",
+      "operator:en": "Hokkaido Chuo Bus",
+      "operator:ja": "北海道中央バス",
+      "operator:wikidata": "Q1284698",
+      "public_transport": "platform",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.34753,
+      43.071684
+    ]
+  },
+  {
+    "name": "北大正門前",
+    "type": "node",
+    "id": "3652288310",
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "covered": "no",
+      "highway": "bus_stop",
+      "name": "北大正門前",
+      "name:en": "Hokudai Shomen mae",
+      "name:ja": "北大正門前",
+      "name:ja_rm": "Hokudai Shōmen mae",
+      "network": "北海道中央バス",
+      "network:en": "Hokkaido Chuo Bus",
+      "network:ja": "北海道中央バス",
+      "network:wikidata": "Q1284698",
+      "operator": "北海道中央バス",
+      "operator:en": "Hokkaido Chuo Bus",
+      "operator:ja": "北海道中央バス",
+      "operator:wikidata": "Q1284698",
+      "public_transport": "platform",
+      "shelter": "no",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.347724,
+      43.0718347
+    ]
+  },
+  {
+    "name": "北海道大学オリジナルショップ",
+    "type": "node",
+    "id": "7259891834",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西5丁目",
+      "addr:postcode": "060-0808",
+      "addr:province": "北海道",
+      "addr:quarter": "北8条",
+      "addr:suburb": "北区",
+      "brand": "北海道大学",
+      "description": "北海道大学の公式グッズの販売店。旧エルムの森ショップが閉店し、カフェdeごはん開店に伴い、それに併設される形で新規開店した。",
+      "internet_access": "wlan",
+      "internet_access:fee": "customers",
+      "level": "0",
+      "name": "北海道大学オリジナルショップ",
+      "name:en": "Hokkaido University Official Souvenir Shop",
+      "name:ja": "北海道大学オリジナルショップ",
+      "opening_hours": "Mo-Fr 07:45-22:30, Sa-Su 08:30-20:30",
+      "operator": "北海道大学",
+      "phone": "+81-11-717-2944",
+      "shop": "gift",
+      "source": "local knowledge;survey",
+      "start_date": "2020-10-01",
+      "website": "https://cafedegohan.com/",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.3475451,
+      43.0709387
+    ]
+  },
+  {
+    "name": "北海道大学 先端人材育成センター",
+    "type": "node",
+    "id": "8912550164",
+    "tags": {
+      "name": "北海道大学 先端人材育成センター",
+      "name:en": "Center for Advanced Human Resource Education and Development, Hokkaido University",
+      "office": "educational_institution",
+      "opening_hours": "Mo-Fr 09:00-17:00"
+    },
+    "coord": [
+      141.3429711,
+      43.0744235
+    ]
+  },
+  {
+    "name": "北海道大学 ダイバーシティ・インクルージョン推進本部",
+    "type": "node",
+    "id": "8912550165",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西7丁目",
+      "addr:postcode": "060-0812",
+      "addr:province": "北海道",
+      "addr:quarter": "北12条",
+      "addr:suburb": "北区",
+      "name": "北海道大学 ダイバーシティ・インクルージョン推進本部",
+      "name:en": "Office of Diversity, Equity, and Inclusion, Hokkaido University",
+      "office": "educational_institution",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "phone": "011-706-3625",
+      "website": "https://reed.synfoster.hokudai.ac.jp"
+    },
+    "coord": [
+      141.3428852,
+      43.0744045
+    ]
+  },
+  {
+    "name": "北海道大学文学部事務室",
+    "type": "node",
+    "id": "9166245765",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西7丁目",
+      "addr:postcode": "060-0810",
+      "addr:province": "北海道",
+      "addr:quarter": "北10条",
+      "addr:suburb": "北区",
+      "name": "北海道大学文学部事務室",
+      "name:en": "Office of the Faculty of Letters, Hokkaido University",
+      "name:ja": "北海道大学文学部事務室",
+      "office": "educational_institution",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "opening_hours:covid19": "restricted"
+    },
+    "coord": [
+      141.3434785,
+      43.0728244
+    ]
+  },
+  {
+    "name": "北海道大学教育学部事務室",
+    "type": "node",
+    "id": "9166245766",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西7丁目",
+      "addr:postcode": "060-0810",
+      "addr:province": "北海道",
+      "addr:quarter": "北10条",
+      "addr:suburb": "北区",
+      "name": "北海道大学教育学部事務室",
+      "name:en": "Office of the Faculty of Education, Hokkaido University",
+      "name:ja": "北海道大学教育学部事務室",
+      "office": "educational_institution",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "opening_hours:covid19": "restricted"
+    },
+    "coord": [
+      141.3434383,
+      43.072987
+    ]
+  },
+  {
+    "name": "北海道大学法学部事務室",
+    "type": "node",
+    "id": "9166245767",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西7丁目",
+      "addr:postcode": "060-0809",
+      "addr:province": "北海道",
+      "addr:quarter": "北9条",
+      "addr:suburb": "北区",
+      "name": "北海道大学法学部事務室",
+      "name:en": "Office of the Faculty of Law, Hokkaido University",
+      "name:ja": "北海道大学法学部事務室",
+      "office": "educational_institution",
+      "opening_hours": "Mo-Fr 09:00-17:00",
+      "opening_hours:covid19": "restricted"
+    },
+    "coord": [
+      141.3437548,
+      43.0718271
+    ]
+  },
+  {
+    "name": "北海道大学経済学部事務室",
+    "type": "node",
+    "id": "9166245768",
+    "tags": {
+      "name": "北海道大学経済学部事務室",
+      "name:en": "Office of the Faculty of Economics, Hokkaido University",
+      "name:ja": "北海道大学経済学部事務室",
+      "office": "educational_institution"
+    },
+    "coord": [
+      141.3437843,
+      43.0716841
+    ]
+  },
+  {
+    "name": "北海道大学 クラーク会館",
+    "type": "way",
+    "id": "104490566",
+    "tags": {
+      "building": "university",
+      "building:levels": "3",
+      "name": "北海道大学 クラーク会館",
+      "name:en": "Clark Hall",
+      "operator": "北海道大学",
+      "ref": "6",
+      "wheelchair": "limited"
+    },
+    "coord": [
+      141.34344455000002,
+      43.0696977375
+    ]
+  },
+  {
+    "name": "北海道大学",
+    "type": "way",
+    "id": "162657842",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:full": "札幌市北区北８条西５丁目",
+      "addr:neighbourhood": "5丁目",
+      "addr:postcode": "060-0808",
+      "addr:province": "北海道",
+      "addr:quarter": "北8条西",
+      "addr:suburb": "北区",
+      "amenity": "university",
+      "contact:facebook": "https://www.facebook.com/HokkaidoUniversity",
+      "contact:instagram": "https://www.instagram.com/hokkaidounivpr",
+      "contact:twitter": "https://twitter.com/HokkaidoUnivPR",
+      "contact:youtube": "http://www.youtube.com/user/hokudaihome",
+      "education": "university",
+      "isced:level": "5;6",
+      "landuse": "education",
+      "name": "北海道大学",
+      "name:en": "Hokkaido University",
+      "name:ja": "北海道大学",
+      "name:ja-Hira": "ほっかいどうだいがく",
+      "name:ja-Latn": "Hokkaidō Daigaku",
+      "name:ko": "홋카이도 대학",
+      "name:zh": "北海道大學",
+      "operator": "国立大学法人北海道大学",
+      "phone": "+81 11 716 2111",
+      "website": "https://www.hokudai.ac.jp/",
+      "wheelchair:description": "このポイントは、北海道大学の敷地を表しています。",
+      "wikidata": "Q1057199",
+      "wikipedia": "ja:北海道大学"
+    },
+    "coord": [
+      141.34044260666667,
+      43.07677489733333
+    ]
+  },
+  {
+    "name": "北海道大学事務局３号館",
+    "type": "way",
+    "id": "168256411",
+    "tags": {
+      "building": "university",
+      "name": "北海道大学事務局３号館",
+      "source": "bing"
+    },
+    "coord": [
+      141.34650406,
+      43.07182844
+    ]
+  },
+  {
+    "name": "北海道大学教職員住宅",
+    "type": "way",
+    "id": "192017246",
+    "tags": {
+      "building": "apartments",
+      "name": "北海道大学教職員住宅",
+      "name:en": "Hokkaido University Teachers' Living Quarter",
+      "source": "Bing"
+    },
+    "coord": [
+      141.346906,
+      43.070068
+    ]
+  },
+  {
+    "name": "北海道大学 百年記念会館",
+    "type": "way",
+    "id": "192017479",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西6丁目",
+      "addr:province": "北海道",
+      "addr:quarter": "北9条",
+      "addr:suburb": "北区",
+      "building": "university",
+      "building:levels": "2",
+      "name": "北海道大学 百年記念会館",
+      "operator": "北海道大学",
+      "source": "GSImaps/std",
+      "start_date": "1977",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.34563107142858,
+      43.071846199999996
+    ]
+  },
+  {
+    "name": "北海道大学中央キャンパス総合研究棟1号館",
+    "type": "way",
+    "id": "192081633",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:postcode": "060-0812",
+      "addr:province": "北海道",
+      "addr:suburb": "北区",
+      "building": "university",
+      "building:levels": "2",
+      "name": "北海道大学中央キャンパス総合研究棟1号館",
+      "source": "Bing;local knowledge"
+    },
+    "coord": [
+      141.3430094352941,
+      43.07446584117647
+    ]
+  },
+  {
+    "name": "北海道大学埋蔵文化財調査センター",
+    "type": "way",
+    "id": "192081710",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西7丁目",
+      "addr:province": "北海道",
+      "addr:quarter": "北11条",
+      "addr:suburb": "北区",
+      "building": "university",
+      "building:levels": "1",
+      "name": "北海道大学埋蔵文化財調査センター",
+      "name:en": "Hokkaido University Archaeological Reseach Center",
+      "name:ja": "北海道大学埋蔵文化財調査センター",
+      "note": "http://maibun.facility.hokudai.ac.jp/index.html",
+      "source": "local knowledge"
+    },
+    "coord": [
+      141.342857375,
+      43.073628937500004
+    ]
+  },
+  {
+    "name": "北海道大学総合博物館",
+    "type": "way",
+    "id": "192083649",
+    "tags": {
+      "building": "yes",
+      "building:colour": "brown",
+      "building:levels": "3",
+      "fee": "no",
+      "name": "北海道大学総合博物館",
+      "name:en": "Hokkaido University General Museum",
+      "name:zh": "北海道大學綜合博物館",
+      "operator": "北海道大学",
+      "operator:type": "university",
+      "roof:colour": "green",
+      "roof:shape": "flat",
+      "source": "Bing",
+      "toilets:wheelchair": "yes",
+      "tourism": "museum",
+      "wheelchair": "yes",
+      "wheelchair:description": "スロープ上部に開き戸あり。開き戸前は狭い。出入り口が車椅子には若干狭い。エレベーターは車椅子2台利用が可能。エレベーター内のボタンは若干高めである。",
+      "wikidata": "Q18339280",
+      "wikipedia": "ja:北海道大学総合博物館"
+    },
+    "coord": [
+      141.34190658444444,
+      43.07262304666666
+    ]
+  },
+  {
+    "name": "北海道大学生協会館",
+    "type": "way",
+    "id": "278775324",
+    "tags": {
+      "building": "retail",
+      "layer": "1",
+      "name": "北海道大学生協会館",
+      "source": "survey"
+    },
+    "coord": [
+      141.3445778666667,
+      43.06965006
+    ]
+  },
+  {
+    "name": "旧農学部図書館（北海道大学出版会オフィス）",
+    "type": "way",
+    "id": "292030378",
+    "tags": {
+      "building": "university",
+      "name": "旧農学部図書館（北海道大学出版会オフィス）",
+      "name:en": "Ex-Library of Faculty of Agriculture (Hokkaido University Press Office)",
+      "name:ja": "旧農学部図書館（北海道大学出版会オフィス）",
+      "roof:colour": "red",
+      "roof:shape": "hipped",
+      "source": "local knowledge"
+    },
+    "coord": [
+      141.3417629,
+      43.071061907692304
+    ]
+  },
+  {
+    "name": "北海道大学文書館",
+    "type": "way",
+    "id": "292030383",
+    "tags": {
+      "building": "university",
+      "fee": "no",
+      "museum": "archives",
+      "name": "北海道大学文書館",
+      "name:en": "Hokkaido University Archives",
+      "operator": "北海道大学",
+      "operator:type": "university",
+      "source": "bing",
+      "tourism": "museum"
+    },
+    "coord": [
+      141.342307355,
+      43.069401585
+    ]
+  },
+  {
+    "name": "北海道大学南門守衛室",
+    "type": "way",
+    "id": "292030384",
+    "tags": {
+      "building": "university",
+      "name": "北海道大学南門守衛室",
+      "name:ja": "北海道大学南門守衛室",
+      "source": "bing"
+    },
+    "coord": [
+      141.34616356,
+      43.070745699999996
+    ]
+  },
+  {
+    "name": "北海道大学事務局１号館",
+    "type": "way",
+    "id": "309551193",
+    "tags": {
+      "building": "university",
+      "name": "北海道大学事務局１号館",
+      "name:en": "Administration Bureau",
+      "source": "source=GSImaps/std"
+    },
+    "coord": [
+      141.34693816666666,
+      43.07148181111111
+    ]
+  },
+  {
+    "name": "北海道大学事務局２号館",
+    "type": "way",
+    "id": "309551469",
+    "tags": {
+      "building": "university",
+      "name": "北海道大学事務局２号館",
+      "source": "GSImaps/std"
+    },
+    "coord": [
+      141.34698271428573,
+      43.071860300000004
+    ]
+  },
+  {
+    "name": "北海道大学事務局４号館",
+    "type": "way",
+    "id": "309551705",
+    "tags": {
+      "building": "university",
+      "name": "北海道大学事務局４号館"
+    },
+    "coord": [
+      141.34678839999998,
+      43.072016885714284
+    ]
+  },
+  {
+    "name": "北海道大学 インフォメーションセンター エルムの森",
+    "type": "way",
+    "id": "309551926",
+    "tags": {
+      "building": "university",
+      "building:levels": "1",
+      "name": "北海道大学 インフォメーションセンター エルムの森",
+      "source": "survey",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.34749014,
+      43.07087242
+    ]
+  },
+  {
+    "name": "北海道大学中央図書館",
+    "type": "way",
+    "id": "600047247",
+    "tags": {
+      "building": "university",
+      "building:levels": "5",
+      "name": "北海道大学中央図書館"
+    },
+    "coord": [
+      141.3448733857143,
+      43.071581471428566
+    ]
+  },
+  {
+    "name": "北海道大学教職員住宅",
+    "type": "way",
+    "id": "775034702",
+    "tags": {
+      "landuse": "residential",
+      "name": "北海道大学教職員住宅",
+      "name:en": "Hokkaido University Teachers' Living Quarter",
+      "operator": "北海道大学",
+      "residential": "apartments"
+    },
+    "coord": [
+      141.34684134,
+      43.07003878
+    ]
+  },
+  {
+    "name": "北海道大学教職員住宅",
+    "type": "way",
+    "id": "775034708",
+    "tags": {
+      "building": "apartments",
+      "name": "北海道大学教職員住宅"
+    },
+    "coord": [
+      141.34464964,
+      43.0700019
+    ]
+  },
+  {
+    "name": "北海道大学教職員住宅",
+    "type": "way",
+    "id": "775034709",
+    "tags": {
+      "building": "apartments",
+      "name": "北海道大学教職員住宅",
+      "name:en": "Teachers' Residence"
+    },
+    "coord": [
+      141.34461522,
+      43.07027646
+    ]
+  },
+  {
+    "name": "北海道大学正門",
+    "type": "way",
+    "id": "777460221",
+    "tags": {
+      "access": "permit",
+      "barrier": "gate",
+      "material": "mixed",
+      "name": "北海道大学正門",
+      "name:en": "The Main Gate of Hokkaido University",
+      "name:ja": "北海道大学正門",
+      "operator": "北海道大学",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.34763275,
+      43.0711003
+    ]
+  },
+  {
+    "name": "北海道大学南門",
+    "type": "way",
+    "id": "777460222",
+    "tags": {
+      "access": "permit",
+      "barrier": "gate",
+      "material": "mixed",
+      "name": "北海道大学南門",
+      "name:en": "The South Gate of Hokkaido University",
+      "name:ja": "北海道大学南門",
+      "operator": "北海道大学",
+      "wheelchair": "yes"
+    },
+    "coord": [
+      141.3462626,
+      43.0707247
+    ]
+  },
+  {
+    "name": "北海道大学文学部倉庫",
+    "type": "way",
+    "id": "992090715",
+    "tags": {
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "西7丁目",
+      "addr:postcode": "060-0810",
+      "addr:province": "北海道",
+      "addr:quarter": "北10条",
+      "addr:suburb": "北区",
+      "building": "warehouse",
+      "building:levels": "1",
+      "name": "北海道大学文学部倉庫"
+    },
+    "coord": [
+      141.34388578,
+      43.07289768
+    ]
+  },
+  {
+    "name": "北海道大学　国際本部",
+    "type": "relation",
+    "id": "2192020",
+    "tags": {
+      "building": "university",
+      "building:levels": "3",
+      "name": "北海道大学　国際本部",
+      "type": "multipolygon",
+      "wheelchair": "limited"
+    }
+  },
+  {
+    "name": "北海道大学病院",
+    "type": "relation",
+    "id": "2618242",
+    "tags": {
+      "building": "hospital",
+      "building:levels": "11",
+      "layer": "1",
+      "name": "北海道大学病院",
+      "note": "タリーズ、サーティワンあり",
+      "source": "survey",
+      "type": "multipolygon",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "北海道大学付属図書館本館",
+    "type": "relation",
+    "id": "2618243",
+    "tags": {
+      "building": "university",
+      "building:levels": "5",
+      "name": "北海道大学付属図書館本館",
+      "source": "GSImaps/std",
+      "type": "multipolygon"
+    }
+  },
+  {
+    "name": "北海道大学 農学部",
+    "type": "relation",
+    "id": "2618250",
+    "tags": {
+      "building": "university",
+      "building:colour": "brown",
+      "building:levels": "4",
+      "layer": "1",
+      "name": "北海道大学 農学部",
+      "name:en": "School of Agriculture",
+      "roof:colour": "green",
+      "roof:shape": "flat",
+      "source": "survey",
+      "type": "multipolygon",
+      "wheelchair": "limited",
+      "wikidata": "Q56346291",
+      "wikipedia": "ja:北海道大学大学院農学研究院・大学院農学院・農学部"
+    }
+  }
+]

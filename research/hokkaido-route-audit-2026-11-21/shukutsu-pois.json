@@ -1,0 +1,72 @@
+[
+  {
+    "name": "おたる水族館",
+    "type": "node",
+    "id": "4365846195",
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "おたる水族館",
+      "name:ja": "おたる水族館",
+      "public_transport": "platform",
+      "shelter": "yes"
+    },
+    "lat": 43.2366507,
+    "lon": 141.0130598
+  },
+  {
+    "name": "おたる水族館",
+    "type": "node",
+    "id": "4365846196",
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "name": "おたる水族館",
+      "name:ja": "おたる水族館",
+      "public_transport": "platform",
+      "shelter": "yes"
+    },
+    "lat": 43.2366711,
+    "lon": 141.0132536
+  },
+  {
+    "name": "祝津パノラマ展望台",
+    "type": "node",
+    "id": "5715953221",
+    "tags": {
+      "direction": "270-60",
+      "ele": "70.9",
+      "name": "祝津パノラマ展望台",
+      "name:ja": "祝津パノラマ展望台",
+      "tourism": "viewpoint",
+      "website": "https://www.city.otaru.lg.jp/docs/2020100900664/#syukutu"
+    },
+    "lat": 43.2381569,
+    "lon": 141.0094945
+  },
+  {
+    "name": "おたる水族館",
+    "type": "way",
+    "id": "473908898",
+    "tags": {
+      "addr:block_number": "303",
+      "addr:city": "小樽市",
+      "addr:neighbourhood": "3丁目",
+      "addr:postcode": "047-0047",
+      "addr:province": "北海道",
+      "addr:quarter": "祝津",
+      "area": "yes",
+      "name": "おたる水族館",
+      "name:ja": "おたる水族館",
+      "tourism": "attraction",
+      "wikidata": "Q11261729",
+      "wikipedia": "ja:おたる水族館"
+    },
+    "lat": 43.23733147173913,
+    "lon": 141.01246948913044
+  }
+]

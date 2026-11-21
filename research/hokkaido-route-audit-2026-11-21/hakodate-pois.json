@@ -1,0 +1,373 @@
+[
+  {
+    "name": "函館山ロープウェイ 山麓駅",
+    "type": "node",
+    "id": "326603233",
+    "tags": {
+      "addr:block_number": "19",
+      "addr:city": "函館市",
+      "addr:housenumber": "7",
+      "addr:province": "北海道",
+      "addr:quarter": "元町",
+      "aerialway": "station",
+      "aerialway:access": "both",
+      "aerialway:summer:access": "both",
+      "name": "函館山ロープウェイ 山麓駅",
+      "name:en": "Hakodate Mountain Ropeway Sanroku Station",
+      "name:ja": "函館山ロープウェイ 山麓駅",
+      "name:ko": "하코다테야마 로프웨이 산로쿠역",
+      "public_transport": "station"
+    },
+    "lat": 41.7609207,
+    "lon": 140.714177
+  },
+  {
+    "name": "函館山ロープウェイ 山頂駅",
+    "type": "node",
+    "id": "326603235",
+    "tags": {
+      "aerialway": "station",
+      "aerialway:access": "both",
+      "aerialway:summer:access": "both",
+      "name": "函館山ロープウェイ 山頂駅",
+      "name:en": "Hakodate Mountain Ropeway Sanchō Station",
+      "name:ja": "函館山ロープウェイ 山頂駅",
+      "name:ko": "하코다테야마 로프웨이 산쵸역",
+      "public_transport": "station"
+    },
+    "lat": 41.7592352,
+    "lon": 140.7049138
+  },
+  {
+    "name": "船見町19; 船見町20",
+    "type": "node",
+    "id": "501597878",
+    "tags": {
+      "highway": "traffic_signals",
+      "name": "船見町19; 船見町20",
+      "name:en": "Funamicho"
+    },
+    "lat": 41.7702793,
+    "lon": 140.700876
+  },
+  {
+    "name": "金森赤レンガ倉庫",
+    "type": "node",
+    "id": "2476094422",
+    "tags": {
+      "addr:block_number": "14",
+      "addr:city": "函館市",
+      "addr:housenumber": "12",
+      "addr:province": "北海道",
+      "addr:quarter": "末広町",
+      "name": "金森赤レンガ倉庫",
+      "name:en": "Kanemori Red Brick Warehouse",
+      "name:fr": "Kanemori Red Brick Warehouse",
+      "name:ko": "카네모리 아카렌가 창고",
+      "name:zh": "金森倉庫群",
+      "opening_hours": "Mo-Su 09:30-19:00",
+      "phone": "+81 138 27 5530",
+      "shop": "mall",
+      "toilets": "yes",
+      "website": "https://hakodate-kanemori.com/",
+      "wheelchair": "yes",
+      "wheelchair:description": "おみやげ"
+    },
+    "lat": 41.7661843,
+    "lon": 140.7164492
+  },
+  {
+    "name": "金森洋物館",
+    "type": "node",
+    "id": "2476269108",
+    "tags": {
+      "addr:block_number": "13",
+      "addr:city": "末広町",
+      "addr:county": "函館市",
+      "addr:housenumber": "9",
+      "addr:province": "北海道",
+      "name": "金森洋物館",
+      "name:en": "Kanemori Red Brick Warehouse-Youbutsukan",
+      "name:fr": "Kanemori Red Brick Warehouse",
+      "name:ko": "카네모리 양물관",
+      "opening_hours": "Mo-Su 09:30-19:00",
+      "phone": "+81 138 23 0350",
+      "shop": "mall",
+      "toilets": "yes",
+      "website": "https://hakodate-kanemori.com/facilities/youbutsukan",
+      "wheelchair": "yes",
+      "wheelchair:description": "段差なしの入り口は一部 屋内は段差なして車いす対応トイレあり"
+    },
+    "lat": 41.7664976,
+    "lon": 140.7170403
+  },
+  {
+    "name": "カトリック元町教会",
+    "type": "node",
+    "id": "3086048896",
+    "tags": {
+      "addr:block_number": "15",
+      "addr:city": "函館市",
+      "addr:housenumber": "30",
+      "addr:province": "北海道",
+      "addr:quarter": "元町",
+      "amenity": "place_of_worship",
+      "denomination": "catholic",
+      "name": "カトリック元町教会",
+      "name:en": "Roman Catholic Church",
+      "name:ja": "カトリック 函館 元町教会",
+      "name:ko": "모토마치 성당",
+      "name:zh": "元町教会",
+      "phone": "+81 138 22 6877",
+      "religion": "christian",
+      "website": "http://motomachi.holy.jp/",
+      "wikidata": "Q11294362"
+    },
+    "lat": 41.763257,
+    "lon": 140.71316
+  },
+  {
+    "name": "ホテル八幡坂",
+    "type": "node",
+    "id": "4591148624",
+    "tags": {
+      "addr:block_number": "31",
+      "addr:city": "函館市",
+      "addr:housenumber": "16",
+      "addr:province": "北海道",
+      "addr:quarter": "元町",
+      "name": "ホテル八幡坂",
+      "name:en": "Hotel Hachimansaka",
+      "name:ja": "ホテル八幡坂",
+      "name:ko": "호텔 하치만자카",
+      "phone": "+81 138-26-4891",
+      "tourism": "hotel"
+    },
+    "lat": 41.7648993,
+    "lon": 140.7131602
+  },
+  {
+    "name": "函館オルゴール堂",
+    "type": "node",
+    "id": "4607184691",
+    "tags": {
+      "addr:block_number": "11",
+      "addr:city": "函館市",
+      "addr:housenumber": "5",
+      "addr:province": "北海道",
+      "addr:quarter": "豊川町",
+      "name": "函館オルゴール堂",
+      "name:en": "Hakodate Orgel Hall",
+      "name:ja": "函館オルゴール堂",
+      "name:ko": "하코다테 오르골당",
+      "opening_hours": "Mo-Su 09:30-19:00",
+      "phone": "+81 138 21 1055",
+      "shop": "gift",
+      "website": "https://hakodate-kanemori.com/shop/2010/04/b-14.php",
+      "wheelchair": "no"
+    },
+    "lat": 41.7669464,
+    "lon": 140.7178716
+  },
+  {
+    "name": "金森赤レンガ倉庫インフォメーションコーナー",
+    "type": "node",
+    "id": "4607459091",
+    "tags": {
+      "addr:block_number": "11",
+      "addr:city": "函館市",
+      "addr:housenumber": "5",
+      "addr:province": "北海道",
+      "addr:quarter": "豊川町",
+      "information": "office",
+      "name": "金森赤レンガ倉庫インフォメーションコーナー",
+      "name:en": "Kanamori Red Brick Warehouse Information Corner",
+      "name:ja": "金森赤レンガ倉庫インフォメーション",
+      "name:ko": "카네모리 아카렌가 창고 인포메이션 코너",
+      "opening_hours": "Mo-Su 09:30-19:00",
+      "phone": "+81 800-800-6640",
+      "tourism": "information",
+      "website": "https://hakodate-kanemori.com/"
+    },
+    "lat": 41.7669632,
+    "lon": 140.7171455
+  },
+  {
+    "name": "八幡坂",
+    "type": "node",
+    "id": "5329294424",
+    "tags": {
+      "name": "八幡坂",
+      "name:en": "Hachiman-zaka Slope",
+      "name:ja": "八幡坂",
+      "name:ko": "하치만자카 거리",
+      "tourism": "attraction"
+    },
+    "lat": 41.7637939,
+    "lon": 140.7117728
+  },
+  {
+    "name": "市立函館博物館郷土資料館 旧金森洋物店",
+    "type": "node",
+    "id": "5840008498",
+    "tags": {
+      "addr:block_number": "19",
+      "addr:city": "函館市",
+      "addr:housenumber": "15",
+      "addr:province": "北海道",
+      "addr:quarter": "末広町",
+      "name": "市立函館博物館郷土資料館 旧金森洋物店",
+      "name:en": "Ichijo Hakodate Museum Local Museum Former Kanemori Yoko",
+      "name:ko": "시립 하코다테 박물관 향토자료관 구카나모리 양물점",
+      "name:zh": "舊金森洋物店",
+      "opening_hours": "Tu-Su 09:00-16:00",
+      "phone": "+81 138 23 3095",
+      "tourism": "museum",
+      "website": "https://www.city.hakodate.hokkaido.jp/docs/2015121000073/"
+    },
+    "lat": 41.7660733,
+    "lon": 140.7128502
+  },
+  {
+    "name": "日本基督教団函館教会",
+    "type": "node",
+    "id": "5841517085",
+    "tags": {
+      "addr:block_number": "31",
+      "addr:city": "函館市",
+      "addr:housenumber": "19",
+      "addr:province": "北海道",
+      "addr:quarter": "元町",
+      "amenity": "place_of_worship",
+      "name": "日本基督教団函館教会",
+      "name:en": "UCCJ Hakodate Church",
+      "name:ko": "일본 기독교단 하코다테 교회",
+      "name:zh": "日本基督教團函館教會",
+      "phone": "+81 138 22 3342",
+      "religion": "christian",
+      "website": "https://hako-ch.sakura.ne.jp/",
+      "wikidata": "Q18234501"
+    },
+    "lat": 41.7646807,
+    "lon": 140.7135551
+  },
+  {
+    "name": "金森赤レンガ倉庫",
+    "type": "node",
+    "id": "10607546564",
+    "tags": {
+      "information": "map",
+      "name": "金森赤レンガ倉庫",
+      "name:en": "KANEMORI RED BRICK WAREHOUSE",
+      "tourism": "information",
+      "wheelchair": "yes"
+    },
+    "lat": 41.7663069,
+    "lon": 140.7168435
+  },
+  {
+    "name": "金森神社",
+    "type": "node",
+    "id": "12466225057",
+    "tags": {
+      "amenity": "place_of_worship",
+      "check_date": "2025-01-01",
+      "name": "金森神社",
+      "name:en": "Kanamori Shrine",
+      "religion": "shinto"
+    },
+    "lat": 41.7664608,
+    "lon": 140.7179014
+  },
+  {
+    "name": "函館山ロープウェイ",
+    "type": "way",
+    "id": "29681334",
+    "tags": {
+      "aerialway": "cable_car",
+      "aerialway:duration": "3",
+      "name": "函館山ロープウェイ",
+      "name:en": "Hakodateyama Ropeway",
+      "name:ko": "하코다테야마 로프웨이",
+      "wikidata": "Q6921027",
+      "wikipedia": "ja:函館山ロープウェイ"
+    },
+    "lat": 41.760077949999996,
+    "lon": 140.70954540000002
+  },
+  {
+    "name": "八幡坂",
+    "type": "way",
+    "id": "41111885",
+    "tags": {
+      "highway": "tertiary",
+      "lanes": "2",
+      "lit": "yes",
+      "name": "八幡坂",
+      "name:en": "Hachimansaka Dori",
+      "name:ja": "八幡坂通",
+      "name:ko": "하치만자카 거리",
+      "surface": "paving_stones"
+    },
+    "lat": 41.76446585,
+    "lon": 140.7124462875
+  },
+  {
+    "name": "函館ハリストス正教会",
+    "type": "way",
+    "id": "254175356",
+    "tags": {
+      "addr:block_number": "3",
+      "addr:city": "函館市",
+      "addr:country": "JP",
+      "addr:full": "北海道函館市元町3-13",
+      "addr:housenumber": "13",
+      "addr:postcode": "040-0054",
+      "addr:province": "北海道",
+      "addr:quarter": "元町",
+      "alt_name:ru": "Гангандера",
+      "amenity": "place_of_worship",
+      "building": "church",
+      "denomination": "japanese_orthodox",
+      "name": "函館ハリストス正教会",
+      "name:en": "Holy Resurrection Orthodox Church",
+      "name:ja": "函館ハリストス正教会",
+      "name:ko": "하코다테 하리스토스 성당",
+      "name:ru": "Церковь Воскресения Христова",
+      "phone": "+81 138 23 7387",
+      "religion": "christian",
+      "website": "https://www.orthodox-hakodate.jp/",
+      "wikidata": "Q4504662"
+    },
+    "lat": 41.76280773125,
+    "lon": 140.71224655625
+  },
+  {
+    "name": "函館聖ヨハネ教会",
+    "type": "way",
+    "id": "390279691",
+    "tags": {
+      "addr:block_number": "3",
+      "addr:city": "函館市",
+      "addr:country": "JP",
+      "addr:full": "北海道函館市元町3-23",
+      "addr:housenumber": "23",
+      "addr:postcode": "040-0054",
+      "addr:province": "北海道",
+      "addr:quarter": "元町",
+      "amenity": "place_of_worship",
+      "building": "church",
+      "denomination": "anglican",
+      "name": "函館聖ヨハネ教会",
+      "name:en": "Hakodate Saint John Church",
+      "name:ja": "函館聖ヨハネ教会",
+      "name:ko": "하코다테 성 요한 교회",
+      "name:ru": "Церковь Св. Иоанна в Хакодате",
+      "religion": "christian",
+      "wikidata": "Q56346699",
+      "wikipedia": "ja:函館聖ヨハネ教会"
+    },
+    "lat": 41.7625506,
+    "lon": 140.71282811999998
+  }
+]

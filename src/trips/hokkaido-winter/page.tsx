@@ -9,7 +9,7 @@ import { SyncedTable } from "@/components/synced-table";
 import { OpenFreeMap } from "../../OpenFreeMap";
 import type { Trip } from "../types";
 import { buildHokkaidoMapPlaces, type HokkaidoMapPlace } from "./recommendation-map";
-import { recommendationCities, dayPlans, nights, recommendations, type RecommendationCity } from "./trip";
+import { recommendationCities, dayPlans, nights, recommendations, stayAreas, type RecommendationCity } from "./trip";
 import { sources } from "./sources";
 import { FoodList } from "./food-list";
 import { ticketGroups } from "./tickets";
@@ -19,9 +19,9 @@ const reminders = [
   { icon: CalendarDays, title: "两场雪节，日期别记错", text: "札幌雪祭2/4–11；小樽雪灯2/6–13。2/5没有正式雪灯，2/6点灯时间待公告。", sources: ["O1", "O2"] },
   { icon: TrainFront, title: "函馆转场，留半天", text: "2/2函馆到札幌约4小时，实际从中午开始玩。北斗全车指定席，先订座；雪天出发前查停运。", sources: ["O7", "O9", "O10"] },
   { icon: MountainSnow, title: "索道停运，就取消登山", text: "函馆山冬季不能打车上山；天狗山先看能见度。冬季团注明有珠山1/12–3/13停运，本次不排。", sources: ["O3", "O4", "O5", "N29"] },
-  { icon: CloudSnow, title: "2/7早回札幌", text: "小樽住两晚，2/7早班回札幌，2/8返程。抵达后以市区活动为主，雪天晚到就减项目。", sources: ["O10"] },
+  { icon: CloudSnow, title: "朝里、发寒，看清停站", text: "2/5坐09:25普通车停朝里，2/7坐08:55普通车停发寒；09:33 Airport31号不停朝里，09:22 Airport52号不停发寒。", sources: ["N17", "N19"] },
   { icon: Footprints, title: "坡道慢走，随时取暖", text: "穿防滑防水鞋；结冰就缩短坡道路线。室外与室内交替，累了删可选点。", sources: ["T02", "T13", "K09"] },
-  { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，通常20点收尾；1/30赶末班北斗，约23点才入住。", sources: ["O14"] },
+  { icon: Snowflake, title: "白天短，不追满场", text: "札幌2/4日落16:50。白天留给雪景，通常20点收尾；朝里遇风雪就不下车，留时间逛小樽。", sources: ["O14"] },
 ];
 
 const routeQa = [
@@ -36,24 +36,34 @@ const routeQa = [
     sources: ["O2"],
   },
   {
-    question: "落地当晚去函馆，来得及吗？",
-    answer: "按16:30落地、南千岁19:18北斗22号规划，22:31到函馆，约23点入住。机场先坐JR一站到南千岁，争取18:40前后候车。17:26前班不建议赶；19:18是现行末班直达北斗，延误赶不上需改住千岁。",
-    sources: ["N14", "N22", "O10"],
+    question: "落地住哪里，次晨怎么去函馆？",
+    answer: "1/30住千岁站附近。1/31约07:45–08:00出门，08:40→08:43 Airport32号到南千岁，09:12→12:33北斗6号到函馆，换乘29分钟。北斗不停千岁、也不进机场；08:19北斗84号为临时车，未确认当天运行。",
+    sources: ["N05", "N14", "N22"],
   },
   {
     question: "2日到札幌，能玩一整天吗？",
-    answer: "推荐08:56→12:41北斗5号，实际玩下午和晚上，安排大学、旧道厅与狸小路。想早到可选07:37→11:29；晚班10:05→14:01。大通雪祭留到2/4开幕。",
+    answer: "推荐08:56→12:41北斗5号。札幌站寄存→北大南部→旧道厅→回站取行李，再去西线9条酒店；寄存满员就先去酒店并删减景点。狸小路留2/4。站到酒店打车每车单程预算¥2,000–3,200，默认市电接地下步行街。",
     sources: ["N16", "O1"],
   },
   {
-    question: "为什么5日上午去小樽，住几晚？",
-    answer: "札幌有2日下午、4日和7日，现有景点基本够排。5日09:33→10:07去小樽，白天逛堺町；6日天狗山与雪灯分开玩。住5、6日两晚，7日08:05→08:50回札幌，8日返程。",
-    sources: ["N17", "N19", "O2", "O3"],
+    question: "5日怎么经朝里去小樽，住几晚？",
+    answer: "约08:00从西线9条酒店出发，市电接地下步行街到札幌站。09:25普通156M→朝里，10:42普通162M→小樽。先去站前酒店寄存，再接驳音乐盒堂本馆，从南向北逛堺町、运河。风雪大或带大箱就取消朝里短停；住5、6日两晚。",
+    sources: ["N17", "O2", "O3"],
   },
   {
     question: "去小樽能把大箱子留在札幌吗？",
-    answer: "札幌2/2–4和2/7尽量订同一家，先确认允许跨两晚寄存；允许就只带两晚换洗小包。否则2/5早上带去小樽酒店寄存，2/7退房后带回札幌。",
+    answer: "札幌2/2–4和2/7尽量订同一家，先确认允许跨两晚寄存；允许就只带两晚换洗小包。若不能寄存，5日带箱直达小樽、取消朝里短停；7日先回札幌酒店放箱，再改地铁往返白色恋人。",
     sources: ["N10"],
+  },
+  {
+    question: "白色恋人怎样顺路去？哪些车不停站？",
+    answer: "2/7坐08:55普通149M，约09:32到发寒，打车到公园预算每车单程¥1,000–1,800；报价超¥3,000改JR到札幌、地铁经大通到宫之泽，游园顺延。结束后宫之泽→西11丁目→中央区役所前市电→西线9条酒店。09:22 Airport52号不停发寒，09:33 Airport31号不停朝里。",
+    sources: ["N17", "N19", "N30", "N31"],
+  },
+  {
+    question: "朝里、发寒的到站时间准确吗？能存行李吗？",
+    answer: "官方总时刻表在这两站列的是发车时刻，到站略早，所以写约10:05、约09:32；返程上车按发车时间提前候车。白色恋人有免费柜，但尺寸和空位不保证；朝里按无寄存安排，只带小包短停。",
+    sources: ["N17", "N19", "N32"],
   },
   {
     question: "3日一日游怎么订，包含温泉和有珠山吗？",
@@ -62,8 +72,13 @@ const routeQa = [
   },
   {
     question: "冰涛节能看夜景吗？函馆山有几次机会？",
-    answer: "候选团2/3预计16:10–17:10停留冰涛节，跨傍晚亮灯时段，现场安排与路况为准，游览约1小时。函馆山1/31优先、2/1留天气备选，两天择晴一次。",
+    answer: "候选团2/3预计16:10–17:10停留冰涛节，亮灯与路况以现场为准。函馆山默认2/1，接元町步行线；若1/31更晴，交换五棱郭与元町＋函馆山的安排，并缩短或取消金森、公会堂。双日停运则取消夜景。",
     sources: ["N29", "N02", "O4", "O5"],
+  },
+  {
+    question: "打车预算怎么算？超过¥3,000怎么办？",
+    answer: "按普通车、每车单程看总价，不按人均拆分。札幌站↔西线9条预算¥2,000–3,200，默认公共交通；电视塔或神宫短途¥1,800–2,800，发寒→白色恋人¥1,000–1,800，小樽站前→音乐盒堂本馆粗估¥1,200–2,000。酒店门牌未定，均为预算区间，非叫车报价；上车前看含迎车等费用的全额预估，超¥3,000优先公共交通。雪天低速等候可能继续加价，2027年出发前再核。",
+    sources: ["N34", "N35"],
   },
 ];
 
@@ -157,7 +172,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               <p className="mb-5 flex items-center gap-3 font-mono text-xs tracking-[.16em] text-primary"><span className="h-px w-8 bg-primary" />HOKKAIDO / WINTER 2027</p>
               <h1 className="text-[clamp(2.3rem,5vw,3.6rem)] font-semibold leading-[1.2] tracking-tight">北海道<br /><span className="font-serif text-primary">冬季慢游</span></h1>
               <p className="mt-5 font-mono text-sm tracking-wider">{trip.fullDateRange}</p>
-              <p className="mt-3 text-sm leading-7 text-muted-foreground">转场日7点起 · 游玩日8:30–9点起 · 抵达夜约23点入住</p>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">转场日7点起 · 游玩日8:30–9点起 · 抵达夜住千岁</p>
             </div>
             <WinterPostcard />
           </div>
@@ -168,7 +183,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
         </header>
 
         <div className="my-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs sm:my-10 sm:gap-x-5 sm:text-sm" aria-label="城市路线">
-          <span>新千岁机场</span><span aria-hidden="true" className="text-primary">→</span><span>函馆</span><span aria-hidden="true" className="text-primary">→</span><span>札幌（洞爷湖·登别·冰涛节一日游）</span><span aria-hidden="true" className="text-primary">→</span><span>小樽</span><span aria-hidden="true" className="text-primary">→</span><span>札幌</span>
+          <span>千岁</span><span aria-hidden="true" className="text-primary">→</span><span>函馆</span><span aria-hidden="true" className="text-primary">→</span><span>札幌（洞爷湖·登别·冰涛节一日游）</span><span aria-hidden="true" className="text-primary">→</span><span>朝里·小樽</span><span aria-hidden="true" className="text-primary">→</span><span>白色恋人·札幌</span>
         </div>
 
         <section id="itinerary" aria-labelledby="itinerary-heading">
@@ -183,7 +198,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
                       <Badge variant="outline">{day.city} · {day.pace}</Badge>
                     </div>
                     <CardTitle><h3>{day.title}</h3></CardTitle>
-                    <CardDescription>{day.stay ? `住${day.stay}` : "住宿按实际航班"}</CardDescription>
+                    <CardDescription>{day.stay ? `住${day.stay} · ${stayAreas[day.stay]}` : "住宿按实际航班"}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ol className="flex flex-col gap-3">
@@ -214,13 +229,14 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               </article>
             ))}
           </div>
-          <p className="mt-4 text-xs leading-6 text-muted-foreground">JR按2026.11.20–21核验的现行时刻规划，2027年出行前复核。2/3一日游已公布冬季路线，余位待确认；北斗提前订指定席，换班先改签。1/30约23点入住；雪天留足换乘、取票与寄存时间。</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">打车预算均为普通车每车单程估算，按酒店片区规划，非固定报价；札幌参考现行运价，小樽短途仅作粗估。上车前确认含迎车、预约等费用的全额预估，超过¥3,000优先公共交通。冬季加价、低速等候、车种及酒店门牌会影响实际费用。公共交通价格按成人每人计；具体接驳预算见下方“打车预算”标签。{sourceRefs(["N34", "N35"])}</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">JR按2026.11.20–21核验的现行时刻规划，2027年出行前复核。2/3一日游已公布冬季路线，余位待确认；北斗提前订指定席，换班先改签。朝里、发寒的约到站时间按总表发车栏估算；停站已逐班核对，雪天留足换乘、取票与寄存时间。</p>
         </section>
 
         <section id="places" aria-labelledby="places-heading" className="mt-14 sm:mt-20">
           <SectionHeading number="02" title="哪些值得去" id="places-heading" description="按本次冬季慢游排序；优先安排经典，可选按体力，可省不用补齐。" />
           <div className="hokkaido-recommendation-map mt-6">
-            <p className="mb-2 text-xs text-muted-foreground">概览点位 · WGS84 · 不作导航入口</p>
+            <p className="mb-2 text-xs text-muted-foreground">位置参考 · 山岳标索道山麓站，五棱郭标塔楼；街区与园区为参考点，导航时核对入口。电视塔与T38、伏见稻荷与头大佛已分开标点。</p>
             <OpenFreeMap
               places={visibleMapPlaces}
               focusPlaceId={focusedRecommendationId}
@@ -300,9 +316,9 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
         </section>
 
         <section id="tickets" aria-labelledby="tickets-heading" className="mt-14 scroll-mt-24 sm:mt-20">
-          <SectionHeading number="04" title="哪些票要先买" id="tickets-heading" description="按类型查购买时间 · 不含酒店 · 成人日元价格 · JR单独买票" />
+          <SectionHeading number="04" title="哪些票要先买" id="tickets-heading" description="票价按成人每人 · 打车按每车单程 · 金额均为日元 · JR单独买票" />
           <Tabs defaultValue="rail" className="mt-6 gap-5">
-            <TabsList variant="line" className="w-full max-w-2xl" aria-label="购票类型">
+            <TabsList variant="line" className="grid w-full max-w-3xl grid-cols-3 group-data-[orientation=horizontal]/tabs:h-auto sm:grid-cols-5" aria-label="购票类型">
               {ticketGroups.map((group) => <TabsTrigger key={group.id} value={group.id}>{group.label}</TabsTrigger>)}
             </TabsList>
             {ticketGroups.map((group) => (
@@ -318,7 +334,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
                       <p className="font-mono text-sm text-primary">{ticket.price}</p>
                       <p className="text-sm leading-6"><span className="font-semibold">购买时间 · </span>{ticket.timing}</p>
                       <p className="text-sm leading-6 text-muted-foreground">{ticket.note}</p>
-                      <div className="mt-auto flex flex-wrap items-center gap-2"><span className="text-xs text-muted-foreground">官方说明</span>{sourceRefs(ticket.sources)}</div>
+                      <div className="mt-auto flex flex-wrap items-center gap-2"><span className="text-xs text-muted-foreground">来源参考</span>{sourceRefs(ticket.sources)}</div>
                     </li>
                   ))}
                 </ul>
@@ -326,7 +342,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
               </TabsContent>
             ))}
           </Tabs>
-          <p className="mt-4 text-xs leading-6 text-muted-foreground">价格与规则核验于2026.11.20–21，2027出行前复核，一日游以选定日期报价与余位为准。JR开售时间为北京时间09:00／日本时间10:00；集合、乘车与游览时间均为日本当地时间。</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">已公布票价与规则核验于2026.11.20–21，2027出行前复核；打车区间仅作预算，一日游以选定日期报价与余位为准。JR开售时间为北京时间09:00／日本时间10:00；集合、乘车与游览时间均为日本当地时间。</p>
         </section>
 
         <section id="reminders" aria-labelledby="reminders-heading" className="mt-14 sm:mt-20">

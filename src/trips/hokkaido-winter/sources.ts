@@ -1,6 +1,40 @@
 export type Source = { sourceId: string; group: string; title: string; url: string; collectedAt: string };
 
 export const sources: Source[] = [
+  {"sourceId": "N34", "group": "official", "title": "札幌交通局：市电、地铁票价与换乘", "url": "https://www.city.sapporo.jp/st/josyaken/ryokin/ryoukin.html", "collectedAt": "2026-11-21"},
+  {"sourceId": "N35", "group": "transport", "title": "札幌MK：计程车运价、迎车费与冬季差异（预算参考，非各路线报价）", "url": "https://www.mk-group.co.jp/sapporo/taxi/", "collectedAt": "2026-11-21"},
+  {"sourceId": "M01", "group": "map-check", "title": "北海道神宫神门：位置核对", "url": "https://www.openstreetmap.org/node/6215959869", "collectedAt": "2026-11-21"},
+  {"sourceId": "M02", "group": "map-check", "title": "北海道大学正门：位置核对", "url": "https://www.openstreetmap.org/way/777460221", "collectedAt": "2026-11-21"},
+  {"sourceId": "M03", "group": "map-check", "title": "大通公园东段：位置核对", "url": "https://www.openstreetmap.org/node/2287712217", "collectedAt": "2026-11-21"},
+  {"sourceId": "M04", "group": "map-check", "title": "白色恋人公园：位置核对", "url": "https://www.openstreetmap.org/node/2422507432", "collectedAt": "2026-11-21"},
+  {"sourceId": "M05", "group": "map-check", "title": "札幌电视塔：位置核对", "url": "https://www.openstreetmap.org/way/199758828", "collectedAt": "2026-11-21"},
+  {"sourceId": "M06", "group": "map-check", "title": "北海道厅旧本厅舍：位置核对", "url": "https://ja.wikipedia.org/wiki/北海道庁旧本庁舎", "collectedAt": "2026-11-21"},
+  {"sourceId": "M07", "group": "map-check", "title": "小樽运河南端浅草桥：位置核对", "url": "https://www.openstreetmap.org/way/38939135", "collectedAt": "2026-11-21"},
+  {"sourceId": "M08", "group": "map-check", "title": "小樽音乐盒堂本馆：位置核对", "url": "https://www.openstreetmap.org/node/1256671137", "collectedAt": "2026-11-21"},
+  {"sourceId": "M09", "group": "map-check", "title": "北一硝子三号馆：位置核对", "url": "https://www.openstreetmap.org/node/5603040059", "collectedAt": "2026-11-21"},
+  {"sourceId": "M10", "group": "map-check", "title": "船见坂路段：位置核对", "url": "https://www.openstreetmap.org/way/151601603", "collectedAt": "2026-11-21"},
+  {"sourceId": "M11", "group": "map-check", "title": "小樽水族馆主馆附近：位置核对", "url": "https://ja.wikipedia.org/wiki/おたる水族館", "collectedAt": "2026-11-21"},
+  {"sourceId": "M12", "group": "map-check", "title": "祝津全景展望台：位置核对", "url": "https://www.openstreetmap.org/node/5715953221", "collectedAt": "2026-11-21"},
+  {"sourceId": "M13", "group": "map-check", "title": "天狗山索道山麓站：位置核对", "url": "https://www.openstreetmap.org/node/6057324224", "collectedAt": "2026-11-21"},
+  {"sourceId": "M14", "group": "map-check", "title": "函馆山索道山麓站：位置核对", "url": "https://www.openstreetmap.org/node/326603233", "collectedAt": "2026-11-21"},
+  {"sourceId": "M15", "group": "map-check", "title": "八幡坂上段：位置核对", "url": "https://www.openstreetmap.org/node/5329294424", "collectedAt": "2026-11-21"},
+  {"sourceId": "M16", "group": "map-check", "title": "金森红砖仓库：位置核对", "url": "https://www.openstreetmap.org/node/2476094422", "collectedAt": "2026-11-21"},
+  {"sourceId": "M17", "group": "map-check", "title": "旧函馆区公会堂：位置核对", "url": "https://ja.wikipedia.org/wiki/旧函館区公会堂", "collectedAt": "2026-11-21"},
+  {"sourceId": "M18", "group": "map-check", "title": "五棱郭塔：位置核对", "url": "https://ja.wikipedia.org/wiki/五稜郭タワー", "collectedAt": "2026-11-21"},
+  {"sourceId": "M19", "group": "map-check", "title": "函馆市热带植物园：位置核对", "url": "https://www.openstreetmap.org/way/241423246", "collectedAt": "2026-11-21"},
+  {"sourceId": "M20", "group": "map-check", "title": "藻岩山索道山麓站：位置核对", "url": "https://www.openstreetmap.org/way/166668678", "collectedAt": "2026-11-21"},
+  {"sourceId": "M21", "group": "map-check", "title": "札幌伏见稻荷神社：位置核对", "url": "https://www.openstreetmap.org/node/3887704767", "collectedAt": "2026-11-21"},
+  {"sourceId": "M22", "group": "map-check", "title": "有珠山索道昭和新山站：位置核对", "url": "https://www.openstreetmap.org/node/3080011771", "collectedAt": "2026-11-21"},
+  {"sourceId": "M23", "group": "map-check", "title": "JR塔位置", "url": "https://ja.wikipedia.org/wiki/JRタワー", "collectedAt": "2026-11-21"},
+  {"sourceId": "M24", "group": "map-check", "title": "头大佛位置", "url": "https://en.wikipedia.org/wiki/Hill_of_the_Buddha", "collectedAt": "2026-11-21"},
+  {"sourceId": "M25", "group": "map-check", "title": "昭和新山山麓位置", "url": "https://www.openstreetmap.org/node/11342840810", "collectedAt": "2026-11-21"},
+  {"sourceId": "M26", "group": "map-check", "title": "堺町南段参考：音乐盒堂2号馆附近", "url": "https://www.openstreetmap.org/way/525960324", "collectedAt": "2026-11-21"},
+  {"sourceId": "M27", "group": "map-check", "title": "旧手宫线市区段", "url": "https://www.openstreetmap.org/way/257877185", "collectedAt": "2026-11-21"},
+
+  {"sourceId": "N30", "group": "official", "title": "白色恋人公园：交通与接驳", "url": "https://www.shiroikoibitopark.jp/park-guide/access.html", "collectedAt": "2026-11-21"},
+  {"sourceId": "N31", "group": "official", "title": "白色恋人公园：营业时间", "url": "https://www.shiroikoibitopark.jp/daily-report/", "collectedAt": "2026-11-21"},
+  {"sourceId": "N32", "group": "official", "title": "白色恋人公园：免费寄存柜与常见问题", "url": "https://www.shiroikoibitopark.jp/park-guide/faq.html", "collectedAt": "2026-11-21"},
+  {"sourceId": "N33", "group": "transport", "title": "OpenStreetMap：朝里站位置", "url": "https://www.openstreetmap.org/node/8082693157", "collectedAt": "2026-11-21"},
   {"sourceId": "N29", "group": "transport", "title": "VELTRA：2027冬季洞爷湖、登别、冰涛节一日游（含停运提示，余位待确认）", "url": "https://www.veltra.com/jp/japan/hokkaido/sapporo/a/166508", "collectedAt": "2026-11-21"},
   {"sourceId": "N22", "group": "official", "title": "JR北海道：预订、开售时间与取票", "url": "https://www.jrhokkaido.co.jp/global/english/ticket/reservation/index.html", "collectedAt": "2026-11-20"},
   {"sourceId": "N23", "group": "official", "title": "白色恋人：入馆价格与体验预约", "url": "https://www.shiroikoibitopark.jp/facility/counter.html", "collectedAt": "2026-11-20"},
@@ -604,6 +638,7 @@ export const sources: Source[] = [
 ];
 
 export const sourceGroups = [
+  { id: "map-check", label: "地图点位核对" },
   { id: "transport", label: "交通、温泉与行李寄存" },
   { id: "candidate-research", label: "景点补充调研" },
   { id: "hokkaido", label: "北海道总体" },

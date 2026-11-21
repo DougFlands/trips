@@ -1,0 +1,362 @@
+[
+  {
+    "name": "正門",
+    "type": "node",
+    "id": "3578461927",
+    "tags": {
+      "barrier": "gate",
+      "fee": "yes",
+      "foot": "yes",
+      "name": "正門",
+      "vehicle": "no"
+    },
+    "coord": [
+      141.307888,
+      43.0514774
+    ]
+  },
+  {
+    "name": "北海道神宮神門",
+    "type": "node",
+    "id": "6215959869",
+    "tags": {
+      "amenity": "place_of_worship",
+      "check_date": "2026-06-17",
+      "name": "北海道神宮神門",
+      "religion": "shinto"
+    },
+    "coord": [
+      141.3081104,
+      43.0546731
+    ]
+  },
+  {
+    "name": "円山動物園正門",
+    "type": "node",
+    "id": "9946202188",
+    "tags": {
+      "bench": "no",
+      "bin": "no",
+      "bus": "yes",
+      "highway": "bus_stop",
+      "lit": "yes",
+      "name": "円山動物園正門",
+      "name:en": "Maruyama Zoo main gate",
+      "name:ja": "円山動物園正門",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport": "platform",
+      "shelter": "no",
+      "tactile_paving": "no"
+    },
+    "coord": [
+      141.3080654,
+      43.0516353
+    ]
+  },
+  {
+    "name": "北海道神宮",
+    "type": "node",
+    "id": "12021731475",
+    "tags": {
+      "historic": "memorial",
+      "memorial": "stone",
+      "name": "北海道神宮"
+    },
+    "coord": [
+      141.3108102,
+      43.0541253
+    ]
+  },
+  {
+    "name": "北海道神宮境内の野鳥",
+    "type": "node",
+    "id": "12021804737",
+    "tags": {
+      "name": "北海道神宮境内の野鳥",
+      "tourism": "information"
+    },
+    "coord": [
+      141.3087464,
+      43.0552188
+    ]
+  },
+  {
+    "name": "北海道神宮未社開拓神社",
+    "type": "node",
+    "id": "12022091935",
+    "tags": {
+      "information": "board",
+      "name": "北海道神宮未社開拓神社",
+      "source": "survey",
+      "tourism": "information"
+    },
+    "coord": [
+      141.3117098,
+      43.0550262
+    ]
+  },
+  {
+    "name": "北海道神宮末社　穂多木神社",
+    "type": "node",
+    "id": "12022097506",
+    "tags": {
+      "information": "board",
+      "name": "北海道神宮末社　穂多木神社",
+      "operator": "北海道神宮",
+      "tourism": "information"
+    },
+    "coord": [
+      141.3112635,
+      43.0551261
+    ]
+  },
+  {
+    "name": "北海道神宮",
+    "type": "way",
+    "id": "146432491",
+    "tags": {
+      "amenity": "place_of_worship",
+      "landuse": "religious",
+      "name": "北海道神宮",
+      "name:en": "Hokkaido Jingu Shrine",
+      "name:ja": "北海道神宮",
+      "name:ko": "홋카이도 신궁",
+      "religion": "shinto",
+      "website": "http://www.hokkaidojingu.or.jp/",
+      "wikidata": "Q710826",
+      "wikipedia": "ja:北海道神宮"
+    },
+    "coord": [
+      141.30982184074074,
+      43.05494551851852
+    ]
+  },
+  {
+    "name": "ラピス神宮外苑グランヒルタワー",
+    "type": "way",
+    "id": "351297202",
+    "tags": {
+      "addr:block_number": "2",
+      "addr:city": "札幌市",
+      "addr:housenumber": "27",
+      "addr:neighbourhood": "10丁目",
+      "addr:postcode": "064-0951",
+      "addr:province": "北海道",
+      "addr:quarter": "宮の森1条",
+      "addr:suburb": "中央区",
+      "building": "apartments",
+      "building:levels": "15",
+      "name": "ラピス神宮外苑グランヒルタワー",
+      "name:ja": "ラピス神宮外苑グランヒルタワー",
+      "website": "https://www.homes.co.jp/archive/b-35420923/"
+    },
+    "coord": [
+      141.30632763333335,
+      43.056074805555554
+    ]
+  },
+  {
+    "name": "神宮茶屋　福レ餅",
+    "type": "way",
+    "id": "1296663056",
+    "tags": {
+      "amenity": "cafe",
+      "building": "yes",
+      "name": "神宮茶屋　福レ餅"
+    },
+    "coord": [
+      141.30928636000002,
+      43.055127320000004
+    ]
+  },
+  {
+    "name": "北海道神宮社務所",
+    "type": "way",
+    "id": "1297593911",
+    "tags": {
+      "building": "office",
+      "name": "北海道神宮社務所",
+      "office": "religion",
+      "religion": "shinto",
+      "source": "Bing"
+    },
+    "coord": [
+      141.30763930714286,
+      43.0551686
+    ]
+  },
+  {
+    "name": "Bus 円15 : 円山公園駅前 => 北海道神宮 => 円山西町神社前",
+    "type": "relation",
+    "id": "14678972",
+    "tags": {
+      "colour": "#1E90FF",
+      "from": "円山公園駅前",
+      "name": "Bus 円15 : 円山公園駅前 => 北海道神宮 => 円山西町神社前",
+      "name:ja": "Bus 円15 : 円山公園駅前 => 北海道神宮 => 円山西町神社前",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "official_name": "動物園線",
+      "official_name:en": "Dobutsuen Bus Line",
+      "official_name:ja": "動物園線",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport:version": "2",
+      "ref": "円15",
+      "route": "bus",
+      "to": "円山西町神社前",
+      "type": "route",
+      "via": "北海道神宮"
+    }
+  },
+  {
+    "name": "Bus 円15 : 円山西町神社前 => 北海道神宮 => 円山公園駅前",
+    "type": "relation",
+    "id": "14678973",
+    "tags": {
+      "colour": "#1E90FF",
+      "from": "円山西町神社前",
+      "name": "Bus 円15 : 円山西町神社前 => 北海道神宮 => 円山公園駅前",
+      "name:ja": "Bus 円15 : 円山西町神社前 => 北海道神宮 => 円山公園駅前",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "official_name": "動物園線",
+      "official_name:en": "Dobutsuen Bus Line",
+      "official_name:ja": "動物園線",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport:version": "2",
+      "ref": "円15",
+      "route": "bus",
+      "to": "円山公園駅前",
+      "type": "route",
+      "via": "北海道神宮"
+    }
+  },
+  {
+    "name": "Bus 円16 : 円山公園駅前 => 北海道神宮 => 円山西町2丁目",
+    "type": "relation",
+    "id": "14679149",
+    "tags": {
+      "colour": "#1E90FF",
+      "from": "円山公園駅前",
+      "name": "Bus 円16 : 円山公園駅前 => 北海道神宮 => 円山西町2丁目",
+      "name:ja": "Bus 円16 : 円山公園駅前 => 北海道神宮 => 円山西町2丁目",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "official_name": "動物園線",
+      "official_name:en": "Dobutsuen Bus Line",
+      "official_name:ja": "動物園線",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport:version": "2",
+      "ref": "円16",
+      "route": "bus",
+      "to": "円山西町2丁目",
+      "type": "route",
+      "via": "北海道神宮"
+    }
+  },
+  {
+    "name": "Bus 円16 : 円山西町2丁目 => 北海道神宮 => 円山公園駅前",
+    "type": "relation",
+    "id": "14679150",
+    "tags": {
+      "from": "円山西町2丁目",
+      "name": "Bus 円16 : 円山西町2丁目 => 北海道神宮 => 円山公園駅前",
+      "name:ja": "Bus 円16 : 円山西町2丁目 => 北海道神宮 => 円山公園駅前",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "official_name": "動物園線",
+      "official_name:en": "Dobutsuen Bus Line",
+      "official_name:ja": "動物園線",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport:version": "2",
+      "ref": "円16",
+      "route": "bus",
+      "to": "円山公園駅前",
+      "type": "route",
+      "via": "北海道神宮"
+    }
+  },
+  {
+    "name": "Bus くらまる号 : 円山公園駅前 => 円山動物園正門 => 大倉山ジャンプ競技場",
+    "type": "relation",
+    "id": "19859350",
+    "tags": {
+      "colour": "#1E90FF",
+      "from": "円山公園駅前",
+      "name": "Bus くらまる号 : 円山公園駅前 => 円山動物園正門 => 大倉山ジャンプ競技場",
+      "name:ja": "Bus くらまる号 : 円山公園駅前 => 円山動物園正門 => 大倉山ジャンプ競技場",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "official_name": "くらまる号",
+      "official_name:en": "Kuramaru go Bus Line",
+      "official_name:ja": "くらまる号",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport:version": "2",
+      "ref": "くらまる号",
+      "route": "bus",
+      "to": "大倉山ジャンプ競技場",
+      "type": "route",
+      "via": "円山動物園正門"
+    }
+  },
+  {
+    "name": "Bus くらまる号 : 大倉山ジャンプ競技場 => 円山動物園正門 => 円山公園駅前",
+    "type": "relation",
+    "id": "19859351",
+    "tags": {
+      "colour": "#1E90FF",
+      "from": "大倉山ジャンプ競技場",
+      "name": "Bus くらまる号 : 大倉山ジャンプ競技場 => 円山動物園正門 => 円山公園駅前",
+      "name:ja": "Bus くらまる号 : 大倉山ジャンプ競技場 => 円山動物園正門 => 円山公園駅前",
+      "network": "ジェイ・アール北海道バス",
+      "network:en": "JR Hokkaido Bus",
+      "network:ja": "ジェイ・アール北海道バス",
+      "network:wikidata": "Q6108885",
+      "official_name": "くらまる号",
+      "official_name:en": "Kuramaru go Bus Line",
+      "official_name:ja": "くらまる号",
+      "operator": "ジェイ・アール北海道バス",
+      "operator:en": "JR Hokkaido Bus",
+      "operator:ja": "ジェイ・アール北海道バス",
+      "operator:wikidata": "Q6108885",
+      "public_transport:version": "2",
+      "ref": "くらまる号",
+      "route": "bus",
+      "to": "円山公園駅前",
+      "type": "route",
+      "via": "円山動物園正門"
+    }
+  }
+]

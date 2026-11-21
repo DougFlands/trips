@@ -1,0 +1,249 @@
+[
+  {
+    "name": "北海道神宮",
+    "url": "https://ja.wikipedia.org/wiki/%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE",
+    "status": 200,
+    "coords": [
+      "北緯43.054333度 東経141.30750度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE&params=43_3_15.6_N_141_18_27_E_type:landmark_region:JP&title=%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE"
+    ]
+  },
+  {
+    "name": "円山公園 (札幌市)",
+    "url": "https://ja.wikipedia.org/wiki/%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%20%28%E6%9C%AD%E5%B9%8C%E5%B8%82%29",
+    "status": 200,
+    "coords": [
+      "北緯43.05083度 東経141.30972度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92_(%E6%9C%AD%E5%B9%8C%E5%B8%82)&params=43_03_03_N_141_18_35_E_type:landmark_region:JP_"
+    ]
+  },
+  {
+    "name": "小樽運河",
+    "url": "https://ja.wikipedia.org/wiki/%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3",
+    "status": 200,
+    "coords": [
+      "北緯43.2度 東経141度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3&params=43.2_N_141_E_"
+    ]
+  },
+  {
+    "name": "船見坂",
+    "url": "https://ja.wikipedia.org/wiki/%E8%88%B9%E8%A6%8B%E5%9D%82",
+    "status": 404,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "手宮線",
+    "url": "https://ja.wikipedia.org/wiki/%E6%89%8B%E5%AE%AE%E7%B7%9A",
+    "status": 200,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "おたる水族館",
+    "url": "https://ja.wikipedia.org/wiki/%E3%81%8A%E3%81%9F%E3%82%8B%E6%B0%B4%E6%97%8F%E9%A4%A8",
+    "status": 200,
+    "coords": [
+      "北緯43.236806度 東経141.011250度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E3%81%8A%E3%81%9F%E3%82%8B%E6%B0%B4%E6%97%8F%E9%A4%A8&params=43_14_12.5_N_141_0_40.5_E_type:landmark_region:JP"
+    ]
+  },
+  {
+    "name": "祝津パノラマ展望台",
+    "url": "https://ja.wikipedia.org/wiki/%E7%A5%9D%E6%B4%A5%E3%83%91%E3%83%8E%E3%83%A9%E3%83%9E%E5%B1%95%E6%9C%9B%E5%8F%B0",
+    "status": 404,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "小樽オルゴール堂",
+    "url": "https://ja.wikipedia.org/wiki/%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%82",
+    "status": 200,
+    "coords": [
+      "北緯43.191147604090965度 東経141.00688747891326度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%82&params=43.191147604091_N_141.00688747891_E_"
+    ]
+  },
+  {
+    "name": "北一硝子",
+    "url": "https://ja.wikipedia.org/wiki/%E5%8C%97%E4%B8%80%E7%A1%9D%E5%AD%90",
+    "status": 200,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "天狗山 (小樽市)",
+    "url": "https://ja.wikipedia.org/wiki/%E5%A4%A9%E7%8B%97%E5%B1%B1%20%28%E5%B0%8F%E6%A8%BD%E5%B8%82%29",
+    "status": 200,
+    "coords": [
+      "北緯43.168389度 東経140.969806度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%A4%A9%E7%8B%97%E5%B1%B1_(%E5%B0%8F%E6%A8%BD%E5%B8%82)&params=43_10_06.2_N_140_58_11.3_E_type:mountain_region:JP-01"
+    ]
+  },
+  {
+    "name": "金森赤レンガ倉庫",
+    "url": "https://ja.wikipedia.org/wiki/%E9%87%91%E6%A3%AE%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB",
+    "status": 200,
+    "coords": [
+      "北緯41.76611度 東経140.71750度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E9%87%91%E6%A3%AE%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB&params=41_45_58_N_140_43_3_E_type:landmark_region:&title=%E9%87%91%E6%A3%AE%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB"
+    ]
+  },
+  {
+    "name": "八幡坂",
+    "url": "https://ja.wikipedia.org/wiki/%E5%85%AB%E5%B9%A1%E5%9D%82",
+    "status": 404,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "函館山ロープウェイ",
+    "url": "https://ja.wikipedia.org/wiki/%E5%87%BD%E9%A4%A8%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4",
+    "status": 200,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "五稜郭タワー",
+    "url": "https://ja.wikipedia.org/wiki/%E4%BA%94%E7%A8%9C%E9%83%AD%E3%82%BF%E3%83%AF%E3%83%BC",
+    "status": 200,
+    "coords": [
+      "北緯41.794694度 東経140.754000度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E4%BA%94%E7%A8%9C%E9%83%AD%E3%82%BF%E3%83%AF%E3%83%BC&params=41_47_40.9_N_140_45_14.4_E_type:landmark_region:&title=%E4%BA%94%E7%A8%9C%E9%83%AD%E3%82%BF%E3%83%AF%E3%83%BC%3Cbr+%2F%3EGoryokaku+Tower"
+    ]
+  },
+  {
+    "name": "旧函館区公会堂",
+    "url": "https://ja.wikipedia.org/wiki/%E6%97%A7%E5%87%BD%E9%A4%A8%E5%8C%BA%E5%85%AC%E4%BC%9A%E5%A0%82",
+    "status": 200,
+    "coords": [
+      "北緯41.765028度 東経140.70889度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E6%97%A7%E5%87%BD%E9%A4%A8%E5%8C%BA%E5%85%AC%E4%BC%9A%E5%A0%82&params=41_45_54.1_N_140_42_32_E_scale:1000_region:JP-01"
+    ]
+  },
+  {
+    "name": "札幌テレビ塔",
+    "url": "https://ja.wikipedia.org/wiki/%E6%9C%AD%E5%B9%8C%E3%83%86%E3%83%AC%E3%83%93%E5%A1%94",
+    "status": 200,
+    "coords": [
+      "北緯43.0610917度 東経141.3564333度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%86%E3%83%AC%E3%83%93%E5%A1%94&params=43_3_39.93_N_141_21_23.16_E_type:landmark_region:JP-01&title=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%86%E3%83%AC%E3%83%93%E5%A1%94"
+    ]
+  },
+  {
+    "name": "JRタワー",
+    "url": "https://ja.wikipedia.org/wiki/JR%E3%82%BF%E3%83%AF%E3%83%BC",
+    "status": 200,
+    "coords": [
+      "北緯43.06861度 東経141.35194度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=JR%E3%82%BF%E3%83%AF%E3%83%BC&params=43_04_07_N_141_21_07_E_type:landmark_region:&title=JR%E3%82%BF%E3%83%AF%E3%83%BC"
+    ]
+  },
+  {
+    "name": "札幌伏見稲荷神社",
+    "url": "https://ja.wikipedia.org/wiki/%E6%9C%AD%E5%B9%8C%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE",
+    "status": 200,
+    "coords": [
+      "北緯43.034917度 東経141.325333度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E6%9C%AD%E5%B9%8C%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE&params=43_2_5.7_N_141_19_31.2_E_type:landmark_region:JP&title=%E6%9C%AD%E5%B9%8C%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE"
+    ]
+  },
+  {
+    "name": "真駒内滝野霊園",
+    "url": "https://ja.wikipedia.org/wiki/%E7%9C%9F%E9%A7%92%E5%86%85%E6%BB%9D%E9%87%8E%E9%9C%8A%E5%9C%92",
+    "status": 200,
+    "coords": [
+      "北緯42.927917度 東経141.376611度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E7%9C%9F%E9%A7%92%E5%86%85%E6%BB%9D%E9%87%8E%E9%9C%8A%E5%9C%92&params=42_55_40.5_N_141_22_35.8_E_type:landmark_region:JP"
+    ]
+  },
+  {
+    "name": "藻岩山ロープウェイ",
+    "url": "https://ja.wikipedia.org/wiki/%E8%97%BB%E5%B2%A9%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4",
+    "status": 200,
+    "coords": [
+      "北緯43.02250度 東経141.32222度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E8%97%BB%E5%B2%A9%E5%B1%B1_(%E6%9C%AD%E5%B9%8C%E5%B8%82)&params=43_01_21_N_141_19_20_E_region:JP-01"
+    ]
+  },
+  {
+    "name": "白い恋人パーク",
+    "url": "https://ja.wikipedia.org/wiki/%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF",
+    "status": 200,
+    "coords": [
+      "北緯43.08861度 東経141.27167度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF&params=43_05_19_N_141_16_18_E_type:landmark_region:JP"
+    ]
+  },
+  {
+    "name": "大通公園",
+    "url": "https://ja.wikipedia.org/wiki/%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92",
+    "status": 200,
+    "coords": [
+      "北緯43.059722度 東経141.346389度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92&params=43.059722_N_141.346389_E_"
+    ]
+  },
+  {
+    "name": "北海道庁旧本庁舎",
+    "url": "https://ja.wikipedia.org/wiki/%E5%8C%97%E6%B5%B7%E9%81%93%E5%BA%81%E6%97%A7%E6%9C%AC%E5%BA%81%E8%88%8E",
+    "status": 200,
+    "coords": [
+      "北緯43.063944度 東経141.348000度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E5%8C%97%E6%B5%B7%E9%81%93%E5%BA%81%E6%97%A7%E6%9C%AC%E5%BA%81%E8%88%8E&params=43_3_50.2_N_141_20_52.8_E_region:JP-01_type:landmark"
+    ]
+  },
+  {
+    "name": "函館市熱帯植物園",
+    "url": "https://ja.wikipedia.org/wiki/%E5%87%BD%E9%A4%A8%E5%B8%82%E7%86%B1%E5%B8%AF%E6%A4%8D%E7%89%A9%E5%9C%92",
+    "status": 200,
+    "coords": [],
+    "geohack": []
+  },
+  {
+    "name": "昭和新山",
+    "url": "https://ja.wikipedia.org/wiki/%E6%98%AD%E5%92%8C%E6%96%B0%E5%B1%B1",
+    "status": 200,
+    "coords": [
+      "北緯42.54250度 東経140.86444度"
+    ],
+    "geohack": [
+      "https://geohack.toolforge.org/geohack.php?language=ja&pagename=%E6%98%AD%E5%92%8C%E6%96%B0%E5%B1%B1&params=42_32_33_N_140_51_52_E_region:JP-01_type:mountain"
+    ]
+  }
+]

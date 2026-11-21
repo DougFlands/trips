@@ -1,0 +1,176 @@
+[
+  {
+    "name": "昭和新山ガラス館",
+    "type": "node",
+    "id": "3079575602",
+    "tags": {
+      "name": "昭和新山ガラス館",
+      "name:en": "Showa-shinzan Glass Shop",
+      "shop": "gift"
+    },
+    "lat": 42.5392685,
+    "lon": 140.8597085
+  },
+  {
+    "name": "有珠山ロープウェイ 昭和新山駅",
+    "type": "node",
+    "id": "3080011771",
+    "tags": {
+      "aerialway": "station",
+      "name": "有珠山ロープウェイ 昭和新山駅",
+      "name:ja": "有珠山ロープウェイ 昭和新山駅",
+      "public_transport": "station"
+    },
+    "lat": 42.5390478,
+    "lon": 140.8604592
+  },
+  {
+    "name": "有珠山ロープウェイ 有珠山頂駅",
+    "type": "node",
+    "id": "3080011773",
+    "tags": {
+      "aerialway": "station",
+      "name": "有珠山ロープウェイ 有珠山頂駅",
+      "name:ja": "有珠山ロープウェイ 有珠山頂駅",
+      "public_transport": "station"
+    },
+    "lat": 42.5402809,
+    "lon": 140.8443629
+  },
+  {
+    "name": "昭和新山",
+    "type": "node",
+    "id": "3104852458",
+    "tags": {
+      "bus": "yes",
+      "departures_board": "no",
+      "highway": "bus_stop",
+      "lit": "no",
+      "name": "昭和新山",
+      "operator": "道南バス 株式会社",
+      "public_transport": "platform",
+      "ref": "1412",
+      "shelter": "yes",
+      "website": "https://www.donanbus.co.jp/data/kougai/jikoku/now/kougai_jikoku_1412.pdf"
+    },
+    "lat": 42.5403946,
+    "lon": 140.8597807
+  },
+  {
+    "name": "昭和新山",
+    "type": "node",
+    "id": "3292335660",
+    "tags": {
+      "ele": "398",
+      "name": "昭和新山",
+      "name:en": "Showa-shinzan",
+      "name:ja": "昭和新山",
+      "name:ja-Hira": "しょうわしんざん",
+      "name:ja-Latn": "Shōwa-shinzan",
+      "name:zh": "昭和新山",
+      "natural": "volcano",
+      "source": "GSImaps/std",
+      "volcano:type": "lava_dome",
+      "wikidata": "Q1138090",
+      "wikipedia": "ja:昭和新山"
+    },
+    "lat": 42.5425537,
+    "lon": 140.8643525
+  },
+  {
+    "name": "昭和新山",
+    "type": "node",
+    "id": "8653775335",
+    "tags": {
+      "name": "昭和新山",
+      "name:en": "Showashinzan",
+      "name:id": "Showashinzan",
+      "name:ja": "昭和新山",
+      "name:ja-Hira": "しょうわしんざん",
+      "name:ja-Latn": "Shōwashinzan",
+      "official_name": "字昭和新山",
+      "official_name:ja": "字昭和新山",
+      "official_name:ja-Hira": "あざしょうわしんざん",
+      "official_name:ja-Latn": "Aza Shōwashinzan",
+      "place": "neighbourhood",
+      "population": "2",
+      "population:date": "2020-10-01",
+      "postal_code": "052-0102",
+      "postal_code:source": "Japanpost",
+      "source:population": "census",
+      "source:population:url": "https://www.e-stat.go.jp/",
+      "source:postal_code": "japanpost"
+    },
+    "lat": 42.539879,
+    "lon": 140.85996
+  },
+  {
+    "name": "昭和新山周辺案内図",
+    "type": "node",
+    "id": "11342840810",
+    "tags": {
+      "information": "map",
+      "name": "昭和新山周辺案内図",
+      "tourism": "information"
+    },
+    "lat": 42.5400541,
+    "lon": 140.8599401
+  },
+  {
+    "name": "昭和新山",
+    "type": "node",
+    "id": "11342840811",
+    "tags": {
+      "information": "board",
+      "name": "昭和新山",
+      "tourism": "information"
+    },
+    "lat": 42.541227,
+    "lon": 140.8608171
+  },
+  {
+    "name": "昭和新山野外博物館",
+    "type": "node",
+    "id": "11342840812",
+    "tags": {
+      "information": "board",
+      "name": "昭和新山野外博物館",
+      "tourism": "information"
+    },
+    "lat": 42.5411613,
+    "lon": 140.8594928
+  },
+  {
+    "name": "昭和新山大橋",
+    "type": "way",
+    "id": "111900758",
+    "tags": {
+      "bridge": "yes",
+      "highway": "secondary",
+      "layer": "1",
+      "length": "106.3",
+      "name": "昭和新山大橋",
+      "name:en": "Showashinzan Ohashi Bridge",
+      "name:ja": "昭和新山大橋",
+      "name:ja-Hira": "しょうわしんざん おおはし",
+      "operator": "北海道",
+      "ref": "703",
+      "source": "YahooJapan/ALPSMAP",
+      "start_date": "1984",
+      "width": "11.0"
+    },
+    "lat": 42.53944025,
+    "lon": 140.85746074999997
+  },
+  {
+    "name": "昭和新山熊牧場",
+    "type": "way",
+    "id": "1222893581",
+    "tags": {
+      "name": "昭和新山熊牧場",
+      "tourism": "zoo"
+    },
+    "lat": 42.53850581111111,
+    "lon": 140.8616142
+  }
+]

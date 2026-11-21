@@ -1,0 +1,188 @@
+[
+  {
+    "name": "山麓",
+    "type": "node",
+    "id": "1781191908",
+    "tags": {
+      "aerialway": "station",
+      "name": "山麓",
+      "name:en": "Sanroku",
+      "name:ja": "山麓",
+      "operator": "札幌振興公社",
+      "public_transport": "station",
+      "website": "http://moiwa.sapporo-dc.co.jp/"
+    },
+    "coord": [
+      141.3330663,
+      43.0315385
+    ]
+  },
+  {
+    "name": "札幌伏見稲荷神社",
+    "type": "node",
+    "id": "3887704767",
+    "tags": {
+      "addr:block_number": "2",
+      "addr:city": "札幌市",
+      "addr:housenumber": "68",
+      "addr:neighbourhood": "2丁目",
+      "addr:postcode": "064-0942",
+      "addr:province": "北海道",
+      "addr:quarter": "伏見",
+      "addr:suburb": "中央区",
+      "amenity": "place_of_worship",
+      "denomination": "shinto",
+      "name": "札幌伏見稲荷神社",
+      "name:en": "Sapporo Fushimi Inari shrine",
+      "name:ja": "札幌伏見稲荷神社",
+      "name:ja_rm": "Sapporo Fuhimi Inari Jinja",
+      "religion": "shinto",
+      "website": "http://jinjasapporo.net/find-shrine/%E6%9C%AD%E5%B9%8C%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE/",
+      "wikidata": "Q11521150",
+      "wikipedia": "ja:札幌伏見稲荷神社"
+    },
+    "coord": [
+      141.3253697,
+      43.0349657
+    ]
+  },
+  {
+    "name": "藻岩山ロープウェイ山麓駅",
+    "type": "way",
+    "id": "166668678",
+    "tags": {
+      "amenity": "public_building",
+      "building": "yes",
+      "layer": "1",
+      "name": "藻岩山ロープウェイ山麓駅",
+      "name:en": "Mount Moiwa Ropeway",
+      "wikidata": "Q6922232",
+      "wikipedia": "en:Mount Moiwa Ropeway"
+    },
+    "coord": [
+      141.33303321333332,
+      43.03166746666667
+    ]
+  },
+  {
+    "name": "藻岩浄水場",
+    "type": "way",
+    "id": "167064979",
+    "tags": {
+      "addr:block_number": "6",
+      "addr:city": "札幌市",
+      "addr:neighbourhood": "4丁目",
+      "addr:postcode": "064-0942",
+      "addr:province": "北海道",
+      "addr:quarter": "伏見",
+      "addr:suburb": "中央区",
+      "building": "yes",
+      "man_made": "water_works",
+      "name": "藻岩浄水場",
+      "name:ja": "藻岩浄水場",
+      "operator": "札幌市水道局",
+      "source": "Bing",
+      "website": "https://www.city.sapporo.jp/suido/overview/shisetu/josuijo/moiwa.html"
+    },
+    "coord": [
+      141.32767207826086,
+      43.034050782608695
+    ]
+  },
+  {
+    "name": "白石藻岩通",
+    "type": "way",
+    "id": "380442523",
+    "tags": {
+      "highway": "secondary",
+      "name": "白石藻岩通",
+      "name:en": "Shiroishi moiwa dori",
+      "name:ja": "白石藻岩通",
+      "name:ja_rm": "Shiroishi moiwa dōri",
+      "official_name": "北海道道453号西野白石線",
+      "ref": "453"
+    },
+    "coord": [
+      141.33606672000002,
+      43.031984019999996
+    ]
+  },
+  {
+    "name": "札幌伏見稲荷神社社務所",
+    "type": "way",
+    "id": "385424122",
+    "tags": {
+      "building": "shrine",
+      "name": "札幌伏見稲荷神社社務所",
+      "name:en": "Sapporo Fushimi Inari shrine office",
+      "name:ja": "札幌伏見稲荷神社社務所",
+      "office": "religion",
+      "religion": "shinto"
+    },
+    "coord": [
+      141.32515469166665,
+      43.03518808333333
+    ]
+  },
+  {
+    "name": "札幌伏見稲荷神社参道",
+    "type": "way",
+    "id": "718505014",
+    "tags": {
+      "bicycle": "no",
+      "foot": "yes",
+      "highway": "footway",
+      "horse": "no",
+      "name": "札幌伏見稲荷神社参道",
+      "name:en": "The path of approach to the Sapporo Fushimi Inari shrine",
+      "name:ja": "札幌伏見稲荷神社参道",
+      "surface": "asphalt"
+    },
+    "coord": [
+      141.32621882142857,
+      43.03622192142857
+    ]
+  },
+  {
+    "name": "札幌伏見稲荷神社",
+    "type": "way",
+    "id": "986952883",
+    "tags": {
+      "landuse": "religious",
+      "name": "札幌伏見稲荷神社",
+      "name:en": "Sapporo Fushimi Inari shrine",
+      "name:ja": "札幌伏見稲荷神社",
+      "religion": "shinto"
+    },
+    "coord": [
+      141.3256426652174,
+      43.035616491304346
+    ]
+  },
+  {
+    "name": "札幌伏見稲荷神社手水舎",
+    "type": "way",
+    "id": "986952884",
+    "tags": {
+      "amenity": "place_of_worship",
+      "building": "yes",
+      "name": "札幌伏見稲荷神社手水舎",
+      "religion": "shinto"
+    },
+    "coord": [
+      141.3254216,
+      43.035163520000005
+    ]
+  },
+  {
+    "name": "藻岩山",
+    "type": "relation",
+    "id": "7729192",
+    "tags": {
+      "admin_level": "9",
+      "boundary": "administrative",
+      "name": "藻岩山",
+      "type": "boundary"
+    }
+  }
+]
