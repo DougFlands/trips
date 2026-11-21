@@ -246,3 +246,24 @@ Edge实际阅读60篇有效小红书正文，北海道整体/札幌/小樽/函�
 ### Status
 
 [OK] **Completed**
+
+
+## Session 11: Reusable ReUI typed table
+
+**Date**: 2026-11-21
+**Task**: Reusable ReUI typed table
+**Branch**: `main`
+
+### Summary
+
+Implemented reusable RecordTable, independent cell editors/column settings and v2 model/transport; nine field types, whole-row drag, legacy read compatibility and existing cloud sync. 20 tests/check/audit pass; Edge desktop/narrow UI and production reads verified. Live v2 writes pending valid edit password; isolated API/SQLite verifies typed round-trip and 401/409. Unrelated Hokkaido edits preserved.
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `d5962d1` | (see git log) |
+
+### Status
+
+[OK] **Completed**
