@@ -50,7 +50,7 @@
 
 - `npm run test:tables`：节流尾部、慢写入、新编辑、并发冲突、离线恢复、响应丢失、初始读取失败、旧实例响应、重开页面仅加载云端数据；实际 SQLite 执行与 D1 同语义的 SQL。
 - `npm run check`；`npx wrangler pages functions build functions --outdir work/pages-functions`。
-- 浏览器桌面和窄屏：双击、铅笔、Enter/Escape、IME、改表头、行列新增、密码恢复/锁定、两页面同步、当前页面离线重试。
+- 浏览器桌面和窄屏：双击、铅笔、Enter 换行、Ctrl/⌘+Enter 或失焦保存、Escape 取消、IME、改表头、行列新增、密码恢复/锁定、两页面同步、当前页面离线重试。单元格与表头使用自动高度 Textarea（field-sizing-content），显示时保留换行。
 - `/tests/synced-document.html`：普通备忘 JSON 复用同一 hook，不能只测试表格。
 
 ## 7. Wrong vs Correct

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Pencil, Plus } from "lucide-react";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import { isRecord } from "../lib/synced-document";
 
@@ -56,12 +56,13 @@ function EditableCell({ value, label, readOnly, header, onCommit, onEditingChang
     }
   }, [readOnly, onEditingChange]);
   return editing && !readOnly ? (
-    <Input autoFocus aria-label={label} value={draft} maxLength={header ? 120 : 10000}
+    <Textarea autoFocus aria-label={label} value={draft} maxLength={header ? 120 : 10000}
+      rows={1} className="min-h-9 min-w-0 resize-none overflow-hidden"
       onFocus={event => event.target.select()} onChange={event => setDraft(event.target.value)}
       onBlur={() => finish(true, false)}
       onKeyDown={event => {
         if (event.nativeEvent.isComposing || event.keyCode === 229) return;
-        if (event.key === "Enter" || event.key === "Escape") {
+        if ((event.key === "Enter" && (event.ctrlKey || event.metaKey)) || event.key === "Escape") {
           event.preventDefault(); finish(event.key === "Enter", true);
         }
       }} />
