@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Pencil, Plus } from "lucide-react";
+import { ArrowDown, ArrowUp, Pencil, Plus } from "lucide-react";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
@@ -85,6 +85,13 @@ export function EditableTable({ value, onChange, readOnly = false, onEditingChan
 }) {
   const addColumn = () => onChange({ ...value, columns: [...value.columns, { id: crypto.randomUUID(), name: `列 ${value.columns.length + 1}` }] });
   const addRow = () => onChange({ ...value, rows: [...value.rows, { id: crypto.randomUUID(), cells: {} }] });
+  const moveRow = (index: number, direction: -1 | 1) => {
+    const target = index + direction;
+    if (readOnly || target < 0 || target >= value.rows.length) return;
+    const rows = [...value.rows];
+    [rows[index], rows[target]] = [rows[target], rows[index]];
+    onChange({ ...value, rows });
+  };
   return <div className="flex flex-col gap-3">
     <div className="rounded-lg border bg-background">
       <Table containerLabel="记录表格，可横向滚动">
@@ -97,7 +104,17 @@ export function EditableTable({ value, onChange, readOnly = false, onEditingChan
         </TableRow></TableHeader>
         <TableBody>
           {value.rows.map((row, index) => <TableRow key={row.id}>
-            <TableCell className="font-mono text-xs text-muted-foreground">{index + 1}</TableCell>
+            <TableCell className="font-mono text-xs text-muted-foreground">
+              <div className="flex items-center gap-1">
+                <span className="min-w-4">{index + 1}</span>
+                {!readOnly && <>
+                  <Button type="button" variant="ghost" size="icon-xs" aria-label={`上移第 ${index + 1} 行`}
+                    title="上移" disabled={index === 0} onClick={() => moveRow(index, -1)}><ArrowUp /></Button>
+                  <Button type="button" variant="ghost" size="icon-xs" aria-label={`下移第 ${index + 1} 行`}
+                    title="下移" disabled={index === value.rows.length - 1} onClick={() => moveRow(index, 1)}><ArrowDown /></Button>
+                </>}
+              </div>
+            </TableCell>
             {value.columns.map(column => <TableCell key={column.id} className="max-w-96 border-l">
               <EditableCell value={Object.hasOwn(row.cells, column.id) ? row.cells[column.id] : ""} label={`第 ${index + 1} 行 ${column.name}`} readOnly={readOnly} onEditingChange={onEditingChange}
                 onCommit={text => onChange({ ...value, rows: value.rows.map(item => item.id === row.id
