@@ -6,7 +6,7 @@
 - [x] 实现无按钮编辑、选中输入、中文输入与焦点恢复。
 - [x] 浏览器验收本地内存样例和只读线上旧表。
 - [x] npm run test:tables / npm run check；文档与spec同步。
-- [ ] 提交推送、部署检查、任务归档与journal。
+- [x] 提交推送、部署检查；进入任务归档与journal收尾。
 
 ## 验收记录（2026-11-22）
 
@@ -18,3 +18,4 @@
 - 修复两个验收发现：嵌套DnD辅助div须portal出table；编辑器键盘处理须capture，避免ReUI原生Escape监听抢先触发blur。
 - localhost真实hokkaido-stays只读页面显示已同步，旧数据完整读取，控制台无error/warn。截图work/table-column-popover.jpg为纯内存样例。
 - test:tables：23/23；check：lint、tsc、Vite构建通过；npm audit：0漏洞（直连失败，显式使用现有系统代理后成功）。构建仅保留既有大包与ReUI use-no-memo提示。未改后端路由和同步协议；布局由已有transport测试验证API回读。
+- 工作提交8dcfe10已推送main，Cloudflare Pages检查success。线上index-DSF4lTTW.js包含新提示、列拖拽与编辑器；公开sync-check-20261121仍为revision3/schemaVersion1，读取未写入升级。
