@@ -1,6 +1,7 @@
 export type Source = { sourceId: string; group: string; title: string; url: string; collectedAt: string };
 
 export const sources: Source[] = [
+  {"sourceId": "R41", "group": "candidate-research", "title": "北海道札幌一日游攻略来了（泡芙、表演与白色恋人周边候选，冬季开放待核）", "url": "https://www.douyin.com/video/7709786641266691363", "collectedAt": "2026-11-22"},
   {"sourceId": "N34", "group": "official", "title": "札幌交通局：市电、地铁票价与换乘", "url": "https://www.city.sapporo.jp/st/josyaken/ryokin/ryoukin.html", "collectedAt": "2026-11-21"},
   {"sourceId": "N35", "group": "transport", "title": "札幌MK：计程车运价、迎车费与冬季差异（预算参考，非各路线报价）", "url": "https://www.mk-group.co.jp/sapporo/taxi/", "collectedAt": "2026-11-21"},
   {"sourceId": "M01", "group": "map-check", "title": "北海道神宫神门：位置核对", "url": "https://www.openstreetmap.org/node/6215959869", "collectedAt": "2026-11-21"},
