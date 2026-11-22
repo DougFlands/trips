@@ -52,10 +52,11 @@ export function RecordTable({ value, onChange, readOnly = false, onEditingChange
       <span className="min-w-4 font-mono text-xs text-muted-foreground">{row.index + 1}</span>
       {!readOnly && <DataGridTableDndRowHandle disabled={!!editing.session || !!configuring || columnDragging || !!resizing.isResizingColumn} disabledLabel="请先完成编辑" />}
     </div>,
-  }, ...value.columns.map((column): ColumnDef<DataGridFeatures, TableRow> => ({
+  }, ...value.columns.map((column, index): ColumnDef<DataGridFeatures, TableRow> => ({
     id: column.id, accessorFn: row => row.cells[column.id], size: column.width ?? DEFAULT_COLUMN_WIDTH,
     minSize: MIN_COLUMN_WIDTH, maxSize: MAX_COLUMN_WIDTH,
-    meta: { headerTitle: column.name, cellClassName: "align-top whitespace-normal", headerClassName: "whitespace-normal",
+    meta: { headerTitle: column.name, fillWidth: index === value.columns.length - 1,
+      cellClassName: "align-top whitespace-normal", headerClassName: "whitespace-normal",
       cellEdit: { editable: !readOnly && !layoutBusy } },
     header: () => <div className="flex items-start justify-between gap-1 py-2">
       <div className="min-w-0"><span className="block whitespace-pre-wrap break-words">{column.name}</span><span className="text-xs font-normal text-muted-foreground">{FIELD_TYPES[column.type]}</span></div>

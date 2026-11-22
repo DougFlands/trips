@@ -10,7 +10,7 @@ export function ColumnPopover({ column, open, onOpenChange, onSave, children }: 
   return <Popover open={open} onOpenChange={onOpenChange}>
     <PopoverTrigger asChild>{children}</PopoverTrigger>
     <PopoverContent side="bottom" align="end" collisionPadding={12}
-      className="max-h-[var(--radix-popover-content-available-height)] w-80 max-w-[calc(100vw-24px)] overflow-y-auto"
+      className="max-h-[var(--radix-popover-content-available-height)] w-80 max-w-[calc(100vw-24px)] overflow-y-auto bg-white"
       onEscapeKeyDown={event => { if (event.isComposing) event.preventDefault(); }}>
       <ColumnSettings key={column.id} column={column} onCancel={() => onOpenChange(false)} onSave={next => {
         onSave(next); onOpenChange(false);

@@ -20,9 +20,10 @@
 - ID 为 `[a-zA-Z0-9][a-zA-Z0-9:_-]{0,127}`，JSON 上限 512 KiB。表格额外限制 50 列、1000 行；列/行稳定 ID 独立于名称和位置。
 - 行顺序以 `rows` 数组为准；通过拖拽手柄移动整行，保留 ID 与全部单元格，沿用自动同步与版本冲突处理。只读隐藏手柄，不提供额外上下移动按钮。
 - 列顺序以 `columns` 数组为准；`reorderColumns` 不改行和单元格。`width` 可选、有限且120..960，默认240；`resizeColumns` 校验宽度，无变化返回原对象。字段配置保留已有宽度，旧v2无需迁移。TanStack `columnResizeMode: onEnd`，只在结束时更新布局；行号列不可拖列/调宽。
+- 最后一列设置ReUI `meta.fillWidth` 吸收容器余宽，避免空白fill-cell看起来属于最后一列却在选中时多出内部竖线。列顺序改变后跟随新的末列；编辑器和选中框均使用完整实际单元格宽度，不把自适应余宽写入数据。
 - 选择须挂载 `DataGridCellSelection`，仅设置 `tableLayout.cellSelection` 不够。单击选中，直接输入替换；双击/Enter/F2编辑原值。单元格不提供保存/取消按钮：失焦/单行Enter提交、Tab/Shift+Tab提交并移格、Esc取消；多行Enter换行，Ctrl/Cmd+Enter提交。多选内部Tab逐项移动，首末项退出时提交并移格。非法值阻止交接；document pointerdown capture 只跳过当前编辑器内部，不能跳过其他表格的编辑器。
 - `use-table-editing.ts` 持有编辑会话、提交交接与焦点；`cell-editor.tsx` 使用 `onKeyDownCapture` 处理取消/提交，避免ReUI原生viewport的Escape监听先夺走焦点。组合输入期间不提交/取消；Windows Process/229用flushSync将焦点移入真实输入框，再交给IME。
-- `column-popover.tsx` 用Radix portal，表头按钮下方弹出字段配置，窄屏保留12px边距；字段配置保留保存/取消，失败不关闭，外点/Esc取消。`column-header.tsx` 独立列DnD，ReUI行DnD仅增加 `headerContent` 插槽。内嵌DndContext的accessibility节点portal到document.body，禁止在table内插入辅助div。
+- `column-popover.tsx` 用Radix portal，表头按钮下方弹出字段配置，明确白底，窄屏保留12px边距；字段配置保留保存/取消，失败不关闭，外点/Esc取消。`column-header.tsx` 独立列DnD，ReUI行DnD仅增加 `headerContent` 插槽。内嵌DndContext的accessibility节点portal到document.body，禁止在table内插入辅助div。
 - ReUI 使用 TanStack v9 `useTable` + `dataGridFeatures`，显式 `manualPagination: true`、关闭排序；稳定 `getRowId` 与 DnD `dataIds` 一致。拖拽、单元格编辑、字段设置通过 `onEditingChange` 暂停远端覆盖；取消/锁定/卸载释放。使用自定义编辑器保留多行 Enter 换行；编辑器内部切焦点不提交。
 - 九种字段为 text/multiline/number/currency/date/select/multiselect/checkbox/url。数字必须有限，空数字为 null，0/false 不作空；金额只在展示时保留两位。日期为校验过的 YYYY-MM-DD；网址仅 HTTP(S)。单行文本拒绝换行；选项最多100个且唯一。
 - v1 全字符串列在内存中变为 multiline，保持值、ID、顺序、revision、updatedAt；读取不写，首次实际修改才保存 v2。不推测旧字段类型。字段转换必须整列成功，失败返回行号；禁止删除已使用选项或截断文本（如 `001` 转数字）。旧客户端读到 v2 拒绝解码，旧 revision 写入由 409 拦截。
