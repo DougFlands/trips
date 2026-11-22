@@ -288,3 +288,24 @@ Removed Vite Node API proxy; shared request function uses production API in DEV 
 ### Status
 
 [OK] **Completed**
+
+
+## Session 13: 表格单元格编辑与列布局
+
+**Date**: 2026-11-22
+**Task**: 表格单元格编辑与列布局
+**Branch**: `main`
+
+### Summary
+
+完成选中输入、无按钮编辑、列宽/列拖拽、字段Popover与组件拆分。GPT Edge插件验收九类型、IME组合、行列拖拽、只读和390px布局；23项测试及check通过，audit零漏洞；Cloudflare部署成功。Windows实体IME首字未实机覆盖。
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `8dcfe10` | (see git log) |
+
+### Status
+
+[OK] **Completed**
