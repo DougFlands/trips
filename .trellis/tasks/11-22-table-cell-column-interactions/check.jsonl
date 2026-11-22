@@ -1,0 +1,2 @@
+{"file":".trellis/spec/frontend/quality.md","reason":"lint、typecheck、build、audit"}
+{"file":".trellis/spec/frontend/document-sync.md","reason":"布局兼容、编辑焦点、Popover、只读与同步保护验收"}

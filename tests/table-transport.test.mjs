@@ -37,7 +37,7 @@ test("table transport migrates only on edit, round trips typed values and reject
     assert.deepEqual(requests, ["GET", "GET"]);
     assert.equal(JSON.parse(db.prepare("SELECT data FROM documents").get().data).schemaVersion, 1);
     const changed = { ...first.data, columns: [...first.data.columns,
-      { id: "amount", name: "金额", type: "currency" }, { id: "done", name: "勾选", type: "checkbox" },
+      { id: "amount", name: "金额", type: "currency", width: 320 }, { id: "done", name: "勾选", type: "checkbox" },
       { id: "date", name: "日期", type: "date" }, { id: "tags", name: "标签", type: "multiselect", options: ["已订"] },
     ], rows: [{ id: "a", cells: { ...first.data.rows[0].cells, amount: 0, done: false, date: "2028-02-29", tags: ["已订"] } }] };
     const saved = await transport.write("tables:transport-test", changed, first.revision, signal);

@@ -5,7 +5,7 @@ export const FIELD_TYPES = {
 } as const;
 export type FieldType = keyof typeof FIELD_TYPES;
 export type CellValue = string | number | boolean | string[] | null;
-export type TableColumn = { id: string; name: string; type: FieldType; options?: string[] };
+export type TableColumn = { id: string; name: string; type: FieldType; options?: string[]; width?: number };
 export type TableRow = { id: string; cells: Record<string, CellValue> };
 export type TableData = { schemaVersion: 2; columns: TableColumn[]; rows: TableRow[] };
 export type LegacyTableData = {
@@ -14,6 +14,9 @@ export type LegacyTableData = {
 };
 export const MAX_COLUMNS = 50;
 export const MAX_ROWS = 1000;
+export const DEFAULT_COLUMN_WIDTH = 240;
+export const MIN_COLUMN_WIDTH = 120;
+export const MAX_COLUMN_WIDTH = 960;
 const record = (v: unknown): v is Record<string, unknown> => typeof v === "object" && v !== null && !Array.isArray(v);
 const id = (v: unknown): v is string => typeof v === "string" && /^[a-zA-Z0-9-]{1,64}$/.test(v);
 export const isChoice = (type: FieldType) => type === "select" || type === "multiselect";
@@ -28,6 +31,8 @@ export function isWebUrl(value: string) {
 export function isColumn(value: unknown): value is TableColumn {
   if (!record(value) || !id(value.id) || typeof value.name !== "string" || !value.name.trim()
     || value.name.length > 120 || typeof value.type !== "string" || !Object.hasOwn(FIELD_TYPES, value.type)) return false;
+  if (value.width !== undefined && (typeof value.width !== "number" || !Number.isFinite(value.width)
+    || value.width < MIN_COLUMN_WIDTH || value.width > MAX_COLUMN_WIDTH)) return false;
   if (!isChoice(value.type as FieldType)) return value.options === undefined;
   return Array.isArray(value.options) && value.options.length <= 100
     && value.options.every(option => typeof option === "string" && option.trim() === option && option.length > 0 && option.length <= 120)
@@ -151,4 +156,23 @@ export function reorderRows(table: TableData, activeId: string, overId: string):
   const rows = [...table.rows];
   rows.splice(to, 0, rows.splice(from, 1)[0]);
   return { ...table, rows };
+}
+
+export function reorderColumns(table: TableData, activeId: string, overId: string): TableData {
+  const from = table.columns.findIndex(column => column.id === activeId), to = table.columns.findIndex(column => column.id === overId);
+  if (from < 0 || to < 0 || from === to) return table;
+  const columns = [...table.columns];
+  columns.splice(to, 0, columns.splice(from, 1)[0]);
+  return { ...table, columns };
+}
+
+export function resizeColumns(table: TableData, widths: Record<string, number>): TableData {
+  const columns = table.columns.map(column => {
+    const width = widths[column.id];
+    if (width === undefined || width === (column.width ?? DEFAULT_COLUMN_WIDTH)) return column;
+    const next = { ...column, width };
+    if (!isColumn(next)) throw new Error(`列宽须在 ${MIN_COLUMN_WIDTH}–${MAX_COLUMN_WIDTH} 像素之间。`);
+    return next;
+  });
+  return columns.every((column, index) => column === table.columns[index]) ? table : { ...table, columns };
 }

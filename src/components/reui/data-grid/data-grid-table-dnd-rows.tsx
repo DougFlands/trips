@@ -418,6 +418,7 @@ const MemoizedDataGridTableDndRowsBody = memo(
 ) as typeof DataGridTableDndRowsBody
 
 function DataGridTableDndRows<TData extends object>({
+  headerContent,
   handleDragEnd,
   dataIds,
   footerContent,
@@ -432,6 +433,8 @@ function DataGridTableDndRows<TData extends object>({
   onDragCancel,
   accessibility,
 }: {
+  /** Optional composed header, e.g. independently sortable columns. */
+  headerContent?: ReactNode
   handleDragEnd: (event: DragEndEvent) => void
   dataIds: UniqueIdentifier[]
   footerContent?: ReactNode
@@ -664,7 +667,7 @@ function DataGridTableDndRows<TData extends object>({
         }
       >
         <DataGridTableBase>
-          <DataGridTableHead>
+          {headerContent ?? <DataGridTableHead>
             {mergedHeaderGroups.map((headerGroup, index) => {
               const renderHeader = (
                 header: Header<DataGridFeatures, TData, unknown>
@@ -718,7 +721,7 @@ function DataGridTableDndRows<TData extends object>({
                 </DataGridTableHeadRow>
               )
             })}
-          </DataGridTableHead>
+          </DataGridTableHead>}
 
           {(props.tableLayout?.stripped || !props.tableLayout?.rowBorder) && (
             <DataGridTableRowSpacer />

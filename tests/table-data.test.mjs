@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { isStoredTable, isTableData, upgradeTable, configureColumn, reorderRows, parseCell, isCellValue, FIELD_TYPES } from "../src/lib/table-data.ts";
+import { isStoredTable, isTableData, upgradeTable, configureColumn, reorderRows, reorderColumns, resizeColumns, parseCell, isCellValue, FIELD_TYPES } from "../src/lib/table-data.ts";
 
 const legacy = () => ({ schemaVersion: 1, columns: [{ id: "notes", name: "备注" }], rows: [
   { id: "a", cells: { notes: "第一行\n第二行" } }, { id: "b", cells: { notes: "" } }, { id: "c", cells: {} },
@@ -49,4 +49,24 @@ test("schema boundaries reject duplicate IDs, orphan values and excessive choice
   assert.equal(isTableData({ ...table, rows: [...table.rows, table.rows[0]] }), false);
   assert.equal(isTableData({ ...table, rows: [{ id: "a", cells: { other: "orphan" } }] }), false);
   assert.throws(() => configureColumn(table, { id: "choice", name: "选择", type: "select", options: Array.from({ length: 101 }, (_, i) => String(i)) }));
+});
+
+test("column layouts preserve cell identity and old tables, validate width, round trip without a schema migration", () => {
+  const old = upgradeTable(legacy());
+  const table = configureColumn(old, { id: "amount", name: "金额", type: "number" });
+  const resized = resizeColumns(table, { notes: 420 });
+  assert.equal(table.columns[0].width, undefined);
+  assert.equal(resized.columns[0].width, 420);
+  assert.equal(resizeColumns(resized, { notes: 420 }), resized);
+  const moved = reorderColumns(resized, "notes", "amount");
+  assert.deepEqual(moved.columns.map(column => column.id), ["amount", "notes"]);
+  assert.equal(moved.rows, table.rows);
+  assert.equal(moved.columns[1].width, 420);
+  assert.ok(isTableData(JSON.parse(JSON.stringify(moved))));
+  assert.equal(reorderColumns(moved, "row-actions", "notes"), moved);
+  for (const width of [119, 961, Infinity, NaN, "200"]) {
+    assert.throws(() => resizeColumns(table, { notes: width }));
+    assert.equal(isTableData({ ...table, columns: [{ ...table.columns[0], width }] }), false);
+  }
+  assert.equal(configureColumn(resized, { ...resized.columns[0], name: "新备注" }).columns[0].width, 420);
 });

@@ -124,7 +124,7 @@ node --test tests/stargazing.test.mjs
 
 入口：`/tools/tables/`，首页有“打开记录表格”链接。不同表格可使用不同地址，例如 `/tools/tables/?id=stays`、`?id=expenses`；ID 限字母、数字和连字符，最长 64 个字符。
 
-采用 [ReUI Data Grid](https://reui.io/docs/data-grid)，支持文本、多行文本、数字、金额、日期、单选、多选、勾选和网址。双击或铅笔按钮编辑；多行文本 Enter 换行，Ctrl/⌘+Enter 或失焦保存，Escape 取消。可添加行、添加字段、修改表头名称/类型/选项；行高随内容调整。最多 50 列、1000 行，单份 JSON 不超过 512 KiB。未解锁可读；固定密码验证成功后可编辑，浏览器记住密码，锁定后清除。
+采用 [ReUI Data Grid](https://reui.io/docs/data-grid)，支持文本、多行文本、数字、金额、日期、单选、多选、勾选和网址。单击高亮选中，直接输入替换内容；双击、Enter 或 F2 编辑原值。单元格没有保存/取消按钮：失焦或单行 Enter 提交，Tab / Shift+Tab 提交并移格，Escape 取消；多行 Enter 换行、Ctrl/⌘+Enter 提交。非法内容保留草稿并提示。字段设置在表头按钮下方弹出，保留独立的保存/取消操作。可添加行和字段，行高随内容调整。最多 50 列、1000 行，单份 JSON 不超过 512 KiB。未解锁可读；固定密码验证成功后可编辑，浏览器记住密码，锁定后清除。
 
 本地运行完整表格功能（Node >=22.13）：
 
@@ -138,15 +138,15 @@ npm run dev
 
 自动同步：默认每 1 秒合并写入，每 15 秒读取远端；隐藏页面暂停轮询，恢复可见或网络恢复时补读。表格数据只存线上 D1，不写入浏览器存储；未保存修改仅留在当前页面内存，关闭前有浏览器提醒。浏览器仅记住编辑密码。同一份文档并发修改时提示选择保存当前内容或使用云端版本，不进行字段级合并。首次读取失败不会创建空数据覆盖旧记录。
 
-拖动行号旁的手柄可调整整行顺序，只读时隐藏手柄。移动保留所有单元格与 ID，顺序自动同步。编辑、配置字段或拖拽期间暂停应用远端刷新。
+拖动行号或表头手柄调整行、列顺序；拖动表头右边界调整列宽（120–960px，默认240px）。手柄也支持空格开始/放下、方向键移动。顺序与列宽在拖动结束后自动同步，保留所有单元格与 ID。只读时隐藏手柄、禁用调整。编辑、配置字段、拖拽或调宽期间暂停应用远端刷新。
 
 旧版字符串表格按多行文本完整读取，打开页面不会写入升级数据；首次修改才按原 revision 保存 v2。字段转换会检查整列：非法数字/日期、含换行文本转单行、删除仍被使用的选项等会提示并保留原数据。
 
 复用入口：
 
 - `src/components/record-table/record-table.tsx`：受控组件 `RecordTable({ value, onChange, readOnly, onEditingChange })`，不依赖密码或服务端；`editable-table.tsx` 保留兼容导出。
-- `src/components/record-table/cell-editor.tsx`、`column-settings.tsx`：独立单元格展示/编辑与字段配置；ReUI 上游源码单独放在 `components/reui/data-grid/`。
-- `src/lib/table-data.ts`：JSON 类型、校验、旧数据升级、字段转换与行移动；`table-transport.ts` 仅适配表格读写，不改变通用同步协议。
+- `src/components/record-table/`：`cell-editor.tsx` 提供字段控件，`use-table-editing.ts` 管理提交与焦点，`column-header.tsx` 管理列拖拽/调宽，`column-popover.tsx` 复用 `column-settings.tsx`。ReUI 源码单独放在 `components/reui/data-grid/`，行拖拽组件只增加 `headerContent` 插槽。
+- `src/lib/table-data.ts`：JSON 类型、校验、旧数据升级、字段转换、行列移动和可选列宽；`table-transport.ts` 仅适配表格读写，不改变通用同步协议。
 - `src/components/synced-table.tsx`：`SyncedTable({ id, title? })`，组合密码验证、同步状态与表格，可直接嵌入旅行页；北海道第 04 节前使用 `hokkaido-stays`，与 `/tools/tables/?id=hokkaido-stays` 共用数据。
 - `src/hooks/use-synced-document.ts`：`useSyncedDocument<T>`，可用于任意通过校验的 JSON 数据；`id`、初始值、验证函数和 transport 保持稳定。
 - `src/lib/synced-document.ts`：HTTP transport 与可测试的同步控制器，服务端契约为 `{ data, revision, updatedAt }`。

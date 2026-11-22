@@ -14,9 +14,9 @@ export function ColumnSettings({ column, onSave, onCancel }: {
   const [type, setType] = useState<FieldType>(column.type);
   const [options, setOptions] = useState(column.options?.join("\n") ?? "");
   const [error, setError] = useState("");
-  return <form aria-label="字段设置" className="flex max-w-xl flex-col gap-4 rounded-lg border bg-card p-4" onSubmit={event => {
+  return <form aria-label="字段设置" className="flex min-w-0 flex-col gap-4" onSubmit={event => {
     event.preventDefault();
-    try { onSave({ id: column.id, name: name.trim(), type, ...(isChoice(type) ? { options: options.split("\n").map(item => item.trim()).filter(Boolean) } : {}) }); }
+    try { onSave({ id: column.id, name: name.trim(), type, ...(column.width === undefined ? {} : { width: column.width }), ...(isChoice(type) ? { options: options.split("\n").map(item => item.trim()).filter(Boolean) } : {}) }); }
     catch (reason) { setError(reason instanceof Error ? reason.message : "无法保存字段。"); }
   }} onKeyDown={event => { if (event.key === "Escape" && !event.nativeEvent.isComposing) { event.preventDefault(); onCancel(); } }}>
     <FieldGroup>

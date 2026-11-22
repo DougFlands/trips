@@ -6,7 +6,7 @@
 
 ## 2. Signatures
 
-- `RecordTable({ value, onChange, readOnly, onEditingChange })`；`EditableTable` 为兼容导出。`TableData = { schemaVersion: 2, columns: {id,name,type,options?}[], rows: {id,cells}[] }`；`CellValue = string | number | boolean | string[] | null`。
+- `RecordTable({ value, onChange, readOnly, onEditingChange })`；`EditableTable` 为兼容导出。`TableData = { schemaVersion: 2, columns: {id,name,type,options?,width?}[], rows: {id,cells}[] }`；`CellValue = string | number | boolean | string[] | null`。
 - `createTableTransport(getPassword)` 读取 v1/v2，返回 v2；`table-data.ts` 提供纯校验/迁移/字段转换/行移动。`SyncedTable({id,title?})` 包装权限和同步；单元格编辑/字段设置与 ReUI 上游源码分目录。
 - `useSyncedDocument<T>({ id, initialValue, validate, transport, canEdit?, saveDelay?, pollInterval? })`。
 - transport：`read(id, signal) -> VersionedDocument<T> | null`；`write(id, data, expectedRevision, signal) -> VersionedDocument<T>`。
@@ -19,6 +19,10 @@
 - 响应 `{data, revision, updatedAt}`；PUT `{data, expectedRevision}`。首次创建预期版本 0，成功为 1；后续原子条件更新并递增。
 - ID 为 `[a-zA-Z0-9][a-zA-Z0-9:_-]{0,127}`，JSON 上限 512 KiB。表格额外限制 50 列、1000 行；列/行稳定 ID 独立于名称和位置。
 - 行顺序以 `rows` 数组为准；通过拖拽手柄移动整行，保留 ID 与全部单元格，沿用自动同步与版本冲突处理。只读隐藏手柄，不提供额外上下移动按钮。
+- 列顺序以 `columns` 数组为准；`reorderColumns` 不改行和单元格。`width` 可选、有限且120..960，默认240；`resizeColumns` 校验宽度，无变化返回原对象。字段配置保留已有宽度，旧v2无需迁移。TanStack `columnResizeMode: onEnd`，只在结束时更新布局；行号列不可拖列/调宽。
+- 选择须挂载 `DataGridCellSelection`，仅设置 `tableLayout.cellSelection` 不够。单击选中，直接输入替换；双击/Enter/F2编辑原值。单元格不提供保存/取消按钮：失焦/单行Enter提交、Tab/Shift+Tab提交并移格、Esc取消；多行Enter换行，Ctrl/Cmd+Enter提交。多选内部Tab逐项移动，首末项退出时提交并移格。非法值阻止交接；document pointerdown capture 只跳过当前编辑器内部，不能跳过其他表格的编辑器。
+- `use-table-editing.ts` 持有编辑会话、提交交接与焦点；`cell-editor.tsx` 使用 `onKeyDownCapture` 处理取消/提交，避免ReUI原生viewport的Escape监听先夺走焦点。组合输入期间不提交/取消；Windows Process/229用flushSync将焦点移入真实输入框，再交给IME。
+- `column-popover.tsx` 用Radix portal，表头按钮下方弹出字段配置，窄屏保留12px边距；字段配置保留保存/取消，失败不关闭，外点/Esc取消。`column-header.tsx` 独立列DnD，ReUI行DnD仅增加 `headerContent` 插槽。内嵌DndContext的accessibility节点portal到document.body，禁止在table内插入辅助div。
 - ReUI 使用 TanStack v9 `useTable` + `dataGridFeatures`，显式 `manualPagination: true`、关闭排序；稳定 `getRowId` 与 DnD `dataIds` 一致。拖拽、单元格编辑、字段设置通过 `onEditingChange` 暂停远端覆盖；取消/锁定/卸载释放。使用自定义编辑器保留多行 Enter 换行；编辑器内部切焦点不提交。
 - 九种字段为 text/multiline/number/currency/date/select/multiselect/checkbox/url。数字必须有限，空数字为 null，0/false 不作空；金额只在展示时保留两位。日期为校验过的 YYYY-MM-DD；网址仅 HTTP(S)。单行文本拒绝换行；选项最多100个且唯一。
 - v1 全字符串列在内存中变为 multiline，保持值、ID、顺序、revision、updatedAt；读取不写，首次实际修改才保存 v2。不推测旧字段类型。字段转换必须整列成功，失败返回行号；禁止删除已使用选项或截断文本（如 `001` 转数字）。旧客户端读到 v2 拒绝解码，旧 revision 写入由 409 拦截。
@@ -63,7 +67,7 @@
 
 - `npm run test:tables`：节流尾部、慢写入、新编辑、并发冲突、离线恢复、响应丢失、初始读取失败、旧实例响应、重开页面仅加载云端数据；实际 SQLite 执行与 D1 同语义的 SQL。
 - `npm run check`；`npx wrangler pages functions build functions --outdir work/pages-functions`。
-- 浏览器桌面和窄屏：双击、铅笔、Enter 换行、Ctrl/⌘+Enter 或失焦保存、Escape 取消、IME、改表头、行列新增、密码恢复/锁定、两页面同步、当前页面离线重试。单元格与表头使用自动高度 Textarea（field-sizing-content），显示时保留换行。
+- 浏览器桌面和窄屏：单击高亮、选中输入、双击/F2、Tab/Shift+Tab、非法值不丢失、Enter换行、Ctrl/⌘+Enter或失焦保存、Escape取消、IME、表头Popover、行列拖拽、调宽、行列新增、只读。同步改动另验证密码恢复/锁定、两页面同步、当前页面离线重试。自动高度Textarea（field-sizing-content），显示时保留换行。纯函数测试覆盖旧列无width、宽度边界、列移动与JSON回读；transport测试覆盖width经API回读。
 - `/tests/synced-document.html`：普通备忘 JSON 复用同一 hook，不能只测试表格。
 - `/tests/record-table.html`：内存样例覆盖九种字段、12行不分页、变高行拖拽、只读和窄屏横向滚动。`table-data.test.mjs` 覆盖类型/迁移/无损转换；`table-transport.test.mjs` 使用真实 API 处理器与内存 SQLite 覆盖只读迁移不写、v2回读、401/409，不连接生产数据库。
 - CORS测试必须覆盖预检不进入业务、精确源校验、拒绝未知头、401/409可读、真实路由PUT/GET保持密码/版本契约；开发 transport 测试断言请求绝对线上URL。发布后用浏览器本地页面确认跨域成功，不能仅依靠 curl（curl不执行CORS策略）。

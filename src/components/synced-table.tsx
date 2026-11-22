@@ -73,7 +73,7 @@ export function SyncedTable({ id, title }: { id: string; title?: string }) {
           : <p className="rounded-lg border p-10 text-center text-sm text-muted-foreground">
             {document.status === "loading" ? "正在读取记录…" : "记录暂时无法读取，请稍后重试。"}
           </p>}
-        <p className="text-xs leading-6 text-muted-foreground">{readOnly ? "所有人都可以查看，输入密码后可编辑。" : "拖动行号旁的手柄排序 · 点击表头设置字段 · 多行文本 Enter 换行 · Ctrl/⌘+Enter 保存 · Esc 取消"} 更新约每 15 秒自动读取。</p>
+        <p className="text-xs leading-6 text-muted-foreground">{readOnly ? "所有人都可以查看，输入密码后可编辑。" : "选中后输入 · 双击编辑原值 · Tab 保存并移格 · Esc 取消 · 多行 Enter 换行，Ctrl/⌘+Enter 保存 · 拖手柄排序，拖表头边界调列宽"} 更新约每 15 秒自动读取。</p>
       </section>
   </div>;
 }
