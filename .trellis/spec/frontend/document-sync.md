@@ -7,7 +7,7 @@
 ## 2. Signatures
 
 - `RecordTable({ value, onChange, readOnly, onEditingChange })`；`EditableTable` 为兼容导出。`TableData = { schemaVersion: 2, columns: {id,name,type,options?,width?}[], rows: {id,cells}[] }`；`CellValue = string | number | boolean | string[] | null`。
-- `createTableTransport(getPassword)` 读取 v1/v2，返回 v2；`table-data.ts` 提供纯校验/迁移/字段转换/行移动。`SyncedTable({id,title?})` 包装权限和同步；单元格编辑/字段设置与 ReUI 上游源码分目录。
+- `createTableTransport(getPassword)` 读取 v1/v2，返回 v2；`table-data.ts` 提供纯校验/迁移/字段转换/行移动。`SyncedTable({id,title?,hideWhenLocked?})` 包装权限和同步；单元格编辑/字段设置与 ReUI 上游源码分目录。
 - `useSyncedDocument<T>({ id, initialValue, validate, transport, canEdit?, saveDelay?, pollInterval? })`。
 - transport：`read(id, signal) -> VersionedDocument<T> | null`；`write(id, data, expectedRevision, signal) -> VersionedDocument<T>`。
 - GET/PUT `/api/documents/:id`；POST `/api/edit-access`。
@@ -30,6 +30,7 @@
 - ReUI registry 的 Checkbox 需适配项目 Radix API：部分选中用 `checked="indeterminate"`；沿用 `@/lib/utils` 的 cn，不能引入同名第三方包。保留上游 `use no memo` 指令，目前构建的指令提示不影响未启用 React Compiler 的项目。
 - Pages Functions 的 `params.id` 保留 URL 编码，路由边界必须 `decodeURIComponent` 一次后交给业务校验；格式错误返回 400。API 测试复用真实路由入口，覆盖 `tables%3Anotes` 的创建/读取，避免本地提前解码掩盖生产差异。
 - DB binding `DB`；Secret `TABLE_EDIT_PASSWORD`。客户端发送 `X-Edit-Password: encodeURIComponent(password)`；服务端核对，不能仅信任客户端 unlocked 布尔值。
+- `SyncedTable` 挂载时自行读取非空 query `pwd`，调用现有解锁逻辑，自动失败静默，手动失败保留提示。`hideWhenLocked` 默认 false；true 时锁定期间不渲染记录内容，主动锁定后本次挂载不再尝试链接密码。此参数仅控制组件展示。
 - 只有读取的 404 表示不存在；格式错误、网络失败、503 不可当空文档。所有 API 响应禁缓存。
 - `requestDocumentApi` 在 Vite DEV 环境将 `/api/...` 拼接到 `https://trip.flands.com`，由浏览器直接访问，生产环境保持同源；读、写、密码验证必须经过同一入口。不使用 Vite Node 转发（不自动继承 Windows 系统代理，曾导致频繁12秒超时），不启动本地数据库。12秒超时转换为中文 DocumentError(504)，调用方取消保持原取消信号；HTML响应仍拒绝解码。
 - CORS 精确允许 HTTP/HTTPS 的 localhost、127.0.0.1 源及任意合法端口；不接受 null、其他域名、域名后缀或局域网IP。同源/无Origin请求沿用原流程。允许源的 GET/PUT/POST 预检只放行 Content-Type、X-Edit-Password，返回204；未知来源/方法/头返回403。成功和400/401/404/409/413/503响应均带对应 Allow-Origin 与 Vary: Origin，禁止通配符及 Allow-Credentials；写操作仍验证密码/revision。

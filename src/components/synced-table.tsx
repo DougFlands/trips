@@ -21,10 +21,13 @@ const statuses: Record<SyncStatus, string> = {
   loading: "读取中", synced: "已同步", pending: "待保存", saving: "保存中", error: "同步失败", conflict: "版本冲突",
 };
 
-export function SyncedTable({ id, title }: { id: string; title?: string }) {
+export function SyncedTable({ id, title, hideWhenLocked = false }: { id: string; title?: string; hideWhenLocked?: boolean }) {
   const passwordId = useId();
   const access = useEditAccess();
   const [password, setPassword] = useState("");
+  const [queryPassword] = useState(() => new URLSearchParams(window.location.search).get("pwd"));
+  const [showAccessError, setShowAccessError] = useState(!queryPassword);
+  useEffect(() => { if (queryPassword) void access.unlock(queryPassword); }, [queryPassword, access.unlock]);
   const transport = useMemo(() => createTableTransport(access.getPassword), [access.getPassword]);
   const document = useSyncedDocument({ id: `tables:${id}`, initialValue: initialTable, validate: isTableData,
     transport, canEdit: access.canEdit });
@@ -34,20 +37,20 @@ export function SyncedTable({ id, title }: { id: string; title?: string }) {
       <section aria-label="编辑权限" className="rounded-lg border bg-card p-4 sm:p-5">
         {access.canEdit ? <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3"><Badge>可编辑</Badge><span className="text-sm">已在此浏览器记住密码。</span></div>
-          <Button variant="outline" size="sm" onClick={access.lock}><LockKeyhole data-icon="inline-start" />锁定编辑</Button>
+          <Button variant="outline" size="sm" onClick={access.lock}><LockKeyhole data-icon="inline-start" />{hideWhenLocked ? "锁定表格" : "锁定编辑"}</Button>
         </div> : <form className="flex flex-wrap items-end gap-3" onSubmit={event => {
-          event.preventDefault(); void access.unlock(password).then(() => setPassword(""));
+          event.preventDefault(); setShowAccessError(true); void access.unlock(password).then(() => setPassword(""));
         }}>
           <FieldGroup className="max-w-xs"><Field>
-            <FieldLabel htmlFor={passwordId}>编辑密码 <Badge variant="outline">当前只读</Badge></FieldLabel>
+            <FieldLabel htmlFor={passwordId}>编辑密码 <Badge variant="outline">{hideWhenLocked ? "已锁定" : "当前只读"}</Badge></FieldLabel>
             <Input id={passwordId} type="password" autoComplete="current-password" value={password}
-              onChange={event => setPassword(event.target.value)} placeholder="输入密码后可编辑" required disabled={access.checking} />
+              onChange={event => setPassword(event.target.value)} placeholder={hideWhenLocked ? "输入密码后可查看和编辑" : "输入密码后可编辑"} required disabled={access.checking} />
           </Field></FieldGroup>
-          <Button type="submit" disabled={access.checking || !password}>{access.checking ? "核对中…" : "解锁编辑"}</Button>
+          <Button type="submit" disabled={access.checking || !password}>{access.checking ? "核对中…" : hideWhenLocked ? "解锁表格" : "解锁编辑"}</Button>
         </form>}
-        {access.error && <p role="alert" className="mt-3 text-sm text-destructive">{access.error}</p>}
+        {(showAccessError || access.canEdit) && access.error && <p role="alert" className="mt-3 text-sm text-destructive">{access.error}</p>}
       </section>
-      <section aria-label="记录内容" className="flex min-w-0 flex-col gap-4">
+      {(!hideWhenLocked || access.canEdit) && <section aria-label="记录内容" className="flex min-w-0 flex-col gap-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3"><p className="text-lg font-semibold">{title ?? (id === "notes" ? "通用记录" : id)}</p>
             <Badge variant={document.status === "error" || document.status === "conflict" ? "destructive" : "outline"}>
@@ -74,6 +77,6 @@ export function SyncedTable({ id, title }: { id: string; title?: string }) {
             {document.status === "loading" ? "正在读取记录…" : "记录暂时无法读取，请稍后重试。"}
           </p>}
         <p className="text-xs leading-6 text-muted-foreground">{readOnly ? "所有人都可以查看，输入密码后可编辑。" : "选中后输入 · 双击编辑原值 · Tab 保存并移格 · Esc 取消 · 多行 Enter 换行，Ctrl/⌘+Enter 保存 · 拖手柄排序，拖表头边界调列宽"} 更新约每 15 秒自动读取。</p>
-      </section>
+      </section>}
   </div>;
 }

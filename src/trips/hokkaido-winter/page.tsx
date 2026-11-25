@@ -312,7 +312,7 @@ export function HokkaidoWinterPage({ trip }: { trip: Trip }) {
             <h2 id="stays-heading" className="text-2xl font-semibold tracking-tight sm:text-3xl">住宿与预订记录</h2>
             <p className="mt-3 text-sm leading-7 text-muted-foreground">记下酒店、民宿和预订信息。输入编辑密码后，双击填写，自动保存。</p>
           </div>
-          <SyncedTable id="hokkaido-stays" title="北海道住宿" />
+          <SyncedTable id="hokkaido-stays" title="北海道住宿" hideWhenLocked />
         </section>
 
         <section id="tickets" aria-labelledby="tickets-heading" className="mt-14 scroll-mt-24 sm:mt-20">
