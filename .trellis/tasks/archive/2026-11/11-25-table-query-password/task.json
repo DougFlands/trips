@@ -1,0 +1,29 @@
+{
+  "id": "table-query-password",
+  "name": "table-query-password",
+  "title": "表格支持链接密码及解锁后查看",
+  "description": "",
+  "status": "completed",
+  "dev_type": null,
+  "scope": null,
+  "package": null,
+  "priority": "P2",
+  "creator": "fland",
+  "assignee": "fland",
+  "createdAt": "2026-11-25",
+  "completedAt": "2026-11-25",
+  "branch": null,
+  "base_branch": "main",
+  "worktree_path": null,
+  "commit": null,
+  "pr_url": null,
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": [
+    "src/components/synced-table.tsx",
+    "src/trips/hokkaido-winter/page.tsx"
+  ],
+  "notes": "已实现。npm run check、npm run test:tables（23 项）及 git diff --check 通过。浏览器使用模拟 API 验证自动密码失败静默、手动失败提示、手动及链接正确密码解锁、重新锁定隐藏且不重试、浏览器密码恢复、默认只读模式。",
+  "meta": {}
+}
