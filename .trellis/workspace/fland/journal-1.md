@@ -309,3 +309,24 @@ Removed Vite Node API proxy; shared request function uses production API in DEV 
 ### Status
 
 [OK] **Completed**
+
+
+## Session 14: 表格链接密码与锁定展示
+
+**Date**: 2026-11-25
+**Task**: 表格链接密码与锁定展示
+**Branch**: `main`
+
+### Summary
+
+SyncedTable 自行读取 pwd 并自动解锁，自动失败静默，手动错误保留提示。新增 hideWhenLocked，北海道页面启用。npm run check、23 项表格测试及浏览器模拟 API 回归通过。
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `ec88259` | (see git log) |
+
+### Status
+
+[OK] **Completed**
